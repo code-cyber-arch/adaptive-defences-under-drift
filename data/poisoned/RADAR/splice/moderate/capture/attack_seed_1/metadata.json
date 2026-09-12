@@ -1,0 +1,3352 @@
+{
+  "stream": "radar",
+  "base_seed": null,
+  "rows": 484753,
+  "full_source_rows": 484753,
+  "n_features": 68,
+  "classes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "label_mapping": {
+    "Akira": 0,
+    "BlackBasta": 1,
+    "CyberVolk": 2,
+    "LockBit": 3,
+    "Lynx": 4,
+    "Medusa": 5,
+    "Meow": 6,
+    "goodware": 7
+  },
+  "benign_class": 7,
+  "feature_lineage": {
+    "f0": {
+      "source": "fasttext",
+      "source_column": "event.code"
+    },
+    "f1": {
+      "source": "fasttext",
+      "source_column": "event.type"
+    },
+    "f2": {
+      "source": "fasttext",
+      "source_column": "log.level"
+    },
+    "f3": {
+      "source": "fasttext",
+      "source_column": "event.category"
+    },
+    "f4": {
+      "source": "fasttext",
+      "source_column": "event.action"
+    },
+    "f5": {
+      "source": "fasttext",
+      "source_column": "rule.name"
+    },
+    "f6": {
+      "source": "fasttext",
+      "source_column": "user.domain"
+    },
+    "f7": {
+      "source": "fasttext",
+      "source_column": "user.name"
+    },
+    "f8": {
+      "source": "fasttext",
+      "source_column": "process.executable"
+    },
+    "f9": {
+      "source": "fasttext",
+      "source_column": "file.path"
+    },
+    "f10": {
+      "source": "fasttext",
+      "source_column": "process.hash.md5"
+    },
+    "f11": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.EventType"
+    },
+    "f12": {
+      "source": "fasttext",
+      "source_column": "registry.path"
+    },
+    "f13": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.Description"
+    },
+    "f14": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.Signed"
+    },
+    "f15": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.SignatureStatus"
+    },
+    "f16": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.Signature"
+    },
+    "f17": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.Product"
+    },
+    "f18": {
+      "source": "fasttext",
+      "source_column": "file.pe.original_file_name"
+    },
+    "f19": {
+      "source": "fasttext",
+      "source_column": "file.pe.file_version"
+    },
+    "f20": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.Company"
+    },
+    "f21": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.Type"
+    },
+    "f22": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.TerminalSessionId"
+    },
+    "f23": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.TargetUser"
+    },
+    "f24": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.TargetProcessId"
+    },
+    "f25": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.TargetProcessGUID"
+    },
+    "f26": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.TargetImage"
+    },
+    "f27": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.SourceUser"
+    },
+    "f28": {
+      "source": "fasttext",
+      "source_column": "process.thread.id"
+    },
+    "f29": {
+      "source": "fasttext",
+      "source_column": "source.port"
+    },
+    "f30": {
+      "source": "fasttext",
+      "source_column": "source.ip"
+    },
+    "f31": {
+      "source": "fasttext",
+      "source_column": "destination.port"
+    },
+    "f32": {
+      "source": "fasttext",
+      "source_column": "destination.ip"
+    },
+    "f33": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.CallTrace"
+    },
+    "f34": {
+      "source": "fasttext",
+      "source_column": "process.working_directory"
+    },
+    "f35": {
+      "source": "fasttext",
+      "source_column": "file.name"
+    },
+    "f36": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.ParentUser"
+    },
+    "f37": {
+      "source": "fasttext",
+      "source_column": "process.parent.pid"
+    },
+    "f38": {
+      "source": "fasttext",
+      "source_column": "process.parent.executable"
+    },
+    "f39": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.LogonId"
+    },
+    "f40": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.IntegrityLevel"
+    },
+    "f41": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.GrantedAccess"
+    },
+    "f42": {
+      "source": "fasttext",
+      "source_column": "sysmon.file.is_executable"
+    },
+    "f43": {
+      "source": "fasttext",
+      "source_column": "sysmon.dns.status"
+    },
+    "f44": {
+      "source": "fasttext",
+      "source_column": "dns.question.name"
+    },
+    "f45": {
+      "source": "fasttext",
+      "source_column": "network.transport"
+    },
+    "f46": {
+      "source": "fasttext",
+      "source_column": "network.direction"
+    },
+    "f47": {
+      "source": "engineered",
+      "source_column": "File_Delete_archived"
+    },
+    "f48": {
+      "source": "engineered",
+      "source_column": "File_created"
+    },
+    "f49": {
+      "source": "engineered",
+      "source_column": "File_creation_time_changed"
+    },
+    "f50": {
+      "source": "engineered",
+      "source_column": "Pipe_Created"
+    },
+    "f51": {
+      "source": "engineered",
+      "source_column": "Process_Create"
+    },
+    "f52": {
+      "source": "engineered",
+      "source_column": "Registry_value_set"
+    },
+    "f53": {
+      "source": "engineered",
+      "source_column": "process-related"
+    },
+    "f54": {
+      "source": "engineered",
+      "source_column": "file-related"
+    },
+    "f55": {
+      "source": "engineered",
+      "source_column": "network-related"
+    },
+    "f56": {
+      "source": "engineered",
+      "source_column": "driver-related"
+    },
+    "f57": {
+      "source": "engineered",
+      "source_column": "registry-related"
+    },
+    "f58": {
+      "source": "engineered",
+      "source_column": "suspicious_path"
+    },
+    "f59": {
+      "source": "engineered",
+      "source_column": "system_executable"
+    },
+    "f60": {
+      "source": "engineered",
+      "source_column": "path_length"
+    },
+    "f61": {
+      "source": "engineered",
+      "source_column": "directory_depth"
+    },
+    "f62": {
+      "source": "engineered",
+      "source_column": "process_vs_parent_freq_ratio"
+    },
+    "f63": {
+      "source": "engineered",
+      "source_column": "process_name_length"
+    },
+    "f64": {
+      "source": "engineered",
+      "source_column": "executable_depth_diff"
+    },
+    "f65": {
+      "source": "engineered",
+      "source_column": "parent_is_system_executable"
+    },
+    "f66": {
+      "source": "engineered",
+      "source_column": "extension_similarity"
+    },
+    "f67": {
+      "source": "engineered",
+      "source_column": "file_name_entropy"
+    }
+  },
+  "excluded_metadata": [
+    {
+      "source": "fasttext",
+      "column": "@timestamp"
+    },
+    {
+      "source": "fasttext",
+      "column": "target-class-name"
+    },
+    {
+      "source": "fasttext",
+      "column": "target-class"
+    },
+    {
+      "source": "engineered",
+      "column": "target-class"
+    },
+    {
+      "source": "engineered",
+      "column": "target"
+    }
+  ],
+  "fixed_zero_fills": {
+    "fasttext::event.code": 0,
+    "fasttext::event.type": 0,
+    "fasttext::log.level": 0,
+    "fasttext::event.category": 0,
+    "fasttext::event.action": 0,
+    "fasttext::rule.name": 0,
+    "fasttext::user.domain": 0,
+    "fasttext::user.name": 0,
+    "fasttext::process.executable": 0,
+    "fasttext::file.path": 0,
+    "fasttext::process.hash.md5": 0,
+    "fasttext::winlog.event_data.EventType": 0,
+    "fasttext::registry.path": 0,
+    "fasttext::winlog.event_data.Description": 0,
+    "fasttext::winlog.event_data.Signed": 0,
+    "fasttext::winlog.event_data.SignatureStatus": 0,
+    "fasttext::winlog.event_data.Signature": 0,
+    "fasttext::winlog.event_data.Product": 0,
+    "fasttext::file.pe.original_file_name": 0,
+    "fasttext::file.pe.file_version": 0,
+    "fasttext::winlog.event_data.Company": 0,
+    "fasttext::winlog.event_data.Type": 0,
+    "fasttext::winlog.event_data.TerminalSessionId": 0,
+    "fasttext::winlog.event_data.TargetUser": 0,
+    "fasttext::winlog.event_data.TargetProcessId": 0,
+    "fasttext::winlog.event_data.TargetProcessGUID": 0,
+    "fasttext::winlog.event_data.TargetImage": 0,
+    "fasttext::winlog.event_data.SourceUser": 0,
+    "fasttext::process.thread.id": 0,
+    "fasttext::source.port": 0,
+    "fasttext::source.ip": 0,
+    "fasttext::destination.port": 0,
+    "fasttext::destination.ip": 0,
+    "fasttext::winlog.event_data.CallTrace": 0,
+    "fasttext::process.working_directory": 0,
+    "fasttext::file.name": 0,
+    "fasttext::winlog.event_data.ParentUser": 0,
+    "fasttext::process.parent.pid": 0,
+    "fasttext::process.parent.executable": 0,
+    "fasttext::winlog.event_data.LogonId": 0,
+    "fasttext::winlog.event_data.IntegrityLevel": 0,
+    "fasttext::winlog.event_data.GrantedAccess": 0,
+    "fasttext::sysmon.file.is_executable": 0,
+    "fasttext::sysmon.dns.status": 0,
+    "fasttext::dns.question.name": 0,
+    "fasttext::network.transport": 0,
+    "fasttext::network.direction": 0,
+    "engineered::File_Delete_archived": 0,
+    "engineered::File_created": 0,
+    "engineered::File_creation_time_changed": 0,
+    "engineered::Pipe_Created": 0,
+    "engineered::Process_Create": 0,
+    "engineered::Registry_value_set": 0,
+    "engineered::process-related": 0,
+    "engineered::file-related": 0,
+    "engineered::network-related": 0,
+    "engineered::driver-related": 0,
+    "engineered::registry-related": 0,
+    "engineered::suspicious_path": 0,
+    "engineered::system_executable": 0,
+    "engineered::path_length": 0,
+    "engineered::directory_depth": 0,
+    "engineered::process_vs_parent_freq_ratio": 0,
+    "engineered::process_name_length": 0,
+    "engineered::executable_depth_diff": 0,
+    "engineered::parent_is_system_executable": 0,
+    "engineered::extension_similarity": 0,
+    "engineered::file_name_entropy": 0
+  },
+  "preprocessing": "fixed zero for nonfinite values; no fitted transform or global constant-column selection",
+  "transition_intervals": [],
+  "nominal_centers": [],
+  "estimated_phase_boundaries": [
+    113656,
+    210375,
+    290979,
+    376766
+  ],
+  "segment_boundaries": [
+    113656,
+    210375,
+    290979,
+    376766
+  ],
+  "supports_event_metrics": false,
+  "event_reference": "unverified proportional phase estimates; no exact event metrics",
+  "replay_segment_reference": "estimated positional phases, not proven pure concepts",
+  "kind": "source-assembled laboratory telemetry",
+  "warmup_rows": 1000,
+  "timestamp_order_verified": true,
+  "fasttext_training_provenance": "not established from supplied archive",
+  "key": "radar__splice__moderate__a1",
+  "sha256": "e846a1a3fc368369538f3d28bcb25b0f724446b54de0d362b11d9037a6fb54c8",
+  "truth_sha256": "6035bd936247a44f4a1a0018d575cbcc7ef0967a6bf0326fdbcebaf559b33406",
+  "class_counts": {
+    "7": 250011,
+    "5": 45825,
+    "3": 41395,
+    "0": 39075,
+    "2": 31396,
+    "1": 28106,
+    "4": 26125,
+    "6": 22820
+  },
+  "rng_seed": 1646378106,
+  "attack_seed": 1,
+  "mode": "splice",
+  "level_value": 0.15,
+  "burst_starts": [
+    2035,
+    5323,
+    6885,
+    7541,
+    8038,
+    11765,
+    13190,
+    14438,
+    15939,
+    19324,
+    19947,
+    20643,
+    23414,
+    25409,
+    26712,
+    27564,
+    29973,
+    30523,
+    34185,
+    35174,
+    36127,
+    37159,
+    39764,
+    40112,
+    41343,
+    43324,
+    44417,
+    47731,
+    48678,
+    50683,
+    53074,
+    55044,
+    55524,
+    56504,
+    57032,
+    57942,
+    60655,
+    61230,
+    62404,
+    63087,
+    65558,
+    65982,
+    67774,
+    68261,
+    68586,
+    72562,
+    73296,
+    76907,
+    77497,
+    79023,
+    80669,
+    87272,
+    88480,
+    89368,
+    93406,
+    94158,
+    94679,
+    98324,
+    98640,
+    101430,
+    104231,
+    105473,
+    106620,
+    106917,
+    107534,
+    108041,
+    111813,
+    115422,
+    117698,
+    119262,
+    119602,
+    122115,
+    123084,
+    123693,
+    124339,
+    125162,
+    126112,
+    129141,
+    131478,
+    132545,
+    134522,
+    134948,
+    135518,
+    135905,
+    136655,
+    136923,
+    139247,
+    140366,
+    141753,
+    142610,
+    145025,
+    145547,
+    146404,
+    147096,
+    153092,
+    155440,
+    159064,
+    161703,
+    163675,
+    166546,
+    170005,
+    171813,
+    172380,
+    173563,
+    173851,
+    176700,
+    178677,
+    180278,
+    181929,
+    182449,
+    184952,
+    186084,
+    188698,
+    190543,
+    191006,
+    193556,
+    194281,
+    195777,
+    199186,
+    201504,
+    202282,
+    203555,
+    204684,
+    206798,
+    212242,
+    212794,
+    214546,
+    216051,
+    218877,
+    219510,
+    222113,
+    223178,
+    224162,
+    228116,
+    229564,
+    230490,
+    232674,
+    236719,
+    238300,
+    238661,
+    239755,
+    240839,
+    243095,
+    243409,
+    244173,
+    244607,
+    245145,
+    246143,
+    248383,
+    250754,
+    251059,
+    252356,
+    252852,
+    253529,
+    259774,
+    260276,
+    261369,
+    262203,
+    262617,
+    264417,
+    265639,
+    266976,
+    267727,
+    268818,
+    269235,
+    271066,
+    274433,
+    274948,
+    275438,
+    279221,
+    279861,
+    281498,
+    282686,
+    283830,
+    285634,
+    288052,
+    289575,
+    290022,
+    292983,
+    294347,
+    295284,
+    295929,
+    297964,
+    299251,
+    300948,
+    303427,
+    304629,
+    306948,
+    309377,
+    311714,
+    312308,
+    314229,
+    319632,
+    320576,
+    320936,
+    323007,
+    328449,
+    330311,
+    335928,
+    337701,
+    338018,
+    341778,
+    342907,
+    347228,
+    348261,
+    348792,
+    349163,
+    352902,
+    357197,
+    357779,
+    358561,
+    359452,
+    359711,
+    360436,
+    360778,
+    363821,
+    364717,
+    365194,
+    365516,
+    367422,
+    372443,
+    373303,
+    375372,
+    376081,
+    377994,
+    379121,
+    380666,
+    382982,
+    384041,
+    384448,
+    385244,
+    387002,
+    387632,
+    388388,
+    388759,
+    389284,
+    390525,
+    391237,
+    392718,
+    393516,
+    394185,
+    397243,
+    402327,
+    403975,
+    404933,
+    406921,
+    408410,
+    410263,
+    411697,
+    413311,
+    413693,
+    413982,
+    416053,
+    416822,
+    417090,
+    418601,
+    420548,
+    423441,
+    425084,
+    427912,
+    429048,
+    431468,
+    433182,
+    435814,
+    436937,
+    437291,
+    438129,
+    438537,
+    439733,
+    441543,
+    443987,
+    446713,
+    448621,
+    449470,
+    451216,
+    454182,
+    455319,
+    456058,
+    458426,
+    463008,
+    464486,
+    465716,
+    468323,
+    471425,
+    473858,
+    474626,
+    479148,
+    479842,
+    482101,
+    484352
+  ],
+  "burst_len": 250,
+  "burst_colocated": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "splice_sources": [
+    {
+      "dest": 2035,
+      "src": 183111,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 5323,
+      "src": 339531,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 6885,
+      "src": 394051,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 7541,
+      "src": 303085,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 8038,
+      "src": 212432,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 11765,
+      "src": 278764,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 13190,
+      "src": 352552,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 14438,
+      "src": 232333,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 15939,
+      "src": 317671,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 19324,
+      "src": 384145,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 19947,
+      "src": 240205,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 20643,
+      "src": 428902,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 23414,
+      "src": 261366,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 25409,
+      "src": 159067,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 26712,
+      "src": 402931,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 27564,
+      "src": 366474,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 29973,
+      "src": 273103,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 30523,
+      "src": 333794,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 34185,
+      "src": 227817,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 35174,
+      "src": 392350,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 36127,
+      "src": 265766,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 37159,
+      "src": 250280,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 39764,
+      "src": 317978,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 40112,
+      "src": 301071,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 41343,
+      "src": 341557,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 43324,
+      "src": 246843,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 44417,
+      "src": 374473,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 47731,
+      "src": 452661,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 48678,
+      "src": 230150,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 50683,
+      "src": 370401,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 53074,
+      "src": 343651,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 55044,
+      "src": 212147,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 55524,
+      "src": 225215,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 56504,
+      "src": 229500,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 57032,
+      "src": 346616,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 57942,
+      "src": 432086,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 60655,
+      "src": 230592,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 61230,
+      "src": 458998,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 62404,
+      "src": 180385,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 63087,
+      "src": 381926,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 65558,
+      "src": 179380,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 65982,
+      "src": 248281,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 67774,
+      "src": 433195,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 68261,
+      "src": 182867,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 68586,
+      "src": 299600,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 72562,
+      "src": 395535,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 73296,
+      "src": 322043,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 76907,
+      "src": 197390,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 77497,
+      "src": 363289,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 79023,
+      "src": 277732,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 80669,
+      "src": 214521,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 87272,
+      "src": 128121,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 88480,
+      "src": 148457,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 89368,
+      "src": 337345,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 93406,
+      "src": 334446,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 94158,
+      "src": 350054,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 94679,
+      "src": 278893,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 98324,
+      "src": 451830,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 98640,
+      "src": 215657,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 101430,
+      "src": 152871,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 104231,
+      "src": 372543,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 105473,
+      "src": 386948,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 106620,
+      "src": 436633,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 106917,
+      "src": 186545,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 107534,
+      "src": 428619,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 108041,
+      "src": 225015,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 111813,
+      "src": 199069,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 0,
+      "future_reference": true
+    },
+    {
+      "dest": 115422,
+      "src": 322653,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 117698,
+      "src": 34544,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 1,
+      "future_reference": false
+    },
+    {
+      "dest": 119262,
+      "src": 463273,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 119602,
+      "src": 420867,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 122115,
+      "src": 397965,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 123084,
+      "src": 261595,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 123693,
+      "src": 69615,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 1,
+      "future_reference": false
+    },
+    {
+      "dest": 124339,
+      "src": 26327,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 1,
+      "future_reference": false
+    },
+    {
+      "dest": 125162,
+      "src": 229392,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 126112,
+      "src": 228447,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 129141,
+      "src": 223942,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 131478,
+      "src": 469384,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 132545,
+      "src": 2186,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 1,
+      "future_reference": false
+    },
+    {
+      "dest": 134522,
+      "src": 111621,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 1,
+      "future_reference": false
+    },
+    {
+      "dest": 134948,
+      "src": 276890,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 135518,
+      "src": 331322,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 135905,
+      "src": 362123,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 136655,
+      "src": 368730,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 136923,
+      "src": 476343,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 139247,
+      "src": 437987,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 140366,
+      "src": 244817,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 141753,
+      "src": 428955,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 142610,
+      "src": 307230,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 145025,
+      "src": 66345,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 1,
+      "future_reference": false
+    },
+    {
+      "dest": 145547,
+      "src": 475366,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 146404,
+      "src": 294230,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 147096,
+      "src": 254077,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 153092,
+      "src": 345503,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 155440,
+      "src": 392112,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 159064,
+      "src": 78807,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 1,
+      "future_reference": false
+    },
+    {
+      "dest": 161703,
+      "src": 301808,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 163675,
+      "src": 383321,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 166546,
+      "src": 366140,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 170005,
+      "src": 435885,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 171813,
+      "src": 33809,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 1,
+      "future_reference": false
+    },
+    {
+      "dest": 172380,
+      "src": 249449,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 173563,
+      "src": 280016,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 173851,
+      "src": 250943,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 176700,
+      "src": 238375,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 178677,
+      "src": 454035,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 180278,
+      "src": 52326,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 1,
+      "future_reference": false
+    },
+    {
+      "dest": 181929,
+      "src": 324995,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 182449,
+      "src": 293039,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 184952,
+      "src": 37326,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 1,
+      "future_reference": false
+    },
+    {
+      "dest": 186084,
+      "src": 246750,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 188698,
+      "src": 14968,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 1,
+      "future_reference": false
+    },
+    {
+      "dest": 190543,
+      "src": 236561,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 191006,
+      "src": 2096,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 1,
+      "future_reference": false
+    },
+    {
+      "dest": 193556,
+      "src": 328761,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 194281,
+      "src": 26888,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 1,
+      "future_reference": false
+    },
+    {
+      "dest": 195777,
+      "src": 60596,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 1,
+      "future_reference": false
+    },
+    {
+      "dest": 199186,
+      "src": 105229,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 1,
+      "future_reference": false
+    },
+    {
+      "dest": 201504,
+      "src": 252887,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 202282,
+      "src": 34670,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 1,
+      "future_reference": false
+    },
+    {
+      "dest": 203555,
+      "src": 456701,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 204684,
+      "src": 389467,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 206798,
+      "src": 275718,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 1,
+      "future_reference": true
+    },
+    {
+      "dest": 212242,
+      "src": 331805,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 2,
+      "future_reference": true
+    },
+    {
+      "dest": 212794,
+      "src": 455061,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 2,
+      "future_reference": true
+    },
+    {
+      "dest": 214546,
+      "src": 208516,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 2,
+      "future_reference": false
+    },
+    {
+      "dest": 216051,
+      "src": 59312,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 2,
+      "future_reference": false
+    },
+    {
+      "dest": 218877,
+      "src": 322610,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 2,
+      "future_reference": true
+    },
+    {
+      "dest": 219510,
+      "src": 45529,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 2,
+      "future_reference": false
+    },
+    {
+      "dest": 222113,
+      "src": 316149,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 2,
+      "future_reference": true
+    },
+    {
+      "dest": 223178,
+      "src": 141423,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 2,
+      "future_reference": false
+    },
+    {
+      "dest": 224162,
+      "src": 198599,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 2,
+      "future_reference": false
+    },
+    {
+      "dest": 228116,
+      "src": 107121,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 2,
+      "future_reference": false
+    },
+    {
+      "dest": 229564,
+      "src": 345737,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 2,
+      "future_reference": true
+    },
+    {
+      "dest": 230490,
+      "src": 44664,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 2,
+      "future_reference": false
+    },
+    {
+      "dest": 232674,
+      "src": 459627,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 2,
+      "future_reference": true
+    },
+    {
+      "dest": 236719,
+      "src": 469775,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 2,
+      "future_reference": true
+    },
+    {
+      "dest": 238300,
+      "src": 53862,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 2,
+      "future_reference": false
+    },
+    {
+      "dest": 238661,
+      "src": 441899,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 2,
+      "future_reference": true
+    },
+    {
+      "dest": 239755,
+      "src": 22763,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 2,
+      "future_reference": false
+    },
+    {
+      "dest": 240839,
+      "src": 413490,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 2,
+      "future_reference": true
+    },
+    {
+      "dest": 243095,
+      "src": 62295,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 2,
+      "future_reference": false
+    },
+    {
+      "dest": 243409,
+      "src": 154683,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 2,
+      "future_reference": false
+    },
+    {
+      "dest": 244173,
+      "src": 377611,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 2,
+      "future_reference": true
+    },
+    {
+      "dest": 244607,
+      "src": 204285,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 2,
+      "future_reference": false
+    },
+    {
+      "dest": 245145,
+      "src": 368210,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 2,
+      "future_reference": true
+    },
+    {
+      "dest": 246143,
+      "src": 153001,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 2,
+      "future_reference": false
+    },
+    {
+      "dest": 248383,
+      "src": 294239,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 2,
+      "future_reference": true
+    },
+    {
+      "dest": 250754,
+      "src": 206658,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 2,
+      "future_reference": false
+    },
+    {
+      "dest": 251059,
+      "src": 359092,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 2,
+      "future_reference": true
+    },
+    {
+      "dest": 252356,
+      "src": 163573,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 2,
+      "future_reference": false
+    },
+    {
+      "dest": 252852,
+      "src": 367564,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 2,
+      "future_reference": true
+    },
+    {
+      "dest": 253529,
+      "src": 336347,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 2,
+      "future_reference": true
+    },
+    {
+      "dest": 259774,
+      "src": 448745,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 2,
+      "future_reference": true
+    },
+    {
+      "dest": 260276,
+      "src": 470361,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 2,
+      "future_reference": true
+    },
+    {
+      "dest": 261369,
+      "src": 58113,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 2,
+      "future_reference": false
+    },
+    {
+      "dest": 262203,
+      "src": 412742,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 2,
+      "future_reference": true
+    },
+    {
+      "dest": 262617,
+      "src": 397014,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 2,
+      "future_reference": true
+    },
+    {
+      "dest": 264417,
+      "src": 67640,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 2,
+      "future_reference": false
+    },
+    {
+      "dest": 265639,
+      "src": 167003,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 2,
+      "future_reference": false
+    },
+    {
+      "dest": 266976,
+      "src": 351677,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 2,
+      "future_reference": true
+    },
+    {
+      "dest": 267727,
+      "src": 81437,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 2,
+      "future_reference": false
+    },
+    {
+      "dest": 268818,
+      "src": 475533,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 2,
+      "future_reference": true
+    },
+    {
+      "dest": 269235,
+      "src": 74848,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 2,
+      "future_reference": false
+    },
+    {
+      "dest": 271066,
+      "src": 439429,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 2,
+      "future_reference": true
+    },
+    {
+      "dest": 274433,
+      "src": 78735,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 2,
+      "future_reference": false
+    },
+    {
+      "dest": 274948,
+      "src": 414860,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 2,
+      "future_reference": true
+    },
+    {
+      "dest": 275438,
+      "src": 25125,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 2,
+      "future_reference": false
+    },
+    {
+      "dest": 279221,
+      "src": 305615,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 2,
+      "future_reference": true
+    },
+    {
+      "dest": 279861,
+      "src": 163789,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 2,
+      "future_reference": false
+    },
+    {
+      "dest": 281498,
+      "src": 360263,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 2,
+      "future_reference": true
+    },
+    {
+      "dest": 282686,
+      "src": 371048,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 2,
+      "future_reference": true
+    },
+    {
+      "dest": 283830,
+      "src": 172902,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 2,
+      "future_reference": false
+    },
+    {
+      "dest": 285634,
+      "src": 360842,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 2,
+      "future_reference": true
+    },
+    {
+      "dest": 288052,
+      "src": 1340,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 2,
+      "future_reference": false
+    },
+    {
+      "dest": 289575,
+      "src": 329913,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 2,
+      "future_reference": true
+    },
+    {
+      "dest": 290022,
+      "src": 41806,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 2,
+      "future_reference": false
+    },
+    {
+      "dest": 292983,
+      "src": 381377,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 3,
+      "future_reference": true
+    },
+    {
+      "dest": 294347,
+      "src": 58095,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 295284,
+      "src": 139937,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 295929,
+      "src": 248240,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 297964,
+      "src": 257055,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 299251,
+      "src": 282768,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 300948,
+      "src": 431815,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 3,
+      "future_reference": true
+    },
+    {
+      "dest": 303427,
+      "src": 217703,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 304629,
+      "src": 478829,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 3,
+      "future_reference": true
+    },
+    {
+      "dest": 306948,
+      "src": 224682,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 309377,
+      "src": 481161,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 3,
+      "future_reference": true
+    },
+    {
+      "dest": 311714,
+      "src": 140846,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 312308,
+      "src": 118230,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 314229,
+      "src": 114806,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 319632,
+      "src": 51795,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 320576,
+      "src": 239934,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 320936,
+      "src": 410723,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 3,
+      "future_reference": true
+    },
+    {
+      "dest": 323007,
+      "src": 200739,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 328449,
+      "src": 59350,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 330311,
+      "src": 47076,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 335928,
+      "src": 451939,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 3,
+      "future_reference": true
+    },
+    {
+      "dest": 337701,
+      "src": 13026,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 338018,
+      "src": 150911,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 341778,
+      "src": 7648,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 342907,
+      "src": 13275,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 347228,
+      "src": 393829,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 3,
+      "future_reference": true
+    },
+    {
+      "dest": 348261,
+      "src": 161515,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 348792,
+      "src": 29079,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 349163,
+      "src": 437679,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 3,
+      "future_reference": true
+    },
+    {
+      "dest": 352902,
+      "src": 77730,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 357197,
+      "src": 264735,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 357779,
+      "src": 402187,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 3,
+      "future_reference": true
+    },
+    {
+      "dest": 358561,
+      "src": 441539,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 3,
+      "future_reference": true
+    },
+    {
+      "dest": 359452,
+      "src": 288626,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 359711,
+      "src": 149394,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 360436,
+      "src": 195102,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 360778,
+      "src": 172457,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 363821,
+      "src": 210707,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 364717,
+      "src": 284507,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 365194,
+      "src": 267149,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 365516,
+      "src": 157424,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 367422,
+      "src": 288333,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 372443,
+      "src": 176226,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 373303,
+      "src": 403774,
+      "length": 250,
+      "source_segment": 4,
+      "destination_segment": 3,
+      "future_reference": true
+    },
+    {
+      "dest": 375372,
+      "src": 140211,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 376081,
+      "src": 9885,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 3,
+      "future_reference": false
+    },
+    {
+      "dest": 377994,
+      "src": 60271,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 379121,
+      "src": 58173,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 380666,
+      "src": 205023,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 382982,
+      "src": 354081,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 384041,
+      "src": 112585,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 384448,
+      "src": 99090,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 385244,
+      "src": 135224,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 387002,
+      "src": 329854,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 387632,
+      "src": 170790,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 388388,
+      "src": 334323,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 388759,
+      "src": 355556,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 389284,
+      "src": 111086,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 390525,
+      "src": 109579,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 391237,
+      "src": 330414,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 392718,
+      "src": 259694,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 393516,
+      "src": 279709,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 394185,
+      "src": 332459,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 397243,
+      "src": 304519,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 402327,
+      "src": 90785,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 403975,
+      "src": 125082,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 404933,
+      "src": 371156,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 406921,
+      "src": 170569,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 408410,
+      "src": 168262,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 410263,
+      "src": 12784,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 411697,
+      "src": 196681,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 413311,
+      "src": 229327,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 413693,
+      "src": 79669,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 413982,
+      "src": 104095,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 416053,
+      "src": 253052,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 416822,
+      "src": 211777,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 417090,
+      "src": 363705,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 418601,
+      "src": 271772,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 420548,
+      "src": 115125,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 423441,
+      "src": 27219,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 425084,
+      "src": 194180,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 427912,
+      "src": 107340,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 429048,
+      "src": 260382,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 431468,
+      "src": 38636,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 433182,
+      "src": 25143,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 435814,
+      "src": 369165,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 436937,
+      "src": 82273,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 437291,
+      "src": 206576,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 438129,
+      "src": 80447,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 438537,
+      "src": 310935,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 439733,
+      "src": 71725,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 441543,
+      "src": 206414,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 443987,
+      "src": 17306,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 446713,
+      "src": 23096,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 448621,
+      "src": 252950,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 449470,
+      "src": 358643,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 451216,
+      "src": 336617,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 454182,
+      "src": 149987,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 455319,
+      "src": 195455,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 456058,
+      "src": 41713,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 458426,
+      "src": 81081,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 463008,
+      "src": 168902,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 464486,
+      "src": 96157,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 465716,
+      "src": 241719,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 468323,
+      "src": 271821,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 471425,
+      "src": 156479,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 473858,
+      "src": 125087,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 474626,
+      "src": 234813,
+      "length": 250,
+      "source_segment": 2,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 479148,
+      "src": 138446,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 479842,
+      "src": 77109,
+      "length": 250,
+      "source_segment": 0,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 482101,
+      "src": 357813,
+      "length": 250,
+      "source_segment": 3,
+      "destination_segment": 4,
+      "future_reference": false
+    },
+    {
+      "dest": 484352,
+      "src": 122380,
+      "length": 250,
+      "source_segment": 1,
+      "destination_segment": 4,
+      "future_reference": false
+    }
+  ],
+  "flip_target_map": {},
+  "n_flipped": 0,
+  "burst_rows": 72500,
+  "actual_modified_fraction": 0.1495607041111659,
+  "reference_access": "offline labelled clean archive, including future rows; no detector/model access",
+  "warmup_attack_free_rows": 1000,
+  "replacement_not_insertion": true,
+  "base_key": "radar",
+  "level": "moderate",
+  "clean_sha256": "41496efbf49bf593a2f280c84b5d45344a19baf3884a894fdb011bba588c5776",
+  "path": "data/poisoned/RADAR/splice/moderate/capture/attack_seed_1/stream.parquet",
+  "truth_path": "data/evaluation_truth/RADAR/splice/moderate/capture/attack_seed_1/truth.parquet"
+}

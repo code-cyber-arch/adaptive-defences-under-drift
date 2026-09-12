@@ -1,0 +1,38 @@
+{
+  "status": "published_feature_values_matched",
+  "checked_utc": "2026-09-12T00:31:15.978591+00:00",
+  "rows": 484753,
+  "predictors": 68,
+  "published_release_doi": "10.5281/zenodo.14564541",
+  "archive_sha256": "12870e0a5026b95915ed66f18073b5d9d485de3cd72cb90213269e2824ed4a94",
+  "published_csv_sha256": {
+    "dataset-drift-fasttext.csv": "a8b5659f21ef423d2f03244460c9e84320290ed73842035d436836d11e6e1cf3",
+    "dataset-drift-all.csv": "5789dfab08481d279e68bea4443af1aa789f89620a3bc33197364d73a49779d5",
+    "dataset-drift-engineered.csv": "93a9826caf863c33fc7f9cb0b0e76cfcffade49875ecb167efff3f290c6e9d18"
+  },
+  "local_clean_sha256": "41496efbf49bf593a2f280c84b5d45344a19baf3884a894fdb011bba588c5776",
+  "compared_numeric_cells": 32963204,
+  "exact_numeric_cells": 32963204,
+  "maximum_absolute_numeric_difference": 0.0,
+  "comparison_atol": 1e-12,
+  "comparison_rtol": 1e-12,
+  "mapped_labels_match": true,
+  "upstream_code_executed": false,
+  "timestamp_in_predictors": false,
+  "source_is_assembled_lab_stream": true,
+  "upstream_frequency_feature": {
+    "local_feature": "f62",
+    "source_column": "process_vs_parent_freq_ratio",
+    "notebook_computation": "Whole-input-dataframe process and parent value_counts, mapped to each row; ratio uses parent count + 1.",
+    "online_reconstruction_performed": false,
+    "implication": "Treat supplied feature vectors as offline inputs; causal raw-log feature availability is not established."
+  },
+  "fasttext_fit_code_in_release": false,
+  "inspection_script_sha256": "459e94ccdaf7d9e837aedfb984631089cf4b4ec851925af992bd1fe72029cdf2",
+  "remaining_limits": [
+    "FastText training corpus and timing are not established.",
+    "The feature frequency statistic was supplied, not rebuilt from past-only observations.",
+    "Timestamp amendments in the published script depend on class changes; timestamps are excluded from this experiment.",
+    "One assembled lab stream does not establish independent deployment generalisation."
+  ]
+}

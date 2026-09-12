@@ -1,0 +1,175 @@
+{
+  "remote_commit": "c611fa1860f03bd8c4e72c4ac7754c276b430c85",
+  "remote_branch": "main",
+  "reported_runs": 1464,
+  "reported_verification_checks": 490362,
+  "committed_summary_files": 1032,
+  "committed_summary_hash_mismatches": [],
+  "missing_recorded_summary_files": 432,
+  "all_missing_summaries_are_instance": true,
+  "raw_predictions_committed": 0,
+  "raw_events_committed": 0,
+  "controller_comparison": [
+    {
+      "variant": "alarm",
+      "seed": 7,
+      "q_values_equal": false,
+      "greedy_actions_equal": true,
+      "old_actions": {
+        "0": 1,
+        "1": 1
+      },
+      "new_actions": {
+        "0": 1,
+        "1": 1
+      }
+    },
+    {
+      "variant": "alarm",
+      "seed": 17,
+      "q_values_equal": false,
+      "greedy_actions_equal": true,
+      "old_actions": {
+        "0": 0,
+        "1": 0
+      },
+      "new_actions": {
+        "0": 0,
+        "1": 0
+      }
+    },
+    {
+      "variant": "alarm",
+      "seed": 27,
+      "q_values_equal": false,
+      "greedy_actions_equal": true,
+      "old_actions": {
+        "0": 1,
+        "1": 1
+      },
+      "new_actions": {
+        "0": 1,
+        "1": 1
+      }
+    },
+    {
+      "variant": "alarm_persistence",
+      "seed": 7,
+      "q_values_equal": false,
+      "greedy_actions_equal": true,
+      "old_actions": {
+        "00": 1,
+        "01": 0,
+        "10": 1,
+        "11": 0
+      },
+      "new_actions": {
+        "00": 1,
+        "01": 0,
+        "10": 1,
+        "11": 0
+      }
+    },
+    {
+      "variant": "alarm_persistence",
+      "seed": 17,
+      "q_values_equal": false,
+      "greedy_actions_equal": true,
+      "old_actions": {
+        "00": 0,
+        "01": 0,
+        "10": 1,
+        "11": 0
+      },
+      "new_actions": {
+        "00": 0,
+        "01": 0,
+        "10": 1,
+        "11": 0
+      }
+    },
+    {
+      "variant": "alarm_persistence",
+      "seed": 27,
+      "q_values_equal": false,
+      "greedy_actions_equal": true,
+      "old_actions": {
+        "00": 1,
+        "01": 1,
+        "10": 1,
+        "11": 0
+      },
+      "new_actions": {
+        "00": 1,
+        "01": 1,
+        "10": 1,
+        "11": 0
+      }
+    }
+  ],
+  "metrics_sha256_matches": true,
+  "metrics_rows": 1464,
+  "metrics_rows_by_dataset": {
+    "RBF": 504,
+    "SEA": 504,
+    "radar": 456
+  },
+  "paired_differences_sha256_matches": true,
+  "paired_rows": 549,
+  "rl_accuracy_vs_confirmed": [
+    {
+      "dataset": "SEA",
+      "controller": "rl",
+      "condition_count": 7,
+      "mean_accuracy_difference": -0.45715898236827757,
+      "min": -0.7986834824832459,
+      "max": 0.0009454496149937283,
+      "better": 1
+    },
+    {
+      "dataset": "SEA",
+      "controller": "rl_alarm",
+      "condition_count": 7,
+      "mean_accuracy_difference": -0.9007748921657536,
+      "min": -1.3050308890415623,
+      "max": -0.5494052579036457,
+      "better": 0
+    },
+    {
+      "dataset": "RBF",
+      "controller": "rl",
+      "condition_count": 7,
+      "mean_accuracy_difference": -8.563997300611593,
+      "min": -10.915873702249213,
+      "max": -6.629954102879746,
+      "better": 0
+    },
+    {
+      "dataset": "RBF",
+      "controller": "rl_alarm",
+      "condition_count": 7,
+      "mean_accuracy_difference": -7.727703391296274,
+      "min": -10.508965601501878,
+      "max": -5.88268821646238,
+      "better": 0
+    },
+    {
+      "dataset": "RADAR",
+      "controller": "rl",
+      "condition_count": 7,
+      "mean_accuracy_difference": -0.5162560474525446,
+      "min": -4.223521941483021,
+      "max": 2.1248116328325497,
+      "better": 4
+    },
+    {
+      "dataset": "RADAR",
+      "controller": "rl_alarm",
+      "condition_count": 7,
+      "mean_accuracy_difference": -1.835919423831715,
+      "min": -5.630588928126286,
+      "max": 0.8762427222320198,
+      "better": 2
+    }
+  ]
+}

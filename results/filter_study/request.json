@@ -1,0 +1,89 @@
+{
+  "settings": {
+    "version": "upstream-filter-1.0",
+    "seed": 901,
+    "max_fit_rows": 60000,
+    "max_calibration_rows": 60000,
+    "legitimate_rejection_target": 0.05,
+    "radar_train_fraction": 0.5,
+    "radar_validation_end": 0.7,
+    "embargo_blocks": 1,
+    "detectors": [
+      "adwin",
+      "hddm_w",
+      "hellinger",
+      "d3_oof"
+    ],
+    "response": "confirmed",
+    "screened": true,
+    "classifier": {
+      "max_iter": 100,
+      "max_leaf_nodes": 15,
+      "learning_rate": 0.1,
+      "l2_regularization": 1.0,
+      "early_stopping": false
+    }
+  },
+  "inputs": {
+    "training": {
+      "root": "results/training",
+      "request_sha256": "d3dae4741170a82e3f4591cf1268388cd04e36aa7721bbe74a8866d6e591f2fa",
+      "manifest_sha256": "8082ab428c2ea95c26701bcdfbce254d55798addd9dbd4387d7fdbeb32231d0c"
+    },
+    "validation": {
+      "root": "results/validation",
+      "request_sha256": "b5d1d5be0140adcb60822dd27bdd65546718c34130b82f6cf552b97b16f70de6",
+      "manifest_sha256": "8532c4c0e5599d9efbc615b6a31d31e2ebe012397a67304e92238c11a9e140c9"
+    },
+    "evaluation": {
+      "root": "results/evaluation",
+      "request_sha256": "7654fc61ac1de05ab7678551d151e0317a41e17ac6a5d63cff510cf8cc9ea62a",
+      "manifest_sha256": "fc38326bff053c96d58ca42b96b615c65baae59f3d11f1d776c8461669125177"
+    }
+  },
+  "environment": {
+    "python": "3.14.7",
+    "platform": "macOS-26.3.2-arm64-arm-64bit-Mach-O",
+    "packages": {
+      "river": "0.25.0",
+      "numpy": "2.4.6",
+      "pandas": "3.0.5",
+      "pyarrow": "25.0.0",
+      "scikit-learn": "1.9.0",
+      "matplotlib": "3.11.1"
+    }
+  },
+  "original_sources": {
+    "common/__init__.py": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+    "common/channels.py": "ac721119e5f3eb9b1c1154d22af4a7d6ca4f8c49e0899b567cc16c3f4b036098",
+    "common/generation.py": "df64ff01aa6566f40cd8e0152dcaea1d971dedd72acbc9ef42dda4e8ebe8e6d9",
+    "common/protocol.py": "d0f801a3e8597d59261b977dc758d2c9933e66a772d5344a2bba85387087a0b5",
+    "common/validation.py": "7060d47dbada3fde77afb8db61740a78487b7131ed347c260f9d45db5b6fea84",
+    "tools/compile_document.py": "f4d8f040c72db232d51f08affe14c448ba3baa31698582310a7503106861f40e",
+    "tools/run_experiment.py": "2205abb5a32accfdf23952f38f581067fc11fc1b69d95c97086f8b4bf3079c7b",
+    "tools/run_thesis.py": "5f5a41f896dd332aa0607f40ca076cfd074c8fc29f84bdffa8fc03c643980bbd",
+    "tools/verify_experiment.py": "e69a780b7b2578f04a14addb3a5fea6bbe46387487701b6ad0970e793097697f",
+    "00_streams/build.py": "f9e2461504d083515d685f44f8e8ef3335d13cd9df44f9ffda9c9217b413230d",
+    "01_attacks/interventions.py": "1683af3503710331335cb18eb7ddde5c31673f9b457391e9bcdbc40a9027f2a4",
+    "01_attacks/prepare.py": "1589397ba451cc97e9b7a347c69c2f7dd7474f2fb2a678649adc6c000e89d031",
+    "02_detectors/detectors.py": "533b6b615d7dc20f3bb998ea7b795a963adcb1d79cb274caa811bf107dfc5a52",
+    "02_detectors/monitors.py": "dd6855b6547403681f51a96dc54167c98d05bae76dbfe44ad5ea8f85d4d438f7",
+    "03_policies/gate.py": "91120520d1383288c617d1ce5fdcfddbcb0a2a8f4bee9c288b5a2da232c0b578",
+    "04_rl_training/controller.py": "663d92331b5dc222b3f2a740cd4abea9ceca74c2f2a59247bc234cacd6ff7c7d",
+    "04_rl_training/train.py": "b43b4e1969c2da07e3d0818cab78d3dd92be3cf77a0c1703a732417f93fe3841",
+    "05_experiment/engine.py": "35569e0484cf4438f12cc3cbf0ef3160519aaacd5c20e9a7f91d648648f46574",
+    "05_experiment/run_grid.py": "1634b19e3d47f2cddca9b6afeda56239e05f4aaac4c91b8aca9f492a1437d7b1",
+    "06_analysis/analyse.py": "b474dc59e842f63a34d1f378fdc87c8df06b98c9e062bec1647b4c191d4788c9",
+    "06_analysis/figures.py": "058e270de55b4d1684e1d5c1989a6c5dc29d42e8593ed80c5599ab9061c976ca",
+    "07_documentation/build.py": "6997c1c75a0a6dad5e003c4bd17fbfafe4987db64f1380f8f920ff5f7389ccaf",
+    "requirements.txt": "17a8e59c2a8fb3e384ac852c4a229207f9ec6ae2c3f31163a3bf170970aeecd7",
+    "requirements.lock.txt": "26bce125f3482cbd12a0b3c7f138cdd87217fdd7ce0bb7181c786328968b7e30"
+  },
+  "extension_sources": {
+    "run.py": "c113bf223c8b2b7f5ae025bee620dad8ac600fc7d38d41b01028184a4679722a",
+    "separability.py": "782395cff50cd496fb5277cbcdea0f47fe97f176200952e993dac67a13b58b46",
+    "protocol.py": "6ab100934e0a37bbfda9a6b44d73ccb028be4914af0c26c95ad21312e9db438e",
+    "engine.py": "79d49cc938e5f25251324142cd23411e5c79fbbbe7f38e93300feaecfe7dc3cf",
+    "report.py": "81fbfada9485ac4e3f6355b7b2233cb600e810efd8d0cbcccded283b2070bae1"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "stream": "SEA_A",
+  "base_seed": 2,
+  "rows": 250000,
+  "n_features": 3,
+  "classes": [
+    0,
+    1
+  ],
+  "benign_class": null,
+  "kind": "rapid_linear_mixture",
+  "transition_intervals": [
+    [
+      61750,
+      63250
+    ],
+    [
+      124250,
+      125750
+    ],
+    [
+      186750,
+      188250
+    ]
+  ],
+  "nominal_centers": [
+    62500,
+    125000,
+    187500
+  ],
+  "width": 1500,
+  "event_reference": "global-index scheduled mixture intervals",
+  "supports_event_metrics": true,
+  "segment_boundaries": [
+    62500,
+    125000,
+    187500
+  ],
+  "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+  "feature_lineage": {
+    "f0": {
+      "source_column": "generator_feature_0",
+      "source": "River SEA"
+    },
+    "f1": {
+      "source_column": "generator_feature_1",
+      "source": "River SEA"
+    },
+    "f2": {
+      "source_column": "generator_feature_2",
+      "source": "River SEA"
+    }
+  },
+  "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+  "preprocessing": "none",
+  "warmup_rows": 1000,
+  "key": "SEA_A__base_s2__instance__moderate__a2",
+  "sha256": "1928d59930652c05939c31d46a9819aa8581bb9ab270157d571fba2aebfc13b0",
+  "truth_sha256": "8aee9dfdf3e6cbe02bea63a7864d50d89eac8e8d6caca18a5a26659c07d2799e",
+  "class_counts": {
+    "1": 157323,
+    "0": 92677
+  },
+  "rng_seed": 3240025938,
+  "attack_seed": 2,
+  "mode": "instance",
+  "level_value": 0.15,
+  "burst_starts": [],
+  "burst_len": 250,
+  "burst_colocated": [],
+  "splice_sources": [],
+  "flip_target_map": {
+    "0": 1,
+    "1": 0
+  },
+  "n_flipped": 37500,
+  "burst_rows": 0,
+  "actual_modified_fraction": 0.15,
+  "reference_access": "offline labelled clean archive, including future rows; no detector/model access",
+  "warmup_attack_free_rows": 1000,
+  "replacement_not_insertion": true,
+  "base_key": "SEA_A__base_s2",
+  "level": "moderate",
+  "clean_sha256": "c2c8ec3baa89ec87f7a7c3c723c5b3e34a35bbbacffe49bc368b6f478790e405",
+  "path": "data/poisoned/SEA/instance/moderate/base_seed_2/attack_seed_2/stream.parquet",
+  "truth_path": "data/evaluation_truth/SEA/instance/moderate/base_seed_2/attack_seed_2/truth.parquet"
+}

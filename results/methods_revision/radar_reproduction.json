@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "scope": "One complete RADAR severe label-poisoning assignment; no-reset original engine versus saved new extension control, and confirmed-reset extension engine versus saved original Mac filter-study reference. Exact comparison excludes timing fields only.",
+  "records": [
+    {
+      "condition": "radar__instance__severe__a1",
+      "policy": "none",
+      "rows": 484753,
+      "saved_trace_identical": true,
+      "source_predictions_sha256": "98c5b4137484470ccdb8521adeedcfc59b3d220d6bd81aa62fcc572b96583d3e",
+      "source_events_sha256": "13ba4fa4344f0f776ead65fbc98ca26d8d24f4e6e1c17581f1565798f0058596",
+      "engine": "05_experiment/engine.py",
+      "seconds": 359.1293653749999
+    },
+    {
+      "condition": "radar__instance__severe__a1",
+      "policy": "confirmed",
+      "rows": 484753,
+      "saved_trace_identical": true,
+      "source_predictions_sha256": "8a6999a79301fb29f2dbd49b933562985b2abeefabc79b015ea39fc593b75bb2",
+      "source_events_sha256": "a70dd23a939f7ae53a3154bef6f422f04ac03e5cdecc98258bb2a689f8fac2fd",
+      "engine": "extensions/filter_study/engine.py",
+      "seconds": 104.30179887500071
+    }
+  ],
+  "environment": {
+    "python": "3.14.7",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "packages": {
+      "river": "0.25.0",
+      "numpy": "2.4.6",
+      "pandas": "3.0.5",
+      "pyarrow": "25.0.0",
+      "scikit-learn": "1.9.0",
+      "matplotlib": "3.11.1"
+    }
+  },
+  "script_sha256": "c4ccdf19ce4146ccbdba84611511298e009d8f4b9cc7735727ecdb9c6a1e61b1"
+}

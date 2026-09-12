@@ -1,0 +1,15 @@
+# RADAR release provenance check
+
+Checked 12 September 2026 against the [archived v0.0.1-beta release](https://zenodo.org/records/14564541), associated with the [published RADAR paper](https://link.springer.com/article/10.1186/s42400-025-00435-9). The upstream GitHub URL returned 404 during this audit; the Zenodo snapshot remained available.
+
+The local clean RADAR bank matched all 484,753 labels after the declared class mapping and all 32,963,204 numeric predictor values exactly. This verifies the identity of the supplied features, including the actual 47 FastText-derived and 21 engineered predictors. It does not demonstrate that these supplied features could all be produced causally at deployment time. The local 68-predictor count is supported by the released CSV schemas; the paper's broader feature-count description should not replace this executed schema.
+
+The retained local predictor `f62` is `process_vs_parent_freq_ratio`. The published engineering notebook computes process and parent frequencies over its input dataframe, then maps them to each row. This experiment consumed the supplied statistic; it did not reconstruct a past-only version. A separate reconstruction from the complete raw stream agreed with every supplied ratio within 0.0000005 absolute error. FastText fitting code and its training corpus were not included in this release. Both facts limit claims about end-to-end temporal leakage control.
+
+The release also assembles laboratory logs and includes a script that amends timestamps, using class changes in its timing rule. The experiment excludes timestamp and annotation columns from predictors. A monotonically ordered supplied timestamp consequently establishes order within an assembled stream, not an untouched real deployment timeline.
+
+The released raw table has construction-phase boundaries at 112,777, 208,749, 288,730 and 377,601. The executed splice protocol used its frozen estimated positional boundaries at 113,656, 210,375, 290,979 and 376,766. These estimates are not the released construction-phase boundaries and are not claimed to identify pure concepts. The newly recovered construction annotations were not used retrospectively to change attacks or reported event metrics. They also do not establish natural-drift event ground truth in an operational deployment. `raw_frequency_check.json` retains this distinction and the raw-label alignment check.
+
+The research inputs and active experiment were left unchanged. This finding belongs in Methods and the interpretation limits. A future claim about fully causal raw-telemetry deployment would need a separately specified feature reconstruction and independent evaluation; it is not established by the current runs.
+
+`manifest.json` identifies the upstream archive and extracted source files. `provenance_check.json` records the exact numeric comparison and hashes. The inspection code is [check_radar_provenance.py](../../../../extensions/narrative/check_radar_provenance.py). No upstream script was executed.

@@ -1,0 +1,574 @@
+{
+  "created_utc": "2026-09-08T10:35:24.155689+00:00",
+  "script_sha256": "77e76a50e47a8c48ba04cc8eeb7f660c8fcf7eab2494764c14f27df109953505",
+  "reporting_sources": {
+    "detector_heatmaps.py": "77e76a50e47a8c48ba04cc8eeb7f660c8fcf7eab2494764c14f27df109953505",
+    "compare_detectors.py": "88fa0d233ab7cd02514d1fdb5e9060987b220519d937f8261c446a09e9e4af04",
+    "fixed_responses.py": "73cd39e106406299c923702439fca3830ef278a9760a995347cc950ed3e59842",
+    "compact.py": "288b5ed9519f61a21ba91380dde6d81a700091ff5c5f2fd5fa2f6c3178e8faf0"
+  },
+  "request_sha256": "19887d8ebf106ec6cd24c63f13a19d75995edac69d17d23a5facb7468ebb48ac",
+  "inputs": {
+    "results/evaluation/06_analysis/presentation/detector_comparison/plot_values.csv": "6de463a6f2343f054bdacf440c7eac379c1f1c464f5bb816903f319845e473d8",
+    "results/evaluation/06_analysis/presentation/detector_comparison/manifest.json": "5f88989dc09c6b5fef1f8d550ab894eed5e876adc0da813d9edb9bffd29f35a9"
+  },
+  "entries": [
+    {
+      "dataset": "SEA",
+      "profile": "immediate_unscreened",
+      "pdf": "SEA/SEA_immediate_unscreened_heatmap.pdf",
+      "png": "previews/SEA/SEA_immediate_unscreened_heatmap.png",
+      "plots": 4,
+      "layout": [
+        2,
+        2
+      ],
+      "cells": 112,
+      "width_mm": 170,
+      "height_mm": 128,
+      "colour_limits": {
+        "accuracy": [
+          83.0,
+          93.0
+        ],
+        "macro_f1": [
+          82.0,
+          92.0
+        ],
+        "macro_recall": [
+          82.0,
+          92.0
+        ],
+        "roc_auc": [
+          0.88,
+          0.9400000000000001
+        ]
+      },
+      "metrics": [
+        "accuracy",
+        "macro_f1",
+        "macro_recall",
+        "roc_auc"
+      ],
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ]
+    },
+    {
+      "dataset": "SEA",
+      "profile": "confirmed_unscreened",
+      "pdf": "SEA/SEA_confirmed_unscreened_heatmap.pdf",
+      "png": "previews/SEA/SEA_confirmed_unscreened_heatmap.png",
+      "plots": 4,
+      "layout": [
+        2,
+        2
+      ],
+      "cells": 112,
+      "width_mm": 170,
+      "height_mm": 128,
+      "colour_limits": {
+        "accuracy": [
+          83.0,
+          93.0
+        ],
+        "macro_f1": [
+          82.0,
+          92.0
+        ],
+        "macro_recall": [
+          82.0,
+          92.0
+        ],
+        "roc_auc": [
+          0.88,
+          0.9400000000000001
+        ]
+      },
+      "metrics": [
+        "accuracy",
+        "macro_f1",
+        "macro_recall",
+        "roc_auc"
+      ],
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ]
+    },
+    {
+      "dataset": "SEA",
+      "profile": "immediate_screened",
+      "pdf": "SEA/SEA_immediate_screened_heatmap.pdf",
+      "png": "previews/SEA/SEA_immediate_screened_heatmap.png",
+      "plots": 4,
+      "layout": [
+        2,
+        2
+      ],
+      "cells": 112,
+      "width_mm": 170,
+      "height_mm": 128,
+      "colour_limits": {
+        "accuracy": [
+          83.0,
+          93.0
+        ],
+        "macro_f1": [
+          82.0,
+          92.0
+        ],
+        "macro_recall": [
+          82.0,
+          92.0
+        ],
+        "roc_auc": [
+          0.88,
+          0.9400000000000001
+        ]
+      },
+      "metrics": [
+        "accuracy",
+        "macro_f1",
+        "macro_recall",
+        "roc_auc"
+      ],
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ]
+    },
+    {
+      "dataset": "SEA",
+      "profile": "confirmed_screened",
+      "pdf": "SEA/SEA_confirmed_screened_heatmap.pdf",
+      "png": "previews/SEA/SEA_confirmed_screened_heatmap.png",
+      "plots": 4,
+      "layout": [
+        2,
+        2
+      ],
+      "cells": 112,
+      "width_mm": 170,
+      "height_mm": 128,
+      "colour_limits": {
+        "accuracy": [
+          83.0,
+          93.0
+        ],
+        "macro_f1": [
+          82.0,
+          92.0
+        ],
+        "macro_recall": [
+          82.0,
+          92.0
+        ],
+        "roc_auc": [
+          0.88,
+          0.9400000000000001
+        ]
+      },
+      "metrics": [
+        "accuracy",
+        "macro_f1",
+        "macro_recall",
+        "roc_auc"
+      ],
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ]
+    },
+    {
+      "dataset": "RBF",
+      "profile": "immediate_unscreened",
+      "pdf": "RBF/RBF_immediate_unscreened_heatmap.pdf",
+      "png": "previews/RBF/RBF_immediate_unscreened_heatmap.png",
+      "plots": 4,
+      "layout": [
+        2,
+        2
+      ],
+      "cells": 112,
+      "width_mm": 170,
+      "height_mm": 128,
+      "colour_limits": {
+        "accuracy": [
+          49.0,
+          69.0
+        ],
+        "macro_f1": [
+          48.0,
+          69.0
+        ],
+        "macro_recall": [
+          48.0,
+          68.0
+        ],
+        "roc_auc": [
+          0.74,
+          0.87
+        ]
+      },
+      "metrics": [
+        "accuracy",
+        "macro_f1",
+        "macro_recall",
+        "roc_auc"
+      ],
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ]
+    },
+    {
+      "dataset": "RBF",
+      "profile": "confirmed_unscreened",
+      "pdf": "RBF/RBF_confirmed_unscreened_heatmap.pdf",
+      "png": "previews/RBF/RBF_confirmed_unscreened_heatmap.png",
+      "plots": 4,
+      "layout": [
+        2,
+        2
+      ],
+      "cells": 112,
+      "width_mm": 170,
+      "height_mm": 128,
+      "colour_limits": {
+        "accuracy": [
+          49.0,
+          69.0
+        ],
+        "macro_f1": [
+          48.0,
+          69.0
+        ],
+        "macro_recall": [
+          48.0,
+          68.0
+        ],
+        "roc_auc": [
+          0.74,
+          0.87
+        ]
+      },
+      "metrics": [
+        "accuracy",
+        "macro_f1",
+        "macro_recall",
+        "roc_auc"
+      ],
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ]
+    },
+    {
+      "dataset": "RBF",
+      "profile": "immediate_screened",
+      "pdf": "RBF/RBF_immediate_screened_heatmap.pdf",
+      "png": "previews/RBF/RBF_immediate_screened_heatmap.png",
+      "plots": 4,
+      "layout": [
+        2,
+        2
+      ],
+      "cells": 112,
+      "width_mm": 170,
+      "height_mm": 128,
+      "colour_limits": {
+        "accuracy": [
+          49.0,
+          69.0
+        ],
+        "macro_f1": [
+          48.0,
+          69.0
+        ],
+        "macro_recall": [
+          48.0,
+          68.0
+        ],
+        "roc_auc": [
+          0.74,
+          0.87
+        ]
+      },
+      "metrics": [
+        "accuracy",
+        "macro_f1",
+        "macro_recall",
+        "roc_auc"
+      ],
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ]
+    },
+    {
+      "dataset": "RBF",
+      "profile": "confirmed_screened",
+      "pdf": "RBF/RBF_confirmed_screened_heatmap.pdf",
+      "png": "previews/RBF/RBF_confirmed_screened_heatmap.png",
+      "plots": 4,
+      "layout": [
+        2,
+        2
+      ],
+      "cells": 112,
+      "width_mm": 170,
+      "height_mm": 128,
+      "colour_limits": {
+        "accuracy": [
+          49.0,
+          69.0
+        ],
+        "macro_f1": [
+          48.0,
+          69.0
+        ],
+        "macro_recall": [
+          48.0,
+          68.0
+        ],
+        "roc_auc": [
+          0.74,
+          0.87
+        ]
+      },
+      "metrics": [
+        "accuracy",
+        "macro_f1",
+        "macro_recall",
+        "roc_auc"
+      ],
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ]
+    },
+    {
+      "dataset": "RADAR",
+      "profile": "immediate_unscreened",
+      "pdf": "RADAR/RADAR_immediate_unscreened_heatmap.pdf",
+      "png": "previews/RADAR/RADAR_immediate_unscreened_heatmap.png",
+      "plots": 4,
+      "layout": [
+        2,
+        2
+      ],
+      "cells": 112,
+      "width_mm": 170,
+      "height_mm": 128,
+      "colour_limits": {
+        "accuracy": [
+          59.0,
+          75.0
+        ],
+        "macro_f1": [
+          38.0,
+          70.0
+        ],
+        "macro_recall": [
+          37.0,
+          69.0
+        ],
+        "roc_auc": [
+          0.74,
+          0.92
+        ]
+      },
+      "metrics": [
+        "accuracy",
+        "macro_f1",
+        "macro_recall",
+        "roc_auc"
+      ],
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ]
+    },
+    {
+      "dataset": "RADAR",
+      "profile": "confirmed_unscreened",
+      "pdf": "RADAR/RADAR_confirmed_unscreened_heatmap.pdf",
+      "png": "previews/RADAR/RADAR_confirmed_unscreened_heatmap.png",
+      "plots": 4,
+      "layout": [
+        2,
+        2
+      ],
+      "cells": 112,
+      "width_mm": 170,
+      "height_mm": 128,
+      "colour_limits": {
+        "accuracy": [
+          59.0,
+          75.0
+        ],
+        "macro_f1": [
+          38.0,
+          70.0
+        ],
+        "macro_recall": [
+          37.0,
+          69.0
+        ],
+        "roc_auc": [
+          0.74,
+          0.92
+        ]
+      },
+      "metrics": [
+        "accuracy",
+        "macro_f1",
+        "macro_recall",
+        "roc_auc"
+      ],
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ]
+    },
+    {
+      "dataset": "RADAR",
+      "profile": "immediate_screened",
+      "pdf": "RADAR/RADAR_immediate_screened_heatmap.pdf",
+      "png": "previews/RADAR/RADAR_immediate_screened_heatmap.png",
+      "plots": 4,
+      "layout": [
+        2,
+        2
+      ],
+      "cells": 112,
+      "width_mm": 170,
+      "height_mm": 128,
+      "colour_limits": {
+        "accuracy": [
+          59.0,
+          75.0
+        ],
+        "macro_f1": [
+          38.0,
+          70.0
+        ],
+        "macro_recall": [
+          37.0,
+          69.0
+        ],
+        "roc_auc": [
+          0.74,
+          0.92
+        ]
+      },
+      "metrics": [
+        "accuracy",
+        "macro_f1",
+        "macro_recall",
+        "roc_auc"
+      ],
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ]
+    },
+    {
+      "dataset": "RADAR",
+      "profile": "confirmed_screened",
+      "pdf": "RADAR/RADAR_confirmed_screened_heatmap.pdf",
+      "png": "previews/RADAR/RADAR_confirmed_screened_heatmap.png",
+      "plots": 4,
+      "layout": [
+        2,
+        2
+      ],
+      "cells": 112,
+      "width_mm": 170,
+      "height_mm": 128,
+      "colour_limits": {
+        "accuracy": [
+          59.0,
+          75.0
+        ],
+        "macro_f1": [
+          38.0,
+          70.0
+        ],
+        "macro_recall": [
+          37.0,
+          69.0
+        ],
+        "roc_auc": [
+          0.74,
+          0.92
+        ]
+      },
+      "metrics": [
+        "accuracy",
+        "macro_f1",
+        "macro_recall",
+        "roc_auc"
+      ],
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ]
+    }
+  ],
+  "outputs": {
+    "displayed_cells.csv": "e0fab32d3aeffc02a995f72c7cf8ff2aaf2a4625d589a4dcd4fa00d32959d5f0",
+    "plot_values.csv": "6de463a6f2343f054bdacf440c7eac379c1f1c464f5bb816903f319845e473d8",
+    "README.md": "0c23569b9acc9eed9672d12405f6a26c09bc532b3127c2ce22714df8993022c4",
+    "RADAR/RADAR_confirmed_screened_heatmap.pdf": "99135193f5907378c575b1cb557b015258ad739d7b92ccd149668959afdc2a19",
+    "RADAR/RADAR_confirmed_unscreened_heatmap.pdf": "6ef2120f73ce7a1151be961481d57f4cb20f576d8c984686eb000eaba33f8f25",
+    "RADAR/RADAR_immediate_screened_heatmap.pdf": "34890e2ae5bfd4c1809a8c8d16a8b71dc5eda36b440c7accb55dd4198f82f056",
+    "RADAR/RADAR_immediate_unscreened_heatmap.pdf": "5e87ee6bcea17728f5f59d30e8acdc12c507077685ec8d0062f85f4046f220e2",
+    "RBF/RBF_confirmed_screened_heatmap.pdf": "281b79c4d0751198c3894610b42c5bebdfda5be9c661b2536696c59602d0ddb9",
+    "RBF/RBF_confirmed_unscreened_heatmap.pdf": "cf61765917eb030000e4aead9a81fb9180b46d22e8e398fca7de49d19caf4d7b",
+    "RBF/RBF_immediate_screened_heatmap.pdf": "6494fa8903795e444b07dce630e80c55d844b75e1726f7aa1024f4069e231acb",
+    "RBF/RBF_immediate_unscreened_heatmap.pdf": "76a2e78ba69bf16b04830db1ee7b5b28fff1cef274ccc2afe4c438007c6c1afb",
+    "SEA/SEA_confirmed_screened_heatmap.pdf": "e103f58a251a948055cee56aaa78f5c3d2395fd5e64e75d8ca10b9e36e1d406a",
+    "SEA/SEA_confirmed_unscreened_heatmap.pdf": "ee71db515631c10e27c6ab22182b4cdc07f340e7264117809255b0eeef8255c9",
+    "SEA/SEA_immediate_screened_heatmap.pdf": "b40c536c13efd237a9e39a3bdc80f5197faca0bfacdaa77e88cec9771674cbc9",
+    "SEA/SEA_immediate_unscreened_heatmap.pdf": "1f18627acdfe37fae60a4401db777fc35a31d37c86d09e72dd87849cc38ab550",
+    "previews/RADAR/RADAR_confirmed_screened_heatmap.png": "b63c0176c1c1cda37fb45f591cd90ec1df31c47fec38e8260f6a051e3f19ce8b",
+    "previews/RADAR/RADAR_confirmed_unscreened_heatmap.png": "8bc516dcd03ace08e77353f495bcaaa6cf6a51e00e94e55fb5c9ba72bb791e01",
+    "previews/RADAR/RADAR_immediate_screened_heatmap.png": "35e98c6bd7e8cb5f5c1d3a1056c548baa68de9fce8409957d43d693fed078b99",
+    "previews/RADAR/RADAR_immediate_unscreened_heatmap.png": "f1cef35032422bbeb6bd5f8307e11273a971bbeafe8ef04128598eafa9da5d83",
+    "previews/RBF/RBF_confirmed_screened_heatmap.png": "3f5d1216ff488ee6fc08a8dbef21d8f375ade5db4b9723829494629bf75ba930",
+    "previews/RBF/RBF_confirmed_unscreened_heatmap.png": "a3580fd668c6b10bf4cdf6990d2b4508df7180ebcba78fb623c22a820bfee8a9",
+    "previews/RBF/RBF_immediate_screened_heatmap.png": "7f527b3011a7081a9d0b6f9bd960d55ad6632493af359b9a39da1473e1686f87",
+    "previews/RBF/RBF_immediate_unscreened_heatmap.png": "88a33a934b26b771d553a14e6ae2ad88859645687e4aad509e851cc4ff5f5d29",
+    "previews/SEA/SEA_confirmed_screened_heatmap.png": "82f67bdb787a70deee85234e9e5cc21d9a5d452c1521508532bac92c81fd0769",
+    "previews/SEA/SEA_confirmed_unscreened_heatmap.png": "882a2e759814cb2c7d3ae0b2d7c83d33658e7c7882cd2612ed19c82ad321bc95",
+    "previews/SEA/SEA_immediate_screened_heatmap.png": "380c3107a6dd1633031acd9ef3d5b2200a5ed87948d1d1f966f19d147b6b8444",
+    "previews/SEA/SEA_immediate_unscreened_heatmap.png": "83fdb5a7fcef243a99b2e8b81ee5b5917ef21a3547545e9fb6b21ba540c9036d"
+  }
+}

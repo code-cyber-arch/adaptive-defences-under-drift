@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-09-11T22:58:09.066806+00:00",
+  "original_runs": 1464,
+  "paired_gate_comparisons": 549,
+  "fixed_cohort_rows": 1134,
+  "rl_cohort_rows": 567,
+  "saved_table_aggregation_matches": true,
+  "same_mask_within_cohorts": true,
+  "controllers": [
+    {
+      "variant": "alarm",
+      "seed": 7,
+      "actions": {
+        "0": "reset",
+        "1": "reset"
+      },
+      "alarm_sensitive": false
+    },
+    {
+      "variant": "alarm",
+      "seed": 17,
+      "actions": {
+        "0": "update",
+        "1": "update"
+      },
+      "alarm_sensitive": false
+    },
+    {
+      "variant": "alarm",
+      "seed": 27,
+      "actions": {
+        "0": "reset",
+        "1": "reset"
+      },
+      "alarm_sensitive": false
+    },
+    {
+      "variant": "alarm_persistence",
+      "seed": 7,
+      "actions": {
+        "00": "reset",
+        "01": "update",
+        "10": "reset",
+        "11": "update"
+      },
+      "alarm_sensitive": false
+    },
+    {
+      "variant": "alarm_persistence",
+      "seed": 17,
+      "actions": {
+        "00": "update",
+        "01": "update",
+        "10": "reset",
+        "11": "update"
+      },
+      "alarm_sensitive": true
+    },
+    {
+      "variant": "alarm_persistence",
+      "seed": 27,
+      "actions": {
+        "00": "reset",
+        "01": "reset",
+        "10": "reset",
+        "11": "update"
+      },
+      "alarm_sensitive": true
+    }
+  ],
+  "limitation": "Original raw traces are unavailable; these checks validate saved-table arithmetic and provenance, not independent original trace regeneration."
+}

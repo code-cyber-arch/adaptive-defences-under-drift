@@ -1,0 +1,541 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-09-12T01:50:16.867121+00:00",
+  "scope": "19 RADAR conditions, ADWIN, no-filter and feature-plus-label arms used in the narrative.",
+  "runs": 38,
+  "binary_rates_checked": 114,
+  "checks": [
+    {
+      "condition": "radar__clean__none__anone",
+      "filter": "none",
+      "tp": 9025,
+      "fp": 12636,
+      "fn": 4470,
+      "tn": 50225,
+      "summary_sha256": "600846812e51b881544b5d51c7f194b4c575d83722bfd95810afaf84edb43e3d",
+      "values": {
+        "malicious_precision": 0.41664743086653433,
+        "malicious_recall": 0.668766209707299,
+        "benign_fpr": 0.20101493771973084
+      }
+    },
+    {
+      "condition": "radar__clean__none__anone",
+      "filter": "learned_features_label",
+      "tp": 9296,
+      "fp": 10622,
+      "fn": 4199,
+      "tn": 52239,
+      "summary_sha256": "074c649dd653cdb08b22ce410fdb259788b6242ac43d0ffc28f1e6dcf0e41773",
+      "values": {
+        "malicious_precision": 0.4667135254543629,
+        "malicious_recall": 0.6888477213782882,
+        "benign_fpr": 0.16897599465487345
+      }
+    },
+    {
+      "condition": "radar__instance__moderate__a0",
+      "filter": "none",
+      "tp": 6691,
+      "fp": 14088,
+      "fn": 6804,
+      "tn": 48773,
+      "summary_sha256": "2b79bfd2092b991deaa9ee1eed573c9651c70c8be325572fcf916963066f0d65",
+      "values": {
+        "malicious_precision": 0.32200779633283605,
+        "malicious_recall": 0.4958132641719155,
+        "benign_fpr": 0.22411352030670845
+      }
+    },
+    {
+      "condition": "radar__instance__moderate__a0",
+      "filter": "learned_features_label",
+      "tp": 8724,
+      "fp": 8782,
+      "fn": 4771,
+      "tn": 54079,
+      "summary_sha256": "3b0c05070cf844c8f14b577fd66182003171e4bbf41f581e37c0636a76f7d5c8",
+      "values": {
+        "malicious_precision": 0.4983434251113904,
+        "malicious_recall": 0.6464616524638755,
+        "benign_fpr": 0.13970506355291834
+      }
+    },
+    {
+      "condition": "radar__instance__moderate__a1",
+      "filter": "none",
+      "tp": 9447,
+      "fp": 15894,
+      "fn": 4048,
+      "tn": 46967,
+      "summary_sha256": "8b200e516305e592f32cf13b6621bc4b457d36e82272113ddcace729a0a25f68",
+      "values": {
+        "malicious_precision": 0.3727950751746182,
+        "malicious_recall": 0.7000370507595406,
+        "benign_fpr": 0.25284357550786657
+      }
+    },
+    {
+      "condition": "radar__instance__moderate__a1",
+      "filter": "learned_features_label",
+      "tp": 9578,
+      "fp": 12230,
+      "fn": 3917,
+      "tn": 50631,
+      "summary_sha256": "40a03d0c30ca7df825985730c50524380d83a6b4f1a0d62e8cef5c185b7cf13b",
+      "values": {
+        "malicious_precision": 0.4391966250917095,
+        "malicious_recall": 0.7097443497591701,
+        "benign_fpr": 0.19455624313962552
+      }
+    },
+    {
+      "condition": "radar__instance__moderate__a2",
+      "filter": "none",
+      "tp": 7501,
+      "fp": 11068,
+      "fn": 5994,
+      "tn": 51793,
+      "summary_sha256": "168af0296c353b86692ed02940a1e1cb6676e9b28c5870596853ef8c8970f70d",
+      "values": {
+        "malicious_precision": 0.40395282460014004,
+        "malicious_recall": 0.5558354946276398,
+        "benign_fpr": 0.1760710138241517
+      }
+    },
+    {
+      "condition": "radar__instance__moderate__a2",
+      "filter": "learned_features_label",
+      "tp": 9514,
+      "fp": 19041,
+      "fn": 3981,
+      "tn": 43820,
+      "summary_sha256": "7c039ee95e91657bd9915643218f6b1d46dc568638564dda240ee47de3af7fa8",
+      "values": {
+        "malicious_precision": 0.3331815794081597,
+        "malicious_recall": 0.705001852537977,
+        "benign_fpr": 0.3029064125610474
+      }
+    },
+    {
+      "condition": "radar__instance__severe__a0",
+      "filter": "none",
+      "tp": 4117,
+      "fp": 17961,
+      "fn": 9378,
+      "tn": 44900,
+      "summary_sha256": "147b81eb1c70c70e402efc3bd1b6a4e5369fc48c934985cabdf048076a8b8a0d",
+      "values": {
+        "malicious_precision": 0.18647522420509105,
+        "malicious_recall": 0.3050759540570582,
+        "benign_fpr": 0.2857256486533781
+      }
+    },
+    {
+      "condition": "radar__instance__severe__a0",
+      "filter": "learned_features_label",
+      "tp": 10190,
+      "fp": 15768,
+      "fn": 3305,
+      "tn": 47093,
+      "summary_sha256": "8631963faf3949b7dd858c57374ce09ffe97c5c2a7bb3667b42937181f3f4f3e",
+      "values": {
+        "malicious_precision": 0.39255720779721087,
+        "malicious_recall": 0.7550944794368285,
+        "benign_fpr": 0.2508391530519718
+      }
+    },
+    {
+      "condition": "radar__instance__severe__a1",
+      "filter": "none",
+      "tp": 8583,
+      "fp": 11440,
+      "fn": 4912,
+      "tn": 51421,
+      "summary_sha256": "2babe25133456c7a0195cf8513e3fb3cb50655606138509be306c9f6f71a5606",
+      "values": {
+        "malicious_precision": 0.4286570443989412,
+        "malicious_recall": 0.6360133382734346,
+        "benign_fpr": 0.18198883250346
+      }
+    },
+    {
+      "condition": "radar__instance__severe__a1",
+      "filter": "learned_features_label",
+      "tp": 7862,
+      "fp": 14396,
+      "fn": 5633,
+      "tn": 48465,
+      "summary_sha256": "1b77c16feecc5af3b00efc8c470dd3a275edba311c36c256a9ddd2baa3ec15cd",
+      "values": {
+        "malicious_precision": 0.3532213136849672,
+        "malicious_recall": 0.5825861430159318,
+        "benign_fpr": 0.22901321964334007
+      }
+    },
+    {
+      "condition": "radar__instance__severe__a2",
+      "filter": "none",
+      "tp": 9258,
+      "fp": 16684,
+      "fn": 4237,
+      "tn": 46177,
+      "summary_sha256": "0e0f7d9445b83c164efa0c4c8b9d3b305e8832ce5b379a87f811dab690ec37ef",
+      "values": {
+        "malicious_precision": 0.35687302443913343,
+        "malicious_recall": 0.6860318636532049,
+        "benign_fpr": 0.2654109861440321
+      }
+    },
+    {
+      "condition": "radar__instance__severe__a2",
+      "filter": "learned_features_label",
+      "tp": 6676,
+      "fp": 11072,
+      "fn": 6819,
+      "tn": 51789,
+      "summary_sha256": "7c33a214763beebbb0323d77d0ff59018df3fb8109e637e3c838d008c574b471",
+      "values": {
+        "malicious_precision": 0.37615505972503943,
+        "malicious_recall": 0.4947017413856984,
+        "benign_fpr": 0.176134646283069
+      }
+    },
+    {
+      "condition": "radar__concept__moderate__a0",
+      "filter": "none",
+      "tp": 6856,
+      "fp": 9743,
+      "fn": 4685,
+      "tn": 43622,
+      "summary_sha256": "970ee832e73dda2ecc12d2ba3572a2718d50b4fbb863c6b66d7d9ab932363b9f",
+      "values": {
+        "malicious_precision": 0.4130369299355383,
+        "malicious_recall": 0.5940559743523092,
+        "benign_fpr": 0.18257284737187296
+      }
+    },
+    {
+      "condition": "radar__concept__moderate__a0",
+      "filter": "learned_features_label",
+      "tp": 8176,
+      "fp": 11971,
+      "fn": 3365,
+      "tn": 41394,
+      "summary_sha256": "ea4c43e93a6995d753ad1259086a8b7f91499d081af47acee730285709357041",
+      "values": {
+        "malicious_precision": 0.4058172432620241,
+        "malicious_recall": 0.7084308118880513,
+        "benign_fpr": 0.22432305818420312
+      }
+    },
+    {
+      "condition": "radar__concept__moderate__a1",
+      "filter": "none",
+      "tp": 6607,
+      "fp": 13317,
+      "fn": 5204,
+      "tn": 39425,
+      "summary_sha256": "f3aad85bf2db05d408071c7b6b4277801e051facd9d6e71e88f9ecd69d76a3fb",
+      "values": {
+        "malicious_precision": 0.3316101184501104,
+        "malicious_recall": 0.5593937854542376,
+        "benign_fpr": 0.2524932691213833
+      }
+    },
+    {
+      "condition": "radar__concept__moderate__a1",
+      "filter": "learned_features_label",
+      "tp": 9134,
+      "fp": 11510,
+      "fn": 2677,
+      "tn": 41232,
+      "summary_sha256": "0e853d7301baeb364aef4f5b013b5c75a043a7da153050a41624735344ca7964",
+      "values": {
+        "malicious_precision": 0.44245301298198025,
+        "malicious_recall": 0.7733468800270934,
+        "benign_fpr": 0.21823214895149975
+      }
+    },
+    {
+      "condition": "radar__concept__moderate__a2",
+      "filter": "none",
+      "tp": 8187,
+      "fp": 11125,
+      "fn": 3730,
+      "tn": 43307,
+      "summary_sha256": "59a319b4922ae3b348586c4aae2e1865101bf5c150176caf7deb197c9b816eb9",
+      "values": {
+        "malicious_precision": 0.42393330571665283,
+        "malicious_recall": 0.6870017621884702,
+        "benign_fpr": 0.2043834509112287
+      }
+    },
+    {
+      "condition": "radar__concept__moderate__a2",
+      "filter": "learned_features_label",
+      "tp": 7509,
+      "fp": 10780,
+      "fn": 4408,
+      "tn": 43652,
+      "summary_sha256": "ed66500201e5dba4f377478f10473a14b00238a62293eca0930bd67bab253b18",
+      "values": {
+        "malicious_precision": 0.4105746623653562,
+        "malicious_recall": 0.6301082487203156,
+        "benign_fpr": 0.19804526748971193
+      }
+    },
+    {
+      "condition": "radar__concept__severe__a0",
+      "filter": "none",
+      "tp": 5500,
+      "fp": 12976,
+      "fn": 4474,
+      "tn": 35320,
+      "summary_sha256": "54a20ca0ab4cd499dbaa8cd72cc45d41bba2e9dffcde80c4850f2586d3b079fd",
+      "values": {
+        "malicious_precision": 0.2976834812730028,
+        "malicious_recall": 0.5514337276919992,
+        "benign_fpr": 0.26867649494782175
+      }
+    },
+    {
+      "condition": "radar__concept__severe__a0",
+      "filter": "learned_features_label",
+      "tp": 5696,
+      "fp": 10953,
+      "fn": 4278,
+      "tn": 37343,
+      "summary_sha256": "0f7f17f90fc6a3e169b0a76b4892b369cd54afd15460e80a0eb4e7a4cf538249",
+      "values": {
+        "malicious_precision": 0.34212265000900954,
+        "malicious_recall": 0.5710848205333868,
+        "benign_fpr": 0.2267889680304787
+      }
+    },
+    {
+      "condition": "radar__concept__severe__a1",
+      "filter": "none",
+      "tp": 6351,
+      "fp": 12482,
+      "fn": 4208,
+      "tn": 34359,
+      "summary_sha256": "f43926f2ef83fb2f01cc36f0dd252d8a62fc4d8f6927acd8276c6ba6b22d5779",
+      "values": {
+        "malicious_precision": 0.3372272075611958,
+        "malicious_recall": 0.6014774126337722,
+        "benign_fpr": 0.2664759505561367
+      }
+    },
+    {
+      "condition": "radar__concept__severe__a1",
+      "filter": "learned_features_label",
+      "tp": 7328,
+      "fp": 8872,
+      "fn": 3231,
+      "tn": 37969,
+      "summary_sha256": "fc9b3a566fb8ba40c1c813ae66d7d27576081b25e58b3f6176c0ccaf934bad98",
+      "values": {
+        "malicious_precision": 0.4523456790123457,
+        "malicious_recall": 0.6940051141206554,
+        "benign_fpr": 0.18940671633825068
+      }
+    },
+    {
+      "condition": "radar__concept__severe__a2",
+      "filter": "none",
+      "tp": 8502,
+      "fp": 9457,
+      "fn": 2134,
+      "tn": 35839,
+      "summary_sha256": "81fedd5f96c1dc8b4ad81fba86ececd3bc70d94a871c4311a92a9af1f927e647",
+      "values": {
+        "malicious_precision": 0.47341165989197614,
+        "malicious_recall": 0.7993606619029711,
+        "benign_fpr": 0.20878223242670435
+      }
+    },
+    {
+      "condition": "radar__concept__severe__a2",
+      "filter": "learned_features_label",
+      "tp": 7093,
+      "fp": 9611,
+      "fn": 3543,
+      "tn": 35685,
+      "summary_sha256": "ddc9801e316ac52168dda6d04c2b93fb123547699275ac2594e4a1dcd98858c5",
+      "values": {
+        "malicious_precision": 0.42462883141762453,
+        "malicious_recall": 0.6668860473862355,
+        "benign_fpr": 0.21218209113387496
+      }
+    },
+    {
+      "condition": "radar__splice__moderate__a0",
+      "filter": "none",
+      "tp": 8721,
+      "fp": 11601,
+      "fn": 2262,
+      "tn": 43031,
+      "summary_sha256": "a42f371f2e153214863b75f23e0982edb719ee1ef15ce0342a9ef2335432b4c2",
+      "values": {
+        "malicious_precision": 0.429140832595217,
+        "malicious_recall": 0.7940453428025129,
+        "benign_fpr": 0.2123480743886367
+      }
+    },
+    {
+      "condition": "radar__splice__moderate__a0",
+      "filter": "learned_features_label",
+      "tp": 9692,
+      "fp": 13947,
+      "fn": 1291,
+      "tn": 40685,
+      "summary_sha256": "075aa84ed49054bb239af76c130cac9f7390468accd73b829b0579217eec3950",
+      "values": {
+        "malicious_precision": 0.410000423029739,
+        "malicious_recall": 0.8824547027223891,
+        "benign_fpr": 0.25528993996192706
+      }
+    },
+    {
+      "condition": "radar__splice__moderate__a1",
+      "filter": "none",
+      "tp": 8114,
+      "fp": 9940,
+      "fn": 2796,
+      "tn": 44550,
+      "summary_sha256": "650db92adc87b47855638bd17dc48b0698185bb07e18a54edce600e5ab7242a8",
+      "values": {
+        "malicious_precision": 0.4494294893098482,
+        "malicious_recall": 0.7437213565536205,
+        "benign_fpr": 0.18241879243897963
+      }
+    },
+    {
+      "condition": "radar__splice__moderate__a1",
+      "filter": "learned_features_label",
+      "tp": 7986,
+      "fp": 11595,
+      "fn": 2924,
+      "tn": 42895,
+      "summary_sha256": "db3948306bff94fd8f7afd279d76ae02656a9c0f3a2341063a544d6f4a673c9a",
+      "values": {
+        "malicious_precision": 0.40784433889995403,
+        "malicious_recall": 0.7319890009165902,
+        "benign_fpr": 0.21279133786015783
+      }
+    },
+    {
+      "condition": "radar__splice__moderate__a2",
+      "filter": "none",
+      "tp": 6309,
+      "fp": 14337,
+      "fn": 4545,
+      "tn": 37563,
+      "summary_sha256": "dff48aa4b71d7b585f005be10334598dec11fd4e1c8865bdee7e949e085acb0b",
+      "values": {
+        "malicious_precision": 0.3055797733217088,
+        "malicious_recall": 0.5812603648424544,
+        "benign_fpr": 0.276242774566474
+      }
+    },
+    {
+      "condition": "radar__splice__moderate__a2",
+      "filter": "learned_features_label",
+      "tp": 8639,
+      "fp": 11596,
+      "fn": 2215,
+      "tn": 40304,
+      "summary_sha256": "adc8bf37cf34366a1b1829fde799e5d63f57e46d8183e5f711f44b0ee06ff117",
+      "values": {
+        "malicious_precision": 0.42693353101062514,
+        "malicious_recall": 0.7959277685645845,
+        "benign_fpr": 0.22342967244701348
+      }
+    },
+    {
+      "condition": "radar__splice__severe__a0",
+      "filter": "none",
+      "tp": 6005,
+      "fp": 12480,
+      "fn": 4515,
+      "tn": 34322,
+      "summary_sha256": "7d756107469d115e87d6612daaabb3de026809fd827319ac1df37a3ce945cf92",
+      "values": {
+        "malicious_precision": 0.32485799296727075,
+        "malicious_recall": 0.5708174904942965,
+        "benign_fpr": 0.2666552711422589
+      }
+    },
+    {
+      "condition": "radar__splice__severe__a0",
+      "filter": "learned_features_label",
+      "tp": 5916,
+      "fp": 11393,
+      "fn": 4604,
+      "tn": 35409,
+      "summary_sha256": "b592238ac49ae3fa5998ade3f5c98e8b6b276ead7a68968aafb4b772501a58f4",
+      "values": {
+        "malicious_precision": 0.34178750938817953,
+        "malicious_recall": 0.5623574144486692,
+        "benign_fpr": 0.24342976795863425
+      }
+    },
+    {
+      "condition": "radar__splice__severe__a1",
+      "filter": "none",
+      "tp": 7206,
+      "fp": 9190,
+      "fn": 3224,
+      "tn": 38604,
+      "summary_sha256": "c71f6182cc06bcb8f7bc351a30b8fb4fd3a0b70852f835a932aa24127c21f998",
+      "values": {
+        "malicious_precision": 0.43949743839960964,
+        "malicious_recall": 0.6908916586768936,
+        "benign_fpr": 0.19228355023643134
+      }
+    },
+    {
+      "condition": "radar__splice__severe__a1",
+      "filter": "learned_features_label",
+      "tp": 7652,
+      "fp": 12396,
+      "fn": 2778,
+      "tn": 35398,
+      "summary_sha256": "e19c72eb64af1411d8f29327bccfaea23348b5788575ff2a938cceb465db430c",
+      "values": {
+        "malicious_precision": 0.38168395849960096,
+        "malicious_recall": 0.7336529242569511,
+        "benign_fpr": 0.2593630999707076
+      }
+    },
+    {
+      "condition": "radar__splice__severe__a2",
+      "filter": "none",
+      "tp": 8086,
+      "fp": 7301,
+      "fn": 3012,
+      "tn": 38093,
+      "summary_sha256": "bc6dd34d0883997312669879c1571224d7ed3b8866a1935b88cdcd4d773f4058",
+      "values": {
+        "malicious_precision": 0.5255085461753428,
+        "malicious_recall": 0.7285997477022887,
+        "benign_fpr": 0.16083623386350618
+      }
+    },
+    {
+      "condition": "radar__splice__severe__a2",
+      "filter": "learned_features_label",
+      "tp": 8084,
+      "fp": 5563,
+      "fn": 3014,
+      "tn": 39831,
+      "summary_sha256": "cb4f8c4e5780cc6a2fbef5c33eaed7198489bab6985567862a87dc095918a7af",
+      "values": {
+        "malicious_precision": 0.5923646222613028,
+        "malicious_recall": 0.7284195350513606,
+        "benign_fpr": 0.12254923558179495
+      }
+    }
+  ]
+}

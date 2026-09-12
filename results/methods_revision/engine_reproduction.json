@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "scope": "Two complete synthetic streams on the current Mac; all prediction values, probabilities, training visits and non-timing events compared exactly. Separate saved controls also compared exactly.",
+  "records": [
+    {
+      "condition": "SEA_A__base_s0__clean__none__anone",
+      "rows": 250000,
+      "engines_identical": true,
+      "saved_separate_process_identical": true,
+      "saved_predictions_sha256": "2fc4648b520933704e4653f5f8a16c59ab90346cd63635332dd3a5842d7ea4bb",
+      "original_seconds": 7.039630624999518,
+      "extension_seconds": 7.081175707999137
+    },
+    {
+      "condition": "RBF_I__base_s2__clean__none__anone",
+      "rows": 250000,
+      "engines_identical": true,
+      "saved_separate_process_identical": true,
+      "saved_predictions_sha256": "3865582457a899a3de5e35f320ee7c4bda4b11484108905a18219330d0edb318",
+      "original_seconds": 17.27650595799969,
+      "extension_seconds": 17.27790183399975
+    }
+  ],
+  "environment": {
+    "python": "3.14.7",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "packages": {
+      "river": "0.25.0",
+      "numpy": "2.4.6",
+      "pandas": "3.0.5",
+      "pyarrow": "25.0.0",
+      "scikit-learn": "1.9.0",
+      "matplotlib": "3.11.1"
+    }
+  },
+  "sources": {
+    "05_experiment/engine.py": "35569e0484cf4438f12cc3cbf0ef3160519aaacd5c20e9a7f91d648648f46574",
+    "extensions/filter_study/engine.py": "79d49cc938e5f25251324142cd23411e5c79fbbbe7f38e93300feaecfe7dc3cf",
+    "extensions/thesis_revision/check_engine_reproduction.py": "5d7949a2b181deb780581d6ea425c50363ae924aeac6d12d9e421a706ed83a55"
+  }
+}

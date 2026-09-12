@@ -1,0 +1,4607 @@
+{
+  "original_runs": 1464,
+  "passive_evaluations": 244,
+  "baseline": [
+    {
+      "dataset": "RADAR",
+      "category": 0,
+      "mode": "clean",
+      "level": "none",
+      "accuracy": 0.7015510745648297,
+      "macro_f1": 0.5494893664597541,
+      "macro_recall": 0.5405454458803849,
+      "roc_auc": 0.9351512119603299,
+      "accuracy_change_pp": 0.0,
+      "macro_f1_change_pp": 0.0,
+      "macro_recall_change_pp": 0.0
+    },
+    {
+      "dataset": "RADAR",
+      "category": 1,
+      "mode": "instance",
+      "level": "moderate",
+      "accuracy": 0.6421541725654216,
+      "macro_f1": 0.4554997807968932,
+      "macro_recall": 0.43957017478275473,
+      "roc_auc": 0.7797817374411804,
+      "accuracy_change_pp": -5.939690199940806,
+      "macro_f1_change_pp": -9.398958566286092,
+      "macro_recall_change_pp": -10.097527109763016
+    },
+    {
+      "dataset": "RADAR",
+      "category": 2,
+      "mode": "instance",
+      "level": "severe",
+      "accuracy": 0.6147655043948198,
+      "macro_f1": 0.3871928876138382,
+      "macro_recall": 0.35724147463630535,
+      "roc_auc": 0.7773463231876031,
+      "accuracy_change_pp": -8.678557017000987,
+      "macro_f1_change_pp": -16.229647884591593,
+      "macro_recall_change_pp": -18.330397124407956
+    },
+    {
+      "dataset": "RADAR",
+      "category": 3,
+      "mode": "concept",
+      "level": "moderate",
+      "accuracy": 0.6627104072184092,
+      "macro_f1": 0.4926781340852759,
+      "macro_recall": 0.4993184552868371,
+      "roc_auc": 0.8986602027337093,
+      "accuracy_change_pp": -3.8840667346420443,
+      "macro_f1_change_pp": -5.681123237447822,
+      "macro_recall_change_pp": -4.122699059354779
+    },
+    {
+      "dataset": "RADAR",
+      "category": 4,
+      "mode": "concept",
+      "level": "severe",
+      "accuracy": 0.6532112777500655,
+      "macro_f1": 0.4517309588828571,
+      "macro_recall": 0.4668268216679528,
+      "roc_auc": 0.9004584366612568,
+      "accuracy_change_pp": -4.8339796814764195,
+      "macro_f1_change_pp": -9.775840757689702,
+      "macro_recall_change_pp": -7.3718624212432085
+    },
+    {
+      "dataset": "RADAR",
+      "category": 5,
+      "mode": "splice",
+      "level": "moderate",
+      "accuracy": 0.6871369049545075,
+      "macro_f1": 0.5102110757428749,
+      "macro_recall": 0.4962610536417335,
+      "roc_auc": 0.9117688366171214,
+      "accuracy_change_pp": -1.4414169610322158,
+      "macro_f1_change_pp": -3.927829071687916,
+      "macro_recall_change_pp": -4.428439223865138
+    },
+    {
+      "dataset": "RADAR",
+      "category": 6,
+      "mode": "splice",
+      "level": "severe",
+      "accuracy": 0.6948738942138747,
+      "macro_f1": 0.5136399787483392,
+      "macro_recall": 0.5117514393365529,
+      "roc_auc": 0.9159769193261327,
+      "accuracy_change_pp": -0.6677180350954992,
+      "macro_f1_change_pp": -3.584938771141488,
+      "macro_recall_change_pp": -2.879400654383202
+    },
+    {
+      "dataset": "RBF",
+      "category": 0,
+      "mode": "clean",
+      "level": "none",
+      "accuracy": 0.685923262888234,
+      "macro_f1": 0.6849979009620352,
+      "macro_recall": 0.6848431211660801,
+      "roc_auc": 0.8696593847361034,
+      "accuracy_change_pp": 0.0,
+      "macro_f1_change_pp": 0.0,
+      "macro_recall_change_pp": 0.0
+    },
+    {
+      "dataset": "RBF",
+      "category": 1,
+      "mode": "instance",
+      "level": "moderate",
+      "accuracy": 0.6649036481679075,
+      "macro_f1": 0.6635900770547398,
+      "macro_recall": 0.6630006078454537,
+      "roc_auc": 0.854924924145719,
+      "accuracy_change_pp": -2.101961472032654,
+      "macro_f1_change_pp": -2.1407823907295342,
+      "macro_recall_change_pp": -2.1842513320626478
+    },
+    {
+      "dataset": "RBF",
+      "category": 2,
+      "mode": "instance",
+      "level": "severe",
+      "accuracy": 0.6509348215375623,
+      "macro_f1": 0.6494079725783796,
+      "macro_recall": 0.6486601245219146,
+      "roc_auc": 0.8447727168163169,
+      "accuracy_change_pp": -3.4988441350671695,
+      "macro_f1_change_pp": -3.55899283836556,
+      "macro_recall_change_pp": -3.6182996644165577
+    },
+    {
+      "dataset": "RBF",
+      "category": 3,
+      "mode": "concept",
+      "level": "moderate",
+      "accuracy": 0.6717011709226609,
+      "macro_f1": 0.6704479694965668,
+      "macro_recall": 0.6709263967792113,
+      "roc_auc": 0.8633034127915801,
+      "accuracy_change_pp": -1.4222091965573114,
+      "macro_f1_change_pp": -1.4549931465468346,
+      "macro_recall_change_pp": -1.3916724386868862
+    },
+    {
+      "dataset": "RBF",
+      "category": 4,
+      "mode": "concept",
+      "level": "severe",
+      "accuracy": 0.6752992534987564,
+      "macro_f1": 0.6729558543672493,
+      "macro_recall": 0.6727517636888679,
+      "roc_auc": 0.8642124150546241,
+      "accuracy_change_pp": -1.0624009389477607,
+      "macro_f1_change_pp": -1.2042046594785916,
+      "macro_recall_change_pp": -1.209135747721224
+    },
+    {
+      "dataset": "RBF",
+      "category": 5,
+      "mode": "splice",
+      "level": "moderate",
+      "accuracy": 0.67525153844369,
+      "macro_f1": 0.6742169492837372,
+      "macro_recall": 0.6741337579052527,
+      "roc_auc": 0.8656084325558555,
+      "accuracy_change_pp": -1.0671724444544006,
+      "macro_f1_change_pp": -1.0780951678297956,
+      "macro_recall_change_pp": -1.0709363260827498
+    },
+    {
+      "dataset": "RBF",
+      "category": 6,
+      "mode": "splice",
+      "level": "severe",
+      "accuracy": 0.6887808113790838,
+      "macro_f1": 0.6883471797664963,
+      "macro_recall": 0.6876781674649015,
+      "roc_auc": 0.8733667628760916,
+      "accuracy_change_pp": 0.2857548490849737,
+      "macro_f1_change_pp": 0.334927880446112,
+      "macro_recall_change_pp": 0.2835046298821364
+    },
+    {
+      "dataset": "SEA",
+      "category": 0,
+      "mode": "clean",
+      "level": "none",
+      "accuracy": 0.8997633993689647,
+      "macro_f1": 0.8891380015673663,
+      "macro_recall": 0.8792103964574404,
+      "roc_auc": 0.9292834096921356,
+      "accuracy_change_pp": 0.0,
+      "macro_f1_change_pp": 0.0,
+      "macro_recall_change_pp": 0.0
+    },
+    {
+      "dataset": "SEA",
+      "category": 1,
+      "mode": "instance",
+      "level": "moderate",
+      "accuracy": 0.8990591564046708,
+      "macro_f1": 0.888488692092063,
+      "macro_recall": 0.8789403353716606,
+      "roc_auc": 0.9258156221156001,
+      "accuracy_change_pp": -0.0704242964293833,
+      "macro_f1_change_pp": -0.06493094753032835,
+      "macro_recall_change_pp": -0.02700610857797603
+    },
+    {
+      "dataset": "SEA",
+      "category": 2,
+      "mode": "instance",
+      "level": "severe",
+      "accuracy": 0.8952597431077566,
+      "macro_f1": 0.8837993258675869,
+      "macro_recall": 0.873082264354152,
+      "roc_auc": 0.9232144389564532,
+      "accuracy_change_pp": -0.45036562612080777,
+      "macro_f1_change_pp": -0.5338675699779416,
+      "macro_recall_change_pp": -0.6128132103288331
+    },
+    {
+      "dataset": "SEA",
+      "category": 3,
+      "mode": "concept",
+      "level": "moderate",
+      "accuracy": 0.8987440474761305,
+      "macro_f1": 0.8880574911063457,
+      "macro_recall": 0.8782622842438189,
+      "roc_auc": 0.92662274985611,
+      "accuracy_change_pp": -0.10193518928341971,
+      "macro_f1_change_pp": -0.10805104610206451,
+      "macro_recall_change_pp": -0.09481122136214548
+    },
+    {
+      "dataset": "SEA",
+      "category": 4,
+      "mode": "concept",
+      "level": "severe",
+      "accuracy": 0.8986543796319163,
+      "macro_f1": 0.8880902465489928,
+      "macro_recall": 0.8786737826549135,
+      "roc_auc": 0.9252434420433436,
+      "accuracy_change_pp": -0.11090197370483557,
+      "macro_f1_change_pp": -0.10477550183735085,
+      "macro_recall_change_pp": -0.05366138025268974
+    },
+    {
+      "dataset": "SEA",
+      "category": 5,
+      "mode": "splice",
+      "level": "moderate",
+      "accuracy": 0.8989435861197729,
+      "macro_f1": 0.8885372892616653,
+      "macro_recall": 0.8794735265509518,
+      "roc_auc": 0.9297525055547817,
+      "accuracy_change_pp": -0.08198132491917809,
+      "macro_f1_change_pp": -0.06007123057010233,
+      "macro_recall_change_pp": 0.026313009351142114
+    },
+    {
+      "dataset": "SEA",
+      "category": 6,
+      "mode": "splice",
+      "level": "severe",
+      "accuracy": 0.9011389608022581,
+      "macro_f1": 0.891237780161803,
+      "macro_recall": 0.8828802314058675,
+      "roc_auc": 0.9309324018419485,
+      "accuracy_change_pp": 0.13755614332934263,
+      "macro_f1_change_pp": 0.20997785944366631,
+      "macro_recall_change_pp": 0.36698349484270976
+    }
+  ],
+  "screening": [
+    {
+      "dataset": "RADAR",
+      "detector": "adwin",
+      "policy": "confirmed",
+      "metric": "accuracy",
+      "mean_difference": -2.8012248639080553,
+      "min_condition_difference": -4.901865035140673,
+      "max_condition_difference": -0.39872428364112383,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "adwin",
+      "policy": "confirmed",
+      "metric": "clean_withhold_rate",
+      "mean_difference": 15.464225655029784,
+      "min_condition_difference": 13.765960945018307,
+      "max_condition_difference": 17.784373624398587,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "adwin",
+      "policy": "confirmed",
+      "metric": "macro_f1",
+      "mean_difference": -4.932712743649046,
+      "min_condition_difference": -8.177175363877636,
+      "max_condition_difference": -1.3805394754248024,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "adwin",
+      "policy": "confirmed",
+      "metric": "macro_recall",
+      "mean_difference": -4.778506795096112,
+      "min_condition_difference": -7.941176605448413,
+      "max_condition_difference": -1.6490622222714226,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "adwin",
+      "policy": "confirmed",
+      "metric": "poison_admission_rate",
+      "mean_difference": -17.024353650861666,
+      "min_condition_difference": -20.95890210102384,
+      "max_condition_difference": -14.786521857453527,
+      "defined_conditions": 6,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "adwin",
+      "policy": "confirmed",
+      "metric": "resets_per_100k",
+      "mean_difference": -1.4636811108416237,
+      "min_condition_difference": -1.9941427214822118,
+      "max_condition_difference": -0.6188718790806865,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "adwin",
+      "policy": "confirmed",
+      "metric": "roc_auc",
+      "mean_difference": -0.0043458246663649535,
+      "min_condition_difference": -0.022575726628510078,
+      "max_condition_difference": 0.016841558368338522,
+      "defined_conditions": 7,
+      "positive_conditions": 1
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "adwin",
+      "policy": "confirmed",
+      "metric": "seconds_per_100k",
+      "mean_difference": 18.574262337625953,
+      "min_condition_difference": 12.646913589646408,
+      "max_condition_difference": 24.40458656264021,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "adwin",
+      "policy": "immediate",
+      "metric": "accuracy",
+      "mean_difference": -8.508328956780616,
+      "min_condition_difference": -11.761415127634315,
+      "max_condition_difference": -5.589197520565707,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "adwin",
+      "policy": "immediate",
+      "metric": "clean_withhold_rate",
+      "mean_difference": 38.19872552446657,
+      "min_condition_difference": 30.18477598329072,
+      "max_condition_difference": 44.7121050012774,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "adwin",
+      "policy": "immediate",
+      "metric": "macro_f1",
+      "mean_difference": -16.187455141142735,
+      "min_condition_difference": -18.78533438836203,
+      "max_condition_difference": -13.80941287508936,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "adwin",
+      "policy": "immediate",
+      "metric": "macro_recall",
+      "mean_difference": -17.73289953269407,
+      "min_condition_difference": -20.988312521222028,
+      "max_condition_difference": -15.66571624145761,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "adwin",
+      "policy": "immediate",
+      "metric": "poison_admission_rate",
+      "mean_difference": -41.674670733327154,
+      "min_condition_difference": -49.37315225197375,
+      "max_condition_difference": -30.168567803816746,
+      "defined_conditions": 6,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "adwin",
+      "policy": "immediate",
+      "metric": "resets_per_100k",
+      "mean_difference": -33.4485515598371,
+      "min_condition_difference": -43.66484924624843,
+      "max_condition_difference": -20.629062636022883,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "adwin",
+      "policy": "immediate",
+      "metric": "roc_auc",
+      "mean_difference": -0.024361452402450374,
+      "min_condition_difference": -0.0494682221496191,
+      "max_condition_difference": -0.007841187441468667,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "adwin",
+      "policy": "immediate",
+      "metric": "seconds_per_100k",
+      "mean_difference": 5.661252230275562,
+      "min_condition_difference": 3.414922898882864,
+      "max_condition_difference": 8.085153414899755,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "d3_oof",
+      "policy": "confirmed",
+      "metric": "accuracy",
+      "mean_difference": -1.1602093686418602,
+      "min_condition_difference": -3.292208680131862,
+      "max_condition_difference": 0.0807591241897961,
+      "defined_conditions": 7,
+      "positive_conditions": 1
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "d3_oof",
+      "policy": "confirmed",
+      "metric": "clean_withhold_rate",
+      "mean_difference": 13.609515319839845,
+      "min_condition_difference": 12.609750524952938,
+      "max_condition_difference": 16.752903740139555,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "d3_oof",
+      "policy": "confirmed",
+      "metric": "macro_f1",
+      "mean_difference": -3.3317587330327183,
+      "min_condition_difference": -5.664508611094036,
+      "max_condition_difference": -0.808054104627165,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "d3_oof",
+      "policy": "confirmed",
+      "metric": "macro_recall",
+      "mean_difference": -2.484377942701881,
+      "min_condition_difference": -5.442729560446485,
+      "max_condition_difference": 0.0019718661999605183,
+      "defined_conditions": 7,
+      "positive_conditions": 1
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "d3_oof",
+      "policy": "confirmed",
+      "metric": "poison_admission_rate",
+      "mean_difference": -15.046218289218594,
+      "min_condition_difference": -16.71777145793095,
+      "max_condition_difference": -13.204644542884992,
+      "defined_conditions": 6,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "d3_oof",
+      "policy": "confirmed",
+      "metric": "resets_per_100k",
+      "mean_difference": -0.31434762112034875,
+      "min_condition_difference": -0.7563989633208393,
+      "max_condition_difference": 0.20629062636022885,
+      "defined_conditions": 7,
+      "positive_conditions": 2
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "d3_oof",
+      "policy": "confirmed",
+      "metric": "roc_auc",
+      "mean_difference": 0.007496926237430817,
+      "min_condition_difference": -0.014463188667090066,
+      "max_condition_difference": 0.03970719025652991,
+      "defined_conditions": 7,
+      "positive_conditions": 4
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "d3_oof",
+      "policy": "confirmed",
+      "metric": "seconds_per_100k",
+      "mean_difference": 50.16721074050635,
+      "min_condition_difference": 25.917570164587246,
+      "max_condition_difference": 67.04925411500062,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "d3_oof",
+      "policy": "immediate",
+      "metric": "accuracy",
+      "mean_difference": -1.2650423722980224,
+      "min_condition_difference": -3.89522346487338,
+      "max_condition_difference": 1.1968312994565207,
+      "defined_conditions": 7,
+      "positive_conditions": 2
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "d3_oof",
+      "policy": "immediate",
+      "metric": "clean_withhold_rate",
+      "mean_difference": 16.40935269702125,
+      "min_condition_difference": 13.496299800740596,
+      "max_condition_difference": 20.611708399533804,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "d3_oof",
+      "policy": "immediate",
+      "metric": "macro_f1",
+      "mean_difference": -4.457000939616233,
+      "min_condition_difference": -10.525570574703437,
+      "max_condition_difference": -0.6080826126671787,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "d3_oof",
+      "policy": "immediate",
+      "metric": "macro_recall",
+      "mean_difference": -4.895948488755929,
+      "min_condition_difference": -11.852032438838313,
+      "max_condition_difference": -0.5869443742879047,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "d3_oof",
+      "policy": "immediate",
+      "metric": "poison_admission_rate",
+      "mean_difference": -17.24390291752839,
+      "min_condition_difference": -20.57626592977891,
+      "max_condition_difference": -15.462607089995567,
+      "defined_conditions": 6,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "d3_oof",
+      "policy": "immediate",
+      "metric": "resets_per_100k",
+      "mean_difference": -1.051099858121166,
+      "min_condition_difference": -1.7190885530019069,
+      "max_condition_difference": -0.6188718790806864,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "d3_oof",
+      "policy": "immediate",
+      "metric": "roc_auc",
+      "mean_difference": 0.004846211328871398,
+      "min_condition_difference": -0.029387266531739547,
+      "max_condition_difference": 0.02800650302617406,
+      "defined_conditions": 7,
+      "positive_conditions": 5
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "d3_oof",
+      "policy": "immediate",
+      "metric": "seconds_per_100k",
+      "mean_difference": 29.35453192017805,
+      "min_condition_difference": 19.586441211638718,
+      "max_condition_difference": 43.27577128282693,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hddm_w",
+      "policy": "confirmed",
+      "metric": "accuracy",
+      "mean_difference": -2.2604001561356815,
+      "min_condition_difference": -4.314124908428959,
+      "max_condition_difference": -0.9568511972746515,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hddm_w",
+      "policy": "confirmed",
+      "metric": "clean_withhold_rate",
+      "mean_difference": 15.355823726744102,
+      "min_condition_difference": 12.74097625839851,
+      "max_condition_difference": 17.7400415903119,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hddm_w",
+      "policy": "confirmed",
+      "metric": "macro_f1",
+      "mean_difference": -4.906919012868016,
+      "min_condition_difference": -7.781171535024565,
+      "max_condition_difference": -2.1447669944456833,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hddm_w",
+      "policy": "confirmed",
+      "metric": "macro_recall",
+      "mean_difference": -4.540009712929913,
+      "min_condition_difference": -7.5491141275753755,
+      "max_condition_difference": -2.0489331414390635,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hddm_w",
+      "policy": "confirmed",
+      "metric": "poison_admission_rate",
+      "mean_difference": -16.216099149281384,
+      "min_condition_difference": -19.619289095968174,
+      "max_condition_difference": -13.318665827234488,
+      "defined_conditions": 6,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hddm_w",
+      "policy": "confirmed",
+      "metric": "resets_per_100k",
+      "mean_difference": -1.5127979266416784,
+      "min_condition_difference": -1.9941427214822125,
+      "max_condition_difference": -0.893926047560992,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hddm_w",
+      "policy": "confirmed",
+      "metric": "roc_auc",
+      "mean_difference": -0.0016329226358669274,
+      "min_condition_difference": -0.019901311029609164,
+      "max_condition_difference": 0.019609715245739883,
+      "defined_conditions": 7,
+      "positive_conditions": 2
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hddm_w",
+      "policy": "confirmed",
+      "metric": "seconds_per_100k",
+      "mean_difference": 17.99089664513925,
+      "min_condition_difference": 12.27349363487341,
+      "max_condition_difference": 26.482042112121917,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hddm_w",
+      "policy": "immediate",
+      "metric": "accuracy",
+      "mean_difference": -7.159624845448088,
+      "min_condition_difference": -10.860156196469665,
+      "max_condition_difference": -4.390502552757081,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hddm_w",
+      "policy": "immediate",
+      "metric": "clean_withhold_rate",
+      "mean_difference": 37.155819968403414,
+      "min_condition_difference": 31.139113331895274,
+      "max_condition_difference": 42.15811589121396,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hddm_w",
+      "policy": "immediate",
+      "metric": "macro_f1",
+      "mean_difference": -15.901698470346798,
+      "min_condition_difference": -19.481140211186155,
+      "max_condition_difference": -12.720801369328804,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hddm_w",
+      "policy": "immediate",
+      "metric": "macro_recall",
+      "mean_difference": -17.656392382854552,
+      "min_condition_difference": -20.298614260599532,
+      "max_condition_difference": -14.663435784461235,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hddm_w",
+      "policy": "immediate",
+      "metric": "poison_admission_rate",
+      "mean_difference": -40.811506956515224,
+      "min_condition_difference": -47.99246997652435,
+      "max_condition_difference": -31.074875149912287,
+      "defined_conditions": 6,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hddm_w",
+      "policy": "immediate",
+      "metric": "resets_per_100k",
+      "mean_difference": -37.69224444496181,
+      "min_condition_difference": -44.490011751689345,
+      "max_condition_difference": -28.26181581135135,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hddm_w",
+      "policy": "immediate",
+      "metric": "roc_auc",
+      "mean_difference": -0.0036127715911260993,
+      "min_condition_difference": -0.0320844465910363,
+      "max_condition_difference": 0.014773359331526978,
+      "defined_conditions": 7,
+      "positive_conditions": 4
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hddm_w",
+      "policy": "immediate",
+      "metric": "seconds_per_100k",
+      "mean_difference": 10.445654616645161,
+      "min_condition_difference": 6.02068890755222,
+      "max_condition_difference": 16.882281890637316,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hellinger",
+      "policy": "confirmed",
+      "metric": "accuracy",
+      "mean_difference": -1.2945150133357723,
+      "min_condition_difference": -3.4929968068205994,
+      "max_condition_difference": -0.38406531094051416,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hellinger",
+      "policy": "confirmed",
+      "metric": "clean_withhold_rate",
+      "mean_difference": 15.061214133525576,
+      "min_condition_difference": 12.936188992138172,
+      "max_condition_difference": 17.553031503302357,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hellinger",
+      "policy": "confirmed",
+      "metric": "macro_f1",
+      "mean_difference": -3.7490720336118986,
+      "min_condition_difference": -7.754025385450883,
+      "max_condition_difference": -1.0960212948656605,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hellinger",
+      "policy": "confirmed",
+      "metric": "macro_recall",
+      "mean_difference": -3.8989618485329585,
+      "min_condition_difference": -9.18345117942479,
+      "max_condition_difference": -1.1810284360051695,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hellinger",
+      "policy": "confirmed",
+      "metric": "poison_admission_rate",
+      "mean_difference": -16.51792137521952,
+      "min_condition_difference": -19.068437743962836,
+      "max_condition_difference": -14.386629906111834,
+      "defined_conditions": 6,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hellinger",
+      "policy": "confirmed",
+      "metric": "resets_per_100k",
+      "mean_difference": -0.8153391422809044,
+      "min_condition_difference": -1.512797926641678,
+      "max_condition_difference": 0.0,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hellinger",
+      "policy": "confirmed",
+      "metric": "roc_auc",
+      "mean_difference": -0.0014800417701733416,
+      "min_condition_difference": -0.01924831371209949,
+      "max_condition_difference": 0.019073803329916778,
+      "defined_conditions": 7,
+      "positive_conditions": 4
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hellinger",
+      "policy": "confirmed",
+      "metric": "seconds_per_100k",
+      "mean_difference": 30.282226092951593,
+      "min_condition_difference": 24.972095672079593,
+      "max_condition_difference": 42.501626085887274,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hellinger",
+      "policy": "immediate",
+      "metric": "accuracy",
+      "mean_difference": -3.3261901976205395,
+      "min_condition_difference": -5.938697058549743,
+      "max_condition_difference": -0.2736958610261501,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hellinger",
+      "policy": "immediate",
+      "metric": "clean_withhold_rate",
+      "mean_difference": 20.499621524704178,
+      "min_condition_difference": 18.157855763492904,
+      "max_condition_difference": 22.325459945818334,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hellinger",
+      "policy": "immediate",
+      "metric": "macro_f1",
+      "mean_difference": -8.514223409094717,
+      "min_condition_difference": -14.94923776862476,
+      "max_condition_difference": -5.446855662846734,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hellinger",
+      "policy": "immediate",
+      "metric": "macro_recall",
+      "mean_difference": -8.957657642057411,
+      "min_condition_difference": -16.025830013952532,
+      "max_condition_difference": -4.906972927864217,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hellinger",
+      "policy": "immediate",
+      "metric": "poison_admission_rate",
+      "mean_difference": -21.454142349970613,
+      "min_condition_difference": -27.356101925284303,
+      "max_condition_difference": -18.015663785614723,
+      "defined_conditions": 6,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hellinger",
+      "policy": "immediate",
+      "metric": "resets_per_100k",
+      "mean_difference": -3.664114458684064,
+      "min_condition_difference": -4.538393779925033,
+      "max_condition_difference": -1.9253791793621355,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hellinger",
+      "policy": "immediate",
+      "metric": "roc_auc",
+      "mean_difference": 0.01449466530642386,
+      "min_condition_difference": -0.027994420798090596,
+      "max_condition_difference": 0.05413205870390755,
+      "defined_conditions": 7,
+      "positive_conditions": 5
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "hellinger",
+      "policy": "immediate",
+      "metric": "seconds_per_100k",
+      "mean_difference": 33.09491473960476,
+      "min_condition_difference": 21.85567686362491,
+      "max_condition_difference": 50.2772065567468,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "none",
+      "policy": "none",
+      "metric": "accuracy",
+      "mean_difference": -0.7561365790562816,
+      "min_condition_difference": -4.739714652349954,
+      "max_condition_difference": 0.9410101688328713,
+      "defined_conditions": 7,
+      "positive_conditions": 4
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "none",
+      "policy": "none",
+      "metric": "clean_withhold_rate",
+      "mean_difference": 8.443739416981959,
+      "min_condition_difference": 7.4418199819394415,
+      "max_condition_difference": 10.076633577273347,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "none",
+      "policy": "none",
+      "metric": "macro_f1",
+      "mean_difference": -2.0431443656981902,
+      "min_condition_difference": -7.5374037852081415,
+      "max_condition_difference": 2.742490280390747,
+      "defined_conditions": 7,
+      "positive_conditions": 1
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "none",
+      "policy": "none",
+      "metric": "macro_recall",
+      "mean_difference": -1.507452664911925,
+      "min_condition_difference": -6.06070204263655,
+      "max_condition_difference": 3.6039983025249853,
+      "defined_conditions": 7,
+      "positive_conditions": 3
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "none",
+      "policy": "none",
+      "metric": "poison_admission_rate",
+      "mean_difference": -9.131011504212333,
+      "min_condition_difference": -10.53473585932595,
+      "max_condition_difference": -7.797957291750339,
+      "defined_conditions": 6,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "none",
+      "policy": "none",
+      "metric": "resets_per_100k",
+      "mean_difference": 0.0,
+      "min_condition_difference": 0.0,
+      "max_condition_difference": 0.0,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "none",
+      "policy": "none",
+      "metric": "roc_auc",
+      "mean_difference": 0.00580217955868509,
+      "min_condition_difference": -0.018536632280831283,
+      "max_condition_difference": 0.04309165865048992,
+      "defined_conditions": 7,
+      "positive_conditions": 3
+    },
+    {
+      "dataset": "RADAR",
+      "detector": "none",
+      "policy": "none",
+      "metric": "seconds_per_100k",
+      "mean_difference": 148.14159164122557,
+      "min_condition_difference": 106.93428653353816,
+      "max_condition_difference": 177.23145234104038,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "adwin",
+      "policy": "confirmed",
+      "metric": "accuracy",
+      "mean_difference": 2.6667012961733434,
+      "min_condition_difference": -1.501667140829758,
+      "max_condition_difference": 5.396516558526218,
+      "defined_conditions": 7,
+      "positive_conditions": 6
+    },
+    {
+      "dataset": "RBF",
+      "detector": "adwin",
+      "policy": "confirmed",
+      "metric": "clean_withhold_rate",
+      "mean_difference": 24.624190914917357,
+      "min_condition_difference": 21.13121551717451,
+      "max_condition_difference": 29.404271672164754,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "adwin",
+      "policy": "confirmed",
+      "metric": "macro_f1",
+      "mean_difference": 2.7296893905736472,
+      "min_condition_difference": -1.3830100820150346,
+      "max_condition_difference": 5.383650680382605,
+      "defined_conditions": 7,
+      "positive_conditions": 6
+    },
+    {
+      "dataset": "RBF",
+      "detector": "adwin",
+      "policy": "confirmed",
+      "metric": "macro_recall",
+      "mean_difference": 2.8189843959851397,
+      "min_condition_difference": -1.3757215775548375,
+      "max_condition_difference": 5.471861238653701,
+      "defined_conditions": 7,
+      "positive_conditions": 6
+    },
+    {
+      "dataset": "RBF",
+      "detector": "adwin",
+      "policy": "confirmed",
+      "metric": "poison_admission_rate",
+      "mean_difference": -37.94766755890061,
+      "min_condition_difference": -52.51173523772419,
+      "max_condition_difference": -21.26439896362637,
+      "defined_conditions": 6,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "detector": "adwin",
+      "policy": "confirmed",
+      "metric": "resets_per_100k",
+      "mean_difference": -1.942857142857143,
+      "min_condition_difference": -3.466666666666667,
+      "max_condition_difference": -0.26666666666666666,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "detector": "adwin",
+      "policy": "confirmed",
+      "metric": "roc_auc",
+      "mean_difference": 0.016094592181556427,
+      "min_condition_difference": -0.01248517536830566,
+      "max_condition_difference": 0.02659259346800587,
+      "defined_conditions": 7,
+      "positive_conditions": 6
+    },
+    {
+      "dataset": "RBF",
+      "detector": "adwin",
+      "policy": "confirmed",
+      "metric": "seconds_per_100k",
+      "mean_difference": 8.554566026674141,
+      "min_condition_difference": 6.524663533363494,
+      "max_condition_difference": 12.038956520023442,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "adwin",
+      "policy": "immediate",
+      "metric": "accuracy",
+      "mean_difference": 4.84671559575014,
+      "min_condition_difference": 1.2133888456976494,
+      "max_condition_difference": 9.342066301896212,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "adwin",
+      "policy": "immediate",
+      "metric": "clean_withhold_rate",
+      "mean_difference": 35.63580911958166,
+      "min_condition_difference": 27.851682270705997,
+      "max_condition_difference": 42.83165354593836,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "adwin",
+      "policy": "immediate",
+      "metric": "macro_f1",
+      "mean_difference": 5.101437655891854,
+      "min_condition_difference": 1.332558668303896,
+      "max_condition_difference": 9.695634397865545,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "adwin",
+      "policy": "immediate",
+      "metric": "macro_recall",
+      "mean_difference": 5.077692788978816,
+      "min_condition_difference": 1.2956405922599463,
+      "max_condition_difference": 9.829149660346852,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "adwin",
+      "policy": "immediate",
+      "metric": "poison_admission_rate",
+      "mean_difference": -58.415336025608845,
+      "min_condition_difference": -80.1803826976542,
+      "max_condition_difference": -27.805487547303105,
+      "defined_conditions": 6,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "detector": "adwin",
+      "policy": "immediate",
+      "metric": "resets_per_100k",
+      "mean_difference": -12.342857142857143,
+      "min_condition_difference": -20.400000000000002,
+      "max_condition_difference": -4.8,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "detector": "adwin",
+      "policy": "immediate",
+      "metric": "roc_auc",
+      "mean_difference": 0.03172313456058099,
+      "min_condition_difference": 0.0068200648798367736,
+      "max_condition_difference": 0.05939999815966853,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "adwin",
+      "policy": "immediate",
+      "metric": "seconds_per_100k",
+      "mean_difference": 3.919052213341707,
+      "min_condition_difference": 1.9300489732995605,
+      "max_condition_difference": 8.15312128001824,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "d3_oof",
+      "policy": "confirmed",
+      "metric": "accuracy",
+      "mean_difference": -0.5818039470035314,
+      "min_condition_difference": -2.0308996857488917,
+      "max_condition_difference": 1.6347150217003872,
+      "defined_conditions": 7,
+      "positive_conditions": 2
+    },
+    {
+      "dataset": "RBF",
+      "detector": "d3_oof",
+      "policy": "confirmed",
+      "metric": "clean_withhold_rate",
+      "mean_difference": 23.923283681933892,
+      "min_condition_difference": 22.489959839357425,
+      "max_condition_difference": 26.568984443459858,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "d3_oof",
+      "policy": "confirmed",
+      "metric": "macro_f1",
+      "mean_difference": -0.5070683648273915,
+      "min_condition_difference": -1.94702980133921,
+      "max_condition_difference": 1.8101815478413865,
+      "defined_conditions": 7,
+      "positive_conditions": 2
+    },
+    {
+      "dataset": "RBF",
+      "detector": "d3_oof",
+      "policy": "confirmed",
+      "metric": "macro_recall",
+      "mean_difference": -0.41374005374520195,
+      "min_condition_difference": -1.861947001713582,
+      "max_condition_difference": 1.8787739836345925,
+      "defined_conditions": 7,
+      "positive_conditions": 2
+    },
+    {
+      "dataset": "RBF",
+      "detector": "d3_oof",
+      "policy": "confirmed",
+      "metric": "poison_admission_rate",
+      "mean_difference": -29.976225553949096,
+      "min_condition_difference": -34.14192789488517,
+      "max_condition_difference": -23.538082299991686,
+      "defined_conditions": 6,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "detector": "d3_oof",
+      "policy": "confirmed",
+      "metric": "resets_per_100k",
+      "mean_difference": -0.43809523809523804,
+      "min_condition_difference": -0.9333333333333332,
+      "max_condition_difference": -0.26666666666666666,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "detector": "d3_oof",
+      "policy": "confirmed",
+      "metric": "roc_auc",
+      "mean_difference": -0.003257971976411898,
+      "min_condition_difference": -0.011999661071341317,
+      "max_condition_difference": 0.013812591027675625,
+      "defined_conditions": 7,
+      "positive_conditions": 2
+    },
+    {
+      "dataset": "RBF",
+      "detector": "d3_oof",
+      "policy": "confirmed",
+      "metric": "seconds_per_100k",
+      "mean_difference": 9.190444030475225,
+      "min_condition_difference": 7.527058640029281,
+      "max_condition_difference": 10.511287920021763,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "d3_oof",
+      "policy": "immediate",
+      "metric": "accuracy",
+      "mean_difference": 5.163156897367616,
+      "min_condition_difference": 2.852332717130609,
+      "max_condition_difference": 8.34899332208318,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "d3_oof",
+      "policy": "immediate",
+      "metric": "clean_withhold_rate",
+      "mean_difference": 26.066653892116598,
+      "min_condition_difference": 20.749665327978576,
+      "max_condition_difference": 29.96289996734554,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "d3_oof",
+      "policy": "immediate",
+      "metric": "macro_f1",
+      "mean_difference": 5.345121684366323,
+      "min_condition_difference": 2.9904561917564116,
+      "max_condition_difference": 8.483880096542425,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "d3_oof",
+      "policy": "immediate",
+      "metric": "macro_recall",
+      "mean_difference": 5.419260653260509,
+      "min_condition_difference": 3.1483159169403883,
+      "max_condition_difference": 8.542654551192518,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "d3_oof",
+      "policy": "immediate",
+      "metric": "poison_admission_rate",
+      "mean_difference": -31.916723408801946,
+      "min_condition_difference": -38.11667996887219,
+      "max_condition_difference": -25.453193306489624,
+      "defined_conditions": 6,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "detector": "d3_oof",
+      "policy": "immediate",
+      "metric": "resets_per_100k",
+      "mean_difference": -2.3047619047619046,
+      "min_condition_difference": -2.8000000000000007,
+      "max_condition_difference": -1.866666666666667,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "detector": "d3_oof",
+      "policy": "immediate",
+      "metric": "roc_auc",
+      "mean_difference": 0.031348997012079396,
+      "min_condition_difference": 0.01753137559927435,
+      "max_condition_difference": 0.04576771491708217,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "d3_oof",
+      "policy": "immediate",
+      "metric": "seconds_per_100k",
+      "mean_difference": 7.94269541332587,
+      "min_condition_difference": 6.718905719990533,
+      "max_condition_difference": 9.726206133328379,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hddm_w",
+      "policy": "confirmed",
+      "metric": "accuracy",
+      "mean_difference": 3.6635327400094972,
+      "min_condition_difference": 0.6092587017462958,
+      "max_condition_difference": 6.3643001299589805,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hddm_w",
+      "policy": "confirmed",
+      "metric": "clean_withhold_rate",
+      "mean_difference": 28.63704244839616,
+      "min_condition_difference": 24.497991967871485,
+      "max_condition_difference": 31.996245025587694,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hddm_w",
+      "policy": "confirmed",
+      "metric": "macro_f1",
+      "mean_difference": 3.706606338769215,
+      "min_condition_difference": 0.8247353246086756,
+      "max_condition_difference": 6.482220974993484,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hddm_w",
+      "policy": "confirmed",
+      "metric": "macro_recall",
+      "mean_difference": 3.8165666812395904,
+      "min_condition_difference": 0.9519524199380514,
+      "max_condition_difference": 6.6006576966661425,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hddm_w",
+      "policy": "confirmed",
+      "metric": "poison_admission_rate",
+      "mean_difference": -36.82159353738391,
+      "min_condition_difference": -52.292709420194875,
+      "max_condition_difference": -25.197222234564663,
+      "defined_conditions": 6,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hddm_w",
+      "policy": "confirmed",
+      "metric": "resets_per_100k",
+      "mean_difference": -2.6285714285714286,
+      "min_condition_difference": -3.1999999999999997,
+      "max_condition_difference": -1.3333333333333333,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hddm_w",
+      "policy": "confirmed",
+      "metric": "roc_auc",
+      "mean_difference": 0.021610183172728534,
+      "min_condition_difference": 0.0034083216309276723,
+      "max_condition_difference": 0.035253378396154056,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hddm_w",
+      "policy": "confirmed",
+      "metric": "seconds_per_100k",
+      "mean_difference": 6.635691708583563,
+      "min_condition_difference": 5.0173747999904075,
+      "max_condition_difference": 10.508853880005582,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hddm_w",
+      "policy": "immediate",
+      "metric": "accuracy",
+      "mean_difference": 1.0331180351816822,
+      "min_condition_difference": 0.6544396453512588,
+      "max_condition_difference": 1.5142310218091464,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hddm_w",
+      "policy": "immediate",
+      "metric": "clean_withhold_rate",
+      "mean_difference": 46.155022477747075,
+      "min_condition_difference": 43.775100401606416,
+      "max_condition_difference": 48.625184533290586,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hddm_w",
+      "policy": "immediate",
+      "metric": "macro_f1",
+      "mean_difference": 1.0595420772845334,
+      "min_condition_difference": 0.6727592695534135,
+      "max_condition_difference": 1.555998433644107,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hddm_w",
+      "policy": "immediate",
+      "metric": "macro_recall",
+      "mean_difference": 1.0420802036253076,
+      "min_condition_difference": 0.6580546316100592,
+      "max_condition_difference": 1.53414461432619,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hddm_w",
+      "policy": "immediate",
+      "metric": "poison_admission_rate",
+      "mean_difference": -63.83389732309363,
+      "min_condition_difference": -80.49061222313055,
+      "max_condition_difference": -46.14131836829656,
+      "defined_conditions": 6,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hddm_w",
+      "policy": "immediate",
+      "metric": "resets_per_100k",
+      "mean_difference": -32.7047619047619,
+      "min_condition_difference": -42.800000000000004,
+      "max_condition_difference": -22.666666666666668,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hddm_w",
+      "policy": "immediate",
+      "metric": "roc_auc",
+      "mean_difference": 0.0024912315511319244,
+      "min_condition_difference": -0.00014388986436945453,
+      "max_condition_difference": 0.004421397982283877,
+      "defined_conditions": 7,
+      "positive_conditions": 6
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hddm_w",
+      "policy": "immediate",
+      "metric": "seconds_per_100k",
+      "mean_difference": 1.5331933485698834,
+      "min_condition_difference": 1.2718543999517955,
+      "max_condition_difference": 1.7354822799873837,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hellinger",
+      "policy": "confirmed",
+      "metric": "accuracy",
+      "mean_difference": 3.0126476668546034,
+      "min_condition_difference": 1.3088597155866817,
+      "max_condition_difference": 4.534422398124115,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hellinger",
+      "policy": "confirmed",
+      "metric": "clean_withhold_rate",
+      "mean_difference": 24.29170142906071,
+      "min_condition_difference": 20.080321285140556,
+      "max_condition_difference": 27.823493324191976,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hellinger",
+      "policy": "confirmed",
+      "metric": "macro_f1",
+      "mean_difference": 3.100474822004361,
+      "min_condition_difference": 1.3219595561889637,
+      "max_condition_difference": 4.675602620819904,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hellinger",
+      "policy": "confirmed",
+      "metric": "macro_recall",
+      "mean_difference": 3.1791246411072254,
+      "min_condition_difference": 1.3259491039704436,
+      "max_condition_difference": 4.5524754444203674,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hellinger",
+      "policy": "confirmed",
+      "metric": "poison_admission_rate",
+      "mean_difference": -32.788376414393554,
+      "min_condition_difference": -39.15529289576425,
+      "max_condition_difference": -21.649879730607058,
+      "defined_conditions": 6,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hellinger",
+      "policy": "confirmed",
+      "metric": "resets_per_100k",
+      "mean_difference": -1.5999999999999999,
+      "min_condition_difference": -2.266666666666667,
+      "max_condition_difference": -0.9333333333333332,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hellinger",
+      "policy": "confirmed",
+      "metric": "roc_auc",
+      "mean_difference": 0.015775509012249226,
+      "min_condition_difference": 0.0034191626327535842,
+      "max_condition_difference": 0.024915889578869994,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hellinger",
+      "policy": "confirmed",
+      "metric": "seconds_per_100k",
+      "mean_difference": 8.461885643808083,
+      "min_condition_difference": 7.028991453380633,
+      "max_condition_difference": 10.820854773372412,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hellinger",
+      "policy": "immediate",
+      "metric": "accuracy",
+      "mean_difference": 6.793072409158248,
+      "min_condition_difference": 5.8658597808294815,
+      "max_condition_difference": 7.381461046607984,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hellinger",
+      "policy": "immediate",
+      "metric": "clean_withhold_rate",
+      "mean_difference": 30.80036125044106,
+      "min_condition_difference": 29.063881255763857,
+      "max_condition_difference": 33.1864495531399,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hellinger",
+      "policy": "immediate",
+      "metric": "macro_f1",
+      "mean_difference": 7.125544751409332,
+      "min_condition_difference": 6.159641817156469,
+      "max_condition_difference": 7.940699149760391,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hellinger",
+      "policy": "immediate",
+      "metric": "macro_recall",
+      "mean_difference": 7.171635595931382,
+      "min_condition_difference": 6.058261556990048,
+      "max_condition_difference": 7.8995908521203155,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hellinger",
+      "policy": "immediate",
+      "metric": "poison_admission_rate",
+      "mean_difference": -38.869740782028096,
+      "min_condition_difference": -44.07544571016194,
+      "max_condition_difference": -31.291704846452074,
+      "defined_conditions": 6,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hellinger",
+      "policy": "immediate",
+      "metric": "resets_per_100k",
+      "mean_difference": -6.8,
+      "min_condition_difference": -7.866666666666667,
+      "max_condition_difference": -5.866666666666666,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hellinger",
+      "policy": "immediate",
+      "metric": "roc_auc",
+      "mean_difference": 0.044740586926079864,
+      "min_condition_difference": 0.03927585682741963,
+      "max_condition_difference": 0.049780792354983595,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "hellinger",
+      "policy": "immediate",
+      "metric": "seconds_per_100k",
+      "mean_difference": 5.636846064771748,
+      "min_condition_difference": 4.110361893319836,
+      "max_condition_difference": 7.429034213380267,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "none",
+      "policy": "none",
+      "metric": "accuracy",
+      "mean_difference": -2.272598271567763,
+      "min_condition_difference": -3.493270586935837,
+      "max_condition_difference": -1.2513683277670329,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "detector": "none",
+      "policy": "none",
+      "metric": "clean_withhold_rate",
+      "mean_difference": 22.624764218341088,
+      "min_condition_difference": 19.41097724230254,
+      "max_condition_difference": 26.35545493507546,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "detector": "none",
+      "policy": "none",
+      "metric": "macro_f1",
+      "mean_difference": -2.25401647530107,
+      "min_condition_difference": -3.5597626182814293,
+      "max_condition_difference": -1.2809571659463244,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "detector": "none",
+      "policy": "none",
+      "metric": "macro_recall",
+      "mean_difference": -2.2173208771163364,
+      "min_condition_difference": -3.5264560922489565,
+      "max_condition_difference": -1.2901865925764737,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "detector": "none",
+      "policy": "none",
+      "metric": "poison_admission_rate",
+      "mean_difference": -27.874657998947427,
+      "min_condition_difference": -33.981390769314345,
+      "max_condition_difference": -21.960924221254363,
+      "defined_conditions": 6,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "detector": "none",
+      "policy": "none",
+      "metric": "resets_per_100k",
+      "mean_difference": 0.0,
+      "min_condition_difference": 0.0,
+      "max_condition_difference": 0.0,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "detector": "none",
+      "policy": "none",
+      "metric": "roc_auc",
+      "mean_difference": -0.013524448983641853,
+      "min_condition_difference": -0.01832501341035438,
+      "max_condition_difference": -0.008536679234827779,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "detector": "none",
+      "policy": "none",
+      "metric": "seconds_per_100k",
+      "mean_difference": 9.792361779054184,
+      "min_condition_difference": 8.778360173354544,
+      "max_condition_difference": 10.47615111997972,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "detector": "adwin",
+      "policy": "confirmed",
+      "metric": "accuracy",
+      "mean_difference": 0.4464917404596303,
+      "min_condition_difference": -0.18689469168727824,
+      "max_condition_difference": 1.8036441455374197,
+      "defined_conditions": 7,
+      "positive_conditions": 5
+    },
+    {
+      "dataset": "SEA",
+      "detector": "adwin",
+      "policy": "confirmed",
+      "metric": "clean_withhold_rate",
+      "mean_difference": 20.778623029393962,
+      "min_condition_difference": 12.304303015937341,
+      "max_condition_difference": 31.19519167492903,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "detector": "adwin",
+      "policy": "confirmed",
+      "metric": "macro_f1",
+      "mean_difference": 0.49227399273264866,
+      "min_condition_difference": -0.21483882010774336,
+      "max_condition_difference": 1.9786738934336505,
+      "defined_conditions": 7,
+      "positive_conditions": 5
+    },
+    {
+      "dataset": "SEA",
+      "detector": "adwin",
+      "policy": "confirmed",
+      "metric": "macro_recall",
+      "mean_difference": 0.5062811534128083,
+      "min_condition_difference": -0.26302311133148776,
+      "max_condition_difference": 2.02679747120883,
+      "defined_conditions": 7,
+      "positive_conditions": 6
+    },
+    {
+      "dataset": "SEA",
+      "detector": "adwin",
+      "policy": "confirmed",
+      "metric": "poison_admission_rate",
+      "mean_difference": -24.554000280929085,
+      "min_condition_difference": -36.50722339676378,
+      "max_condition_difference": -12.381792582866469,
+      "defined_conditions": 6,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "SEA",
+      "detector": "adwin",
+      "policy": "confirmed",
+      "metric": "resets_per_100k",
+      "mean_difference": -1.4666666666666668,
+      "min_condition_difference": -4.133333333333334,
+      "max_condition_difference": 0.0,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "SEA",
+      "detector": "adwin",
+      "policy": "confirmed",
+      "metric": "roc_auc",
+      "mean_difference": 0.0035648678698721853,
+      "min_condition_difference": 0.00021375805499194525,
+      "max_condition_difference": 0.008948488517307044,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "detector": "adwin",
+      "policy": "confirmed",
+      "metric": "seconds_per_100k",
+      "mean_difference": 2.2235150209583696,
+      "min_condition_difference": 1.1583514933163925,
+      "max_condition_difference": 3.1872521600065125,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "detector": "adwin",
+      "policy": "immediate",
+      "metric": "accuracy",
+      "mean_difference": 1.7690657394123304,
+      "min_condition_difference": -0.8142791997365673,
+      "max_condition_difference": 6.500767097855719,
+      "defined_conditions": 7,
+      "positive_conditions": 6
+    },
+    {
+      "dataset": "SEA",
+      "detector": "adwin",
+      "policy": "immediate",
+      "metric": "clean_withhold_rate",
+      "mean_difference": 36.34219254836209,
+      "min_condition_difference": 14.969875958952587,
+      "max_condition_difference": 60.37140982721821,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "detector": "adwin",
+      "policy": "immediate",
+      "metric": "macro_f1",
+      "mean_difference": 1.9192676860845153,
+      "min_condition_difference": -0.9717347949269373,
+      "max_condition_difference": 6.981922804585905,
+      "defined_conditions": 7,
+      "positive_conditions": 6
+    },
+    {
+      "dataset": "SEA",
+      "detector": "adwin",
+      "policy": "immediate",
+      "metric": "macro_recall",
+      "mean_difference": 1.8628894908026532,
+      "min_condition_difference": -1.2463716958277897,
+      "max_condition_difference": 6.655183443517369,
+      "defined_conditions": 7,
+      "positive_conditions": 6
+    },
+    {
+      "dataset": "SEA",
+      "detector": "adwin",
+      "policy": "immediate",
+      "metric": "poison_admission_rate",
+      "mean_difference": -48.06586714994353,
+      "min_condition_difference": -83.30678943472452,
+      "max_condition_difference": -15.12550003271358,
+      "defined_conditions": 6,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "SEA",
+      "detector": "adwin",
+      "policy": "immediate",
+      "metric": "resets_per_100k",
+      "mean_difference": -15.904761904761907,
+      "min_condition_difference": -49.73333333333334,
+      "max_condition_difference": -0.6666666666666666,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "SEA",
+      "detector": "adwin",
+      "policy": "immediate",
+      "metric": "roc_auc",
+      "mean_difference": 0.012353673027229572,
+      "min_condition_difference": -0.0016900513829180008,
+      "max_condition_difference": 0.04319478105713118,
+      "defined_conditions": 7,
+      "positive_conditions": 6
+    },
+    {
+      "dataset": "SEA",
+      "detector": "adwin",
+      "policy": "immediate",
+      "metric": "seconds_per_100k",
+      "mean_difference": 1.371315588575921,
+      "min_condition_difference": 0.5789169733412564,
+      "max_condition_difference": 2.8322723467213407,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "detector": "d3_oof",
+      "policy": "confirmed",
+      "metric": "accuracy",
+      "mean_difference": 0.01614109701328544,
+      "min_condition_difference": -0.3368080701134442,
+      "max_condition_difference": 0.473311752961425,
+      "defined_conditions": 7,
+      "positive_conditions": 3
+    },
+    {
+      "dataset": "SEA",
+      "detector": "d3_oof",
+      "policy": "confirmed",
+      "metric": "clean_withhold_rate",
+      "mean_difference": 13.141086468706051,
+      "min_condition_difference": 9.408104663890766,
+      "max_condition_difference": 21.515344216414505,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "detector": "d3_oof",
+      "policy": "confirmed",
+      "metric": "macro_f1",
+      "mean_difference": 0.01615311645956497,
+      "min_condition_difference": -0.39946569289984746,
+      "max_condition_difference": 0.5719098692944291,
+      "defined_conditions": 7,
+      "positive_conditions": 3
+    },
+    {
+      "dataset": "SEA",
+      "detector": "d3_oof",
+      "policy": "confirmed",
+      "metric": "macro_recall",
+      "mean_difference": 0.003938802274808663,
+      "min_condition_difference": -0.50520815465022,
+      "max_condition_difference": 0.7475958628318032,
+      "defined_conditions": 7,
+      "positive_conditions": 3
+    },
+    {
+      "dataset": "SEA",
+      "detector": "d3_oof",
+      "policy": "confirmed",
+      "metric": "poison_admission_rate",
+      "mean_difference": -15.33117353581128,
+      "min_condition_difference": -28.59494429053095,
+      "max_condition_difference": -10.816529688289704,
+      "defined_conditions": 6,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "SEA",
+      "detector": "d3_oof",
+      "policy": "confirmed",
+      "metric": "resets_per_100k",
+      "mean_difference": -0.13333333333333333,
+      "min_condition_difference": -0.4000000000000001,
+      "max_condition_difference": 0.0,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "SEA",
+      "detector": "d3_oof",
+      "policy": "confirmed",
+      "metric": "roc_auc",
+      "mean_difference": 0.00017050005898199854,
+      "min_condition_difference": -0.0013872192595124622,
+      "max_condition_difference": 0.001565797827581002,
+      "defined_conditions": 7,
+      "positive_conditions": 4
+    },
+    {
+      "dataset": "SEA",
+      "detector": "d3_oof",
+      "policy": "confirmed",
+      "metric": "seconds_per_100k",
+      "mean_difference": 4.202494927619894,
+      "min_condition_difference": 2.8644241333318257,
+      "max_condition_difference": 5.4726106800138945,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "detector": "d3_oof",
+      "policy": "immediate",
+      "metric": "accuracy",
+      "mean_difference": 0.1451878288653452,
+      "min_condition_difference": -0.3097598907261097,
+      "max_condition_difference": 0.781731775475821,
+      "defined_conditions": 7,
+      "positive_conditions": 3
+    },
+    {
+      "dataset": "SEA",
+      "detector": "d3_oof",
+      "policy": "immediate",
+      "metric": "clean_withhold_rate",
+      "mean_difference": 21.50606392724564,
+      "min_condition_difference": 17.399984716047275,
+      "max_condition_difference": 25.75925914686044,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "detector": "d3_oof",
+      "policy": "immediate",
+      "metric": "macro_f1",
+      "mean_difference": 0.14495760172311795,
+      "min_condition_difference": -0.3726806568782807,
+      "max_condition_difference": 0.8179021698487499,
+      "defined_conditions": 7,
+      "positive_conditions": 3
+    },
+    {
+      "dataset": "SEA",
+      "detector": "d3_oof",
+      "policy": "immediate",
+      "metric": "macro_recall",
+      "mean_difference": 0.10024008144224934,
+      "min_condition_difference": -0.5100993780274732,
+      "max_condition_difference": 0.7564816072371842,
+      "defined_conditions": 7,
+      "positive_conditions": 3
+    },
+    {
+      "dataset": "SEA",
+      "detector": "d3_oof",
+      "policy": "immediate",
+      "metric": "poison_admission_rate",
+      "mean_difference": -23.75875394746237,
+      "min_condition_difference": -31.93223964916068,
+      "max_condition_difference": -20.6917040074315,
+      "defined_conditions": 6,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "SEA",
+      "detector": "d3_oof",
+      "policy": "immediate",
+      "metric": "resets_per_100k",
+      "mean_difference": -1.219047619047619,
+      "min_condition_difference": -1.866666666666667,
+      "max_condition_difference": -0.39999999999999997,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "SEA",
+      "detector": "d3_oof",
+      "policy": "immediate",
+      "metric": "roc_auc",
+      "mean_difference": 0.001536467810427494,
+      "min_condition_difference": -0.0002618355486149933,
+      "max_condition_difference": 0.0047907762556328075,
+      "defined_conditions": 7,
+      "positive_conditions": 6
+    },
+    {
+      "dataset": "SEA",
+      "detector": "d3_oof",
+      "policy": "immediate",
+      "metric": "seconds_per_100k",
+      "mean_difference": 2.231892771451246,
+      "min_condition_difference": 1.69212412002186,
+      "max_condition_difference": 3.018155280034989,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hddm_w",
+      "policy": "confirmed",
+      "metric": "accuracy",
+      "mean_difference": 0.6003218605885523,
+      "min_condition_difference": 0.04261689487857397,
+      "max_condition_difference": 2.2397606280988525,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hddm_w",
+      "policy": "confirmed",
+      "metric": "clean_withhold_rate",
+      "mean_difference": 20.438636273357478,
+      "min_condition_difference": 8.835341365461844,
+      "max_condition_difference": 31.17945443069769,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hddm_w",
+      "policy": "confirmed",
+      "metric": "macro_f1",
+      "mean_difference": 0.6698081527623707,
+      "min_condition_difference": 0.05325638549887879,
+      "max_condition_difference": 2.4508706477470015,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hddm_w",
+      "policy": "confirmed",
+      "metric": "macro_recall",
+      "mean_difference": 0.7197697477612864,
+      "min_condition_difference": 0.08503716151344598,
+      "max_condition_difference": 2.5023289578735195,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hddm_w",
+      "policy": "confirmed",
+      "metric": "poison_admission_rate",
+      "mean_difference": -24.733133264965943,
+      "min_condition_difference": -36.12803015371509,
+      "max_condition_difference": -11.836922275622745,
+      "defined_conditions": 6,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hddm_w",
+      "policy": "confirmed",
+      "metric": "resets_per_100k",
+      "mean_difference": -1.2952380952380949,
+      "min_condition_difference": -4.3999999999999995,
+      "max_condition_difference": 0.26666666666666666,
+      "defined_conditions": 7,
+      "positive_conditions": 1
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hddm_w",
+      "policy": "confirmed",
+      "metric": "roc_auc",
+      "mean_difference": 0.0037350193100264472,
+      "min_condition_difference": -0.00022494972240823716,
+      "max_condition_difference": 0.013698289139663014,
+      "defined_conditions": 7,
+      "positive_conditions": 6
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hddm_w",
+      "policy": "confirmed",
+      "metric": "seconds_per_100k",
+      "mean_difference": 2.715057870475132,
+      "min_condition_difference": 1.3702078400179734,
+      "max_condition_difference": 4.10150686663886,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hddm_w",
+      "policy": "immediate",
+      "metric": "accuracy",
+      "mean_difference": 1.7180077138505296,
+      "min_condition_difference": -0.8496194580626115,
+      "max_condition_difference": 6.435475870899043,
+      "defined_conditions": 7,
+      "positive_conditions": 6
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hddm_w",
+      "policy": "immediate",
+      "metric": "clean_withhold_rate",
+      "mean_difference": 33.397691472048955,
+      "min_condition_difference": 10.441767068273089,
+      "max_condition_difference": 56.93377252844332,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hddm_w",
+      "policy": "immediate",
+      "metric": "macro_f1",
+      "mean_difference": 1.8598741245280122,
+      "min_condition_difference": -0.9937432007107246,
+      "max_condition_difference": 6.924131116364081,
+      "defined_conditions": 7,
+      "positive_conditions": 6
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hddm_w",
+      "policy": "immediate",
+      "metric": "macro_recall",
+      "mean_difference": 1.810305948318372,
+      "min_condition_difference": -1.2279253288764225,
+      "max_condition_difference": 6.6793180320671794,
+      "defined_conditions": 7,
+      "positive_conditions": 6
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hddm_w",
+      "policy": "immediate",
+      "metric": "poison_admission_rate",
+      "mean_difference": -47.67414187842874,
+      "min_condition_difference": -80.76501756367968,
+      "max_condition_difference": -13.60858600430461,
+      "defined_conditions": 6,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hddm_w",
+      "policy": "immediate",
+      "metric": "resets_per_100k",
+      "mean_difference": -16.247619047619047,
+      "min_condition_difference": -53.6,
+      "max_condition_difference": -0.1333333333333333,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hddm_w",
+      "policy": "immediate",
+      "metric": "roc_auc",
+      "mean_difference": 0.01147921657397657,
+      "min_condition_difference": -0.0016556980370584506,
+      "max_condition_difference": 0.03990194673926269,
+      "defined_conditions": 7,
+      "positive_conditions": 6
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hddm_w",
+      "policy": "immediate",
+      "metric": "seconds_per_100k",
+      "mean_difference": 1.9459990247729277,
+      "min_condition_difference": 0.437387160025537,
+      "max_condition_difference": 4.175803320016712,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hellinger",
+      "policy": "confirmed",
+      "metric": "accuracy",
+      "mean_difference": -0.5084466662900907,
+      "min_condition_difference": -1.1259968658500208,
+      "max_condition_difference": 0.610831035791326,
+      "defined_conditions": 7,
+      "positive_conditions": 2
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hellinger",
+      "policy": "confirmed",
+      "metric": "clean_withhold_rate",
+      "mean_difference": 16.428004019623355,
+      "min_condition_difference": 11.646586345381523,
+      "max_condition_difference": 25.427051032072665,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hellinger",
+      "policy": "confirmed",
+      "metric": "macro_f1",
+      "mean_difference": -0.627421663086512,
+      "min_condition_difference": -1.3242382139251514,
+      "max_condition_difference": 0.6425350026921054,
+      "defined_conditions": 7,
+      "positive_conditions": 2
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hellinger",
+      "policy": "confirmed",
+      "metric": "macro_recall",
+      "mean_difference": -0.865476984939089,
+      "min_condition_difference": -1.6554575458063752,
+      "max_condition_difference": 0.5563702189300468,
+      "defined_conditions": 7,
+      "positive_conditions": 2
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hellinger",
+      "policy": "confirmed",
+      "metric": "poison_admission_rate",
+      "mean_difference": -19.930550361875177,
+      "min_condition_difference": -30.790130014376842,
+      "max_condition_difference": -12.213419265487731,
+      "defined_conditions": 6,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hellinger",
+      "policy": "confirmed",
+      "metric": "resets_per_100k",
+      "mean_difference": -0.8952380952380953,
+      "min_condition_difference": -2.2666666666666666,
+      "max_condition_difference": 0.5333333333333333,
+      "defined_conditions": 7,
+      "positive_conditions": 1
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hellinger",
+      "policy": "confirmed",
+      "metric": "roc_auc",
+      "mean_difference": -0.000828930611786307,
+      "min_condition_difference": -0.00461358693335312,
+      "max_condition_difference": 0.004431907964280946,
+      "defined_conditions": 7,
+      "positive_conditions": 2
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hellinger",
+      "policy": "confirmed",
+      "metric": "seconds_per_100k",
+      "mean_difference": 3.256374986669315,
+      "min_condition_difference": 2.099793319962919,
+      "max_condition_difference": 3.926679519967486,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hellinger",
+      "policy": "immediate",
+      "metric": "accuracy",
+      "mean_difference": 1.2376974286425748,
+      "min_condition_difference": 0.6980547865515755,
+      "max_condition_difference": 2.1502751809586975,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hellinger",
+      "policy": "immediate",
+      "metric": "clean_withhold_rate",
+      "mean_difference": 35.39925263393717,
+      "min_condition_difference": 30.08485773076974,
+      "max_condition_difference": 44.96079267096483,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hellinger",
+      "policy": "immediate",
+      "metric": "macro_f1",
+      "mean_difference": 1.3575147964012533,
+      "min_condition_difference": 0.7468579464775305,
+      "max_condition_difference": 2.318746797808117,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hellinger",
+      "policy": "immediate",
+      "metric": "macro_recall",
+      "mean_difference": 1.3591382188368588,
+      "min_condition_difference": 0.6730080655997303,
+      "max_condition_difference": 2.1970516720628477,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hellinger",
+      "policy": "immediate",
+      "metric": "poison_admission_rate",
+      "mean_difference": -39.667033319296756,
+      "min_condition_difference": -45.037025797241675,
+      "max_condition_difference": -32.35965598098642,
+      "defined_conditions": 6,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hellinger",
+      "policy": "immediate",
+      "metric": "resets_per_100k",
+      "mean_difference": -3.9428571428571426,
+      "min_condition_difference": -5.599999999999999,
+      "max_condition_difference": -1.9999999999999998,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hellinger",
+      "policy": "immediate",
+      "metric": "roc_auc",
+      "mean_difference": 0.008761371597614883,
+      "min_condition_difference": 0.005284612501361215,
+      "max_condition_difference": 0.013597996805578124,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "detector": "hellinger",
+      "policy": "immediate",
+      "metric": "seconds_per_100k",
+      "mean_difference": 1.2963564399851575,
+      "min_condition_difference": 0.8848788132891062,
+      "max_condition_difference": 1.8394310533379514,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "detector": "none",
+      "policy": "none",
+      "metric": "accuracy",
+      "mean_difference": 0.1486052997536262,
+      "min_condition_difference": -0.1953717586399691,
+      "max_condition_difference": 0.41329752552714166,
+      "defined_conditions": 7,
+      "positive_conditions": 5
+    },
+    {
+      "dataset": "SEA",
+      "detector": "none",
+      "policy": "none",
+      "metric": "clean_withhold_rate",
+      "mean_difference": 10.994288193273809,
+      "min_condition_difference": 7.364372018364537,
+      "max_condition_difference": 16.98868850952631,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "detector": "none",
+      "policy": "none",
+      "metric": "macro_f1",
+      "mean_difference": 0.17242081778751822,
+      "min_condition_difference": -0.21893476961419486,
+      "max_condition_difference": 0.473168950332703,
+      "defined_conditions": 7,
+      "positive_conditions": 5
+    },
+    {
+      "dataset": "SEA",
+      "detector": "none",
+      "policy": "none",
+      "metric": "macro_recall",
+      "mean_difference": 0.1898622930776007,
+      "min_condition_difference": -0.22596968515456636,
+      "max_condition_difference": 0.4989643409621565,
+      "defined_conditions": 7,
+      "positive_conditions": 5
+    },
+    {
+      "dataset": "SEA",
+      "detector": "none",
+      "policy": "none",
+      "metric": "poison_admission_rate",
+      "mean_difference": -12.819922373134673,
+      "min_condition_difference": -19.36290468330712,
+      "max_condition_difference": -8.242963936603328,
+      "defined_conditions": 6,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "SEA",
+      "detector": "none",
+      "policy": "none",
+      "metric": "resets_per_100k",
+      "mean_difference": 0.0,
+      "min_condition_difference": 0.0,
+      "max_condition_difference": 0.0,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "SEA",
+      "detector": "none",
+      "policy": "none",
+      "metric": "roc_auc",
+      "mean_difference": 0.0001236555233803235,
+      "min_condition_difference": -0.0007811987122096816,
+      "max_condition_difference": 0.0012038984209855978,
+      "defined_conditions": 7,
+      "positive_conditions": 5
+    },
+    {
+      "dataset": "SEA",
+      "detector": "none",
+      "policy": "none",
+      "metric": "seconds_per_100k",
+      "mean_difference": 5.365155796183363,
+      "min_condition_difference": 4.54265498664851,
+      "max_condition_difference": 6.09943155994018,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    }
+  ],
+  "passive": [
+    {
+      "dataset": "RADAR",
+      "series": "adwin",
+      "metric": "alarm_rate",
+      "mean_of_condition_means": 0.7764659582841401,
+      "minimum_condition_mean": 0.6556473829201103,
+      "maximum_condition_mean": 0.9090909090909091,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "RADAR",
+      "series": "adwin",
+      "metric": "detection_delay",
+      "mean_of_condition_means": null,
+      "minimum_condition_mean": null,
+      "maximum_condition_mean": null,
+      "defined_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "series": "adwin",
+      "metric": "event_recall",
+      "mean_of_condition_means": null,
+      "minimum_condition_mean": null,
+      "maximum_condition_mean": null,
+      "defined_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "series": "adwin",
+      "metric": "poison_alarm_rate",
+      "mean_of_condition_means": 0.8377402111025419,
+      "minimum_condition_mean": 0.6556473829201103,
+      "maximum_condition_mean": 0.9700653389512618,
+      "defined_conditions": 6
+    },
+    {
+      "dataset": "RADAR",
+      "series": "adwin",
+      "metric": "seconds_per_100k",
+      "mean_of_condition_means": 0.11715290760791987,
+      "minimum_condition_mean": 0.09478299254154815,
+      "maximum_condition_mean": 0.14084046244712511,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "RADAR",
+      "series": "adwin",
+      "metric": "unexposed_alarm_rate",
+      "mean_of_condition_means": 0.6579675505528604,
+      "minimum_condition_mean": 0.5555555555555556,
+      "maximum_condition_mean": 0.7063183320620392,
+      "defined_conditions": 5
+    },
+    {
+      "dataset": "RADAR",
+      "series": "d3_oof",
+      "metric": "alarm_rate",
+      "mean_of_condition_means": 0.028630460448642266,
+      "minimum_condition_mean": 0.024793388429752067,
+      "maximum_condition_mean": 0.03305785123966942,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "RADAR",
+      "series": "d3_oof",
+      "metric": "detection_delay",
+      "mean_of_condition_means": null,
+      "minimum_condition_mean": null,
+      "maximum_condition_mean": null,
+      "defined_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "series": "d3_oof",
+      "metric": "event_recall",
+      "mean_of_condition_means": null,
+      "minimum_condition_mean": null,
+      "maximum_condition_mean": null,
+      "defined_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "series": "d3_oof",
+      "metric": "poison_alarm_rate",
+      "mean_of_condition_means": 0.027864199270157444,
+      "minimum_condition_mean": 0.024793388429752067,
+      "maximum_condition_mean": 0.032946563202606464,
+      "defined_conditions": 6
+    },
+    {
+      "dataset": "RADAR",
+      "series": "d3_oof",
+      "metric": "seconds_per_100k",
+      "mean_of_condition_means": 15.63134889015991,
+      "minimum_condition_mean": 10.663977956680604,
+      "maximum_condition_mean": 17.459032745008187,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "RADAR",
+      "series": "d3_oof",
+      "metric": "unexposed_alarm_rate",
+      "mean_of_condition_means": 0.0681588725222579,
+      "minimum_condition_mean": 0.024793388429752067,
+      "maximum_condition_mean": 0.1574074074074074,
+      "defined_conditions": 5
+    },
+    {
+      "dataset": "RADAR",
+      "series": "hddm_w",
+      "metric": "alarm_rate",
+      "mean_of_condition_means": 0.6686343959071231,
+      "minimum_condition_mean": 0.5702479338842975,
+      "maximum_condition_mean": 0.7672176308539944,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "RADAR",
+      "series": "hddm_w",
+      "metric": "detection_delay",
+      "mean_of_condition_means": null,
+      "minimum_condition_mean": null,
+      "maximum_condition_mean": null,
+      "defined_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "series": "hddm_w",
+      "metric": "event_recall",
+      "mean_of_condition_means": null,
+      "minimum_condition_mean": null,
+      "maximum_condition_mean": null,
+      "defined_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "series": "hddm_w",
+      "metric": "poison_alarm_rate",
+      "mean_of_condition_means": 0.7405366206498049,
+      "minimum_condition_mean": 0.5750688705234159,
+      "maximum_condition_mean": 0.8482025245784373,
+      "defined_conditions": 6
+    },
+    {
+      "dataset": "RADAR",
+      "series": "hddm_w",
+      "metric": "seconds_per_100k",
+      "mean_of_condition_means": 1.628949434507223,
+      "minimum_condition_mean": 0.949712856972746,
+      "maximum_condition_mean": 2.025690409911776,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "RADAR",
+      "series": "hddm_w",
+      "metric": "unexposed_alarm_rate",
+      "mean_of_condition_means": 0.5497845650598455,
+      "minimum_condition_mean": 0.4444444444444444,
+      "maximum_condition_mean": 0.6170353419781337,
+      "defined_conditions": 5
+    },
+    {
+      "dataset": "RADAR",
+      "series": "hellinger",
+      "metric": "alarm_rate",
+      "mean_of_condition_means": 0.06739472648563558,
+      "minimum_condition_mean": 0.06198347107438016,
+      "maximum_condition_mean": 0.08677685950413223,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "RADAR",
+      "series": "hellinger",
+      "metric": "detection_delay",
+      "mean_of_condition_means": null,
+      "minimum_condition_mean": null,
+      "maximum_condition_mean": null,
+      "defined_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "series": "hellinger",
+      "metric": "event_recall",
+      "mean_of_condition_means": null,
+      "minimum_condition_mean": null,
+      "maximum_condition_mean": null,
+      "defined_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "series": "hellinger",
+      "metric": "poison_alarm_rate",
+      "mean_of_condition_means": 0.061593122083685024,
+      "minimum_condition_mean": 0.04410748784953619,
+      "maximum_condition_mean": 0.0832506384096715,
+      "defined_conditions": 6
+    },
+    {
+      "dataset": "RADAR",
+      "series": "hellinger",
+      "metric": "seconds_per_100k",
+      "mean_of_condition_means": 0.4118659538569109,
+      "minimum_condition_mean": 0.38078037018182576,
+      "maximum_condition_mean": 0.4492732522162029,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "RADAR",
+      "series": "hellinger",
+      "metric": "unexposed_alarm_rate",
+      "mean_of_condition_means": 0.06945077836808008,
+      "minimum_condition_mean": 0.05555555555555555,
+      "maximum_condition_mean": 0.0869438087973557,
+      "defined_conditions": 5
+    },
+    {
+      "dataset": "RBF",
+      "series": "adwin",
+      "metric": "alarm_rate",
+      "mean_of_condition_means": 0.23675655000956206,
+      "minimum_condition_mean": 0.04149933065595716,
+      "maximum_condition_mean": 0.4257028112449799,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "series": "adwin",
+      "metric": "detection_delay",
+      "mean_of_condition_means": 5.7936507936507935,
+      "minimum_condition_mean": 2.777777777777778,
+      "maximum_condition_mean": 11.444444444444445,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "series": "adwin",
+      "metric": "event_recall",
+      "mean_of_condition_means": 1.0,
+      "minimum_condition_mean": 1.0,
+      "maximum_condition_mean": 1.0,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "series": "adwin",
+      "metric": "poison_alarm_rate",
+      "mean_of_condition_means": 0.5746434396790198,
+      "minimum_condition_mean": 0.04149933065595716,
+      "maximum_condition_mean": 0.9763203021333061,
+      "defined_conditions": 6
+    },
+    {
+      "dataset": "RBF",
+      "series": "adwin",
+      "metric": "seconds_per_100k",
+      "mean_of_condition_means": 0.08976485135832003,
+      "minimum_condition_mean": 0.07941891954590878,
+      "maximum_condition_mean": 0.09859155965968967,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "series": "adwin",
+      "metric": "unexposed_alarm_rate",
+      "mean_of_condition_means": 0.018867924528301886,
+      "minimum_condition_mean": 0.0,
+      "maximum_condition_mean": 0.03773584905660377,
+      "defined_conditions": 2
+    },
+    {
+      "dataset": "RBF",
+      "series": "d3_oof",
+      "metric": "alarm_rate",
+      "mean_of_condition_means": 0.03098106712564544,
+      "minimum_condition_mean": 0.020080321285140562,
+      "maximum_condition_mean": 0.03614457831325301,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "series": "d3_oof",
+      "metric": "detection_delay",
+      "mean_of_condition_means": 22.25,
+      "minimum_condition_mean": 12.916666666666666,
+      "maximum_condition_mean": 38.0,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "series": "d3_oof",
+      "metric": "event_recall",
+      "mean_of_condition_means": 0.888888888888889,
+      "minimum_condition_mean": 0.7777777777777777,
+      "maximum_condition_mean": 1.0,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "series": "d3_oof",
+      "metric": "poison_alarm_rate",
+      "mean_of_condition_means": 0.03108834252961079,
+      "minimum_condition_mean": 0.01904761904761905,
+      "maximum_condition_mean": 0.0380952380952381,
+      "defined_conditions": 6
+    },
+    {
+      "dataset": "RBF",
+      "series": "d3_oof",
+      "metric": "seconds_per_100k",
+      "mean_of_condition_means": 0.9886971429212108,
+      "minimum_condition_mean": 0.9396607069298625,
+      "maximum_condition_mean": 1.0281624795868993,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "series": "d3_oof",
+      "metric": "unexposed_alarm_rate",
+      "mean_of_condition_means": 0.015723270440251572,
+      "minimum_condition_mean": 0.0,
+      "maximum_condition_mean": 0.031446540880503145,
+      "defined_conditions": 2
+    },
+    {
+      "dataset": "RBF",
+      "series": "hddm_w",
+      "metric": "alarm_rate",
+      "mean_of_condition_means": 0.5624402371390324,
+      "minimum_condition_mean": 0.3453815261044177,
+      "maximum_condition_mean": 0.6345381526104418,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "series": "hddm_w",
+      "metric": "detection_delay",
+      "mean_of_condition_means": 2.126984126984127,
+      "minimum_condition_mean": 0.7777777777777777,
+      "maximum_condition_mean": 3.5555555555555554,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "series": "hddm_w",
+      "metric": "event_recall",
+      "mean_of_condition_means": 1.0,
+      "minimum_condition_mean": 1.0,
+      "maximum_condition_mean": 1.0,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "series": "hddm_w",
+      "metric": "poison_alarm_rate",
+      "mean_of_condition_means": 0.8097989605497912,
+      "minimum_condition_mean": 0.5408299866131192,
+      "maximum_condition_mean": 0.9904761904761905,
+      "defined_conditions": 6
+    },
+    {
+      "dataset": "RBF",
+      "series": "hddm_w",
+      "metric": "seconds_per_100k",
+      "mean_of_condition_means": 0.7463190285888102,
+      "minimum_condition_mean": 0.6403308397779862,
+      "maximum_condition_mean": 0.8607077602607508,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "series": "hddm_w",
+      "metric": "unexposed_alarm_rate",
+      "mean_of_condition_means": 0.6666666666666666,
+      "minimum_condition_mean": 0.3333333333333333,
+      "maximum_condition_mean": 1.0,
+      "defined_conditions": 2
+    },
+    {
+      "dataset": "RBF",
+      "series": "hellinger",
+      "metric": "alarm_rate",
+      "mean_of_condition_means": 0.08471983170778351,
+      "minimum_condition_mean": 0.06961178045515394,
+      "maximum_condition_mean": 0.10174029451137885,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "series": "hellinger",
+      "metric": "detection_delay",
+      "mean_of_condition_means": 14.809523809523808,
+      "minimum_condition_mean": 8.777777777777777,
+      "maximum_condition_mean": 27.555555555555554,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "series": "hellinger",
+      "metric": "event_recall",
+      "mean_of_condition_means": 1.0,
+      "minimum_condition_mean": 1.0,
+      "maximum_condition_mean": 1.0,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "series": "hellinger",
+      "metric": "poison_alarm_rate",
+      "mean_of_condition_means": 0.08998041604345088,
+      "minimum_condition_mean": 0.06712428974856248,
+      "maximum_condition_mean": 0.1111111111111111,
+      "defined_conditions": 6
+    },
+    {
+      "dataset": "RBF",
+      "series": "hellinger",
+      "metric": "seconds_per_100k",
+      "mean_of_condition_means": 0.07260354109818028,
+      "minimum_condition_mean": 0.06759085301309825,
+      "maximum_condition_mean": 0.08056933311745525,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "RBF",
+      "series": "hellinger",
+      "metric": "unexposed_alarm_rate",
+      "mean_of_condition_means": 0.0440251572327044,
+      "minimum_condition_mean": 0.0,
+      "maximum_condition_mean": 0.0880503144654088,
+      "defined_conditions": 2
+    },
+    {
+      "dataset": "SEA",
+      "series": "adwin",
+      "metric": "alarm_rate",
+      "mean_of_condition_means": 0.22336966915280168,
+      "minimum_condition_mean": 0.012048192771084336,
+      "maximum_condition_mean": 0.7710843373493975,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "series": "adwin",
+      "metric": "detection_delay",
+      "mean_of_condition_means": 3.003968253968254,
+      "minimum_condition_mean": 0.5277777777777778,
+      "maximum_condition_mean": 5.833333333333333,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "series": "adwin",
+      "metric": "event_recall",
+      "mean_of_condition_means": 0.8412698412698412,
+      "minimum_condition_mean": 0.4444444444444444,
+      "maximum_condition_mean": 1.0,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "series": "adwin",
+      "metric": "poison_alarm_rate",
+      "mean_of_condition_means": 0.34578984105151295,
+      "minimum_condition_mean": 0.012048192771084336,
+      "maximum_condition_mean": 0.9239570436325,
+      "defined_conditions": 6
+    },
+    {
+      "dataset": "SEA",
+      "series": "adwin",
+      "metric": "seconds_per_100k",
+      "mean_of_condition_means": 0.08535234652725714,
+      "minimum_condition_mean": 0.07719919976467887,
+      "maximum_condition_mean": 0.10012132007007797,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "series": "adwin",
+      "metric": "unexposed_alarm_rate",
+      "mean_of_condition_means": 0.0814579186586553,
+      "minimum_condition_mean": 0.0,
+      "maximum_condition_mean": 0.3333333333333333,
+      "defined_conditions": 5
+    },
+    {
+      "dataset": "SEA",
+      "series": "d3_oof",
+      "metric": "alarm_rate",
+      "mean_of_condition_means": 0.02677376171352075,
+      "minimum_condition_mean": 0.01472556894243641,
+      "maximum_condition_mean": 0.03346720214190094,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "series": "d3_oof",
+      "metric": "detection_delay",
+      "mean_of_condition_means": 8.482142857142858,
+      "minimum_condition_mean": 4.75,
+      "maximum_condition_mean": 11.583333333333334,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "series": "d3_oof",
+      "metric": "event_recall",
+      "mean_of_condition_means": 0.4603174603174603,
+      "minimum_condition_mean": 0.1111111111111111,
+      "maximum_condition_mean": 0.6666666666666666,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "series": "d3_oof",
+      "metric": "poison_alarm_rate",
+      "mean_of_condition_means": 0.024930042111869975,
+      "minimum_condition_mean": 0.009410430839002268,
+      "maximum_condition_mean": 0.032128514056224904,
+      "defined_conditions": 6
+    },
+    {
+      "dataset": "SEA",
+      "series": "d3_oof",
+      "metric": "seconds_per_100k",
+      "mean_of_condition_means": 0.8380838764343589,
+      "minimum_condition_mean": 0.7756566534439723,
+      "maximum_condition_mean": 0.8771122138326367,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "series": "d3_oof",
+      "metric": "unexposed_alarm_rate",
+      "mean_of_condition_means": 0.0332586320984111,
+      "minimum_condition_mean": 0.0,
+      "maximum_condition_mean": 0.10822510822510822,
+      "defined_conditions": 5
+    },
+    {
+      "dataset": "SEA",
+      "series": "hddm_w",
+      "metric": "alarm_rate",
+      "mean_of_condition_means": 0.22623828647925032,
+      "minimum_condition_mean": 0.00535475234270415,
+      "maximum_condition_mean": 0.6666666666666666,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "series": "hddm_w",
+      "metric": "detection_delay",
+      "mean_of_condition_means": 4.055555555555555,
+      "minimum_condition_mean": 0.638888888888889,
+      "maximum_condition_mean": 8.166666666666666,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "series": "hddm_w",
+      "metric": "event_recall",
+      "mean_of_condition_means": 0.7301587301587301,
+      "minimum_condition_mean": 0.3333333333333333,
+      "maximum_condition_mean": 1.0,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "series": "hddm_w",
+      "metric": "poison_alarm_rate",
+      "mean_of_condition_means": 0.34460428999257436,
+      "minimum_condition_mean": 0.022863398232856363,
+      "maximum_condition_mean": 0.8232396406838598,
+      "defined_conditions": 6
+    },
+    {
+      "dataset": "SEA",
+      "series": "hddm_w",
+      "metric": "seconds_per_100k",
+      "mean_of_condition_means": 0.6473539562452407,
+      "minimum_condition_mean": 0.5496467467087011,
+      "maximum_condition_mean": 0.8636780397966505,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "series": "hddm_w",
+      "metric": "unexposed_alarm_rate",
+      "mean_of_condition_means": 0.00036832412523020257,
+      "minimum_condition_mean": 0.0,
+      "maximum_condition_mean": 0.0018416206261510127,
+      "defined_conditions": 5
+    },
+    {
+      "dataset": "SEA",
+      "series": "hellinger",
+      "metric": "alarm_rate",
+      "mean_of_condition_means": 0.09179575444635686,
+      "minimum_condition_mean": 0.07630522088353413,
+      "maximum_condition_mean": 0.09772423025435073,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "series": "hellinger",
+      "metric": "detection_delay",
+      "mean_of_condition_means": 4.841269841269841,
+      "minimum_condition_mean": 3.638888888888889,
+      "maximum_condition_mean": 8.444444444444445,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "series": "hellinger",
+      "metric": "event_recall",
+      "mean_of_condition_means": 0.9047619047619048,
+      "minimum_condition_mean": 0.7777777777777778,
+      "maximum_condition_mean": 1.0,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "series": "hellinger",
+      "metric": "poison_alarm_rate",
+      "mean_of_condition_means": 0.09303480191660064,
+      "minimum_condition_mean": 0.07733838920451497,
+      "maximum_condition_mean": 0.10745171631871138,
+      "defined_conditions": 6
+    },
+    {
+      "dataset": "SEA",
+      "series": "hellinger",
+      "metric": "seconds_per_100k",
+      "mean_of_condition_means": 0.029035253490188293,
+      "minimum_condition_mean": 0.026735400160153706,
+      "maximum_condition_mean": 0.034398506457606955,
+      "defined_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "series": "hellinger",
+      "metric": "unexposed_alarm_rate",
+      "mean_of_condition_means": 0.12847116255956034,
+      "minimum_condition_mean": 0.06084656084656084,
+      "maximum_condition_mean": 0.3333333333333333,
+      "defined_conditions": 5
+    }
+  ],
+  "rl": [
+    {
+      "dataset": "RADAR",
+      "series": "rl",
+      "reference": "confirmed",
+      "metric": "accuracy",
+      "mean_difference": -0.5162560474525446,
+      "min_condition_difference": -4.223521941483021,
+      "max_condition_difference": 2.1248116328325497,
+      "defined_conditions": 7,
+      "positive_conditions": 4
+    },
+    {
+      "dataset": "RADAR",
+      "series": "rl",
+      "reference": "confirmed",
+      "metric": "macro_f1",
+      "mean_difference": 0.7299971999679732,
+      "min_condition_difference": -3.745399074521773,
+      "max_condition_difference": 4.791716399087389,
+      "defined_conditions": 7,
+      "positive_conditions": 4
+    },
+    {
+      "dataset": "RADAR",
+      "series": "rl",
+      "reference": "confirmed",
+      "metric": "macro_recall",
+      "mean_difference": 1.3039820718278,
+      "min_condition_difference": -3.5067253979522888,
+      "max_condition_difference": 6.1682001913000635,
+      "defined_conditions": 7,
+      "positive_conditions": 4
+    },
+    {
+      "dataset": "RADAR",
+      "series": "rl",
+      "reference": "confirmed",
+      "metric": "roc_auc",
+      "mean_difference": -0.04605530611817845,
+      "min_condition_difference": -0.10726707813199536,
+      "max_condition_difference": 0.015086650030456172,
+      "defined_conditions": 7,
+      "positive_conditions": 2
+    },
+    {
+      "dataset": "RADAR",
+      "series": "rl",
+      "reference": "immediate",
+      "metric": "accuracy",
+      "mean_difference": 2.1797055548028434,
+      "min_condition_difference": 0.4627033712676735,
+      "max_condition_difference": 5.038654429046274,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RADAR",
+      "series": "rl",
+      "reference": "immediate",
+      "metric": "macro_f1",
+      "mean_difference": 1.3651636778831227,
+      "min_condition_difference": 0.0014931256350251647,
+      "max_condition_difference": 4.369342946443744,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "RADAR",
+      "series": "rl",
+      "reference": "immediate",
+      "metric": "macro_recall",
+      "mean_difference": 1.0350611334217823,
+      "min_condition_difference": -0.6550879127718493,
+      "max_condition_difference": 3.67636590612752,
+      "defined_conditions": 7,
+      "positive_conditions": 5
+    },
+    {
+      "dataset": "RADAR",
+      "series": "rl",
+      "reference": "immediate",
+      "metric": "roc_auc",
+      "mean_difference": 0.009629956106207602,
+      "min_condition_difference": -0.008808508029296521,
+      "max_condition_difference": 0.029077255401169604,
+      "defined_conditions": 7,
+      "positive_conditions": 6
+    },
+    {
+      "dataset": "RADAR",
+      "series": "rl",
+      "reference": "none",
+      "metric": "accuracy",
+      "mean_difference": -2.464400328967384,
+      "min_condition_difference": -8.99413376563745,
+      "max_condition_difference": 2.2425648954862614,
+      "defined_conditions": 7,
+      "positive_conditions": 3
+    },
+    {
+      "dataset": "RADAR",
+      "series": "rl",
+      "reference": "none",
+      "metric": "macro_f1",
+      "mean_difference": 4.122485589769622,
+      "min_condition_difference": -3.2555297568618173,
+      "max_condition_difference": 8.541532487361664,
+      "defined_conditions": 7,
+      "positive_conditions": 5
+    },
+    {
+      "dataset": "RADAR",
+      "series": "rl",
+      "reference": "none",
+      "metric": "macro_recall",
+      "mean_difference": 3.7647596830195966,
+      "min_condition_difference": -4.844884889000396,
+      "max_condition_difference": 9.382635486404787,
+      "defined_conditions": 7,
+      "positive_conditions": 5
+    },
+    {
+      "dataset": "RADAR",
+      "series": "rl",
+      "reference": "none",
+      "metric": "roc_auc",
+      "mean_difference": -0.08218375110171956,
+      "min_condition_difference": -0.17117211976372526,
+      "max_condition_difference": -0.010011950507236836,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "series": "rl_alarm",
+      "reference": "confirmed",
+      "metric": "accuracy",
+      "mean_difference": -1.835919423831715,
+      "min_condition_difference": -5.630588928126286,
+      "max_condition_difference": 0.8762427222320198,
+      "defined_conditions": 7,
+      "positive_conditions": 2
+    },
+    {
+      "dataset": "RADAR",
+      "series": "rl_alarm",
+      "reference": "confirmed",
+      "metric": "macro_f1",
+      "mean_difference": -1.8153783107002508,
+      "min_condition_difference": -6.15686330177266,
+      "max_condition_difference": 1.6708443449483579,
+      "defined_conditions": 7,
+      "positive_conditions": 3
+    },
+    {
+      "dataset": "RADAR",
+      "series": "rl_alarm",
+      "reference": "confirmed",
+      "metric": "macro_recall",
+      "mean_difference": -1.060898869869751,
+      "min_condition_difference": -5.666620949887117,
+      "max_condition_difference": 3.20306138760856,
+      "defined_conditions": 7,
+      "positive_conditions": 3
+    },
+    {
+      "dataset": "RADAR",
+      "series": "rl_alarm",
+      "reference": "confirmed",
+      "metric": "roc_auc",
+      "mean_difference": -0.05065242853580654,
+      "min_condition_difference": -0.10595784895810952,
+      "max_condition_difference": 0.007568271394628605,
+      "defined_conditions": 7,
+      "positive_conditions": 1
+    },
+    {
+      "dataset": "RADAR",
+      "series": "rl_alarm",
+      "reference": "immediate",
+      "metric": "accuracy",
+      "mean_difference": 0.8600421784236733,
+      "min_condition_difference": -1.6887994992773454,
+      "max_condition_difference": 3.130336755638785,
+      "defined_conditions": 7,
+      "positive_conditions": 5
+    },
+    {
+      "dataset": "RADAR",
+      "series": "rl_alarm",
+      "reference": "immediate",
+      "metric": "macro_f1",
+      "mean_difference": -1.1802118327851012,
+      "min_condition_difference": -3.0471610611749504,
+      "max_condition_difference": 0.7926003579608154,
+      "defined_conditions": 7,
+      "positive_conditions": 2
+    },
+    {
+      "dataset": "RADAR",
+      "series": "rl_alarm",
+      "reference": "immediate",
+      "metric": "macro_recall",
+      "mean_difference": -1.3298198082757686,
+      "min_condition_difference": -3.6096306079750065,
+      "max_condition_difference": 1.3114353856773988,
+      "defined_conditions": 7,
+      "positive_conditions": 2
+    },
+    {
+      "dataset": "RADAR",
+      "series": "rl_alarm",
+      "reference": "immediate",
+      "metric": "roc_auc",
+      "mean_difference": 0.005032833688579515,
+      "min_condition_difference": -0.01632688666512409,
+      "max_condition_difference": 0.04272528003015371,
+      "defined_conditions": 7,
+      "positive_conditions": 3
+    },
+    {
+      "dataset": "RADAR",
+      "series": "rl_alarm",
+      "reference": "none",
+      "metric": "accuracy",
+      "mean_difference": -3.7840637053465542,
+      "min_condition_difference": -7.39660289543066,
+      "max_condition_difference": -0.7356631326942309,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RADAR",
+      "series": "rl_alarm",
+      "reference": "none",
+      "metric": "macro_f1",
+      "mean_difference": 1.5771100791013979,
+      "min_condition_difference": -2.7067486800347003,
+      "max_condition_difference": 5.420660433222633,
+      "defined_conditions": 7,
+      "positive_conditions": 5
+    },
+    {
+      "dataset": "RADAR",
+      "series": "rl_alarm",
+      "reference": "none",
+      "metric": "macro_recall",
+      "mean_difference": 1.3998787413220448,
+      "min_condition_difference": -4.162174058135165,
+      "max_condition_difference": 6.417496682713282,
+      "defined_conditions": 7,
+      "positive_conditions": 4
+    },
+    {
+      "dataset": "RADAR",
+      "series": "rl_alarm",
+      "reference": "none",
+      "metric": "roc_auc",
+      "mean_difference": -0.08678087351934764,
+      "min_condition_difference": -0.15750606132268316,
+      "max_condition_difference": -0.017530329143064405,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "series": "rl",
+      "reference": "confirmed",
+      "metric": "accuracy",
+      "mean_difference": -8.563997300611593,
+      "min_condition_difference": -10.915873702249213,
+      "max_condition_difference": -6.629954102879746,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "series": "rl",
+      "reference": "confirmed",
+      "metric": "macro_f1",
+      "mean_difference": -8.888689845979616,
+      "min_condition_difference": -11.21012261561001,
+      "max_condition_difference": -7.21004057945553,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "series": "rl",
+      "reference": "confirmed",
+      "metric": "macro_recall",
+      "mean_difference": -8.964048560341903,
+      "min_condition_difference": -11.25037742404696,
+      "max_condition_difference": -7.237075315161561,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "series": "rl",
+      "reference": "confirmed",
+      "metric": "roc_auc",
+      "mean_difference": -0.061073753316770514,
+      "min_condition_difference": -0.07143011976978164,
+      "max_condition_difference": -0.046156408037504947,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "series": "rl",
+      "reference": "immediate",
+      "metric": "accuracy",
+      "mean_difference": -2.3094331525055156,
+      "min_condition_difference": -7.323857811964788,
+      "max_condition_difference": 1.2220304697782198,
+      "defined_conditions": 7,
+      "positive_conditions": 2
+    },
+    {
+      "dataset": "RBF",
+      "series": "rl",
+      "reference": "immediate",
+      "metric": "macro_f1",
+      "mean_difference": -2.4100431479582136,
+      "min_condition_difference": -7.623289631934424,
+      "max_condition_difference": 1.2700728810249566,
+      "defined_conditions": 7,
+      "positive_conditions": 2
+    },
+    {
+      "dataset": "RBF",
+      "series": "rl",
+      "reference": "immediate",
+      "metric": "macro_recall",
+      "mean_difference": -2.3848109601183296,
+      "min_condition_difference": -7.684983971817612,
+      "max_condition_difference": 1.2843539443226064,
+      "defined_conditions": 7,
+      "positive_conditions": 2
+    },
+    {
+      "dataset": "RBF",
+      "series": "rl",
+      "reference": "immediate",
+      "metric": "roc_auc",
+      "mean_difference": -0.019997861712699634,
+      "min_condition_difference": -0.05369912508811955,
+      "max_condition_difference": 0.004750277832634524,
+      "defined_conditions": 7,
+      "positive_conditions": 2
+    },
+    {
+      "dataset": "RBF",
+      "series": "rl",
+      "reference": "none",
+      "metric": "accuracy",
+      "mean_difference": -9.46438362757855,
+      "min_condition_difference": -10.897949539505,
+      "max_condition_difference": -8.342172628196431,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "series": "rl",
+      "reference": "none",
+      "metric": "macro_f1",
+      "mean_difference": -9.856439637540708,
+      "min_condition_difference": -11.218400002287362,
+      "max_condition_difference": -8.758478554416453,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "series": "rl",
+      "reference": "none",
+      "metric": "macro_recall",
+      "mean_difference": -9.944832634392743,
+      "min_condition_difference": -11.312994305361327,
+      "max_condition_difference": -8.932013761825667,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "series": "rl",
+      "reference": "none",
+      "metric": "roc_auc",
+      "mean_difference": -0.06651017665216616,
+      "min_condition_difference": -0.07310158467699579,
+      "max_condition_difference": -0.0597645432651965,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "series": "rl_alarm",
+      "reference": "confirmed",
+      "metric": "accuracy",
+      "mean_difference": -7.727703391296274,
+      "min_condition_difference": -10.508965601501878,
+      "max_condition_difference": -5.88268821646238,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "series": "rl_alarm",
+      "reference": "confirmed",
+      "metric": "macro_f1",
+      "mean_difference": -8.019310229349854,
+      "min_condition_difference": -10.790512586936872,
+      "max_condition_difference": -6.179517652434093,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "series": "rl_alarm",
+      "reference": "confirmed",
+      "metric": "macro_recall",
+      "mean_difference": -8.080971791991377,
+      "min_condition_difference": -10.829459458529733,
+      "max_condition_difference": -6.34338247634516,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "series": "rl_alarm",
+      "reference": "confirmed",
+      "metric": "roc_auc",
+      "mean_difference": -0.05580603108684956,
+      "min_condition_difference": -0.06922190922404577,
+      "max_condition_difference": -0.045364949184545034,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "series": "rl_alarm",
+      "reference": "immediate",
+      "metric": "accuracy",
+      "mean_difference": -1.473139243190197,
+      "min_condition_difference": -7.369415630590715,
+      "max_condition_difference": 2.5528308437816727,
+      "defined_conditions": 7,
+      "positive_conditions": 3
+    },
+    {
+      "dataset": "RBF",
+      "series": "rl_alarm",
+      "reference": "immediate",
+      "metric": "macro_f1",
+      "mean_difference": -1.5406635313284531,
+      "min_condition_difference": -7.662672640631929,
+      "max_condition_difference": 2.657034441865021,
+      "defined_conditions": 7,
+      "positive_conditions": 3
+    },
+    {
+      "dataset": "RBF",
+      "series": "rl_alarm",
+      "reference": "immediate",
+      "metric": "macro_recall",
+      "mean_difference": -1.5017341917678035,
+      "min_condition_difference": -7.71266801187311,
+      "max_condition_difference": 2.7029126139922144,
+      "defined_conditions": 7,
+      "positive_conditions": 3
+    },
+    {
+      "dataset": "RBF",
+      "series": "rl_alarm",
+      "reference": "immediate",
+      "metric": "roc_auc",
+      "mean_difference": -0.014730139482778681,
+      "min_condition_difference": -0.054000246241368975,
+      "max_condition_difference": 0.013465266952783791,
+      "defined_conditions": 7,
+      "positive_conditions": 2
+    },
+    {
+      "dataset": "RBF",
+      "series": "rl_alarm",
+      "reference": "none",
+      "metric": "accuracy",
+      "mean_difference": -8.62808971826323,
+      "min_condition_difference": -9.69407989796112,
+      "max_condition_difference": -8.129122454398937,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "series": "rl_alarm",
+      "reference": "none",
+      "metric": "macro_f1",
+      "mean_difference": -8.987060020910947,
+      "min_condition_difference": -10.000206756558372,
+      "max_condition_difference": -8.447590130437277,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "series": "rl_alarm",
+      "reference": "none",
+      "metric": "macro_recall",
+      "mean_difference": -9.061755866042216,
+      "min_condition_difference": -10.054645191371236,
+      "max_condition_difference": -8.56119149694586,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "RBF",
+      "series": "rl_alarm",
+      "reference": "none",
+      "metric": "roc_auc",
+      "mean_difference": -0.0612424544222452,
+      "min_condition_difference": -0.06545406361576767,
+      "max_condition_difference": -0.05813814081069594,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "SEA",
+      "series": "rl",
+      "reference": "confirmed",
+      "metric": "accuracy",
+      "mean_difference": -0.45715898236827757,
+      "min_condition_difference": -0.7986834824832459,
+      "max_condition_difference": 0.0009454496149937283,
+      "defined_conditions": 7,
+      "positive_conditions": 1
+    },
+    {
+      "dataset": "SEA",
+      "series": "rl",
+      "reference": "confirmed",
+      "metric": "macro_f1",
+      "mean_difference": -0.552939729701939,
+      "min_condition_difference": -0.941077439309157,
+      "max_condition_difference": -0.05340107263645718,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "SEA",
+      "series": "rl",
+      "reference": "confirmed",
+      "metric": "macro_recall",
+      "mean_difference": -0.7556859288092609,
+      "min_condition_difference": -1.188769803724432,
+      "max_condition_difference": -0.2684251917637474,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "SEA",
+      "series": "rl",
+      "reference": "confirmed",
+      "metric": "roc_auc",
+      "mean_difference": 0.0021629925451967804,
+      "min_condition_difference": 0.00038592102361123537,
+      "max_condition_difference": 0.0037383080204770693,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "series": "rl",
+      "reference": "immediate",
+      "metric": "accuracy",
+      "mean_difference": 0.04631214184318555,
+      "min_condition_difference": -0.9712477759263279,
+      "max_condition_difference": 0.710886443144565,
+      "defined_conditions": 7,
+      "positive_conditions": 5
+    },
+    {
+      "dataset": "SEA",
+      "series": "rl",
+      "reference": "immediate",
+      "metric": "macro_f1",
+      "mean_difference": 0.03580502700465342,
+      "min_condition_difference": -1.0944735136774038,
+      "max_condition_difference": 0.84777952087662,
+      "defined_conditions": 7,
+      "positive_conditions": 5
+    },
+    {
+      "dataset": "SEA",
+      "series": "rl",
+      "reference": "immediate",
+      "metric": "macro_recall",
+      "mean_difference": -0.022837659454162083,
+      "min_condition_difference": -1.2159536380034086,
+      "max_condition_difference": 1.076701242086416,
+      "defined_conditions": 7,
+      "positive_conditions": 3
+    },
+    {
+      "dataset": "SEA",
+      "series": "rl",
+      "reference": "immediate",
+      "metric": "roc_auc",
+      "mean_difference": 0.0037743246333666455,
+      "min_condition_difference": 0.0018461131698474704,
+      "max_condition_difference": 0.006701695979632068,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "series": "rl",
+      "reference": "none",
+      "metric": "accuracy",
+      "mean_difference": 1.3214031728484894,
+      "min_condition_difference": 0.7201618251019615,
+      "max_condition_difference": 2.2036851352778704,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "series": "rl",
+      "reference": "none",
+      "metric": "macro_f1",
+      "mean_difference": 1.5333951261350551,
+      "min_condition_difference": 0.8661792697453449,
+      "max_condition_difference": 2.5554033152568176,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "series": "rl",
+      "reference": "none",
+      "metric": "macro_recall",
+      "mean_difference": 1.7556318624175444,
+      "min_condition_difference": 1.0725212928389238,
+      "max_condition_difference": 2.953812473438903,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "series": "rl",
+      "reference": "none",
+      "metric": "roc_auc",
+      "mean_difference": 0.00638038822098447,
+      "min_condition_difference": 0.0035838326057540857,
+      "max_condition_difference": 0.010258462882973421,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "series": "rl_alarm",
+      "reference": "confirmed",
+      "metric": "accuracy",
+      "mean_difference": -0.9007748921657533,
+      "min_condition_difference": -1.3050308890415623,
+      "max_condition_difference": -0.5494052579036457,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "SEA",
+      "series": "rl_alarm",
+      "reference": "confirmed",
+      "metric": "macro_f1",
+      "mean_difference": -1.0741536329991994,
+      "min_condition_difference": -1.5407651485399096,
+      "max_condition_difference": -0.6880252253123165,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "SEA",
+      "series": "rl_alarm",
+      "reference": "confirmed",
+      "metric": "macro_recall",
+      "mean_difference": -1.3755092544153784,
+      "min_condition_difference": -1.9317822386729595,
+      "max_condition_difference": -0.7218514869119064,
+      "defined_conditions": 7,
+      "positive_conditions": 0
+    },
+    {
+      "dataset": "SEA",
+      "series": "rl_alarm",
+      "reference": "confirmed",
+      "metric": "roc_auc",
+      "mean_difference": 0.0014652560005519336,
+      "min_condition_difference": -0.00035828242590200493,
+      "max_condition_difference": 0.002991770648776019,
+      "defined_conditions": 7,
+      "positive_conditions": 6
+    },
+    {
+      "dataset": "SEA",
+      "series": "rl_alarm",
+      "reference": "immediate",
+      "metric": "accuracy",
+      "mean_difference": -0.3973037679542903,
+      "min_condition_difference": -1.2629655038912446,
+      "max_condition_difference": 0.03523683054302099,
+      "defined_conditions": 7,
+      "positive_conditions": 2
+    },
+    {
+      "dataset": "SEA",
+      "series": "rl_alarm",
+      "reference": "immediate",
+      "metric": "macro_f1",
+      "mean_difference": -0.4854088762926071,
+      "min_condition_difference": -1.4510733556207283,
+      "max_condition_difference": 0.0573167025345119,
+      "defined_conditions": 7,
+      "positive_conditions": 1
+    },
+    {
+      "dataset": "SEA",
+      "series": "rl_alarm",
+      "reference": "immediate",
+      "metric": "macro_recall",
+      "mean_difference": -0.6426609850602796,
+      "min_condition_difference": -1.6693799331515677,
+      "max_condition_difference": 0.14065044169743932,
+      "defined_conditions": 7,
+      "positive_conditions": 1
+    },
+    {
+      "dataset": "SEA",
+      "series": "rl_alarm",
+      "reference": "immediate",
+      "metric": "roc_auc",
+      "mean_difference": 0.003076588088721799,
+      "min_condition_difference": 0.0012713550631134884,
+      "max_condition_difference": 0.0052075722548243775,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "series": "rl_alarm",
+      "reference": "none",
+      "metric": "accuracy",
+      "mean_difference": 0.8777872630510135,
+      "min_condition_difference": 0.35657484399820305,
+      "max_condition_difference": 1.5280355226763263,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "series": "rl_alarm",
+      "reference": "none",
+      "metric": "macro_f1",
+      "mean_difference": 1.0121812228377947,
+      "min_condition_difference": 0.43913845801636375,
+      "max_condition_difference": 1.7649404969147096,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "series": "rl_alarm",
+      "reference": "none",
+      "metric": "macro_recall",
+      "mean_difference": 1.135808536811427,
+      "min_condition_difference": 0.5696058439346618,
+      "max_condition_difference": 2.0177616730499266,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    },
+    {
+      "dataset": "SEA",
+      "series": "rl_alarm",
+      "reference": "none",
+      "metric": "roc_auc",
+      "mean_difference": 0.005682651676339623,
+      "min_condition_difference": 0.003806580916477268,
+      "max_condition_difference": 0.008764339158165732,
+      "defined_conditions": 7,
+      "positive_conditions": 7
+    }
+  ],
+  "rl_state_contrasts": [
+    {
+      "dataset": "RADAR",
+      "category": 0,
+      "metric": "accuracy",
+      "error_aware_minus_alarm": 1.407066986643265
+    },
+    {
+      "dataset": "RADAR",
+      "category": 0,
+      "metric": "macro_f1",
+      "error_aware_minus_alarm": 3.1901244491378136
+    },
+    {
+      "dataset": "RADAR",
+      "category": 0,
+      "metric": "macro_recall",
+      "error_aware_minus_alarm": 3.5550999614893235
+    },
+    {
+      "dataset": "RADAR",
+      "category": 0,
+      "metric": "roc_auc",
+      "error_aware_minus_alarm": -0.0009568423173930881
+    },
+    {
+      "dataset": "RADAR",
+      "category": 1,
+      "metric": "accuracy",
+      "error_aware_minus_alarm": 1.6570691908514235
+    },
+    {
+      "dataset": "RADAR",
+      "category": 1,
+      "metric": "macro_f1",
+      "error_aware_minus_alarm": 2.5793808707511117
+    },
+    {
+      "dataset": "RADAR",
+      "category": 1,
+      "metric": "macro_recall",
+      "error_aware_minus_alarm": 2.235873969286367
+    },
+    {
+      "dataset": "RADAR",
+      "category": 1,
+      "metric": "roc_auc",
+      "error_aware_minus_alarm": 0.01570508971402973
+    },
+    {
+      "dataset": "RADAR",
+      "category": 2,
+      "metric": "accuracy",
+      "error_aware_minus_alarm": 1.2485689106005302
+    },
+    {
+      "dataset": "RADAR",
+      "category": 2,
+      "metric": "macro_f1",
+      "error_aware_minus_alarm": 3.120872054139031
+    },
+    {
+      "dataset": "RADAR",
+      "category": 2,
+      "metric": "macro_recall",
+      "error_aware_minus_alarm": 2.9651388036915045
+    },
+    {
+      "dataset": "RADAR",
+      "category": 2,
+      "metric": "roc_auc",
+      "error_aware_minus_alarm": 0.007518378635827568
+    },
+    {
+      "dataset": "RADAR",
+      "category": 3,
+      "metric": "accuracy",
+      "error_aware_minus_alarm": 3.8512114440019745
+    },
+    {
+      "dataset": "RADAR",
+      "category": 3,
+      "metric": "macro_f1",
+      "error_aware_minus_alarm": 4.4549966101366065
+    },
+    {
+      "dataset": "RADAR",
+      "category": 3,
+      "metric": "macro_recall",
+      "error_aware_minus_alarm": 4.513536584775537
+    },
+    {
+      "dataset": "RADAR",
+      "category": 3,
+      "metric": "roc_auc",
+      "error_aware_minus_alarm": 0.02472674343892674
+    },
+    {
+      "dataset": "RADAR",
+      "category": 4,
+      "metric": "accuracy",
+      "error_aware_minus_alarm": 4.228834724873628
+    },
+    {
+      "dataset": "RADAR",
+      "category": 4,
+      "metric": "macro_f1",
+      "error_aware_minus_alarm": 5.574248116825423
+    },
+    {
+      "dataset": "RADAR",
+      "category": 4,
+      "metric": "macro_recall",
+      "error_aware_minus_alarm": 5.3907331553060915
+    },
+    {
+      "dataset": "RADAR",
+      "category": 4,
+      "metric": "roc_auc",
+      "error_aware_minus_alarm": 0.033019688442770624
+    },
+    {
+      "dataset": "RADAR",
+      "category": 5,
+      "metric": "accuracy",
+      "error_aware_minus_alarm": -1.5975308702067903
+    },
+    {
+      "dataset": "RADAR",
+      "category": 5,
+      "metric": "macro_f1",
+      "error_aware_minus_alarm": -0.5487810768271167
+    },
+    {
+      "dataset": "RADAR",
+      "category": 5,
+      "metric": "macro_recall",
+      "error_aware_minus_alarm": -0.6827108308652314
+    },
+    {
+      "dataset": "RADAR",
+      "category": 5,
+      "metric": "roc_auc",
+      "error_aware_minus_alarm": -0.02759714421210613
+    },
+    {
+      "dataset": "RADAR",
+      "category": 6,
+      "metric": "accuracy",
+      "error_aware_minus_alarm": -1.5575767521098385
+    },
+    {
+      "dataset": "RADAR",
+      "category": 6,
+      "metric": "macro_f1",
+      "error_aware_minus_alarm": -0.5532124494853017
+    },
+    {
+      "dataset": "RADAR",
+      "category": 6,
+      "metric": "macro_recall",
+      "error_aware_minus_alarm": -1.4235050518007366
+    },
+    {
+      "dataset": "RADAR",
+      "category": 6,
+      "metric": "roc_auc",
+      "error_aware_minus_alarm": -0.020236056778658845
+    },
+    {
+      "dataset": "RBF",
+      "category": 0,
+      "metric": "accuracy",
+      "error_aware_minus_alarm": -0.4069081007473354
+    },
+    {
+      "dataset": "RBF",
+      "category": 0,
+      "metric": "macro_f1",
+      "error_aware_minus_alarm": -0.4196100286731343
+    },
+    {
+      "dataset": "RBF",
+      "category": 0,
+      "metric": "macro_recall",
+      "error_aware_minus_alarm": -0.42091796551722754
+    },
+    {
+      "dataset": "RBF",
+      "category": 0,
+      "metric": "roc_auc",
+      "error_aware_minus_alarm": -0.0022082105457358705
+    },
+    {
+      "dataset": "RBF",
+      "category": 1,
+      "metric": "accuracy",
+      "error_aware_minus_alarm": 0.045557818625925194
+    },
+    {
+      "dataset": "RBF",
+      "category": 1,
+      "metric": "macro_f1",
+      "error_aware_minus_alarm": 0.03938300869750636
+    },
+    {
+      "dataset": "RBF",
+      "category": 1,
+      "metric": "macro_recall",
+      "error_aware_minus_alarm": 0.027684040055498
+    },
+    {
+      "dataset": "RBF",
+      "category": 1,
+      "metric": "roc_auc",
+      "error_aware_minus_alarm": 0.00030112115324942845
+    },
+    {
+      "dataset": "RBF",
+      "category": 2,
+      "metric": "accuracy",
+      "error_aware_minus_alarm": -0.11309213083783683
+    },
+    {
+      "dataset": "RBF",
+      "category": 2,
+      "metric": "macro_f1",
+      "error_aware_minus_alarm": -0.19748636915296972
+    },
+    {
+      "dataset": "RBF",
+      "category": 2,
+      "metric": "macro_recall",
+      "error_aware_minus_alarm": -0.23915453768572656
+    },
+    {
+      "dataset": "RBF",
+      "category": 2,
+      "metric": "roc_auc",
+      "error_aware_minus_alarm": -0.0007914588529599106
+    },
+    {
+      "dataset": "RBF",
+      "category": 3,
+      "metric": "accuracy",
+      "error_aware_minus_alarm": -1.0701846716233347
+    },
+    {
+      "dataset": "RBF",
+      "category": 3,
+      "metric": "macro_f1",
+      "error_aware_minus_alarm": -1.1336672142163344
+    },
+    {
+      "dataset": "RBF",
+      "category": 3,
+      "metric": "macro_recall",
+      "error_aware_minus_alarm": -1.159410155093628
+    },
+    {
+      "dataset": "RBF",
+      "category": 3,
+      "metric": "roc_auc",
+      "error_aware_minus_alarm": -0.007870556446078184
+    },
+    {
+      "dataset": "RBF",
+      "category": 4,
+      "metric": "accuracy",
+      "error_aware_minus_alarm": -1.9951007073690912
+    },
+    {
+      "dataset": "RBF",
+      "category": 4,
+      "metric": "macro_f1",
+      "error_aware_minus_alarm": -2.0144476113887437
+    },
+    {
+      "dataset": "RBF",
+      "category": 4,
+      "metric": "macro_recall",
+      "error_aware_minus_alarm": -2.014569857756421
+    },
+    {
+      "dataset": "RBF",
+      "category": 4,
+      "metric": "roc_auc",
+      "error_aware_minus_alarm": -0.011503503578318308
+    },
+    {
+      "dataset": "RBF",
+      "category": 5,
+      "metric": "accuracy",
+      "error_aware_minus_alarm": -1.3308003740034522
+    },
+    {
+      "dataset": "RBF",
+      "category": 5,
+      "metric": "macro_f1",
+      "error_aware_minus_alarm": -1.3869615608400647
+    },
+    {
+      "dataset": "RBF",
+      "category": 5,
+      "metric": "macro_recall",
+      "error_aware_minus_alarm": -1.418558669669608
+    },
+    {
+      "dataset": "RBF",
+      "category": 5,
+      "metric": "roc_auc",
+      "error_aware_minus_alarm": -0.008714989120149267
+    },
+    {
+      "dataset": "RBF",
+      "category": 6,
+      "metric": "accuracy",
+      "error_aware_minus_alarm": -0.983529199252105
+    },
+    {
+      "dataset": "RBF",
+      "category": 6,
+      "metric": "macro_f1",
+      "error_aware_minus_alarm": -0.9728675408345842
+    },
+    {
+      "dataset": "RBF",
+      "category": 6,
+      "metric": "macro_recall",
+      "error_aware_minus_alarm": -0.9566102327865703
+    },
+    {
+      "dataset": "RBF",
+      "category": 6,
+      "metric": "roc_auc",
+      "error_aware_minus_alarm": -0.006086458219454564
+    },
+    {
+      "dataset": "SEA",
+      "category": 0,
+      "metric": "accuracy",
+      "error_aware_minus_alarm": 0.4880646083259406
+    },
+    {
+      "dataset": "SEA",
+      "category": 0,
+      "metric": "macro_f1",
+      "error_aware_minus_alarm": 0.5701590208382642
+    },
+    {
+      "dataset": "SEA",
+      "category": 0,
+      "metric": "macro_recall",
+      "error_aware_minus_alarm": 0.6715370956844935
+    },
+    {
+      "dataset": "SEA",
+      "category": 0,
+      "metric": "roc_auc",
+      "error_aware_minus_alarm": 0.0006553438143443261
+    },
+    {
+      "dataset": "SEA",
+      "category": 1,
+      "metric": "accuracy",
+      "error_aware_minus_alarm": 0.675649612601544
+    },
+    {
+      "dataset": "SEA",
+      "category": 1,
+      "metric": "macro_f1",
+      "error_aware_minus_alarm": 0.7904628183421081
+    },
+    {
+      "dataset": "SEA",
+      "category": 1,
+      "metric": "macro_recall",
+      "error_aware_minus_alarm": 0.9360508003889767
+    },
+    {
+      "dataset": "SEA",
+      "category": 1,
+      "metric": "roc_auc",
+      "error_aware_minus_alarm": 0.0014941237248076906
+    },
+    {
+      "dataset": "SEA",
+      "category": 2,
+      "metric": "accuracy",
+      "error_aware_minus_alarm": 0.29171772796491674
+    },
+    {
+      "dataset": "SEA",
+      "category": 2,
+      "metric": "macro_f1",
+      "error_aware_minus_alarm": 0.35659984194332434
+    },
+    {
+      "dataset": "SEA",
+      "category": 2,
+      "metric": "macro_recall",
+      "error_aware_minus_alarm": 0.45342629514815896
+    },
+    {
+      "dataset": "SEA",
+      "category": 2,
+      "metric": "roc_auc",
+      "error_aware_minus_alarm": 0.0005747581067339821
+    },
+    {
+      "dataset": "SEA",
+      "category": 3,
+      "metric": "accuracy",
+      "error_aware_minus_alarm": 0.40598650571010236
+    },
+    {
+      "dataset": "SEA",
+      "category": 3,
+      "metric": "macro_f1",
+      "error_aware_minus_alarm": 0.48228605129354934
+    },
+    {
+      "dataset": "SEA",
+      "category": 3,
+      "metric": "macro_recall",
+      "error_aware_minus_alarm": 0.5890594979999294
+    },
+    {
+      "dataset": "SEA",
+      "category": 3,
+      "metric": "roc_auc",
+      "error_aware_minus_alarm": 0.00025952888586492734
+    },
+    {
+      "dataset": "SEA",
+      "category": 4,
+      "metric": "accuracy",
+      "error_aware_minus_alarm": 0.3635869811037584
+    },
+    {
+      "dataset": "SEA",
+      "category": 4,
+      "metric": "macro_f1",
+      "error_aware_minus_alarm": 0.42704081172898106
+    },
+    {
+      "dataset": "SEA",
+      "category": 4,
+      "metric": "macro_recall",
+      "error_aware_minus_alarm": 0.502915448904262
+    },
+    {
+      "dataset": "SEA",
+      "category": 4,
+      "metric": "roc_auc",
+      "error_aware_minus_alarm": 0.0013030329750537788
+    },
+    {
+      "dataset": "SEA",
+      "category": 5,
+      "metric": "accuracy",
+      "error_aware_minus_alarm": 0.5932306059016105
+    },
+    {
+      "dataset": "SEA",
+      "category": 5,
+      "metric": "macro_f1",
+      "error_aware_minus_alarm": 0.6870281900970684
+    },
+    {
+      "dataset": "SEA",
+      "category": 5,
+      "metric": "macro_recall",
+      "error_aware_minus_alarm": 0.7870213186099188
+    },
+    {
+      "dataset": "SEA",
+      "category": 5,
+      "metric": "roc_auc",
+      "error_aware_minus_alarm": 0.0008201166164324055
+    },
+    {
+      "dataset": "SEA",
+      "category": 6,
+      "metric": "accuracy",
+      "error_aware_minus_alarm": 0.2870753269744582
+    },
+    {
+      "dataset": "SEA",
+      "category": 6,
+      "metric": "macro_f1",
+      "error_aware_minus_alarm": 0.3349205888375284
+    },
+    {
+      "dataset": "SEA",
+      "category": 6,
+      "metric": "macro_recall",
+      "error_aware_minus_alarm": 0.39875282250708316
+    },
+    {
+      "dataset": "SEA",
+      "category": 6,
+      "metric": "roc_auc",
+      "error_aware_minus_alarm": -0.00022274831072318277
+    }
+  ]
+}
