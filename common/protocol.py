@@ -59,7 +59,7 @@ def arms(config):
         if variant not in ('alarm', 'alarm_persistence'):
             raise ValueError('Unknown frozen RL variant')
         policy = 'rl_alarm' if variant == 'alarm' else 'rl'
-        result.append({'policy': policy, 'guarded': True, 'detector': 'adwin', 'rl_seed': model['seed'], 'rl_model': model})
+        result.append({'policy': policy, 'guarded': True, 'detector': model.get('detector', 'adwin'), 'rl_seed': model['seed'], 'rl_model': model})
     return result
 
 def run_id(condition, arm):

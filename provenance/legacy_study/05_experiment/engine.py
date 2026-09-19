@@ -28,10 +28,8 @@ def execute(observations, audits, classes, policy, guarded, config, controller=N
     model = tree.HoeffdingTreeClassifier()
     detector = detectors.create(policy, config['detector'])
     response = Response('none' if p.is_rl(policy) else policy, **config['response'])
-    if p.is_rl(policy) and (controller is None or not guarded):
-        raise ValueError('RL requires a controller and screening')
-    if controller is not None and config['audit']['delay_blocks'] != 1 and controller.collect_rewards:
-        raise ValueError('Reward collection requires one-block audit delay; use a frozen decision-only controller for sensitivity')
+    if p.is_rl(policy) and (controller is None or not guarded or config['audit']['delay_blocks'] != 1):
+        raise ValueError('RL requires a controller, screening and one-block audit delay')
     if controller is not None:
         controller.begin_episode()
     prediction = np.full(n, -1, dtype=np.int64)
@@ -117,7 +115,7 @@ def execute(observations, audits, classes, policy, guarded, config, controller=N
                 refit_total += len(train_ids)
                 response.committed()
                 detector = detectors.create(policy, config['detector'])
-        if controller is not None and controller.collect_rewards and left >= warmup:
+        if controller is not None and left >= warmup:
             controller.record(rl_state, rl_action, deepcopy(model), block, len(train_ids), not accepted)
         events.append({'rl_action': rl_action, 'rl_state': rl_state, 'rl_reward_delivered': delivered_reward, 'block': block, 'start_row': left, 'end_row': right, 'scored': left >= warmup, 'feedback_error': error, 'raw_fire': fired, 'response_event': response_event, 'reset_requested': bool(requested), 'reset_committed': bool(requested and accepted), 'training_blocks': json.dumps(proposed_blocks), 'candidate_rows': len(train_ids), 'accepted': accepted, 'audit_latest_row': latest_audit, 'candidate_seconds': candidate_seconds, 'predict_seconds': predict_seconds, 'gate_seconds': gate_seconds, **{k: v for k, v in gate.items() if k != 'supported_classes'}})
         if controller is not None:

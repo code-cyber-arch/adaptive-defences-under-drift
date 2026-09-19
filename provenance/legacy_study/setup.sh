@@ -17,4 +17,4 @@ if [[ ! -x .venv/bin/python ]]; then
 fi
 .venv/bin/python -m pip install -r requirements.lock.txt
 .venv/bin/python -m pip check
-echo "Ready: bash run.sh --tests or --pilot."
+echo "Ready: bash run.sh --tests, --check-evidence or --smoke."

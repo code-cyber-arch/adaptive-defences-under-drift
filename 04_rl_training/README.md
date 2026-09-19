@@ -1,7 +1,18 @@
-# Phase 04: train the RL controllers
+# Phase 04: train within every dataset and detector
 
-Both controllers choose continue learning or reset. The alarm controller has two states. The alarm_persistence controller also observes recent error deterioration and has four states. Both use the same accuracy reward and screening rule.
+Train **120 controllers** across SEA, RBF and RADAR: four detectors × two state representations × five seeds for each dataset. Training episodes are not pooled across datasets.
 
-Use results/training/04_rl_training/alarm/ or alarm_persistence/, then seed_7, seed_17 or seed_27. Each folder contains q_table.json, policy.csv (actions, values and visit counts), episodes.csv and transitions.parquet.
+```text
+results/per_dataset_study/stages/training/
+  SEA_A/04_rl_training/<detector>/<variant>/seed_<seed>/
+  RBF_I/04_rl_training/<detector>/<variant>/seed_<seed>/
+  radar/04_rl_training/<detector>/<variant>/seed_<seed>/
+```
 
-Training uses separate SEA and RBF seed 112. Both representations use the same conditions and episode order for a matching RL seed. Validation uses seed 113. A fixed four-pass training budget is not a claim of convergence. Evaluation never changes the Q-table.
+Detectors are `adwin`, `hddm_w`, `hellinger` and `d3_oof`; variants are `alarm` and `alarm_persistence`; seeds are 7, 17, 27, 37 and 47. Each folder contains its Q-table, selected actions, visit/reward diagnostics, episodes and transitions. The combined `results/per_dataset_study/models.json` identifies all 120 fitted models.
+
+SEA and RBF each train on their own seed-112 realization. RADAR trains only on original rows `[0,242000)`. Validation and evaluation use disjoint seeds or later RADAR periods with embargoes. Poisoning is generated within each partition, including splice donors. Phase 04 rejects a manifest that is not a training partition of the matching dataset.
+
+All detectors within a dataset use the same four passes over seven conditions, episode order for a matching RL seed, reward and gate. This is a fixed budget, not a convergence claim. Phase 05 requires the model's dataset and detector to match its inputs and never updates the fitted Q-table.
+
+Run `bash run.sh --training --workers 4` for training only, or `bash run.sh --run --workers 4` for training through final verification and reporting.

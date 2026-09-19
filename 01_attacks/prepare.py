@@ -1,5 +1,6 @@
 """Prepare documented input paths and keep the three evidence channels separate."""
 from pathlib import Path
+import json
 import os
 import numpy as np
 import pandas as pd
@@ -98,10 +99,11 @@ def generated_inputs(root, config):
                     p.write(obs_folder / 'metadata.json', c)
     return {'bases': bases, 'conditions': conditions}
 
-def build(root, config):
+def build(root, config, allow_existing=False):
     """Record exact stream inputs and create delayed protected samples."""
     stage = root / '01_attacks'
-    if stage.exists():
+    previous = verify(root) if stage.exists() and allow_existing else None
+    if stage.exists() and not allow_existing:
         raise FileExistsError(stage)
     bank = p.read(p.ROOT / config['input_bank']) if config.get('input_bank') else generated_inputs(root, config)
     stage.mkdir(parents=True, exist_ok=True)
@@ -139,6 +141,13 @@ def build(root, config):
         manifest['conditions'][key] = c
         for f in [file, truth_file]:
             manifest['outputs'][relative(f, stage)] = p.sha(f)
+    if previous is not None:
+        for name, digest in previous['outputs'].items():
+            if manifest['outputs'].get(name) != digest:
+                raise ValueError(f'Existing input changed: {name}')
+        for key, condition in previous['conditions'].items():
+            if json.loads(json.dumps(manifest['conditions'].get(key))) != condition:
+                raise ValueError(f'Existing condition changed: {key}')
     p.write(stage / 'manifest.json', manifest)
     p.write(root / '00_streams/catalogue.json', manifest['bases'])
     (root / '00_streams/README.md').write_text('# Stream inputs\n\nThe catalogue points to the authoritative clean stream files. Data are not duplicated in this results folder.\n', encoding='utf-8')

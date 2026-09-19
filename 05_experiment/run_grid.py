@@ -27,6 +27,8 @@ def worker(root, condition, arm, config):
         if p.sha(file) != contract['sha256']:
             raise ValueError('Frozen RL model changed')
         record = p.read(file)
+        if record.get('detector', 'adwin') != arm['detector']:
+            raise ValueError('Frozen RL detector differs from evaluation detector')
         expected_variant = 'alarm' if arm['policy'] == 'rl_alarm' else 'alarm_persistence'
         if record['variant'] != expected_variant:
             raise ValueError('Frozen RL variant differs from the comparison arm')

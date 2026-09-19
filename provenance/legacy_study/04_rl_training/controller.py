@@ -14,14 +14,11 @@ def accuracy(model, xs, ys):
 
 class Controller:
 
-    def __init__(self, settings, seed, training=False, table=None, collect_rewards=True):
+    def __init__(self, settings, seed, training=False, table=None):
         """Initialise this component with its declared settings and empty state."""
         self.settings = dict(settings)
         self.seed = seed
         self.training = training
-        if training and not collect_rewards:
-            raise ValueError('Training requires reward collection')
-        self.collect_rewards = collect_rewards
         self.rng = np.random.default_rng(seed)
         self.variant = settings.get('variant', 'alarm')
         if self.variant not in ('alarm', 'alarm_persistence'):
@@ -82,8 +79,6 @@ class Controller:
 
     def record(self, state, action, after, block, work, rejected):
         """Keep the chosen action and resulting model until its reward is released."""
-        if not self.collect_rewards:
-            return
         if action not in ACTIONS:
             raise ValueError('Unknown action')
         self.pending = (state, action, after, block, work, rejected)
