@@ -1,0 +1,133 @@
+{
+  "stream": "radar",
+  "mode": "clean",
+  "level": "none",
+  "base_seed": null,
+  "attack_seed": null,
+  "attack_assignment": null,
+  "base_key": "radar__evaluation",
+  "condition": "radar__evaluation__clean__none__aNone",
+  "filter_rows_withheld": 595,
+  "rows": 12000,
+  "training_visits": 12704,
+  "accepted_training_visits": 8311,
+  "accepted_refit_rows": 2849,
+  "resets": 1,
+  "seconds": 1.5476248750055674,
+  "pending_candidate": false,
+  "audit_rows_reserved": 600,
+  "policy": "confirmed",
+  "guarded": true,
+  "host_n": 9230,
+  "host_accuracy": 0.6776814734561214,
+  "host_macro_f1": 0.21132614996800375,
+  "poison_rows": 0,
+  "poison_rows_admitted": 0,
+  "poison_admission_rate": null,
+  "clean_rows": 10450,
+  "clean_rows_withheld": 4039,
+  "clean_withhold_rate": 0.3865071770334928,
+  "malicious_recall": 0.36768149882903983,
+  "benign_fpr": 0.04139595322071654,
+  "filter_poison_recall": null,
+  "filter_legitimate_rejection": 0.056937799043062204,
+  "detector": "hellinger",
+  "filter": "learned_features",
+  "filter_seed": 27,
+  "contract": {
+    "protocol_sha256": "60af6fc113d1f42cdf6ff3c948e1dfbfff2439f890cfa432e697352a60d33578",
+    "condition": "radar__evaluation__clean__none__aNone",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "radar"
+      ],
+      "rows": 12000,
+      "base_seeds": [],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance"
+      ],
+      "levels": {
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7
+        ],
+        "epochs": 1,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "radar",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0
+      ],
+      "pilot_rows": 12000
+    },
+    "inputs": {
+      "observations": "b7300c818b0c0204607b139dae854d328573a58e66a83fcacb8676e0ed917738",
+      "audit": "1d262d86c6369f92992aff7b36a191d3f29e6f32d61cafccf2525b2447526802",
+      "truth": "dee7c51630dab67285402faff69114dc83f6b69c8d02a9d1dcb3ea9a01e8c605"
+    },
+    "detector": "hellinger",
+    "filter": "learned_features",
+    "filter_seed": 27,
+    "profile_sha256": "c739ad580ef7680837b55f93ead88b12ff90aaad694b1bd14804971d94d4ed2d"
+  },
+  "reused": null,
+  "files": {
+    "predictions.parquet": "10178aeac611de7e8c0eb08c9e27640c24b2170df9878a8a11dc12537b08087a",
+    "events.parquet": "476a9995bf94af923160d20fc3ec86f264191785737237a751c2b179da1e8b51"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/integration_full_study/filters/runs/radar/hellinger/radar__evaluation__clean__none__aNone/learned_features_seed_27"
+}

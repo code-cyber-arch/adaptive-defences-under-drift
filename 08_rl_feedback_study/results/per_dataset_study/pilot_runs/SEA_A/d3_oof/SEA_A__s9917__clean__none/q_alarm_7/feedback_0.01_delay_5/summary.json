@@ -1,0 +1,143 @@
+{
+  "rows": 12000,
+  "training_visits": 11400,
+  "accepted_training_visits": 7600,
+  "accepted_refit_rows": 0,
+  "resets": 0,
+  "seconds": 0.13707633400917985,
+  "pending_candidate": false,
+  "audit_rows_reserved": 600,
+  "policy": "rl",
+  "guarded": true,
+  "host_n": 10450,
+  "host_accuracy": 0.8869856459330143,
+  "host_macro_f1": 0.8761651786108928,
+  "poison_rows": 0,
+  "poison_rows_admitted": 0,
+  "poison_admission_rate": null,
+  "clean_rows": 10450,
+  "clean_rows_withheld": 3800,
+  "clean_withhold_rate": 0.36363636363636365,
+  "malicious_recall": null,
+  "benign_fpr": null,
+  "condition": "SEA_A__s9917__clean__none",
+  "stream": "SEA_A",
+  "mode": "clean",
+  "level": "none",
+  "base_seed": 9917,
+  "arm": "q_alarm_7",
+  "detector": "d3_oof",
+  "feedback_fraction": 0.01,
+  "delay_blocks": 5,
+  "no_feedback_blocks": 4,
+  "state_visits": {
+    "0": 11
+  },
+  "action_counts": {
+    "update": 11
+  },
+  "contract": {
+    "condition": "SEA_A__s9917__clean__none",
+    "arm": {
+      "name": "q_alarm_7",
+      "policy": "rl",
+      "variant": "alarm",
+      "seed": 7,
+      "model_path": "results/per_dataset_study/pilot/training/SEA_A/04_rl_training/d3_oof/alarm/seed_7/q_table.json",
+      "model_sha256": "134712f4b3c358ade621b6ca574a2204f80ccb8cdefd46698db311d3f654c0fb",
+      "detector": "d3_oof",
+      "dataset": "SEA_A"
+    },
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "SEA_A"
+      ],
+      "rows": 12000,
+      "base_seeds": [
+        9917
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance"
+      ],
+      "levels": {
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7
+        ],
+        "epochs": 1,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "SEA_A",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0
+      ],
+      "pilot_rows": 12000
+    },
+    "feedback_fraction": 0.01,
+    "delay_blocks": 5,
+    "inputs": {
+      "observations": "831a56935c45c5d1614987b2c64ee90c19421e5895ba31b05af1e45aee6c624d",
+      "audit": "e79491ad3c61118d6d48af680d315dde0889d1b6a3612b62c706d42f5e99f9c8",
+      "truth": "12d437612a6fc753f2c1dfe1baa5807e7addf14f155bc07051fdcc65ddddbf00"
+    }
+  },
+  "status": "complete",
+  "files": {
+    "feedback_schedule.parquet": "91c409e9a01dd3f664aedfad2ec62681640043b464811ac88381b98252a3e1c6",
+    "events.parquet": "9d377aa6c8e5991005f46c94b3d502b4ca4ea0d137ea931728637e7b7d80b566",
+    "predictions.parquet": "a0fbba89721cd4dbe32dedcf5e8d747ea8f9547b592d2cd961fd8e00d2e90f0f"
+  }
+}

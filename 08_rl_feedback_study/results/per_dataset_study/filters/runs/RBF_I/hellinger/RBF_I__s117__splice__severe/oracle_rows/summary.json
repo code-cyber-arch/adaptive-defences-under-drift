@@ -1,0 +1,149 @@
+{
+  "stream": "RBF_I",
+  "mode": "splice",
+  "level": "severe",
+  "base_seed": 117,
+  "attack_seed": 3664738830,
+  "attack_assignment": null,
+  "base_key": "RBF_I__s117",
+  "condition": "RBF_I__s117__splice__severe",
+  "filter_rows_withheld": 14214,
+  "rows": 60000,
+  "training_visits": 42786,
+  "accepted_training_visits": 38027,
+  "accepted_refit_rows": 0,
+  "resets": 0,
+  "seconds": 2.2959115840203594,
+  "pending_candidate": false,
+  "audit_rows_reserved": 3000,
+  "policy": "confirmed",
+  "guarded": true,
+  "host_n": 41836,
+  "host_accuracy": 0.5269863275647767,
+  "host_macro_f1": 0.5247426354922272,
+  "poison_rows": 14214,
+  "poison_rows_admitted": 0,
+  "poison_admission_rate": 0.0,
+  "clean_rows": 41836,
+  "clean_rows_withheld": 4759,
+  "clean_withhold_rate": 0.1137537049431112,
+  "malicious_recall": null,
+  "benign_fpr": null,
+  "filter_poison_recall": 1.0,
+  "filter_legitimate_rejection": 0.0,
+  "detector": "hellinger",
+  "filter": "oracle_rows",
+  "filter_seed": null,
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "RBF_I__s117__splice__severe",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "RBF_I"
+      ],
+      "rows": 60000,
+      "base_seeds": [
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "RBF_I",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "939549fedfadaf4db92db08d744314ae0b92d31aa7a53cdb299fb12d2df603a3",
+      "audit": "b8e12281d59d977b46d2e0a65e1823a45457105937c25034062269558f75f748",
+      "truth": "83bc93a60d6c8cda268addf1001f4104442d35b27a3df4dc267b875387725605"
+    },
+    "detector": "hellinger",
+    "filter": "oracle_rows",
+    "filter_seed": null,
+    "profile_sha256": "b739bc22ea872ec0eff7f197df637b41298c78a779117953c26c38eb5d627ce5"
+  },
+  "reused": null,
+  "files": {
+    "predictions.parquet": "ef007425d411f6e67e5b41f6a08580bd59d1b4e064ffade84de97bb08d7e88ac",
+    "events.parquet": "c9ea49258c6cc2650b546f330ad1aebac2fcd7e05ee53cb561ceb33c53fd8e39"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/filters/runs/RBF_I/hellinger/RBF_I__s117__splice__severe/oracle_rows"
+}

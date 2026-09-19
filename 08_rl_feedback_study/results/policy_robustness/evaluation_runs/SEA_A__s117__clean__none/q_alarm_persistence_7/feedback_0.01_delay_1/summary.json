@@ -1,0 +1,137 @@
+{
+  "rows": 60000,
+  "training_visits": 57000,
+  "accepted_training_visits": 51300,
+  "accepted_refit_rows": 47500,
+  "resets": 50,
+  "seconds": 0.6584826250036713,
+  "pending_candidate": false,
+  "audit_rows_reserved": 3000,
+  "policy": "rl",
+  "guarded": true,
+  "host_n": 56050,
+  "host_accuracy": 0.9096520963425513,
+  "host_macro_f1": 0.90037738250907,
+  "poison_rows": 0,
+  "poison_rows_admitted": 0,
+  "poison_admission_rate": null,
+  "clean_rows": 56050,
+  "clean_rows_withheld": 5700,
+  "clean_withhold_rate": 0.1016949152542373,
+  "condition": "SEA_A__s117__clean__none",
+  "stream": "SEA_A",
+  "mode": "clean",
+  "level": "none",
+  "base_seed": 117,
+  "arm": "q_alarm_persistence_7",
+  "feedback_fraction": 0.01,
+  "delay_blocks": 1,
+  "no_feedback_blocks": 0,
+  "state_visits": {
+    "00": 55,
+    "01": 3,
+    "11": 1
+  },
+  "action_counts": {
+    "reset": 55,
+    "update": 4
+  },
+  "contract": {
+    "condition": "SEA_A__s117__clean__none",
+    "arm": {
+      "name": "q_alarm_persistence_7",
+      "policy": "rl",
+      "model_path": "results/training/04_rl_training/alarm_persistence/seed_7/q_table.json",
+      "model_sha256": "3a5f4752cf8b526120b9204c5321f67ab138e19a0c925f64d3a3f26bb4481cfd"
+    },
+    "config": {
+      "name": "policy_robustness_evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "SEA_A",
+        "RBF_I"
+      ],
+      "rows": 60000,
+      "base_seeds": [
+        115,
+        116,
+        117
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "persist_inputs": false
+    },
+    "feedback_fraction": 0.01,
+    "delay_blocks": 1,
+    "inputs": {
+      "observations": "7c0f2484c6a69843fec1220c27cb8289df1148278c2b50eca735836a62314526",
+      "audit": "88d85ee2193517a13a5fe3ec628148ff003cc6039bc568ee4a21399bc13bb8ff",
+      "truth": "53c09686c89306cf2d011ebf283306f117bb045c43a8b99c21fe94ccc9249179"
+    }
+  },
+  "status": "complete",
+  "files": {
+    "feedback_schedule.parquet": "7f543e3e0abb070941df3a936e75a7e640de1187bfba5a3f7df50472b5a7ee65",
+    "events.parquet": "96525e60a2f03d351c69aa8dc6d25d262625cb9ee2eaed0ecb0bb7c5be9cc677",
+    "predictions.parquet": "22b1161c3838f457ce802c8e49a21962b55fe6ae3e02dff0e2a901d8bdd41853"
+  }
+}

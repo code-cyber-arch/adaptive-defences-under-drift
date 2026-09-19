@@ -1,0 +1,164 @@
+{
+  "SEA_A__s114": {
+    "metadata": {
+      "stream": "SEA_A",
+      "base_seed": 114,
+      "rows": 60000,
+      "n_features": 3,
+      "classes": [
+        0,
+        1
+      ],
+      "benign_class": null,
+      "kind": "rapid_linear_mixture",
+      "transition_intervals": [
+        [
+          14820,
+          15180
+        ],
+        [
+          29820,
+          30180
+        ],
+        [
+          44820,
+          45180
+        ]
+      ],
+      "nominal_centers": [
+        15000,
+        30000,
+        45000
+      ],
+      "width": 360,
+      "event_reference": "global-index scheduled mixture intervals",
+      "supports_event_metrics": true,
+      "segment_boundaries": [
+        15000,
+        30000,
+        45000
+      ],
+      "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+      "feature_lineage": {
+        "f0": {
+          "source_column": "generator_feature_0",
+          "source": "River SEA"
+        },
+        "f1": {
+          "source_column": "generator_feature_1",
+          "source": "River SEA"
+        },
+        "f2": {
+          "source_column": "generator_feature_2",
+          "source": "River SEA"
+        }
+      },
+      "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+      "preprocessing": "none",
+      "warmup_rows": 1000,
+      "key": "SEA_A__s114",
+      "path": "results/detector_policy_study/validation/00_streams/SEA/check_seed_114/stream.parquet",
+      "sha256": "23c722eb8bb0ad390d91fd10b2b406d76978a811a1ad0a946288bde7691fb412",
+      "role": "check"
+    },
+    "clean": "../00_streams/SEA/check_seed_114/stream.parquet",
+    "audit": "../audit/protected/SEA/seed_114/sample.parquet",
+    "audit_rows": 3000
+  },
+  "RBF_I__s114": {
+    "metadata": {
+      "stream": "RBF_I",
+      "base_seed": 114,
+      "rows": 60000,
+      "n_features": 10,
+      "classes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "benign_class": null,
+      "kind": "broad_linear_mixture",
+      "transition_intervals": [
+        [
+          9000,
+          21000
+        ],
+        [
+          24000,
+          36000
+        ],
+        [
+          39000,
+          51000
+        ]
+      ],
+      "nominal_centers": [
+        15000,
+        30000,
+        45000
+      ],
+      "width": 12000,
+      "event_reference": "global-index scheduled mixture intervals",
+      "supports_event_metrics": true,
+      "segment_boundaries": [
+        15000,
+        30000,
+        45000
+      ],
+      "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+      "feature_lineage": {
+        "f0": {
+          "source_column": "generator_feature_0",
+          "source": "River RandomRBF"
+        },
+        "f1": {
+          "source_column": "generator_feature_1",
+          "source": "River RandomRBF"
+        },
+        "f2": {
+          "source_column": "generator_feature_2",
+          "source": "River RandomRBF"
+        },
+        "f3": {
+          "source_column": "generator_feature_3",
+          "source": "River RandomRBF"
+        },
+        "f4": {
+          "source_column": "generator_feature_4",
+          "source": "River RandomRBF"
+        },
+        "f5": {
+          "source_column": "generator_feature_5",
+          "source": "River RandomRBF"
+        },
+        "f6": {
+          "source_column": "generator_feature_6",
+          "source": "River RandomRBF"
+        },
+        "f7": {
+          "source_column": "generator_feature_7",
+          "source": "River RandomRBF"
+        },
+        "f8": {
+          "source_column": "generator_feature_8",
+          "source": "River RandomRBF"
+        },
+        "f9": {
+          "source_column": "generator_feature_9",
+          "source": "River RandomRBF"
+        }
+      },
+      "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+      "preprocessing": "none",
+      "warmup_rows": 1000,
+      "key": "RBF_I__s114",
+      "path": "results/detector_policy_study/validation/00_streams/RBF/check_seed_114/stream.parquet",
+      "sha256": "c44ffabf193c7438230fd4d22bfb17cd4d072508150eefb36ed49ca08cc08f5b",
+      "role": "check"
+    },
+    "clean": "../00_streams/RBF/check_seed_114/stream.parquet",
+    "audit": "../audit/protected/RBF/seed_114/sample.parquet",
+    "audit_rows": 3000
+  }
+}

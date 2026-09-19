@@ -1,0 +1,161 @@
+{
+  "rows": 60000,
+  "training_visits": 57000,
+  "accepted_training_visits": 36100,
+  "accepted_refit_rows": 5700,
+  "resets": 6,
+  "seconds": 2.4618508749990724,
+  "pending_candidate": false,
+  "audit_rows_reserved": 3000,
+  "policy": "rl",
+  "guarded": true,
+  "host_n": 41821,
+  "host_accuracy": 0.495707897946008,
+  "host_macro_f1": 0.4889618003590571,
+  "poison_rows": 14229,
+  "poison_rows_admitted": 6036,
+  "poison_admission_rate": 0.42420409023824585,
+  "clean_rows": 41821,
+  "clean_rows_withheld": 12707,
+  "clean_withhold_rate": 0.3038425671313455,
+  "malicious_recall": null,
+  "benign_fpr": null,
+  "condition": "RBF_I__s117__concept__severe",
+  "stream": "RBF_I",
+  "mode": "concept",
+  "level": "severe",
+  "base_seed": 117,
+  "arm": "q_alarm_persistence_17",
+  "detector": "hddm_w",
+  "feedback_fraction": 0.02,
+  "delay_blocks": 5,
+  "no_feedback_blocks": 4,
+  "state_visits": {
+    "10": 32,
+    "00": 7,
+    "11": 14,
+    "01": 6
+  },
+  "action_counts": {
+    "update": 45,
+    "reset": 14
+  },
+  "contract": {
+    "condition": "RBF_I__s117__concept__severe",
+    "arm": {
+      "name": "q_alarm_persistence_17",
+      "policy": "rl",
+      "variant": "alarm_persistence",
+      "seed": 17,
+      "model_path": "results/per_dataset_study/stages/training/RBF_I/04_rl_training/hddm_w/alarm_persistence/seed_17/q_table.json",
+      "model_sha256": "3551c76ae721558925bf6ad7d5d9a3f5c2ebe82c1503592d967e26e01b0cfdf6",
+      "detector": "hddm_w",
+      "dataset": "RBF_I"
+    },
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "RBF_I"
+      ],
+      "rows": 60000,
+      "base_seeds": [
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "RBF_I",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "feedback_fraction": 0.02,
+    "delay_blocks": 5,
+    "inputs": {
+      "observations": "ceb16211d84973b662205118f093ab4f6c8eb298926e7a60ca85b93ff7c5166a",
+      "audit": "b8e12281d59d977b46d2e0a65e1823a45457105937c25034062269558f75f748",
+      "truth": "960e3ab48f0631ff1097fd22db5a41983dcfe177745a9633e984dea002c82578"
+    }
+  },
+  "status": "complete",
+  "files": {
+    "feedback_schedule.parquet": "2af602d61b2f4ade4b0e9dc1bb2e26c666964525da5da5d5bb2e68e41a06e883",
+    "events.parquet": "b7e505bfe703ad629d05e143437d6665b45527d2bcf9f8baa2583dde8efed04c",
+    "predictions.parquet": "a5f4c65ce5fb7e0b579290a0ebef05e080be0120bdcc461685a0d26d43c58491"
+  }
+}

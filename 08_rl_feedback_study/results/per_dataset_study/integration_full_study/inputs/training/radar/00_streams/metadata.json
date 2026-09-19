@@ -1,0 +1,434 @@
+{
+  "stream": "radar",
+  "base_seed": null,
+  "rows": 12000,
+  "full_source_rows": 484753,
+  "n_features": 68,
+  "classes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "label_mapping": {
+    "Akira": 0,
+    "BlackBasta": 1,
+    "CyberVolk": 2,
+    "LockBit": 3,
+    "Lynx": 4,
+    "Medusa": 5,
+    "Meow": 6,
+    "goodware": 7
+  },
+  "benign_class": 7,
+  "feature_lineage": {
+    "f0": {
+      "source": "fasttext",
+      "source_column": "event.code"
+    },
+    "f1": {
+      "source": "fasttext",
+      "source_column": "event.type"
+    },
+    "f2": {
+      "source": "fasttext",
+      "source_column": "log.level"
+    },
+    "f3": {
+      "source": "fasttext",
+      "source_column": "event.category"
+    },
+    "f4": {
+      "source": "fasttext",
+      "source_column": "event.action"
+    },
+    "f5": {
+      "source": "fasttext",
+      "source_column": "rule.name"
+    },
+    "f6": {
+      "source": "fasttext",
+      "source_column": "user.domain"
+    },
+    "f7": {
+      "source": "fasttext",
+      "source_column": "user.name"
+    },
+    "f8": {
+      "source": "fasttext",
+      "source_column": "process.executable"
+    },
+    "f9": {
+      "source": "fasttext",
+      "source_column": "file.path"
+    },
+    "f10": {
+      "source": "fasttext",
+      "source_column": "process.hash.md5"
+    },
+    "f11": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.EventType"
+    },
+    "f12": {
+      "source": "fasttext",
+      "source_column": "registry.path"
+    },
+    "f13": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.Description"
+    },
+    "f14": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.Signed"
+    },
+    "f15": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.SignatureStatus"
+    },
+    "f16": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.Signature"
+    },
+    "f17": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.Product"
+    },
+    "f18": {
+      "source": "fasttext",
+      "source_column": "file.pe.original_file_name"
+    },
+    "f19": {
+      "source": "fasttext",
+      "source_column": "file.pe.file_version"
+    },
+    "f20": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.Company"
+    },
+    "f21": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.Type"
+    },
+    "f22": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.TerminalSessionId"
+    },
+    "f23": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.TargetUser"
+    },
+    "f24": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.TargetProcessId"
+    },
+    "f25": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.TargetProcessGUID"
+    },
+    "f26": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.TargetImage"
+    },
+    "f27": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.SourceUser"
+    },
+    "f28": {
+      "source": "fasttext",
+      "source_column": "process.thread.id"
+    },
+    "f29": {
+      "source": "fasttext",
+      "source_column": "source.port"
+    },
+    "f30": {
+      "source": "fasttext",
+      "source_column": "source.ip"
+    },
+    "f31": {
+      "source": "fasttext",
+      "source_column": "destination.port"
+    },
+    "f32": {
+      "source": "fasttext",
+      "source_column": "destination.ip"
+    },
+    "f33": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.CallTrace"
+    },
+    "f34": {
+      "source": "fasttext",
+      "source_column": "process.working_directory"
+    },
+    "f35": {
+      "source": "fasttext",
+      "source_column": "file.name"
+    },
+    "f36": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.ParentUser"
+    },
+    "f37": {
+      "source": "fasttext",
+      "source_column": "process.parent.pid"
+    },
+    "f38": {
+      "source": "fasttext",
+      "source_column": "process.parent.executable"
+    },
+    "f39": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.LogonId"
+    },
+    "f40": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.IntegrityLevel"
+    },
+    "f41": {
+      "source": "fasttext",
+      "source_column": "winlog.event_data.GrantedAccess"
+    },
+    "f42": {
+      "source": "fasttext",
+      "source_column": "sysmon.file.is_executable"
+    },
+    "f43": {
+      "source": "fasttext",
+      "source_column": "sysmon.dns.status"
+    },
+    "f44": {
+      "source": "fasttext",
+      "source_column": "dns.question.name"
+    },
+    "f45": {
+      "source": "fasttext",
+      "source_column": "network.transport"
+    },
+    "f46": {
+      "source": "fasttext",
+      "source_column": "network.direction"
+    },
+    "f47": {
+      "source": "engineered",
+      "source_column": "File_Delete_archived"
+    },
+    "f48": {
+      "source": "engineered",
+      "source_column": "File_created"
+    },
+    "f49": {
+      "source": "engineered",
+      "source_column": "File_creation_time_changed"
+    },
+    "f50": {
+      "source": "engineered",
+      "source_column": "Pipe_Created"
+    },
+    "f51": {
+      "source": "engineered",
+      "source_column": "Process_Create"
+    },
+    "f52": {
+      "source": "engineered",
+      "source_column": "Registry_value_set"
+    },
+    "f53": {
+      "source": "engineered",
+      "source_column": "process-related"
+    },
+    "f54": {
+      "source": "engineered",
+      "source_column": "file-related"
+    },
+    "f55": {
+      "source": "engineered",
+      "source_column": "network-related"
+    },
+    "f56": {
+      "source": "engineered",
+      "source_column": "driver-related"
+    },
+    "f57": {
+      "source": "engineered",
+      "source_column": "registry-related"
+    },
+    "f58": {
+      "source": "engineered",
+      "source_column": "suspicious_path"
+    },
+    "f59": {
+      "source": "engineered",
+      "source_column": "system_executable"
+    },
+    "f60": {
+      "source": "engineered",
+      "source_column": "path_length"
+    },
+    "f61": {
+      "source": "engineered",
+      "source_column": "directory_depth"
+    },
+    "f62": {
+      "source": "engineered",
+      "source_column": "process_vs_parent_freq_ratio"
+    },
+    "f63": {
+      "source": "engineered",
+      "source_column": "process_name_length"
+    },
+    "f64": {
+      "source": "engineered",
+      "source_column": "executable_depth_diff"
+    },
+    "f65": {
+      "source": "engineered",
+      "source_column": "parent_is_system_executable"
+    },
+    "f66": {
+      "source": "engineered",
+      "source_column": "extension_similarity"
+    },
+    "f67": {
+      "source": "engineered",
+      "source_column": "file_name_entropy"
+    }
+  },
+  "excluded_metadata": [
+    {
+      "source": "fasttext",
+      "column": "@timestamp"
+    },
+    {
+      "source": "fasttext",
+      "column": "target-class-name"
+    },
+    {
+      "source": "fasttext",
+      "column": "target-class"
+    },
+    {
+      "source": "engineered",
+      "column": "target-class"
+    },
+    {
+      "source": "engineered",
+      "column": "target"
+    }
+  ],
+  "fixed_zero_fills": {
+    "fasttext::event.code": 0,
+    "fasttext::event.type": 0,
+    "fasttext::log.level": 0,
+    "fasttext::event.category": 0,
+    "fasttext::event.action": 0,
+    "fasttext::rule.name": 0,
+    "fasttext::user.domain": 0,
+    "fasttext::user.name": 0,
+    "fasttext::process.executable": 0,
+    "fasttext::file.path": 0,
+    "fasttext::process.hash.md5": 0,
+    "fasttext::winlog.event_data.EventType": 0,
+    "fasttext::registry.path": 0,
+    "fasttext::winlog.event_data.Description": 0,
+    "fasttext::winlog.event_data.Signed": 0,
+    "fasttext::winlog.event_data.SignatureStatus": 0,
+    "fasttext::winlog.event_data.Signature": 0,
+    "fasttext::winlog.event_data.Product": 0,
+    "fasttext::file.pe.original_file_name": 0,
+    "fasttext::file.pe.file_version": 0,
+    "fasttext::winlog.event_data.Company": 0,
+    "fasttext::winlog.event_data.Type": 0,
+    "fasttext::winlog.event_data.TerminalSessionId": 0,
+    "fasttext::winlog.event_data.TargetUser": 0,
+    "fasttext::winlog.event_data.TargetProcessId": 0,
+    "fasttext::winlog.event_data.TargetProcessGUID": 0,
+    "fasttext::winlog.event_data.TargetImage": 0,
+    "fasttext::winlog.event_data.SourceUser": 0,
+    "fasttext::process.thread.id": 0,
+    "fasttext::source.port": 0,
+    "fasttext::source.ip": 0,
+    "fasttext::destination.port": 0,
+    "fasttext::destination.ip": 0,
+    "fasttext::winlog.event_data.CallTrace": 0,
+    "fasttext::process.working_directory": 0,
+    "fasttext::file.name": 0,
+    "fasttext::winlog.event_data.ParentUser": 0,
+    "fasttext::process.parent.pid": 0,
+    "fasttext::process.parent.executable": 0,
+    "fasttext::winlog.event_data.LogonId": 0,
+    "fasttext::winlog.event_data.IntegrityLevel": 0,
+    "fasttext::winlog.event_data.GrantedAccess": 0,
+    "fasttext::sysmon.file.is_executable": 0,
+    "fasttext::sysmon.dns.status": 0,
+    "fasttext::dns.question.name": 0,
+    "fasttext::network.transport": 0,
+    "fasttext::network.direction": 0,
+    "engineered::File_Delete_archived": 0,
+    "engineered::File_created": 0,
+    "engineered::File_creation_time_changed": 0,
+    "engineered::Pipe_Created": 0,
+    "engineered::Process_Create": 0,
+    "engineered::Registry_value_set": 0,
+    "engineered::process-related": 0,
+    "engineered::file-related": 0,
+    "engineered::network-related": 0,
+    "engineered::driver-related": 0,
+    "engineered::registry-related": 0,
+    "engineered::suspicious_path": 0,
+    "engineered::system_executable": 0,
+    "engineered::path_length": 0,
+    "engineered::directory_depth": 0,
+    "engineered::process_vs_parent_freq_ratio": 0,
+    "engineered::process_name_length": 0,
+    "engineered::executable_depth_diff": 0,
+    "engineered::parent_is_system_executable": 0,
+    "engineered::extension_similarity": 0,
+    "engineered::file_name_entropy": 0
+  },
+  "preprocessing": "fixed zero for nonfinite values; no fitted transform or global constant-column selection",
+  "transition_intervals": [],
+  "nominal_centers": [],
+  "estimated_phase_boundaries": [
+    113656,
+    210375,
+    290979,
+    376766
+  ],
+  "segment_boundaries": [
+    6000
+  ],
+  "supports_event_metrics": false,
+  "event_reference": "unverified proportional phase estimates; no exact event metrics",
+  "replay_segment_reference": "estimated positional phases, not proven pure concepts",
+  "kind": "source-assembled laboratory telemetry",
+  "warmup_rows": 1000,
+  "timestamp_order_verified": true,
+  "fasttext_training_provenance": "not established from supplied archive",
+  "key": "radar__training",
+  "sha256": "41496efbf49bf593a2f280c84b5d45344a19baf3884a894fdb011bba588c5776",
+  "truth_sha256": "87744e3a37de198d909ebc967728a63881ef1b86d76a4a4b0e76957973f4f1d0",
+  "class_counts": {
+    "7": 250011,
+    "5": 45825,
+    "3": 41395,
+    "0": 39075,
+    "2": 31396,
+    "1": 28106,
+    "4": 26125,
+    "6": 22820
+  },
+  "path": "data/clean/RADAR/stream.parquet",
+  "truth_path": "data/evaluation_truth/RADAR/stream_reference/capture/reference.parquet",
+  "source_partition": {
+    "role": "training",
+    "start_row": 0,
+    "end_row_exclusive": 12000,
+    "full_source_rows": 484753
+  }
+}

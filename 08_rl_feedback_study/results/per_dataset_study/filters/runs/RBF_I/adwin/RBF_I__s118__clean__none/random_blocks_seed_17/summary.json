@@ -1,0 +1,149 @@
+{
+  "stream": "RBF_I",
+  "mode": "clean",
+  "level": "none",
+  "base_seed": 118,
+  "attack_seed": null,
+  "attack_assignment": null,
+  "base_key": "RBF_I__s118",
+  "condition": "RBF_I__s118__clean__none",
+  "filter_rows_withheld": 0,
+  "rows": 60000,
+  "training_visits": 62700,
+  "accepted_training_visits": 47500,
+  "accepted_refit_rows": 2850,
+  "resets": 1,
+  "seconds": 2.7698718329775147,
+  "pending_candidate": false,
+  "audit_rows_reserved": 3000,
+  "policy": "confirmed",
+  "guarded": true,
+  "host_n": 56050,
+  "host_accuracy": 0.59950044603033,
+  "host_macro_f1": 0.5896578693031314,
+  "poison_rows": 0,
+  "poison_rows_admitted": 0,
+  "poison_admission_rate": null,
+  "clean_rows": 56050,
+  "clean_rows_withheld": 10450,
+  "clean_withhold_rate": 0.1864406779661017,
+  "malicious_recall": null,
+  "benign_fpr": null,
+  "filter_poison_recall": null,
+  "filter_legitimate_rejection": 0.0,
+  "detector": "adwin",
+  "filter": "random_blocks",
+  "filter_seed": 17,
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "RBF_I__s118__clean__none",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "RBF_I"
+      ],
+      "rows": 60000,
+      "base_seeds": [
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "RBF_I",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "c735bc32921e3aa5312d395f2693d1194ed0263ec63936ff134b35207841d26b",
+      "audit": "5ddfdfba4f1d301792c18c3fbbcf32855a416123a97bec3675c3ebdea10c4fcd",
+      "truth": "ec53951f0deb0df5ad761f2b557f31561c4480523bebe744c58082e0337c7a8c"
+    },
+    "detector": "adwin",
+    "filter": "random_blocks",
+    "filter_seed": 17,
+    "profile_sha256": "cf57b4be930000f6ea68f138009bd7839b23da749d5d9422779b554352435607"
+  },
+  "reused": null,
+  "files": {
+    "predictions.parquet": "8d1ec43916871643718c737d7e9bf5f3209a18d94ebe45db96d2229748cb50fe",
+    "events.parquet": "6eae871afb0a4b0783cf68e20f2aac40d128f4fd0126c525144eab108e265b30"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/filters/runs/RBF_I/adwin/RBF_I__s118__clean__none/random_blocks_seed_17"
+}

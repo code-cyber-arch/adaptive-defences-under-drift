@@ -1,0 +1,110 @@
+{
+  "stream": "SEA_A",
+  "mode": "instance",
+  "level": "severe",
+  "base_seed": 9913,
+  "attack_seed": 553344547,
+  "attack_assignment": null,
+  "base_key": "SEA_A__s9913",
+  "condition": "SEA_A__s9913__instance__severe",
+  "contract": {
+    "protocol_sha256": "60af6fc113d1f42cdf6ff3c948e1dfbfff2439f890cfa432e697352a60d33578",
+    "condition": "SEA_A__s9913__instance__severe",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "SEA_A"
+      ],
+      "rows": 12000,
+      "base_seeds": [
+        9913
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance"
+      ],
+      "levels": {
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7
+        ],
+        "epochs": 1,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "SEA_A",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0
+      ],
+      "pilot_rows": 12000
+    },
+    "inputs": {
+      "observations": "460cd33f83a7e54962e6dc5765bba7d74a51a3794e78cacc75e6e0518e72ff51",
+      "audit": "51e944bd53ffe8450d69d1c0197b7a67d1e95c3237268adaaa0f1bfd28b33a3d",
+      "truth": "ae7ddc0e313c3f1d919a741f35fe82c25dad705825a8c06af5449bda6f8dec48"
+    },
+    "models": {
+      "7": "0efa874e4daa14b38e3ff400212b9417484a1026be62274b23794c126ea322b1",
+      "17": "42a82d7665cc303a497d3141327e5255fd3bb778d9c72affe501c55b2a5341cf",
+      "27": "14e3cafb1685b05f4bb38c16772d965a9ffe47fa70b533bb924b19bf22665ed2",
+      "37": "469d6e1f415123a7ab50299432fb029c6f5fa534ea561d91c84985940944fb6f",
+      "47": "1d663a69c494b02c22f3d9d88a823beeff70a3b5f3c24675fbe7ccacd04f0442"
+    }
+  },
+  "host_rows": 10450,
+  "files": {
+    "masks.parquet": "048a4f3cd3f4ae1dbb5ca103a9d605c5cb280633dba4601b2d4e3fe9a18dd585"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/integration_full_study/filters/profiles/SEA_A/SEA_A__s9913__instance__severe"
+}

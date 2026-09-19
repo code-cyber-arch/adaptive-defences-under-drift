@@ -1,0 +1,145 @@
+{
+  "stream": "SEA_A",
+  "mode": "splice",
+  "level": "severe",
+  "base_seed": 117,
+  "attack_seed": 2243424514,
+  "attack_assignment": null,
+  "base_key": "SEA_A__s117",
+  "condition": "SEA_A__s117__splice__severe",
+  "rows": 60000,
+  "training_visits": 58900,
+  "accepted_training_visits": 58900,
+  "accepted_refit_rows": 2850,
+  "resets": 1,
+  "seconds": 0.7074759170063771,
+  "pending_candidate": false,
+  "audit_rows_reserved": 3000,
+  "policy": "confirmed",
+  "guarded": false,
+  "host_n": 41810,
+  "host_accuracy": 0.9020330064577852,
+  "host_macro_f1": 0.8937372681117013,
+  "poison_rows": 14240,
+  "poison_rows_admitted": 14240,
+  "poison_admission_rate": 1.0,
+  "clean_rows": 41810,
+  "clean_rows_withheld": 0,
+  "clean_withhold_rate": 0.0,
+  "malicious_recall": null,
+  "benign_fpr": null,
+  "detector": "d3_oof",
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "SEA_A__s117__splice__severe",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "SEA_A"
+      ],
+      "rows": 60000,
+      "base_seeds": [
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "SEA_A",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "d4afd9450f3ce6d845ad3d27f703e1b8fad1d123f211c60a60f03f082dcf5264",
+      "audit": "88d85ee2193517a13a5fe3ec628148ff003cc6039bc568ee4a21399bc13bb8ff",
+      "truth": "779e2bdf5b6dcbc8b4224d095cf9b1ae2c3aa4b478ad24fe7df1b987b360535a"
+    },
+    "arm": {
+      "policy": "confirmed",
+      "guarded": false,
+      "detector": "d3_oof"
+    }
+  },
+  "reused": null,
+  "files": {
+    "predictions.parquet": "8280387899c1a19b9222edb1dc32df208bf6d7e95ce5764a44f8896680da3d0e",
+    "events.parquet": "26d5e62bb85c1dcdf79a9b86894872d746233644dba50c7ebe833a47232e0f3c"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/fixed_responses/runs/SEA_A/d3_oof/SEA_A__s117__splice__severe/confirmed_unscreened"
+}

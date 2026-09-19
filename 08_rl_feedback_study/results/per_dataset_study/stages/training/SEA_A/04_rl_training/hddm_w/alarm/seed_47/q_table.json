@@ -1,0 +1,68 @@
+{
+  "algorithm": "tabular_q_learning",
+  "variant": "alarm",
+  "seed": 47,
+  "settings": {
+    "seeds": [
+      7,
+      17,
+      27,
+      37,
+      47
+    ],
+    "epochs": 4,
+    "learning_rate": 0.1,
+    "discount": 0.9,
+    "epsilon": 0.1,
+    "variants": [
+      "alarm",
+      "alarm_persistence"
+    ],
+    "persistence": {
+      "history": 5,
+      "recent": 2,
+      "margin": 0.02
+    },
+    "variant": "alarm"
+  },
+  "table": {
+    "0": [
+      7.420171988185191,
+      7.545585238296624
+    ],
+    "1": [
+      7.987055815823644,
+      6.949824794458019
+    ]
+  },
+  "state_visits": {
+    "0": 1278,
+    "1": 374
+  },
+  "training_transitions": 1652,
+  "state_count": 2,
+  "actions": [
+    "update",
+    "reset"
+  ],
+  "detector": "hddm_w",
+  "dataset": "SEA_A",
+  "request_sha256": "f898a2bc0434878faaa2030b52c6299ecc8ea3f763f35940d0664a034031b659",
+  "training_base_seeds": [
+    112
+  ],
+  "training_conditions": [
+    "SEA_A__s112__clean__none",
+    "SEA_A__s112__instance__moderate",
+    "SEA_A__s112__instance__severe",
+    "SEA_A__s112__concept__moderate",
+    "SEA_A__s112__concept__severe",
+    "SEA_A__s112__splice__moderate",
+    "SEA_A__s112__splice__severe"
+  ],
+  "files": {
+    "episodes.csv": "98bbb4f003a454983d8729a879811e79814ff567c2471ed612760fe7686de2f5",
+    "transitions.parquet": "d2e6474c69e32d3a95d3a81db76fea6a006e2e516882f88bb61c19f7a3e761e3",
+    "policy.csv": "b06976ba1d235c682a6d189acfadd46ef1259a02674c41d2bc0e77118adacb59"
+  }
+}

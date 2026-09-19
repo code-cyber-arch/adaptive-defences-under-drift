@@ -1,0 +1,149 @@
+{
+  "stream": "SEA_A",
+  "mode": "instance",
+  "level": "severe",
+  "base_seed": 119,
+  "attack_seed": 3882502243,
+  "attack_assignment": null,
+  "base_key": "SEA_A__s119",
+  "condition": "SEA_A__s119__instance__severe",
+  "filter_rows_withheld": 2778,
+  "rows": 60000,
+  "training_visits": 56023,
+  "accepted_training_visits": 35282,
+  "accepted_refit_rows": 2691,
+  "resets": 1,
+  "seconds": 0.7060251670191064,
+  "pending_candidate": false,
+  "audit_rows_reserved": 3000,
+  "policy": "confirmed",
+  "guarded": true,
+  "host_n": 56050,
+  "host_accuracy": 0.9000178412132025,
+  "host_macro_f1": 0.8907512870714064,
+  "poison_rows": 14266,
+  "poison_rows_admitted": 8588,
+  "poison_admission_rate": 0.6019907472311791,
+  "clean_rows": 41784,
+  "clean_rows_withheld": 16941,
+  "clean_withhold_rate": 0.40544227455485354,
+  "malicious_recall": null,
+  "benign_fpr": null,
+  "filter_poison_recall": 0.04857703631010795,
+  "filter_legitimate_rejection": 0.04989948305571511,
+  "detector": "adwin",
+  "filter": "learned_features",
+  "filter_seed": 27,
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "SEA_A__s119__instance__severe",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "SEA_A"
+      ],
+      "rows": 60000,
+      "base_seeds": [
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "SEA_A",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "7194c038d917dbc9e099ca6e6628700479819eb33e0c388e7904adf937ffb821",
+      "audit": "d471665f07d05edf5e3da74869a7e29d14ea030957cd70aac3a8f5792d364e0f",
+      "truth": "532dbec3b3df4848075c1f177a55dd73d4ca77e9ffb3cc77cac7d7d2f050c270"
+    },
+    "detector": "adwin",
+    "filter": "learned_features",
+    "filter_seed": 27,
+    "profile_sha256": "65708793c9ae4698908994a65656c61ba69fbaa2f630918f2ec9eddc3a22bde2"
+  },
+  "reused": null,
+  "files": {
+    "predictions.parquet": "76a1cca0f23285e2401c0317a62575889a35a3f3ddda71e99d8a23a9aba94c5e",
+    "events.parquet": "b75bb6f81e99acdce69b5b6f39f887caa36e48dd7d31b715d5236ce94a76c93a"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/filters/runs/SEA_A/adwin/SEA_A__s119__instance__severe/learned_features_seed_27"
+}

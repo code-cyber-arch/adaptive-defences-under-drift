@@ -1,0 +1,149 @@
+{
+  "stream": "SEA_A",
+  "mode": "instance",
+  "level": "moderate",
+  "base_seed": 119,
+  "attack_seed": 110941192,
+  "attack_assignment": null,
+  "base_key": "SEA_A__s119",
+  "condition": "SEA_A__s119__instance__moderate",
+  "filter_rows_withheld": 8546,
+  "rows": 60000,
+  "training_visits": 51661,
+  "accepted_training_visits": 38010,
+  "accepted_refit_rows": 2413,
+  "resets": 1,
+  "seconds": 0.7720651249983348,
+  "pending_candidate": false,
+  "audit_rows_reserved": 3000,
+  "policy": "confirmed",
+  "guarded": true,
+  "host_n": 56050,
+  "host_accuracy": 0.9121141837644959,
+  "host_macro_f1": 0.9037776119499858,
+  "poison_rows": 8546,
+  "poison_rows_admitted": 0,
+  "poison_admission_rate": 0.0,
+  "clean_rows": 47504,
+  "clean_rows_withheld": 12043,
+  "clean_withhold_rate": 0.25351549343213203,
+  "malicious_recall": null,
+  "benign_fpr": null,
+  "filter_poison_recall": 1.0,
+  "filter_legitimate_rejection": 0.0,
+  "detector": "d3_oof",
+  "filter": "oracle_rows",
+  "filter_seed": null,
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "SEA_A__s119__instance__moderate",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "SEA_A"
+      ],
+      "rows": 60000,
+      "base_seeds": [
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "SEA_A",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "ef385842f987aec99e493b5d9b6789f369ae9e0fef0ffe5db111906c4062ddde",
+      "audit": "d471665f07d05edf5e3da74869a7e29d14ea030957cd70aac3a8f5792d364e0f",
+      "truth": "0068330b8b3021c40af566ee0e197cfa9ee9abba437608d39b6f86eaa5d4f603"
+    },
+    "detector": "d3_oof",
+    "filter": "oracle_rows",
+    "filter_seed": null,
+    "profile_sha256": "760408791973ad29df1be7079a3474eb0d431773a844a8e7a3d62e4855b477a0"
+  },
+  "reused": null,
+  "files": {
+    "predictions.parquet": "b1c3d3f6790dab9e2faf9e3bc96845419d1236a8f62f8124f66d74405c16b503",
+    "events.parquet": "1588f17b49fd59f2c2761f955d820fdd5429c90f3c960ef665482519603637cc"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/filters/runs/SEA_A/d3_oof/SEA_A__s119__instance__moderate/oracle_rows"
+}

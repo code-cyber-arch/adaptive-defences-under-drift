@@ -1,0 +1,129 @@
+{
+  "dataset": "radar",
+  "data_role": "training",
+  "conditions": {
+    "radar__training__clean__none__aNone": {
+      "stream": "radar",
+      "base_seed": null,
+      "rows": 12000,
+      "classes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "benign_class": 7,
+      "transition_intervals": [],
+      "supports_event_metrics": false,
+      "warmup_rows": 1000,
+      "source_partition": {
+        "role": "training",
+        "start_row": 0,
+        "end_row_exclusive": 12000,
+        "full_source_rows": 484753
+      },
+      "key": "radar__training__clean__none__aNone",
+      "base_key": "radar__training",
+      "mode": "clean",
+      "level": "none",
+      "attack_seed": null,
+      "attack_assignment": null,
+      "observations": "../00_streams/stream.parquet",
+      "truth": "radar__training__clean__none__aNone/truth.parquet",
+      "audit": "../audit/protected/sample.parquet",
+      "attack": {
+        "rng_seed": 3164053843,
+        "attack_seed": null,
+        "mode": "clean",
+        "level_value": 0.0,
+        "burst_starts": [],
+        "burst_len": 250,
+        "burst_colocated": [],
+        "splice_sources": [],
+        "flip_target_map": {},
+        "n_flipped": 0,
+        "burst_rows": 0,
+        "actual_modified_fraction": 0.0,
+        "reference_access": "offline labelled clean archive, including future rows; no detector/model access",
+        "warmup_attack_free_rows": 1000,
+        "replacement_not_insertion": true
+      },
+      "source_observation_sha256": "352ac9c79a7c40c33e4153040d25b864f13dce7710907d7871be9f4528a69fce"
+    },
+    "radar__training__instance__severe__a0": {
+      "stream": "radar",
+      "base_seed": null,
+      "rows": 12000,
+      "classes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "benign_class": 7,
+      "transition_intervals": [],
+      "supports_event_metrics": false,
+      "warmup_rows": 1000,
+      "source_partition": {
+        "role": "training",
+        "start_row": 0,
+        "end_row_exclusive": 12000,
+        "full_source_rows": 484753
+      },
+      "key": "radar__training__instance__severe__a0",
+      "base_key": "radar__training",
+      "mode": "instance",
+      "level": "severe",
+      "attack_seed": 1753327510,
+      "attack_assignment": 0,
+      "observations": "radar__training__instance__severe__a0/observations.parquet",
+      "truth": "radar__training__instance__severe__a0/truth.parquet",
+      "audit": "../audit/protected/sample.parquet",
+      "attack": {
+        "rng_seed": 1277934637,
+        "attack_seed": 1753327510,
+        "mode": "instance",
+        "level_value": 0.25,
+        "burst_starts": [],
+        "burst_len": 250,
+        "burst_colocated": [],
+        "splice_sources": [],
+        "flip_target_map": {
+          "0": 7,
+          "4": 7,
+          "7": 4
+        },
+        "n_flipped": 3000,
+        "burst_rows": 0,
+        "actual_modified_fraction": 0.25,
+        "reference_access": "offline labelled clean archive, including future rows; no detector/model access",
+        "warmup_attack_free_rows": 1000,
+        "replacement_not_insertion": true
+      },
+      "source_observation_sha256": "3e849598351bccc905868fdd25af444a03b19e2c0e81903dd3ce37ea9f5c9d63"
+    }
+  },
+  "outputs": {
+    "../00_streams/stream.parquet": "352ac9c79a7c40c33e4153040d25b864f13dce7710907d7871be9f4528a69fce",
+    "../00_streams/row_map.parquet": "a02ec90ce63fb87e1fefd958659d9c8d8e97f27d4fbb2a14b588dd9b6f15cff1",
+    "../audit/protected/sample.parquet": "4dafac740d05b2a8e6cc1fb007f8059dfa81b563aa495ec9c5d5a96e1189daa4",
+    "radar__training__clean__none__aNone/truth.parquet": "4611ac5a1aeb1d2c06c6c5074d6e44e1493b3b3617838dfcdc847737020f225f",
+    "radar__training__instance__severe__a0/observations.parquet": "3e849598351bccc905868fdd25af444a03b19e2c0e81903dd3ce37ea9f5c9d63",
+    "radar__training__instance__severe__a0/truth.parquet": "40c4b4cee3b72e2aa543f027cf17ae6e8d51de4c2613c3fa8d0de63a55e3f7ba"
+  },
+  "source_partition": {
+    "role": "training",
+    "start_row": 0,
+    "end_row_exclusive": 12000,
+    "full_source_rows": 484753
+  },
+  "source_sha256": "41496efbf49bf593a2f280c84b5d45344a19baf3884a894fdb011bba588c5776"
+}

@@ -1,0 +1,149 @@
+{
+  "stream": "RBF_I",
+  "mode": "concept",
+  "level": "moderate",
+  "base_seed": 115,
+  "attack_seed": 816888935,
+  "attack_assignment": null,
+  "base_key": "RBF_I__s115",
+  "condition": "RBF_I__s115__concept__moderate",
+  "filter_rows_withheld": 8547,
+  "rows": 60000,
+  "training_visits": 52136,
+  "accepted_training_visits": 41965,
+  "accepted_refit_rows": 5464,
+  "resets": 2,
+  "seconds": 2.368969500006642,
+  "pending_candidate": false,
+  "audit_rows_reserved": 3000,
+  "policy": "confirmed",
+  "guarded": true,
+  "host_n": 47503,
+  "host_accuracy": 0.5754162894975055,
+  "host_macro_f1": 0.5692460053650936,
+  "poison_rows": 8547,
+  "poison_rows_admitted": 0,
+  "poison_admission_rate": 0.0,
+  "clean_rows": 47503,
+  "clean_rows_withheld": 8388,
+  "clean_withhold_rate": 0.17657832136917667,
+  "malicious_recall": null,
+  "benign_fpr": null,
+  "filter_poison_recall": 1.0,
+  "filter_legitimate_rejection": 0.0,
+  "detector": "adwin",
+  "filter": "oracle_rows",
+  "filter_seed": null,
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "RBF_I__s115__concept__moderate",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "RBF_I"
+      ],
+      "rows": 60000,
+      "base_seeds": [
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "RBF_I",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "56550abfc225cb6fcbe539fca5aa725f9a3fc5d006aa9de170dd0a791312185f",
+      "audit": "5023714eec8eb6bfbf7a3f9af319a0c81274b6b6f00e132e6093ed1c3c51139f",
+      "truth": "3cc37376574b564c26907da553c5fa2c9412a8cf7df6fc127ff84417bd600e4d"
+    },
+    "detector": "adwin",
+    "filter": "oracle_rows",
+    "filter_seed": null,
+    "profile_sha256": "850ee0c74a9aa99d0be33c406d890fb6c37d79b7f859fd8d3eebb59b3f2ae300"
+  },
+  "reused": null,
+  "files": {
+    "predictions.parquet": "5de7dad85ee159f2ceda9c28d25904c6f269a6c0c0ae322cbabbf5e6fe7240c6",
+    "events.parquet": "290584c1392016f00146860896ea3cfeb75be5f852296487d22069d41b67ac82"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/filters/runs/RBF_I/adwin/RBF_I__s115__concept__moderate/oracle_rows"
+}

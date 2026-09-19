@@ -1,0 +1,134 @@
+{
+  "policies": {
+    "adwin": {
+      "policy_id": "map_1100",
+      "table": {
+        "00": [
+          0.0,
+          1.0
+        ],
+        "01": [
+          0.0,
+          1.0
+        ],
+        "10": [
+          1.0,
+          0.0
+        ],
+        "11": [
+          1.0,
+          0.0
+        ]
+      },
+      "selection": {
+        "arm": "map_1100",
+        "mean_host_macro_f1": 0.7324893153402497,
+        "mean_resets": 24.357142857142858,
+        "conditions": 14
+      },
+      "scope": "Validation-selected four-state deterministic mapping; not test-optimal",
+      "detector": "adwin",
+      "validation_seeds": [
+        114
+      ]
+    },
+    "hddm_w": {
+      "policy_id": "map_1101",
+      "table": {
+        "00": [
+          0.0,
+          1.0
+        ],
+        "01": [
+          0.0,
+          1.0
+        ],
+        "10": [
+          1.0,
+          0.0
+        ],
+        "11": [
+          0.0,
+          1.0
+        ]
+      },
+      "selection": {
+        "arm": "map_1101",
+        "mean_host_macro_f1": 0.733202461897722,
+        "mean_resets": 21.428571428571427,
+        "conditions": 14
+      },
+      "scope": "Validation-selected four-state deterministic mapping; not test-optimal",
+      "detector": "hddm_w",
+      "validation_seeds": [
+        114
+      ]
+    },
+    "hellinger": {
+      "policy_id": "map_0111",
+      "table": {
+        "00": [
+          1.0,
+          0.0
+        ],
+        "01": [
+          0.0,
+          1.0
+        ],
+        "10": [
+          0.0,
+          1.0
+        ],
+        "11": [
+          0.0,
+          1.0
+        ]
+      },
+      "selection": {
+        "arm": "map_0111",
+        "mean_host_macro_f1": 0.731279177373762,
+        "mean_resets": 7.571428571428571,
+        "conditions": 14
+      },
+      "scope": "Validation-selected four-state deterministic mapping; not test-optimal",
+      "detector": "hellinger",
+      "validation_seeds": [
+        114
+      ]
+    },
+    "d3_oof": {
+      "policy_id": "map_0100",
+      "table": {
+        "00": [
+          1.0,
+          0.0
+        ],
+        "01": [
+          0.0,
+          1.0
+        ],
+        "10": [
+          1.0,
+          0.0
+        ],
+        "11": [
+          1.0,
+          0.0
+        ]
+      },
+      "selection": {
+        "arm": "map_0100",
+        "mean_host_macro_f1": 0.7309076687327547,
+        "mean_resets": 6.285714285714286,
+        "conditions": 14
+      },
+      "scope": "Validation-selected four-state deterministic mapping; not test-optimal",
+      "detector": "d3_oof",
+      "validation_seeds": [
+        114
+      ]
+    }
+  },
+  "protocol_sha256": "e49f4b2e3987f56f578d4340ba807a372db4f1b9745cdebc224ab18f6ebf24d3",
+  "training_manifest_sha256": "8f506a96aae16b6fcc2408ce469a14c6cc0a4bbe72ac113e8a80c70abf0de0a6"
+}

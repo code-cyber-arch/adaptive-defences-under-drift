@@ -1,0 +1,140 @@
+{
+  "stream": "radar",
+  "mode": "concept",
+  "level": "severe",
+  "base_seed": null,
+  "attack_seed": 3789935020,
+  "attack_assignment": 2,
+  "base_key": "radar__evaluation",
+  "condition": "radar__evaluation__concept__severe__a2",
+  "resets": 9,
+  "training_visits": 160315,
+  "seconds": 65.07894249999663,
+  "host_n": 57870,
+  "host_accuracy": 0.7255400034560221,
+  "host_macro_f1": 0.22294174653576726,
+  "poison_rows": 34162,
+  "poison_rows_admitted": 27804,
+  "poison_admission_rate": 0.8138867747789942,
+  "clean_rows": 102403,
+  "clean_rows_withheld": 18342,
+  "clean_withhold_rate": 0.1791158462154429,
+  "malicious_recall": 0.5859764705882353,
+  "benign_fpr": 0.20330193671287966,
+  "filter_poison_recall": 0.0,
+  "filter_legitimate_rejection": 0.0,
+  "detector": "hddm_w",
+  "filter": "none",
+  "filter_seed": null,
+  "policy": "confirmed",
+  "guarded": true,
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "radar__evaluation__concept__severe__a2",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "radar"
+      ],
+      "rows": 144753,
+      "base_seeds": [],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "radar",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "260a18376e3861d0823f1b47c5f176b614d40fb279d9546e584dca5f93c01bb4",
+      "audit": "6ad944c969986605d69ed6e46a206c6852a61cf81bce465e8a4c4b44a2f6b0e9",
+      "truth": "10d23dd2499911d3a7eab67498f2f9ea970d1ab9e927b2bb99e910f8801e1152"
+    },
+    "detector": "hddm_w",
+    "filter": "none",
+    "filter_seed": null,
+    "profile_sha256": "e64ec87cfdd703c057bb3ffc66d9b6b98a06ef8700885c6007ed6b6ea65feda1"
+  },
+  "reused": {
+    "summary": "results/per_dataset_study/fixed_responses/runs/radar/hddm_w/radar__evaluation__concept__severe__a2/confirmed_screened/summary.json",
+    "sha256": "ec1edbfe62111c0a6aa9dde772dead82e3b8380fb12a2ca3014866c64d785bdb"
+  },
+  "files": {
+    "predictions.parquet": "de916fb0f5e1930b88bd1e4f112eddd2aa04b15f27c8f117dc7da67259adf526",
+    "events.parquet": "891f53e396ebbfd2c556e856f4866f16de34e055bba5389d0170ea3e07b2434f"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/filters/runs/radar/hddm_w/radar__evaluation__concept__severe__a2/none"
+}

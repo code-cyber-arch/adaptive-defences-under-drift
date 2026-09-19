@@ -1,0 +1,143 @@
+{
+  "stream": "RBF_I",
+  "mode": "instance",
+  "level": "severe",
+  "base_seed": 117,
+  "attack_seed": 2977372565,
+  "attack_assignment": null,
+  "base_key": "RBF_I__s117",
+  "condition": "RBF_I__s117__instance__severe",
+  "resets": 3,
+  "training_visits": 62700,
+  "seconds": 2.7448029160004808,
+  "host_n": 56050,
+  "host_accuracy": 0.500321141837645,
+  "host_macro_f1": 0.49627736813944784,
+  "poison_rows": 14283,
+  "poison_rows_admitted": 9438,
+  "poison_admission_rate": 0.6607855492543583,
+  "clean_rows": 41767,
+  "clean_rows_withheld": 14155,
+  "clean_withhold_rate": 0.3389039193621759,
+  "malicious_recall": null,
+  "benign_fpr": null,
+  "policy": "confirmed",
+  "guarded": true,
+  "detector": "hellinger",
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "RBF_I__s117__instance__severe",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "RBF_I"
+      ],
+      "rows": 60000,
+      "base_seeds": [
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "RBF_I",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "92415398c799986beec035555965361aad5fef69f58513829c7dfbcb497ee2b5",
+      "audit": "b8e12281d59d977b46d2e0a65e1823a45457105937c25034062269558f75f748",
+      "truth": "a04a2981711c9a87ca7f86d31c0bbb8af954286db110f6146febef2db0aab091"
+    },
+    "arm": {
+      "policy": "confirmed",
+      "guarded": true,
+      "detector": "hellinger"
+    }
+  },
+  "reused": {
+    "summary": "results/per_dataset_study/evaluation_runs/RBF_I/hellinger/RBF_I__s117__instance__severe/confirmed/feedback_0.05_delay_1/summary.json",
+    "sha256": "8e6e268ca0889f93ad6ea1fe8de6e124dd918e01a9723d594867c01adde237c4"
+  },
+  "files": {
+    "predictions.parquet": "3b6de0a17f85f97ee7bb2ddeeb0ccf9fd65095c5df05119afe14fa83910725ad",
+    "events.parquet": "cda1cd0196289ee1a334642fd402ba10de5aa3b16ad57ba701de7d833bf59962"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/fixed_responses/runs/RBF_I/hellinger/RBF_I__s117__instance__severe/confirmed_screened"
+}

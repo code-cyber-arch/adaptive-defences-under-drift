@@ -1,0 +1,143 @@
+{
+  "stream": "radar",
+  "mode": "instance",
+  "level": "moderate",
+  "base_seed": null,
+  "attack_seed": 2388385389,
+  "attack_assignment": 1,
+  "base_key": "radar__evaluation",
+  "condition": "radar__evaluation__instance__moderate__a1",
+  "filter_rows_withheld": 136565,
+  "rows": 144753,
+  "training_visits": 950,
+  "accepted_training_visits": 950,
+  "accepted_refit_rows": 0,
+  "resets": 0,
+  "seconds": 3.5642098750104196,
+  "pending_candidate": false,
+  "audit_rows_reserved": 7238,
+  "policy": "confirmed",
+  "guarded": true,
+  "host_n": 75608,
+  "host_accuracy": 0.5796344302190244,
+  "host_macro_f1": 0.10232709760553454,
+  "poison_rows": 20598,
+  "poison_rows_admitted": 0,
+  "poison_admission_rate": 0.0,
+  "clean_rows": 115967,
+  "clean_rows_withheld": 115967,
+  "clean_withhold_rate": 1.0,
+  "malicious_recall": 0.9077548005908419,
+  "benign_fpr": 0.2940806856995553,
+  "filter_poison_recall": 1.0,
+  "filter_legitimate_rejection": 1.0,
+  "detector": "hddm_w",
+  "filter": "random_blocks",
+  "filter_seed": 27,
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "radar__evaluation__instance__moderate__a1",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "radar"
+      ],
+      "rows": 144753,
+      "base_seeds": [],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "radar",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "ebc65683107f7e24d5eda0046112833fe429abb1608284a5a3f7bc3ea6089b58",
+      "audit": "6ad944c969986605d69ed6e46a206c6852a61cf81bce465e8a4c4b44a2f6b0e9",
+      "truth": "d9d65aeafafb69f378bb240cd9a1b282e5f082c431244e7b1360ef0959de221b"
+    },
+    "detector": "hddm_w",
+    "filter": "random_blocks",
+    "filter_seed": 27,
+    "profile_sha256": "d92da1d389e99b56952ac1589da00e1f82cbf2f71aefc04f96e204e643a51804"
+  },
+  "reused": null,
+  "files": {
+    "predictions.parquet": "8213062e6983a56a877fdcfd8207f245223782397b4b36adcc52fdf474b6ecef",
+    "events.parquet": "06591b39ce8bbb4069ceca3d3be8e95be2d41edd2350cfda56d38275eccc1a1a"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/filters/runs/radar/hddm_w/radar__evaluation__instance__moderate__a1/random_blocks_seed_27"
+}

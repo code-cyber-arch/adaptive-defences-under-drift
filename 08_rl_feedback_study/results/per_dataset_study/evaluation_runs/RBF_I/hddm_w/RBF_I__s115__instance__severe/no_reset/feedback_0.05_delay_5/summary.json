@@ -1,0 +1,145 @@
+{
+  "rows": 60000,
+  "training_visits": 57000,
+  "accepted_training_visits": 43700,
+  "accepted_refit_rows": 0,
+  "resets": 0,
+  "seconds": 2.873787375021493,
+  "pending_candidate": false,
+  "audit_rows_reserved": 3000,
+  "policy": "none",
+  "guarded": true,
+  "host_n": 56050,
+  "host_accuracy": 0.5134522747546834,
+  "host_macro_f1": 0.5102400225301584,
+  "poison_rows": 14252,
+  "poison_rows_admitted": 10868,
+  "poison_admission_rate": 0.7625596407521751,
+  "clean_rows": 41798,
+  "clean_rows_withheld": 9916,
+  "clean_withhold_rate": 0.2372362313986315,
+  "malicious_recall": null,
+  "benign_fpr": null,
+  "condition": "RBF_I__s115__instance__severe",
+  "stream": "RBF_I",
+  "mode": "instance",
+  "level": "severe",
+  "base_seed": 115,
+  "arm": "no_reset",
+  "detector": "hddm_w",
+  "feedback_fraction": 0.05,
+  "delay_blocks": 5,
+  "no_feedback_blocks": 4,
+  "state_visits": {},
+  "action_counts": {
+    "": 59
+  },
+  "contract": {
+    "condition": "RBF_I__s115__instance__severe",
+    "arm": {
+      "name": "no_reset",
+      "policy": "none",
+      "detector": "hddm_w",
+      "dataset": "RBF_I"
+    },
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "RBF_I"
+      ],
+      "rows": 60000,
+      "base_seeds": [
+        115,
+        116,
+        117
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "RBF_I",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2
+      ]
+    },
+    "feedback_fraction": 0.05,
+    "delay_blocks": 5,
+    "inputs": {
+      "observations": "68ae0fd68801bddecd5c14fd4aeb3da0fee9b23c270f3969ba1ead8eecacb638",
+      "audit": "5023714eec8eb6bfbf7a3f9af319a0c81274b6b6f00e132e6093ed1c3c51139f",
+      "truth": "b30e8175c4e38215a197cd50a2ecadb0eb9d53aa888068eae46d5fde2481e98c"
+    }
+  },
+  "status": "complete",
+  "files": {
+    "feedback_schedule.parquet": "31a96ba815e865cadb7a95af2ba641e7e8f6325cbd34765116b24763258ccfe5",
+    "events.parquet": "ab72965ce5776a362a4a9dd5598139f66c5b9ec39f225100954c15d5d8e797ff",
+    "predictions.parquet": "c3e9d63ac0611e27e861916a7240d7d04a24c4f405e207762603d6233150b043"
+  }
+}

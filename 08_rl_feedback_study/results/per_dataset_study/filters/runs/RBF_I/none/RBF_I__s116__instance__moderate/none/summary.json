@@ -1,0 +1,146 @@
+{
+  "stream": "RBF_I",
+  "mode": "instance",
+  "level": "moderate",
+  "base_seed": 116,
+  "attack_seed": 2934809029,
+  "attack_assignment": null,
+  "base_key": "RBF_I__s116",
+  "condition": "RBF_I__s116__instance__moderate",
+  "resets": 0,
+  "training_visits": 57000,
+  "seconds": 2.9107032920001075,
+  "host_n": 56050,
+  "host_accuracy": 0.5668688670829617,
+  "host_macro_f1": 0.5562231816704755,
+  "poison_rows": 8561,
+  "poison_rows_admitted": 6545,
+  "poison_admission_rate": 0.7645134914145544,
+  "clean_rows": 47489,
+  "clean_rows_withheld": 11284,
+  "clean_withhold_rate": 0.23761292088694225,
+  "malicious_recall": null,
+  "benign_fpr": null,
+  "filter_poison_recall": 0.0,
+  "filter_legitimate_rejection": 0.0,
+  "detector": "none",
+  "filter": "none",
+  "filter_seed": null,
+  "policy": "none",
+  "guarded": true,
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "RBF_I__s116__instance__moderate",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "RBF_I"
+      ],
+      "rows": 60000,
+      "base_seeds": [
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "RBF_I",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "daf87b7e9606aebebfa86617a21c21ef8d90c6c9621d390142f2ad44b893d52d",
+      "audit": "0d517e845414dc37e3dd318f02cd81c2949cf6a2a75b4ec1bfe5d2e9fab40d15",
+      "truth": "0292d98dd8c81a19ab58e66b50f55f1d03a64db8da44b9ef6bf0eaee49619998"
+    },
+    "detector": "none",
+    "filter": "none",
+    "filter_seed": null,
+    "profile_sha256": "8ec91d924938faf3cdedc45956cc5d962af5975a845c9be8d5c78d7babf5672a"
+  },
+  "reused": {
+    "summary": "results/per_dataset_study/fixed_responses/runs/RBF_I/none/RBF_I__s116__instance__moderate/none_screened/summary.json",
+    "sha256": "a11a33000cf7e09bf6dfc7b5a9bd398d1736b123cf1e8489c1110d54c75f67ae"
+  },
+  "files": {
+    "predictions.parquet": "263a4a35563ee1053ee5c3a52ea2d617ff68d73d869bb855e564b08b02e85400",
+    "events.parquet": "13ec0e76796514744b07b0d6541d721ad571ebc6d5760087f72bc228d43b5b42"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/filters/runs/RBF_I/none/RBF_I__s116__instance__moderate/none"
+}

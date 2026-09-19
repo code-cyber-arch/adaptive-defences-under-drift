@@ -1,0 +1,58 @@
+{
+  "name": "rl_feedback_study",
+  "rows": 60000,
+  "validation_seeds": [
+    114
+  ],
+  "evaluation_seeds": [
+    115,
+    116,
+    117
+  ],
+  "pilot_seed": 9917,
+  "streams": [
+    "SEA_A",
+    "RBF_I"
+  ],
+  "rl_seeds": [
+    7,
+    17,
+    27
+  ],
+  "feedback_fractions": [
+    0.01,
+    0.02,
+    0.05
+  ],
+  "feedback_delays": [
+    1,
+    5
+  ],
+  "sensitivity_conditions": [
+    [
+      "clean",
+      "none"
+    ],
+    [
+      "instance",
+      "severe"
+    ]
+  ],
+  "reserved_fraction": 0.05,
+  "selection_metric": "mean_host_macro_f1",
+  "selection_tiebreak": [
+    "mean_resets",
+    "policy_id"
+  ],
+  "scope": "Matched detector-specific training and evaluation on synthetic streams; existing RQ1 and RQ2",
+  "detectors": [
+    "adwin",
+    "hddm_w",
+    "hellinger",
+    "d3_oof"
+  ],
+  "training_seeds": [
+    112
+  ],
+  "training_epochs": 4
+}

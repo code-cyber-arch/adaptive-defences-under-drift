@@ -1,0 +1,9 @@
+# Integrated methods wording
+
+Within Experiment 2, the learned reset-policy comparison uses ADWIN, HDDM-W, Hellinger and the D3-inspired monitor. Phase 04 trains separate two-state and four-state controllers for each detector. Three RL seeds per representation produce 24 controllers. All detectors use the same development streams, intervention conditions, four-pass training budget and delayed protected-accuracy reward. Episode order is matched for a given training seed. The learned Q-tables are frozen for evaluation.
+
+Each detector is compared under its fixed screened response, learned controllers and same-information controls. The latter include an error-threshold rule and a deterministic mapping selected from all 16 possible four-state/two-action policies. Selection occurs separately for each detector using the validation streams; neither detector nor policy is selected from evaluation performance. The evaluation uses common stream realizations, poisoning assignments, protected reservations and scoring populations. A controller is evaluated only with its training detector.
+
+Feedback sensitivity supports the existing screening and learned-response comparisons. Nested usable protected samples of one, two and five percent are released after one or five blocks, while the reserved population remains five percent. All controllers remain frozen. A missing protected sample causes screening to reject the candidate. This isolates usable feedback under a common reservation and does not alter the timing of ordinary labels.
+
+The existing RQ1 and RQ2 remain unchanged. Results compare exposure, legitimate withholding and prediction together; comparisons within a detector isolate response choice, while matched detector–policy configurations show variation across monitoring methods. Repeated no-reset controls and multiple learned seeds on the same stream are not treated as independent datasets.

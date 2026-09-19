@@ -1,0 +1,143 @@
+{
+  "stream": "radar",
+  "mode": "concept",
+  "level": "severe",
+  "base_seed": null,
+  "attack_seed": 3789935020,
+  "attack_assignment": 2,
+  "base_key": "radar__evaluation",
+  "condition": "radar__evaluation__concept__severe__a2",
+  "filter_rows_withheld": 105450,
+  "rows": 144753,
+  "training_visits": 32065,
+  "accepted_training_visits": 27315,
+  "accepted_refit_rows": 0,
+  "resets": 0,
+  "seconds": 28.138195540988818,
+  "pending_candidate": true,
+  "audit_rows_reserved": 7238,
+  "policy": "confirmed",
+  "guarded": true,
+  "host_n": 57870,
+  "host_accuracy": 0.8362363919129082,
+  "host_macro_f1": 0.21875122110211326,
+  "poison_rows": 34162,
+  "poison_rows_admitted": 0,
+  "poison_admission_rate": 0.0,
+  "clean_rows": 102403,
+  "clean_rows_withheld": 76038,
+  "clean_withhold_rate": 0.7425368397410232,
+  "malicious_recall": 0.7731764705882352,
+  "benign_fpr": 0.08017779659223198,
+  "filter_poison_recall": 1.0,
+  "filter_legitimate_rejection": 0.6961514799371112,
+  "detector": "hddm_w",
+  "filter": "oracle_blocks",
+  "filter_seed": null,
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "radar__evaluation__concept__severe__a2",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "radar"
+      ],
+      "rows": 144753,
+      "base_seeds": [],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "radar",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "260a18376e3861d0823f1b47c5f176b614d40fb279d9546e584dca5f93c01bb4",
+      "audit": "6ad944c969986605d69ed6e46a206c6852a61cf81bce465e8a4c4b44a2f6b0e9",
+      "truth": "10d23dd2499911d3a7eab67498f2f9ea970d1ab9e927b2bb99e910f8801e1152"
+    },
+    "detector": "hddm_w",
+    "filter": "oracle_blocks",
+    "filter_seed": null,
+    "profile_sha256": "e64ec87cfdd703c057bb3ffc66d9b6b98a06ef8700885c6007ed6b6ea65feda1"
+  },
+  "reused": null,
+  "files": {
+    "predictions.parquet": "b221adcafee4d6de47788107b7f73c61a620cfd35a02c5b129f11744f63e183a",
+    "events.parquet": "7bda13539859e7a9398d22d0d65a11f181dc0cfb6400c59b9f8e05af2ace7446"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/filters/runs/radar/hddm_w/radar__evaluation__concept__severe__a2/oracle_blocks"
+}

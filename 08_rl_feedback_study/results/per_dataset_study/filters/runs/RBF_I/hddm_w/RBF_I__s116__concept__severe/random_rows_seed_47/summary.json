@@ -1,0 +1,149 @@
+{
+  "stream": "RBF_I",
+  "mode": "concept",
+  "level": "severe",
+  "base_seed": 116,
+  "attack_seed": 87307388,
+  "attack_assignment": null,
+  "base_key": "RBF_I__s116",
+  "condition": "RBF_I__s116__concept__severe",
+  "filter_rows_withheld": 14244,
+  "rows": 60000,
+  "training_visits": 51235,
+  "accepted_training_visits": 36433,
+  "accepted_refit_rows": 10637,
+  "resets": 5,
+  "seconds": 2.3441983750090003,
+  "pending_candidate": false,
+  "audit_rows_reserved": 3000,
+  "policy": "confirmed",
+  "guarded": true,
+  "host_n": 41806,
+  "host_accuracy": 0.5101181648567191,
+  "host_macro_f1": 0.5058752053373535,
+  "poison_rows": 14244,
+  "poison_rows_admitted": 7966,
+  "poison_admission_rate": 0.5592530188149396,
+  "clean_rows": 41806,
+  "clean_rows_withheld": 17860,
+  "clean_withhold_rate": 0.4272114050614744,
+  "malicious_recall": null,
+  "benign_fpr": null,
+  "filter_poison_recall": 0.2554759898904802,
+  "filter_legitimate_rejection": 0.25367172176242647,
+  "detector": "hddm_w",
+  "filter": "random_rows",
+  "filter_seed": 47,
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "RBF_I__s116__concept__severe",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "RBF_I"
+      ],
+      "rows": 60000,
+      "base_seeds": [
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "RBF_I",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "ec470fb226e53e120239a94a36cff844e20ae2d06749815fc1f11009a7f43e50",
+      "audit": "0d517e845414dc37e3dd318f02cd81c2949cf6a2a75b4ec1bfe5d2e9fab40d15",
+      "truth": "b315acf7cfbfa292628b2b88911e0eebe7b643b90a453015340f8c3fcbbb8829"
+    },
+    "detector": "hddm_w",
+    "filter": "random_rows",
+    "filter_seed": 47,
+    "profile_sha256": "a42d017f8edf2b57612b6418994c9bbe9edcbd1c10fc4563cdbf728a00906a9d"
+  },
+  "reused": null,
+  "files": {
+    "predictions.parquet": "2f27f63d1b62b59d49da10885d67a5de50bd02d4e0a8287b9283f6f8897a6bc4",
+    "events.parquet": "c032e371ab0ddbc6e10ecdb52407c3579d717f4843d4bbe54655395024466d2a"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/filters/runs/RBF_I/hddm_w/RBF_I__s116__concept__severe/random_rows_seed_47"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "complete_five_seed_study",
+  "input_study": "results/per_dataset_study",
+  "filter_seeds": [
+    7,
+    17,
+    27,
+    37,
+    47
+  ],
+  "evaluation_population": "shared_per_dataset_evaluation_partitions",
+  "filter_views": [
+    "features",
+    "features_label"
+  ],
+  "filter_controls": [
+    "none",
+    "oracle_rows",
+    "random_rows",
+    "oracle_blocks",
+    "random_blocks"
+  ],
+  "filter_max_fit_rows": 60000,
+  "filter_max_calibration_rows": 60000,
+  "filter_legitimate_rejection_target": 0.05,
+  "feedback_conditions": "all_seven",
+  "comparison_scope": [
+    "within_dataset_across_detectors",
+    "within_detector_across_policies",
+    "across_datasets",
+    "across_experiments_on_common_rows"
+  ],
+  "feedback_rl_representations": [
+    "alarm",
+    "alarm_persistence"
+  ]
+}

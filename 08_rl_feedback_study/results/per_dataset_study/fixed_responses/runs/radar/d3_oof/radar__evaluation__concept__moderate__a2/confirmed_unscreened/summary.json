@@ -1,0 +1,139 @@
+{
+  "stream": "radar",
+  "mode": "concept",
+  "level": "moderate",
+  "base_seed": null,
+  "attack_seed": 1880718146,
+  "attack_assignment": 2,
+  "base_key": "radar__evaluation",
+  "condition": "radar__evaluation__concept__moderate__a2",
+  "rows": 144753,
+  "training_visits": 145115,
+  "accepted_training_visits": 145115,
+  "accepted_refit_rows": 11400,
+  "resets": 4,
+  "seconds": 47.42752704198938,
+  "pending_candidate": false,
+  "audit_rows_reserved": 7238,
+  "policy": "confirmed",
+  "guarded": false,
+  "host_n": 116167,
+  "host_accuracy": 0.6657484483545241,
+  "host_macro_f1": 0.5406449322830755,
+  "poison_rows": 20398,
+  "poison_rows_admitted": 20398,
+  "poison_admission_rate": 1.0,
+  "clean_rows": 116167,
+  "clean_rows_withheld": 0,
+  "clean_withhold_rate": 0.0,
+  "malicious_recall": 0.7905601677581258,
+  "benign_fpr": 0.18902186659308823,
+  "detector": "d3_oof",
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "radar__evaluation__concept__moderate__a2",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "radar"
+      ],
+      "rows": 144753,
+      "base_seeds": [],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "radar",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "9e4d20c76fa217ba5c920ff39273f4bec25612eddc5a3b4b8ff7347adcae56d9",
+      "audit": "6ad944c969986605d69ed6e46a206c6852a61cf81bce465e8a4c4b44a2f6b0e9",
+      "truth": "307e0c4df8bba59a7c8c922405e3f719df1381f568a1915a2b95cacc1c029995"
+    },
+    "arm": {
+      "policy": "confirmed",
+      "guarded": false,
+      "detector": "d3_oof"
+    }
+  },
+  "reused": null,
+  "files": {
+    "predictions.parquet": "1156f5b9f7a9e0ca628faac37c96bc42b28737cfe9613b01813b3711ea236b9f",
+    "events.parquet": "28d372bd73843657d24354ebcab7c273a00fa8599aed5cd9e22c8403bcd07f1c"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/fixed_responses/runs/radar/d3_oof/radar__evaluation__concept__moderate__a2/confirmed_unscreened"
+}

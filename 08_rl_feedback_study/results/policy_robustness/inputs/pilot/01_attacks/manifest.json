@@ -1,0 +1,720 @@
+{
+  "protocol": "guarded-update-rl-3.0",
+  "bases": {
+    "SEA_A__s9917": {
+      "metadata": {
+        "stream": "SEA_A",
+        "base_seed": 9917,
+        "rows": 60000,
+        "n_features": 3,
+        "classes": [
+          0,
+          1
+        ],
+        "benign_class": null,
+        "kind": "rapid_linear_mixture",
+        "transition_intervals": [
+          [
+            14820,
+            15180
+          ],
+          [
+            29820,
+            30180
+          ],
+          [
+            44820,
+            45180
+          ]
+        ],
+        "nominal_centers": [
+          15000,
+          30000,
+          45000
+        ],
+        "width": 360,
+        "event_reference": "global-index scheduled mixture intervals",
+        "supports_event_metrics": true,
+        "segment_boundaries": [
+          15000,
+          30000,
+          45000
+        ],
+        "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+        "feature_lineage": {
+          "f0": {
+            "source_column": "generator_feature_0",
+            "source": "River SEA"
+          },
+          "f1": {
+            "source_column": "generator_feature_1",
+            "source": "River SEA"
+          },
+          "f2": {
+            "source_column": "generator_feature_2",
+            "source": "River SEA"
+          }
+        },
+        "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+        "preprocessing": "none",
+        "warmup_rows": 1000,
+        "key": "SEA_A__s9917",
+        "path": "results/policy_robustness/inputs/pilot/00_streams/SEA/check_seed_9917/stream.parquet",
+        "sha256": "9d3bec8b9fcdff50851f98d9bacfc6803f83b1ea7014fce957e71231606c67c4",
+        "role": "check"
+      },
+      "clean": "../00_streams/SEA/check_seed_9917/stream.parquet",
+      "audit": "../audit/protected/SEA/seed_9917/sample.parquet",
+      "audit_rows": 3000
+    },
+    "RBF_I__s9917": {
+      "metadata": {
+        "stream": "RBF_I",
+        "base_seed": 9917,
+        "rows": 60000,
+        "n_features": 10,
+        "classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "benign_class": null,
+        "kind": "broad_linear_mixture",
+        "transition_intervals": [
+          [
+            9000,
+            21000
+          ],
+          [
+            24000,
+            36000
+          ],
+          [
+            39000,
+            51000
+          ]
+        ],
+        "nominal_centers": [
+          15000,
+          30000,
+          45000
+        ],
+        "width": 12000,
+        "event_reference": "global-index scheduled mixture intervals",
+        "supports_event_metrics": true,
+        "segment_boundaries": [
+          15000,
+          30000,
+          45000
+        ],
+        "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+        "feature_lineage": {
+          "f0": {
+            "source_column": "generator_feature_0",
+            "source": "River RandomRBF"
+          },
+          "f1": {
+            "source_column": "generator_feature_1",
+            "source": "River RandomRBF"
+          },
+          "f2": {
+            "source_column": "generator_feature_2",
+            "source": "River RandomRBF"
+          },
+          "f3": {
+            "source_column": "generator_feature_3",
+            "source": "River RandomRBF"
+          },
+          "f4": {
+            "source_column": "generator_feature_4",
+            "source": "River RandomRBF"
+          },
+          "f5": {
+            "source_column": "generator_feature_5",
+            "source": "River RandomRBF"
+          },
+          "f6": {
+            "source_column": "generator_feature_6",
+            "source": "River RandomRBF"
+          },
+          "f7": {
+            "source_column": "generator_feature_7",
+            "source": "River RandomRBF"
+          },
+          "f8": {
+            "source_column": "generator_feature_8",
+            "source": "River RandomRBF"
+          },
+          "f9": {
+            "source_column": "generator_feature_9",
+            "source": "River RandomRBF"
+          }
+        },
+        "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+        "preprocessing": "none",
+        "warmup_rows": 1000,
+        "key": "RBF_I__s9917",
+        "path": "results/policy_robustness/inputs/pilot/00_streams/RBF/check_seed_9917/stream.parquet",
+        "sha256": "fd9a2c1e7b5ba19897fabfecd3a91fed7cb344cd3de0cab01eadc9937a5d5b7e",
+        "role": "check"
+      },
+      "clean": "../00_streams/RBF/check_seed_9917/stream.parquet",
+      "audit": "../audit/protected/RBF/seed_9917/sample.parquet",
+      "audit_rows": 3000
+    }
+  },
+  "conditions": {
+    "SEA_A__s9917__clean__none": {
+      "stream": "SEA_A",
+      "base_seed": 9917,
+      "mode": "clean",
+      "level": "none",
+      "rows": 60000,
+      "classes": [
+        0,
+        1
+      ],
+      "benign_class": null,
+      "transition_intervals": [
+        [
+          14820,
+          15180
+        ],
+        [
+          29820,
+          30180
+        ],
+        [
+          44820,
+          45180
+        ]
+      ],
+      "supports_event_metrics": true,
+      "warmup_rows": 1000,
+      "key": "SEA_A__s9917__clean__none",
+      "base_key": "SEA_A__s9917",
+      "attack_seed": null,
+      "observations": "../00_streams/SEA/check_seed_9917/stream.parquet",
+      "truth": "../audit/evaluator/SEA/clean/none/check_seed_9917/attack_seed_None/truth.parquet",
+      "audit": "../audit/protected/SEA/seed_9917/sample.parquet",
+      "attack": {
+        "stream": "SEA_A",
+        "base_seed": 9917,
+        "rows": 60000,
+        "n_features": 3,
+        "classes": [
+          0,
+          1
+        ],
+        "benign_class": null,
+        "kind": "rapid_linear_mixture",
+        "transition_intervals": [
+          [
+            14820,
+            15180
+          ],
+          [
+            29820,
+            30180
+          ],
+          [
+            44820,
+            45180
+          ]
+        ],
+        "nominal_centers": [
+          15000,
+          30000,
+          45000
+        ],
+        "width": 360,
+        "event_reference": "global-index scheduled mixture intervals",
+        "supports_event_metrics": true,
+        "segment_boundaries": [
+          15000,
+          30000,
+          45000
+        ],
+        "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+        "feature_lineage": {
+          "f0": {
+            "source_column": "generator_feature_0",
+            "source": "River SEA"
+          },
+          "f1": {
+            "source_column": "generator_feature_1",
+            "source": "River SEA"
+          },
+          "f2": {
+            "source_column": "generator_feature_2",
+            "source": "River SEA"
+          }
+        },
+        "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+        "preprocessing": "none",
+        "warmup_rows": 1000,
+        "key": "SEA_A__s9917__clean__none",
+        "path": "results/policy_robustness/inputs/pilot/00_streams/SEA/check_seed_9917/stream.parquet",
+        "sha256": "9d3bec8b9fcdff50851f98d9bacfc6803f83b1ea7014fce957e71231606c67c4",
+        "role": "check",
+        "base_key": "SEA_A__s9917",
+        "mode": "clean",
+        "level": "none",
+        "attack_seed": null,
+        "truth_path": "results/policy_robustness/inputs/pilot/audit/evaluator/SEA/clean/none/check_seed_9917/attack_seed_None/truth.parquet",
+        "truth_sha256": "3261fd5878fe5dce90d576d303dc575d5ed5b0ec159c25dc265159e28b53e1b3",
+        "rng_seed": 3127153750,
+        "level_value": 0.0,
+        "burst_starts": [],
+        "burst_len": 250,
+        "burst_colocated": [],
+        "splice_sources": [],
+        "flip_target_map": {},
+        "n_flipped": 0,
+        "burst_rows": 0,
+        "actual_modified_fraction": 0.0,
+        "reference_access": "offline labelled clean archive, including future rows; no detector/model access",
+        "warmup_attack_free_rows": 1000,
+        "replacement_not_insertion": true
+      },
+      "source_observation_sha256": "9d3bec8b9fcdff50851f98d9bacfc6803f83b1ea7014fce957e71231606c67c4"
+    },
+    "SEA_A__s9917__instance__severe": {
+      "stream": "SEA_A",
+      "base_seed": 9917,
+      "mode": "instance",
+      "level": "severe",
+      "rows": 60000,
+      "classes": [
+        0,
+        1
+      ],
+      "benign_class": null,
+      "transition_intervals": [
+        [
+          14820,
+          15180
+        ],
+        [
+          29820,
+          30180
+        ],
+        [
+          44820,
+          45180
+        ]
+      ],
+      "supports_event_metrics": true,
+      "warmup_rows": 1000,
+      "key": "SEA_A__s9917__instance__severe",
+      "base_key": "SEA_A__s9917",
+      "attack_seed": 2902649369,
+      "observations": "SEA/instance/severe/check_seed_9917/attack_seed_2902649369/stream.parquet",
+      "truth": "../audit/evaluator/SEA/instance/severe/check_seed_9917/attack_seed_2902649369/truth.parquet",
+      "audit": "../audit/protected/SEA/seed_9917/sample.parquet",
+      "attack": {
+        "stream": "SEA_A",
+        "base_seed": 9917,
+        "rows": 60000,
+        "n_features": 3,
+        "classes": [
+          0,
+          1
+        ],
+        "benign_class": null,
+        "kind": "rapid_linear_mixture",
+        "transition_intervals": [
+          [
+            14820,
+            15180
+          ],
+          [
+            29820,
+            30180
+          ],
+          [
+            44820,
+            45180
+          ]
+        ],
+        "nominal_centers": [
+          15000,
+          30000,
+          45000
+        ],
+        "width": 360,
+        "event_reference": "global-index scheduled mixture intervals",
+        "supports_event_metrics": true,
+        "segment_boundaries": [
+          15000,
+          30000,
+          45000
+        ],
+        "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+        "feature_lineage": {
+          "f0": {
+            "source_column": "generator_feature_0",
+            "source": "River SEA"
+          },
+          "f1": {
+            "source_column": "generator_feature_1",
+            "source": "River SEA"
+          },
+          "f2": {
+            "source_column": "generator_feature_2",
+            "source": "River SEA"
+          }
+        },
+        "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+        "preprocessing": "none",
+        "warmup_rows": 1000,
+        "key": "SEA_A__s9917__instance__severe",
+        "path": "results/policy_robustness/inputs/pilot/01_attacks/SEA/instance/severe/check_seed_9917/attack_seed_2902649369/stream.parquet",
+        "sha256": "275b49087a7920f6a13b495ddf8f96711184d1602c3f9ce6dc140ed876bb37eb",
+        "role": "check",
+        "base_key": "SEA_A__s9917",
+        "mode": "instance",
+        "level": "severe",
+        "attack_seed": 2902649369,
+        "truth_path": "results/policy_robustness/inputs/pilot/audit/evaluator/SEA/instance/severe/check_seed_9917/attack_seed_2902649369/truth.parquet",
+        "truth_sha256": "f0a8a264124aebe62e47da7df866ba474aeaf123cfbe9c4a98833710c83278fe",
+        "rng_seed": 1182081173,
+        "level_value": 0.25,
+        "burst_starts": [],
+        "burst_len": 250,
+        "burst_colocated": [],
+        "splice_sources": [],
+        "flip_target_map": {
+          "0": 1,
+          "1": 0
+        },
+        "n_flipped": 15000,
+        "burst_rows": 0,
+        "actual_modified_fraction": 0.25,
+        "reference_access": "offline labelled clean archive, including future rows; no detector/model access",
+        "warmup_attack_free_rows": 1000,
+        "replacement_not_insertion": true
+      },
+      "source_observation_sha256": "275b49087a7920f6a13b495ddf8f96711184d1602c3f9ce6dc140ed876bb37eb"
+    },
+    "RBF_I__s9917__clean__none": {
+      "stream": "RBF_I",
+      "base_seed": 9917,
+      "mode": "clean",
+      "level": "none",
+      "rows": 60000,
+      "classes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "benign_class": null,
+      "transition_intervals": [
+        [
+          9000,
+          21000
+        ],
+        [
+          24000,
+          36000
+        ],
+        [
+          39000,
+          51000
+        ]
+      ],
+      "supports_event_metrics": true,
+      "warmup_rows": 1000,
+      "key": "RBF_I__s9917__clean__none",
+      "base_key": "RBF_I__s9917",
+      "attack_seed": null,
+      "observations": "../00_streams/RBF/check_seed_9917/stream.parquet",
+      "truth": "../audit/evaluator/RBF/clean/none/check_seed_9917/attack_seed_None/truth.parquet",
+      "audit": "../audit/protected/RBF/seed_9917/sample.parquet",
+      "attack": {
+        "stream": "RBF_I",
+        "base_seed": 9917,
+        "rows": 60000,
+        "n_features": 10,
+        "classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "benign_class": null,
+        "kind": "broad_linear_mixture",
+        "transition_intervals": [
+          [
+            9000,
+            21000
+          ],
+          [
+            24000,
+            36000
+          ],
+          [
+            39000,
+            51000
+          ]
+        ],
+        "nominal_centers": [
+          15000,
+          30000,
+          45000
+        ],
+        "width": 12000,
+        "event_reference": "global-index scheduled mixture intervals",
+        "supports_event_metrics": true,
+        "segment_boundaries": [
+          15000,
+          30000,
+          45000
+        ],
+        "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+        "feature_lineage": {
+          "f0": {
+            "source_column": "generator_feature_0",
+            "source": "River RandomRBF"
+          },
+          "f1": {
+            "source_column": "generator_feature_1",
+            "source": "River RandomRBF"
+          },
+          "f2": {
+            "source_column": "generator_feature_2",
+            "source": "River RandomRBF"
+          },
+          "f3": {
+            "source_column": "generator_feature_3",
+            "source": "River RandomRBF"
+          },
+          "f4": {
+            "source_column": "generator_feature_4",
+            "source": "River RandomRBF"
+          },
+          "f5": {
+            "source_column": "generator_feature_5",
+            "source": "River RandomRBF"
+          },
+          "f6": {
+            "source_column": "generator_feature_6",
+            "source": "River RandomRBF"
+          },
+          "f7": {
+            "source_column": "generator_feature_7",
+            "source": "River RandomRBF"
+          },
+          "f8": {
+            "source_column": "generator_feature_8",
+            "source": "River RandomRBF"
+          },
+          "f9": {
+            "source_column": "generator_feature_9",
+            "source": "River RandomRBF"
+          }
+        },
+        "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+        "preprocessing": "none",
+        "warmup_rows": 1000,
+        "key": "RBF_I__s9917__clean__none",
+        "path": "results/policy_robustness/inputs/pilot/00_streams/RBF/check_seed_9917/stream.parquet",
+        "sha256": "fd9a2c1e7b5ba19897fabfecd3a91fed7cb344cd3de0cab01eadc9937a5d5b7e",
+        "role": "check",
+        "base_key": "RBF_I__s9917",
+        "mode": "clean",
+        "level": "none",
+        "attack_seed": null,
+        "truth_path": "results/policy_robustness/inputs/pilot/audit/evaluator/RBF/clean/none/check_seed_9917/attack_seed_None/truth.parquet",
+        "truth_sha256": "87129213f71b8cc0d5182f6ad4d7ba6dc291b36bed12fb5eaa6b7a23816a303c",
+        "rng_seed": 4200838236,
+        "level_value": 0.0,
+        "burst_starts": [],
+        "burst_len": 250,
+        "burst_colocated": [],
+        "splice_sources": [],
+        "flip_target_map": {},
+        "n_flipped": 0,
+        "burst_rows": 0,
+        "actual_modified_fraction": 0.0,
+        "reference_access": "offline labelled clean archive, including future rows; no detector/model access",
+        "warmup_attack_free_rows": 1000,
+        "replacement_not_insertion": true
+      },
+      "source_observation_sha256": "fd9a2c1e7b5ba19897fabfecd3a91fed7cb344cd3de0cab01eadc9937a5d5b7e"
+    },
+    "RBF_I__s9917__instance__severe": {
+      "stream": "RBF_I",
+      "base_seed": 9917,
+      "mode": "instance",
+      "level": "severe",
+      "rows": 60000,
+      "classes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "benign_class": null,
+      "transition_intervals": [
+        [
+          9000,
+          21000
+        ],
+        [
+          24000,
+          36000
+        ],
+        [
+          39000,
+          51000
+        ]
+      ],
+      "supports_event_metrics": true,
+      "warmup_rows": 1000,
+      "key": "RBF_I__s9917__instance__severe",
+      "base_key": "RBF_I__s9917",
+      "attack_seed": 3291892567,
+      "observations": "RBF/instance/severe/check_seed_9917/attack_seed_3291892567/stream.parquet",
+      "truth": "../audit/evaluator/RBF/instance/severe/check_seed_9917/attack_seed_3291892567/truth.parquet",
+      "audit": "../audit/protected/RBF/seed_9917/sample.parquet",
+      "attack": {
+        "stream": "RBF_I",
+        "base_seed": 9917,
+        "rows": 60000,
+        "n_features": 10,
+        "classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "benign_class": null,
+        "kind": "broad_linear_mixture",
+        "transition_intervals": [
+          [
+            9000,
+            21000
+          ],
+          [
+            24000,
+            36000
+          ],
+          [
+            39000,
+            51000
+          ]
+        ],
+        "nominal_centers": [
+          15000,
+          30000,
+          45000
+        ],
+        "width": 12000,
+        "event_reference": "global-index scheduled mixture intervals",
+        "supports_event_metrics": true,
+        "segment_boundaries": [
+          15000,
+          30000,
+          45000
+        ],
+        "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+        "feature_lineage": {
+          "f0": {
+            "source_column": "generator_feature_0",
+            "source": "River RandomRBF"
+          },
+          "f1": {
+            "source_column": "generator_feature_1",
+            "source": "River RandomRBF"
+          },
+          "f2": {
+            "source_column": "generator_feature_2",
+            "source": "River RandomRBF"
+          },
+          "f3": {
+            "source_column": "generator_feature_3",
+            "source": "River RandomRBF"
+          },
+          "f4": {
+            "source_column": "generator_feature_4",
+            "source": "River RandomRBF"
+          },
+          "f5": {
+            "source_column": "generator_feature_5",
+            "source": "River RandomRBF"
+          },
+          "f6": {
+            "source_column": "generator_feature_6",
+            "source": "River RandomRBF"
+          },
+          "f7": {
+            "source_column": "generator_feature_7",
+            "source": "River RandomRBF"
+          },
+          "f8": {
+            "source_column": "generator_feature_8",
+            "source": "River RandomRBF"
+          },
+          "f9": {
+            "source_column": "generator_feature_9",
+            "source": "River RandomRBF"
+          }
+        },
+        "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+        "preprocessing": "none",
+        "warmup_rows": 1000,
+        "key": "RBF_I__s9917__instance__severe",
+        "path": "results/policy_robustness/inputs/pilot/01_attacks/RBF/instance/severe/check_seed_9917/attack_seed_3291892567/stream.parquet",
+        "sha256": "504f857802d94367e54dcab9ace02d3593b6447421bc503fccf2c9bf7e3b6654",
+        "role": "check",
+        "base_key": "RBF_I__s9917",
+        "mode": "instance",
+        "level": "severe",
+        "attack_seed": 3291892567,
+        "truth_path": "results/policy_robustness/inputs/pilot/audit/evaluator/RBF/instance/severe/check_seed_9917/attack_seed_3291892567/truth.parquet",
+        "truth_sha256": "353d9b7bb8f3235c217eadaab4eab623de093fa60de7e9905de8810f0dad424d",
+        "rng_seed": 59080811,
+        "level_value": 0.25,
+        "burst_starts": [],
+        "burst_len": 250,
+        "burst_colocated": [],
+        "splice_sources": [],
+        "flip_target_map": {
+          "0": 2,
+          "1": 2,
+          "2": 1,
+          "3": 1
+        },
+        "n_flipped": 15000,
+        "burst_rows": 0,
+        "actual_modified_fraction": 0.25,
+        "reference_access": "offline labelled clean archive, including future rows; no detector/model access",
+        "warmup_attack_free_rows": 1000,
+        "replacement_not_insertion": true
+      },
+      "source_observation_sha256": "504f857802d94367e54dcab9ace02d3593b6447421bc503fccf2c9bf7e3b6654"
+    }
+  },
+  "outputs": {
+    "../00_streams/SEA/check_seed_9917/stream.parquet": "9d3bec8b9fcdff50851f98d9bacfc6803f83b1ea7014fce957e71231606c67c4",
+    "../audit/protected/SEA/seed_9917/sample.parquet": "fe40549208d756bb2eb82af311a2869f5a7d19b9ad97d1ab67fd639a87a0184f",
+    "../00_streams/RBF/check_seed_9917/stream.parquet": "fd9a2c1e7b5ba19897fabfecd3a91fed7cb344cd3de0cab01eadc9937a5d5b7e",
+    "../audit/protected/RBF/seed_9917/sample.parquet": "38f03a90439ba6c672af1331f4292f54953fab873494dc760fcb64c97c96b0b4",
+    "../audit/evaluator/SEA/clean/none/check_seed_9917/attack_seed_None/truth.parquet": "3261fd5878fe5dce90d576d303dc575d5ed5b0ec159c25dc265159e28b53e1b3",
+    "SEA/instance/severe/check_seed_9917/attack_seed_2902649369/stream.parquet": "275b49087a7920f6a13b495ddf8f96711184d1602c3f9ce6dc140ed876bb37eb",
+    "../audit/evaluator/SEA/instance/severe/check_seed_9917/attack_seed_2902649369/truth.parquet": "f0a8a264124aebe62e47da7df866ba474aeaf123cfbe9c4a98833710c83278fe",
+    "../audit/evaluator/RBF/clean/none/check_seed_9917/attack_seed_None/truth.parquet": "87129213f71b8cc0d5182f6ad4d7ba6dc291b36bed12fb5eaa6b7a23816a303c",
+    "RBF/instance/severe/check_seed_9917/attack_seed_3291892567/stream.parquet": "504f857802d94367e54dcab9ace02d3593b6447421bc503fccf2c9bf7e3b6654",
+    "../audit/evaluator/RBF/instance/severe/check_seed_9917/attack_seed_3291892567/truth.parquet": "353d9b7bb8f3235c217eadaab4eab623de093fa60de7e9905de8810f0dad424d"
+  },
+  "audit_assumption": {
+    "fraction": 0.05,
+    "seed": 517,
+    "delay_blocks": 1,
+    "window_blocks": 1,
+    "source": "simulated protected original-observation channel; never training or final test data"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "stream": "SEA_A",
+  "base_seed": 118,
+  "rows": 60000,
+  "n_features": 3,
+  "classes": [
+    0,
+    1
+  ],
+  "benign_class": null,
+  "kind": "rapid_linear_mixture",
+  "transition_intervals": [
+    [
+      14820,
+      15180
+    ],
+    [
+      29820,
+      30180
+    ],
+    [
+      44820,
+      45180
+    ]
+  ],
+  "nominal_centers": [
+    15000,
+    30000,
+    45000
+  ],
+  "width": 360,
+  "event_reference": "global-index scheduled mixture intervals",
+  "supports_event_metrics": true,
+  "segment_boundaries": [
+    15000,
+    30000,
+    45000
+  ],
+  "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+  "feature_lineage": {
+    "f0": {
+      "source_column": "generator_feature_0",
+      "source": "River SEA"
+    },
+    "f1": {
+      "source_column": "generator_feature_1",
+      "source": "River SEA"
+    },
+    "f2": {
+      "source_column": "generator_feature_2",
+      "source": "River SEA"
+    }
+  },
+  "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+  "preprocessing": "none",
+  "warmup_rows": 1000,
+  "key": "SEA_A__s118",
+  "path": "results/per_dataset_study/stages/evaluation/SEA_A/00_streams/SEA/check_seed_118/stream.parquet",
+  "sha256": "9829f5f537c46498d1b6bb1a40519129a7d96930bf7d5aff3f0ac3f25296fff2",
+  "role": "check"
+}

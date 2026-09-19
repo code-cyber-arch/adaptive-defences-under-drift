@@ -1,0 +1,149 @@
+{
+  "stream": "SEA_A",
+  "mode": "instance",
+  "level": "severe",
+  "base_seed": 116,
+  "attack_seed": 3914142360,
+  "attack_assignment": null,
+  "base_key": "SEA_A__s116",
+  "condition": "SEA_A__s116__instance__severe",
+  "filter_rows_withheld": 14241,
+  "rows": 60000,
+  "training_visits": 44165,
+  "accepted_training_visits": 20758,
+  "accepted_refit_rows": 2109,
+  "resets": 1,
+  "seconds": 0.6764287920086645,
+  "pending_candidate": false,
+  "audit_rows_reserved": 3000,
+  "policy": "confirmed",
+  "guarded": true,
+  "host_n": 56050,
+  "host_accuracy": 0.9085459411239964,
+  "host_macro_f1": 0.8998386199767534,
+  "poison_rows": 14241,
+  "poison_rows_admitted": 4601,
+  "poison_admission_rate": 0.32308124429464224,
+  "clean_rows": 41809,
+  "clean_rows_withheld": 28008,
+  "clean_withhold_rate": 0.6699036092707312,
+  "malicious_recall": null,
+  "benign_fpr": null,
+  "filter_poison_recall": 0.2589003581209185,
+  "filter_legitimate_rejection": 0.25243368652682435,
+  "detector": "d3_oof",
+  "filter": "random_rows",
+  "filter_seed": 47,
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "SEA_A__s116__instance__severe",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "SEA_A"
+      ],
+      "rows": 60000,
+      "base_seeds": [
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "SEA_A",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "909ec7ac8626a64117b2f68ce8b09ca6efb2d90eb4b05ff06e43966cf1cfae5f",
+      "audit": "1839bd68a012bbd3eb75d833bdeaf8e61043ad8cb50d178cfa2fdc76dae73c22",
+      "truth": "5b00a832d106a6ef55e6eb55dee9f850e9dd73b145004bd198dfd9e1403b811c"
+    },
+    "detector": "d3_oof",
+    "filter": "random_rows",
+    "filter_seed": 47,
+    "profile_sha256": "e7002a01a6ad2dda231b41258f349b3a64949bfa1df690fba3dc9e019e170528"
+  },
+  "reused": null,
+  "files": {
+    "predictions.parquet": "485c6a6663992ebbe8b0749894ff1e6474bace13a0a9432ba42b5849c19dec66",
+    "events.parquet": "acc078872bd7fe483fb5bb76f3848ed3f1150a2114829819c34a78fb21ffe909"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/filters/runs/SEA_A/d3_oof/SEA_A__s116__instance__severe/random_rows_seed_47"
+}

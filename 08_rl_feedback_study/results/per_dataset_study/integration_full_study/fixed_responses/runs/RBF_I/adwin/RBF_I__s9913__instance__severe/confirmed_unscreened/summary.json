@@ -1,0 +1,131 @@
+{
+  "stream": "RBF_I",
+  "mode": "instance",
+  "level": "severe",
+  "base_seed": 9913,
+  "attack_seed": 821989827,
+  "attack_assignment": null,
+  "base_key": "RBF_I__s9913",
+  "condition": "RBF_I__s9913__instance__severe",
+  "rows": 12000,
+  "training_visits": 11400,
+  "accepted_training_visits": 11400,
+  "accepted_refit_rows": 0,
+  "resets": 0,
+  "seconds": 0.45477512502111495,
+  "pending_candidate": false,
+  "audit_rows_reserved": 600,
+  "policy": "confirmed",
+  "guarded": false,
+  "host_n": 10450,
+  "host_accuracy": 0.33043062200956935,
+  "host_macro_f1": 0.31277587835964565,
+  "poison_rows": 2843,
+  "poison_rows_admitted": 2843,
+  "poison_admission_rate": 1.0,
+  "clean_rows": 7607,
+  "clean_rows_withheld": 0,
+  "clean_withhold_rate": 0.0,
+  "malicious_recall": null,
+  "benign_fpr": null,
+  "detector": "adwin",
+  "contract": {
+    "protocol_sha256": "60af6fc113d1f42cdf6ff3c948e1dfbfff2439f890cfa432e697352a60d33578",
+    "condition": "RBF_I__s9913__instance__severe",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "RBF_I"
+      ],
+      "rows": 12000,
+      "base_seeds": [
+        9913
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance"
+      ],
+      "levels": {
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7
+        ],
+        "epochs": 1,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "RBF_I",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0
+      ],
+      "pilot_rows": 12000
+    },
+    "inputs": {
+      "observations": "6c58af11bc107193b131b44c1f6a930219481c6a6518171260cc523ddd9666fa",
+      "audit": "cec0bd114d913878117fce961e4166a34a2c3d55b749c30d41b77a00f5f9c799",
+      "truth": "f9062833906f6c052559aa74ce1968ab25073875a79b8d23463392e9d3f04a29"
+    },
+    "arm": {
+      "policy": "confirmed",
+      "guarded": false,
+      "detector": "adwin"
+    }
+  },
+  "reused": null,
+  "files": {
+    "predictions.parquet": "f55a934549bb17b916f5169cbbb3df71ab10ebf11189b8402f1929f90c4d9900",
+    "events.parquet": "5ec2340cf64e2f86f7151a36aeb440fda4586947923e0b127afa89712356268d"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/integration_full_study/fixed_responses/runs/RBF_I/adwin/RBF_I__s9913__instance__severe/confirmed_unscreened"
+}

@@ -1,0 +1,83 @@
+{
+  "stream": "SEA_A",
+  "base_seed": 9911,
+  "rows": 12000,
+  "n_features": 3,
+  "classes": [
+    0,
+    1
+  ],
+  "benign_class": null,
+  "kind": "rapid_linear_mixture",
+  "transition_intervals": [
+    [
+      2964,
+      3036
+    ],
+    [
+      5964,
+      6036
+    ],
+    [
+      8964,
+      9036
+    ]
+  ],
+  "nominal_centers": [
+    3000,
+    6000,
+    9000
+  ],
+  "width": 72,
+  "event_reference": "global-index scheduled mixture intervals",
+  "supports_event_metrics": true,
+  "segment_boundaries": [
+    3000,
+    6000,
+    9000
+  ],
+  "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+  "feature_lineage": {
+    "f0": {
+      "source_column": "generator_feature_0",
+      "source": "River SEA"
+    },
+    "f1": {
+      "source_column": "generator_feature_1",
+      "source": "River SEA"
+    },
+    "f2": {
+      "source_column": "generator_feature_2",
+      "source": "River SEA"
+    }
+  },
+  "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+  "preprocessing": "none",
+  "warmup_rows": 1000,
+  "key": "SEA_A__s9911__instance__severe",
+  "path": "results/per_dataset_study/integration_full_study/inputs/training/SEA_A/01_attacks/SEA/instance/severe/training_seed_9911/attack_seed_3451770219/stream.parquet",
+  "sha256": "a2cc77b3e76ab7e8538ee15c1f4809ac762c80bf68c0e5e203d3b24396b71762",
+  "role": "training",
+  "base_key": "SEA_A__s9911",
+  "mode": "instance",
+  "level": "severe",
+  "attack_seed": 3451770219,
+  "truth_path": "results/per_dataset_study/integration_full_study/inputs/training/SEA_A/audit/evaluator/SEA/instance/severe/training_seed_9911/attack_seed_3451770219/truth.parquet",
+  "truth_sha256": "a79524dc5a15ce5b082643f12eb4a088d859f85b8aeb338f047e1ab94a96d40d",
+  "rng_seed": 1326650177,
+  "level_value": 0.25,
+  "burst_starts": [],
+  "burst_len": 250,
+  "burst_colocated": [],
+  "splice_sources": [],
+  "flip_target_map": {
+    "0": 1,
+    "1": 0
+  },
+  "n_flipped": 3000,
+  "burst_rows": 0,
+  "actual_modified_fraction": 0.25,
+  "reference_access": "offline labelled clean archive, including future rows; no detector/model access",
+  "warmup_attack_free_rows": 1000,
+  "replacement_not_insertion": true
+}

@@ -1,0 +1,2330 @@
+{
+  "protocol": "guarded-update-rl-3.0",
+  "bases": {
+    "RBF_I__s114": {
+      "metadata": {
+        "stream": "RBF_I",
+        "base_seed": 114,
+        "rows": 60000,
+        "n_features": 10,
+        "classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "benign_class": null,
+        "kind": "broad_linear_mixture",
+        "transition_intervals": [
+          [
+            9000,
+            21000
+          ],
+          [
+            24000,
+            36000
+          ],
+          [
+            39000,
+            51000
+          ]
+        ],
+        "nominal_centers": [
+          15000,
+          30000,
+          45000
+        ],
+        "width": 12000,
+        "event_reference": "global-index scheduled mixture intervals",
+        "supports_event_metrics": true,
+        "segment_boundaries": [
+          15000,
+          30000,
+          45000
+        ],
+        "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+        "feature_lineage": {
+          "f0": {
+            "source_column": "generator_feature_0",
+            "source": "River RandomRBF"
+          },
+          "f1": {
+            "source_column": "generator_feature_1",
+            "source": "River RandomRBF"
+          },
+          "f2": {
+            "source_column": "generator_feature_2",
+            "source": "River RandomRBF"
+          },
+          "f3": {
+            "source_column": "generator_feature_3",
+            "source": "River RandomRBF"
+          },
+          "f4": {
+            "source_column": "generator_feature_4",
+            "source": "River RandomRBF"
+          },
+          "f5": {
+            "source_column": "generator_feature_5",
+            "source": "River RandomRBF"
+          },
+          "f6": {
+            "source_column": "generator_feature_6",
+            "source": "River RandomRBF"
+          },
+          "f7": {
+            "source_column": "generator_feature_7",
+            "source": "River RandomRBF"
+          },
+          "f8": {
+            "source_column": "generator_feature_8",
+            "source": "River RandomRBF"
+          },
+          "f9": {
+            "source_column": "generator_feature_9",
+            "source": "River RandomRBF"
+          }
+        },
+        "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+        "preprocessing": "none",
+        "warmup_rows": 1000,
+        "key": "RBF_I__s114",
+        "path": "results/per_dataset_study/stages/validation/RBF_I/00_streams/RBF/validation_seed_114/stream.parquet",
+        "sha256": "c44ffabf193c7438230fd4d22bfb17cd4d072508150eefb36ed49ca08cc08f5b",
+        "role": "validation"
+      },
+      "clean": "../00_streams/RBF/validation_seed_114/stream.parquet",
+      "audit": "../audit/protected/RBF/seed_114/sample.parquet",
+      "audit_rows": 3000
+    }
+  },
+  "conditions": {
+    "RBF_I__s114__clean__none": {
+      "stream": "RBF_I",
+      "base_seed": 114,
+      "mode": "clean",
+      "level": "none",
+      "rows": 60000,
+      "classes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "benign_class": null,
+      "transition_intervals": [
+        [
+          9000,
+          21000
+        ],
+        [
+          24000,
+          36000
+        ],
+        [
+          39000,
+          51000
+        ]
+      ],
+      "supports_event_metrics": true,
+      "warmup_rows": 1000,
+      "key": "RBF_I__s114__clean__none",
+      "base_key": "RBF_I__s114",
+      "attack_seed": null,
+      "observations": "../00_streams/RBF/validation_seed_114/stream.parquet",
+      "truth": "../audit/evaluator/RBF/clean/none/validation_seed_114/attack_seed_None/truth.parquet",
+      "audit": "../audit/protected/RBF/seed_114/sample.parquet",
+      "attack": {
+        "stream": "RBF_I",
+        "base_seed": 114,
+        "rows": 60000,
+        "n_features": 10,
+        "classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "benign_class": null,
+        "kind": "broad_linear_mixture",
+        "transition_intervals": [
+          [
+            9000,
+            21000
+          ],
+          [
+            24000,
+            36000
+          ],
+          [
+            39000,
+            51000
+          ]
+        ],
+        "nominal_centers": [
+          15000,
+          30000,
+          45000
+        ],
+        "width": 12000,
+        "event_reference": "global-index scheduled mixture intervals",
+        "supports_event_metrics": true,
+        "segment_boundaries": [
+          15000,
+          30000,
+          45000
+        ],
+        "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+        "feature_lineage": {
+          "f0": {
+            "source_column": "generator_feature_0",
+            "source": "River RandomRBF"
+          },
+          "f1": {
+            "source_column": "generator_feature_1",
+            "source": "River RandomRBF"
+          },
+          "f2": {
+            "source_column": "generator_feature_2",
+            "source": "River RandomRBF"
+          },
+          "f3": {
+            "source_column": "generator_feature_3",
+            "source": "River RandomRBF"
+          },
+          "f4": {
+            "source_column": "generator_feature_4",
+            "source": "River RandomRBF"
+          },
+          "f5": {
+            "source_column": "generator_feature_5",
+            "source": "River RandomRBF"
+          },
+          "f6": {
+            "source_column": "generator_feature_6",
+            "source": "River RandomRBF"
+          },
+          "f7": {
+            "source_column": "generator_feature_7",
+            "source": "River RandomRBF"
+          },
+          "f8": {
+            "source_column": "generator_feature_8",
+            "source": "River RandomRBF"
+          },
+          "f9": {
+            "source_column": "generator_feature_9",
+            "source": "River RandomRBF"
+          }
+        },
+        "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+        "preprocessing": "none",
+        "warmup_rows": 1000,
+        "key": "RBF_I__s114__clean__none",
+        "path": "results/per_dataset_study/stages/validation/RBF_I/00_streams/RBF/validation_seed_114/stream.parquet",
+        "sha256": "c44ffabf193c7438230fd4d22bfb17cd4d072508150eefb36ed49ca08cc08f5b",
+        "role": "validation",
+        "base_key": "RBF_I__s114",
+        "mode": "clean",
+        "level": "none",
+        "attack_seed": null,
+        "truth_path": "results/per_dataset_study/stages/validation/RBF_I/audit/evaluator/RBF/clean/none/validation_seed_114/attack_seed_None/truth.parquet",
+        "truth_sha256": "073998061e5b0737b59eccdaec0b0cf4b4354121b6ddb269681022aa34caa262",
+        "rng_seed": 3819570639,
+        "level_value": 0.0,
+        "burst_starts": [],
+        "burst_len": 250,
+        "burst_colocated": [],
+        "splice_sources": [],
+        "flip_target_map": {},
+        "n_flipped": 0,
+        "burst_rows": 0,
+        "actual_modified_fraction": 0.0,
+        "reference_access": "offline labelled clean archive, including future rows; no detector/model access",
+        "warmup_attack_free_rows": 1000,
+        "replacement_not_insertion": true
+      },
+      "source_observation_sha256": "c44ffabf193c7438230fd4d22bfb17cd4d072508150eefb36ed49ca08cc08f5b"
+    },
+    "RBF_I__s114__instance__moderate": {
+      "stream": "RBF_I",
+      "base_seed": 114,
+      "mode": "instance",
+      "level": "moderate",
+      "rows": 60000,
+      "classes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "benign_class": null,
+      "transition_intervals": [
+        [
+          9000,
+          21000
+        ],
+        [
+          24000,
+          36000
+        ],
+        [
+          39000,
+          51000
+        ]
+      ],
+      "supports_event_metrics": true,
+      "warmup_rows": 1000,
+      "key": "RBF_I__s114__instance__moderate",
+      "base_key": "RBF_I__s114",
+      "attack_seed": 1446359448,
+      "observations": "RBF/instance/moderate/validation_seed_114/attack_seed_1446359448/stream.parquet",
+      "truth": "../audit/evaluator/RBF/instance/moderate/validation_seed_114/attack_seed_1446359448/truth.parquet",
+      "audit": "../audit/protected/RBF/seed_114/sample.parquet",
+      "attack": {
+        "stream": "RBF_I",
+        "base_seed": 114,
+        "rows": 60000,
+        "n_features": 10,
+        "classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "benign_class": null,
+        "kind": "broad_linear_mixture",
+        "transition_intervals": [
+          [
+            9000,
+            21000
+          ],
+          [
+            24000,
+            36000
+          ],
+          [
+            39000,
+            51000
+          ]
+        ],
+        "nominal_centers": [
+          15000,
+          30000,
+          45000
+        ],
+        "width": 12000,
+        "event_reference": "global-index scheduled mixture intervals",
+        "supports_event_metrics": true,
+        "segment_boundaries": [
+          15000,
+          30000,
+          45000
+        ],
+        "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+        "feature_lineage": {
+          "f0": {
+            "source_column": "generator_feature_0",
+            "source": "River RandomRBF"
+          },
+          "f1": {
+            "source_column": "generator_feature_1",
+            "source": "River RandomRBF"
+          },
+          "f2": {
+            "source_column": "generator_feature_2",
+            "source": "River RandomRBF"
+          },
+          "f3": {
+            "source_column": "generator_feature_3",
+            "source": "River RandomRBF"
+          },
+          "f4": {
+            "source_column": "generator_feature_4",
+            "source": "River RandomRBF"
+          },
+          "f5": {
+            "source_column": "generator_feature_5",
+            "source": "River RandomRBF"
+          },
+          "f6": {
+            "source_column": "generator_feature_6",
+            "source": "River RandomRBF"
+          },
+          "f7": {
+            "source_column": "generator_feature_7",
+            "source": "River RandomRBF"
+          },
+          "f8": {
+            "source_column": "generator_feature_8",
+            "source": "River RandomRBF"
+          },
+          "f9": {
+            "source_column": "generator_feature_9",
+            "source": "River RandomRBF"
+          }
+        },
+        "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+        "preprocessing": "none",
+        "warmup_rows": 1000,
+        "key": "RBF_I__s114__instance__moderate",
+        "path": "results/per_dataset_study/stages/validation/RBF_I/01_attacks/RBF/instance/moderate/validation_seed_114/attack_seed_1446359448/stream.parquet",
+        "sha256": "1cc387ac41968eef02d7c58435d5dc761349671fa073df3dda6c86a40272b618",
+        "role": "validation",
+        "base_key": "RBF_I__s114",
+        "mode": "instance",
+        "level": "moderate",
+        "attack_seed": 1446359448,
+        "truth_path": "results/per_dataset_study/stages/validation/RBF_I/audit/evaluator/RBF/instance/moderate/validation_seed_114/attack_seed_1446359448/truth.parquet",
+        "truth_sha256": "15690705716da732fb7d6d2f002b04e09c9a337e0e51f6f872becca38d182e1a",
+        "rng_seed": 3105789801,
+        "level_value": 0.15,
+        "burst_starts": [],
+        "burst_len": 250,
+        "burst_colocated": [],
+        "splice_sources": [],
+        "flip_target_map": {
+          "0": 3,
+          "1": 3,
+          "2": 3,
+          "3": 1
+        },
+        "n_flipped": 9000,
+        "burst_rows": 0,
+        "actual_modified_fraction": 0.15,
+        "reference_access": "offline labelled clean archive, including future rows; no detector/model access",
+        "warmup_attack_free_rows": 1000,
+        "replacement_not_insertion": true
+      },
+      "source_observation_sha256": "1cc387ac41968eef02d7c58435d5dc761349671fa073df3dda6c86a40272b618"
+    },
+    "RBF_I__s114__instance__severe": {
+      "stream": "RBF_I",
+      "base_seed": 114,
+      "mode": "instance",
+      "level": "severe",
+      "rows": 60000,
+      "classes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "benign_class": null,
+      "transition_intervals": [
+        [
+          9000,
+          21000
+        ],
+        [
+          24000,
+          36000
+        ],
+        [
+          39000,
+          51000
+        ]
+      ],
+      "supports_event_metrics": true,
+      "warmup_rows": 1000,
+      "key": "RBF_I__s114__instance__severe",
+      "base_key": "RBF_I__s114",
+      "attack_seed": 1409906528,
+      "observations": "RBF/instance/severe/validation_seed_114/attack_seed_1409906528/stream.parquet",
+      "truth": "../audit/evaluator/RBF/instance/severe/validation_seed_114/attack_seed_1409906528/truth.parquet",
+      "audit": "../audit/protected/RBF/seed_114/sample.parquet",
+      "attack": {
+        "stream": "RBF_I",
+        "base_seed": 114,
+        "rows": 60000,
+        "n_features": 10,
+        "classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "benign_class": null,
+        "kind": "broad_linear_mixture",
+        "transition_intervals": [
+          [
+            9000,
+            21000
+          ],
+          [
+            24000,
+            36000
+          ],
+          [
+            39000,
+            51000
+          ]
+        ],
+        "nominal_centers": [
+          15000,
+          30000,
+          45000
+        ],
+        "width": 12000,
+        "event_reference": "global-index scheduled mixture intervals",
+        "supports_event_metrics": true,
+        "segment_boundaries": [
+          15000,
+          30000,
+          45000
+        ],
+        "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+        "feature_lineage": {
+          "f0": {
+            "source_column": "generator_feature_0",
+            "source": "River RandomRBF"
+          },
+          "f1": {
+            "source_column": "generator_feature_1",
+            "source": "River RandomRBF"
+          },
+          "f2": {
+            "source_column": "generator_feature_2",
+            "source": "River RandomRBF"
+          },
+          "f3": {
+            "source_column": "generator_feature_3",
+            "source": "River RandomRBF"
+          },
+          "f4": {
+            "source_column": "generator_feature_4",
+            "source": "River RandomRBF"
+          },
+          "f5": {
+            "source_column": "generator_feature_5",
+            "source": "River RandomRBF"
+          },
+          "f6": {
+            "source_column": "generator_feature_6",
+            "source": "River RandomRBF"
+          },
+          "f7": {
+            "source_column": "generator_feature_7",
+            "source": "River RandomRBF"
+          },
+          "f8": {
+            "source_column": "generator_feature_8",
+            "source": "River RandomRBF"
+          },
+          "f9": {
+            "source_column": "generator_feature_9",
+            "source": "River RandomRBF"
+          }
+        },
+        "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+        "preprocessing": "none",
+        "warmup_rows": 1000,
+        "key": "RBF_I__s114__instance__severe",
+        "path": "results/per_dataset_study/stages/validation/RBF_I/01_attacks/RBF/instance/severe/validation_seed_114/attack_seed_1409906528/stream.parquet",
+        "sha256": "778e7677ec62a02f663078e714ac92da23cf8a8d31d223d8b94315f35cc808ab",
+        "role": "validation",
+        "base_key": "RBF_I__s114",
+        "mode": "instance",
+        "level": "severe",
+        "attack_seed": 1409906528,
+        "truth_path": "results/per_dataset_study/stages/validation/RBF_I/audit/evaluator/RBF/instance/severe/validation_seed_114/attack_seed_1409906528/truth.parquet",
+        "truth_sha256": "e73277352eeb61dbd13239e0e773d3ea5457133602860b84b58958992bc09ef7",
+        "rng_seed": 1569676404,
+        "level_value": 0.25,
+        "burst_starts": [],
+        "burst_len": 250,
+        "burst_colocated": [],
+        "splice_sources": [],
+        "flip_target_map": {
+          "0": 3,
+          "1": 3,
+          "2": 3,
+          "3": 1
+        },
+        "n_flipped": 15000,
+        "burst_rows": 0,
+        "actual_modified_fraction": 0.25,
+        "reference_access": "offline labelled clean archive, including future rows; no detector/model access",
+        "warmup_attack_free_rows": 1000,
+        "replacement_not_insertion": true
+      },
+      "source_observation_sha256": "778e7677ec62a02f663078e714ac92da23cf8a8d31d223d8b94315f35cc808ab"
+    },
+    "RBF_I__s114__concept__moderate": {
+      "stream": "RBF_I",
+      "base_seed": 114,
+      "mode": "concept",
+      "level": "moderate",
+      "rows": 60000,
+      "classes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "benign_class": null,
+      "transition_intervals": [
+        [
+          9000,
+          21000
+        ],
+        [
+          24000,
+          36000
+        ],
+        [
+          39000,
+          51000
+        ]
+      ],
+      "supports_event_metrics": true,
+      "warmup_rows": 1000,
+      "key": "RBF_I__s114__concept__moderate",
+      "base_key": "RBF_I__s114",
+      "attack_seed": 656574945,
+      "observations": "RBF/concept/moderate/validation_seed_114/attack_seed_656574945/stream.parquet",
+      "truth": "../audit/evaluator/RBF/concept/moderate/validation_seed_114/attack_seed_656574945/truth.parquet",
+      "audit": "../audit/protected/RBF/seed_114/sample.parquet",
+      "attack": {
+        "stream": "RBF_I",
+        "base_seed": 114,
+        "rows": 60000,
+        "n_features": 10,
+        "classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "benign_class": null,
+        "kind": "broad_linear_mixture",
+        "transition_intervals": [
+          [
+            9000,
+            21000
+          ],
+          [
+            24000,
+            36000
+          ],
+          [
+            39000,
+            51000
+          ]
+        ],
+        "nominal_centers": [
+          15000,
+          30000,
+          45000
+        ],
+        "width": 12000,
+        "event_reference": "global-index scheduled mixture intervals",
+        "supports_event_metrics": true,
+        "segment_boundaries": [
+          15000,
+          30000,
+          45000
+        ],
+        "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+        "feature_lineage": {
+          "f0": {
+            "source_column": "generator_feature_0",
+            "source": "River RandomRBF"
+          },
+          "f1": {
+            "source_column": "generator_feature_1",
+            "source": "River RandomRBF"
+          },
+          "f2": {
+            "source_column": "generator_feature_2",
+            "source": "River RandomRBF"
+          },
+          "f3": {
+            "source_column": "generator_feature_3",
+            "source": "River RandomRBF"
+          },
+          "f4": {
+            "source_column": "generator_feature_4",
+            "source": "River RandomRBF"
+          },
+          "f5": {
+            "source_column": "generator_feature_5",
+            "source": "River RandomRBF"
+          },
+          "f6": {
+            "source_column": "generator_feature_6",
+            "source": "River RandomRBF"
+          },
+          "f7": {
+            "source_column": "generator_feature_7",
+            "source": "River RandomRBF"
+          },
+          "f8": {
+            "source_column": "generator_feature_8",
+            "source": "River RandomRBF"
+          },
+          "f9": {
+            "source_column": "generator_feature_9",
+            "source": "River RandomRBF"
+          }
+        },
+        "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+        "preprocessing": "none",
+        "warmup_rows": 1000,
+        "key": "RBF_I__s114__concept__moderate",
+        "path": "results/per_dataset_study/stages/validation/RBF_I/01_attacks/RBF/concept/moderate/validation_seed_114/attack_seed_656574945/stream.parquet",
+        "sha256": "a7ec7cf56037a00d0bc8f333336db23a762bd91b77dd07aa0e5d3fcc08d839a0",
+        "role": "validation",
+        "base_key": "RBF_I__s114",
+        "mode": "concept",
+        "level": "moderate",
+        "attack_seed": 656574945,
+        "truth_path": "results/per_dataset_study/stages/validation/RBF_I/audit/evaluator/RBF/concept/moderate/validation_seed_114/attack_seed_656574945/truth.parquet",
+        "truth_sha256": "d453352b88b137f7d946b38b8507cf95957599040d3e1c09fadb9396b006ebb3",
+        "rng_seed": 1306249596,
+        "level_value": 0.15,
+        "burst_starts": [
+          1380,
+          2029,
+          2638,
+          3068,
+          3385,
+          3672,
+          4547,
+          5015,
+          5311,
+          6439,
+          7028,
+          7468,
+          8083,
+          14875,
+          21006,
+          21871,
+          22632,
+          22935,
+          23724,
+          29875,
+          36819,
+          37890,
+          38252,
+          38516,
+          44875,
+          52206,
+          52629,
+          54120,
+          54870,
+          55177,
+          56100,
+          56778,
+          57282,
+          57744,
+          58660,
+          59089
+        ],
+        "burst_len": 250,
+        "burst_colocated": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "splice_sources": [],
+        "flip_target_map": {},
+        "n_flipped": 0,
+        "burst_rows": 9000,
+        "actual_modified_fraction": 0.15,
+        "reference_access": "offline labelled clean archive, including future rows; no detector/model access",
+        "warmup_attack_free_rows": 1000,
+        "replacement_not_insertion": true
+      },
+      "source_observation_sha256": "a7ec7cf56037a00d0bc8f333336db23a762bd91b77dd07aa0e5d3fcc08d839a0"
+    },
+    "RBF_I__s114__concept__severe": {
+      "stream": "RBF_I",
+      "base_seed": 114,
+      "mode": "concept",
+      "level": "severe",
+      "rows": 60000,
+      "classes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "benign_class": null,
+      "transition_intervals": [
+        [
+          9000,
+          21000
+        ],
+        [
+          24000,
+          36000
+        ],
+        [
+          39000,
+          51000
+        ]
+      ],
+      "supports_event_metrics": true,
+      "warmup_rows": 1000,
+      "key": "RBF_I__s114__concept__severe",
+      "base_key": "RBF_I__s114",
+      "attack_seed": 2195729336,
+      "observations": "RBF/concept/severe/validation_seed_114/attack_seed_2195729336/stream.parquet",
+      "truth": "../audit/evaluator/RBF/concept/severe/validation_seed_114/attack_seed_2195729336/truth.parquet",
+      "audit": "../audit/protected/RBF/seed_114/sample.parquet",
+      "attack": {
+        "stream": "RBF_I",
+        "base_seed": 114,
+        "rows": 60000,
+        "n_features": 10,
+        "classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "benign_class": null,
+        "kind": "broad_linear_mixture",
+        "transition_intervals": [
+          [
+            9000,
+            21000
+          ],
+          [
+            24000,
+            36000
+          ],
+          [
+            39000,
+            51000
+          ]
+        ],
+        "nominal_centers": [
+          15000,
+          30000,
+          45000
+        ],
+        "width": 12000,
+        "event_reference": "global-index scheduled mixture intervals",
+        "supports_event_metrics": true,
+        "segment_boundaries": [
+          15000,
+          30000,
+          45000
+        ],
+        "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+        "feature_lineage": {
+          "f0": {
+            "source_column": "generator_feature_0",
+            "source": "River RandomRBF"
+          },
+          "f1": {
+            "source_column": "generator_feature_1",
+            "source": "River RandomRBF"
+          },
+          "f2": {
+            "source_column": "generator_feature_2",
+            "source": "River RandomRBF"
+          },
+          "f3": {
+            "source_column": "generator_feature_3",
+            "source": "River RandomRBF"
+          },
+          "f4": {
+            "source_column": "generator_feature_4",
+            "source": "River RandomRBF"
+          },
+          "f5": {
+            "source_column": "generator_feature_5",
+            "source": "River RandomRBF"
+          },
+          "f6": {
+            "source_column": "generator_feature_6",
+            "source": "River RandomRBF"
+          },
+          "f7": {
+            "source_column": "generator_feature_7",
+            "source": "River RandomRBF"
+          },
+          "f8": {
+            "source_column": "generator_feature_8",
+            "source": "River RandomRBF"
+          },
+          "f9": {
+            "source_column": "generator_feature_9",
+            "source": "River RandomRBF"
+          }
+        },
+        "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+        "preprocessing": "none",
+        "warmup_rows": 1000,
+        "key": "RBF_I__s114__concept__severe",
+        "path": "results/per_dataset_study/stages/validation/RBF_I/01_attacks/RBF/concept/severe/validation_seed_114/attack_seed_2195729336/stream.parquet",
+        "sha256": "3b85b941e6c176aaea0104c5551e4c3033c50b36c19f506a72d4474c4a4a56c4",
+        "role": "validation",
+        "base_key": "RBF_I__s114",
+        "mode": "concept",
+        "level": "severe",
+        "attack_seed": 2195729336,
+        "truth_path": "results/per_dataset_study/stages/validation/RBF_I/audit/evaluator/RBF/concept/severe/validation_seed_114/attack_seed_2195729336/truth.parquet",
+        "truth_sha256": "4e67dca294901896b214e7709ce4e3f6d964c38697bd9fc4c6f5a2c17b149845",
+        "rng_seed": 4142173885,
+        "level_value": 0.25,
+        "burst_starts": [
+          1241,
+          1762,
+          2231,
+          2548,
+          2907,
+          3163,
+          3436,
+          3819,
+          4331,
+          5163,
+          5564,
+          6093,
+          6358,
+          6624,
+          6991,
+          7308,
+          7621,
+          7934,
+          8226,
+          8476,
+          14875,
+          21177,
+          21618,
+          21944,
+          22290,
+          22572,
+          22915,
+          23320,
+          23637,
+          29875,
+          36193,
+          36792,
+          37114,
+          37680,
+          38047,
+          38459,
+          38741,
+          44875,
+          51134,
+          51546,
+          52067,
+          52349,
+          52644,
+          53025,
+          53355,
+          53685,
+          54208,
+          54464,
+          54831,
+          55352,
+          55759,
+          56043,
+          56427,
+          56914,
+          57224,
+          57894,
+          58292,
+          58819,
+          59178,
+          59486
+        ],
+        "burst_len": 250,
+        "burst_colocated": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "splice_sources": [],
+        "flip_target_map": {},
+        "n_flipped": 0,
+        "burst_rows": 15000,
+        "actual_modified_fraction": 0.25,
+        "reference_access": "offline labelled clean archive, including future rows; no detector/model access",
+        "warmup_attack_free_rows": 1000,
+        "replacement_not_insertion": true
+      },
+      "source_observation_sha256": "3b85b941e6c176aaea0104c5551e4c3033c50b36c19f506a72d4474c4a4a56c4"
+    },
+    "RBF_I__s114__splice__moderate": {
+      "stream": "RBF_I",
+      "base_seed": 114,
+      "mode": "splice",
+      "level": "moderate",
+      "rows": 60000,
+      "classes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "benign_class": null,
+      "transition_intervals": [
+        [
+          9000,
+          21000
+        ],
+        [
+          24000,
+          36000
+        ],
+        [
+          39000,
+          51000
+        ]
+      ],
+      "supports_event_metrics": true,
+      "warmup_rows": 1000,
+      "key": "RBF_I__s114__splice__moderate",
+      "base_key": "RBF_I__s114",
+      "attack_seed": 3352555626,
+      "observations": "RBF/splice/moderate/validation_seed_114/attack_seed_3352555626/stream.parquet",
+      "truth": "../audit/evaluator/RBF/splice/moderate/validation_seed_114/attack_seed_3352555626/truth.parquet",
+      "audit": "../audit/protected/RBF/seed_114/sample.parquet",
+      "attack": {
+        "stream": "RBF_I",
+        "base_seed": 114,
+        "rows": 60000,
+        "n_features": 10,
+        "classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "benign_class": null,
+        "kind": "broad_linear_mixture",
+        "transition_intervals": [
+          [
+            9000,
+            21000
+          ],
+          [
+            24000,
+            36000
+          ],
+          [
+            39000,
+            51000
+          ]
+        ],
+        "nominal_centers": [
+          15000,
+          30000,
+          45000
+        ],
+        "width": 12000,
+        "event_reference": "global-index scheduled mixture intervals",
+        "supports_event_metrics": true,
+        "segment_boundaries": [
+          15000,
+          30000,
+          45000
+        ],
+        "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+        "feature_lineage": {
+          "f0": {
+            "source_column": "generator_feature_0",
+            "source": "River RandomRBF"
+          },
+          "f1": {
+            "source_column": "generator_feature_1",
+            "source": "River RandomRBF"
+          },
+          "f2": {
+            "source_column": "generator_feature_2",
+            "source": "River RandomRBF"
+          },
+          "f3": {
+            "source_column": "generator_feature_3",
+            "source": "River RandomRBF"
+          },
+          "f4": {
+            "source_column": "generator_feature_4",
+            "source": "River RandomRBF"
+          },
+          "f5": {
+            "source_column": "generator_feature_5",
+            "source": "River RandomRBF"
+          },
+          "f6": {
+            "source_column": "generator_feature_6",
+            "source": "River RandomRBF"
+          },
+          "f7": {
+            "source_column": "generator_feature_7",
+            "source": "River RandomRBF"
+          },
+          "f8": {
+            "source_column": "generator_feature_8",
+            "source": "River RandomRBF"
+          },
+          "f9": {
+            "source_column": "generator_feature_9",
+            "source": "River RandomRBF"
+          }
+        },
+        "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+        "preprocessing": "none",
+        "warmup_rows": 1000,
+        "key": "RBF_I__s114__splice__moderate",
+        "path": "results/per_dataset_study/stages/validation/RBF_I/01_attacks/RBF/splice/moderate/validation_seed_114/attack_seed_3352555626/stream.parquet",
+        "sha256": "7fc49360c99c22943887a784df2b16af7db1f0337f24c230a97d930d899dcd2d",
+        "role": "validation",
+        "base_key": "RBF_I__s114",
+        "mode": "splice",
+        "level": "moderate",
+        "attack_seed": 3352555626,
+        "truth_path": "results/per_dataset_study/stages/validation/RBF_I/audit/evaluator/RBF/splice/moderate/validation_seed_114/attack_seed_3352555626/truth.parquet",
+        "truth_sha256": "f2bb38f27bc2e561fe48c7fe5d030dca811088bcb00b844a6c32bb343630855c",
+        "rng_seed": 2704825380,
+        "level_value": 0.15,
+        "burst_starts": [
+          1131,
+          1573,
+          2261,
+          2671,
+          2968,
+          3415,
+          4572,
+          6479,
+          7116,
+          7590,
+          8460,
+          14875,
+          21343,
+          21980,
+          22418,
+          23132,
+          23445,
+          29875,
+          37861,
+          38455,
+          44875,
+          51171,
+          51985,
+          52535,
+          52978,
+          53743,
+          54323,
+          54800,
+          55539,
+          55922,
+          56442,
+          57009,
+          57615,
+          58074,
+          58920,
+          59550
+        ],
+        "burst_len": 250,
+        "burst_colocated": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "splice_sources": [
+          {
+            "dest": 1131,
+            "src": 17415,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 1573,
+            "src": 28595,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 2261,
+            "src": 44610,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 2671,
+            "src": 40786,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 2968,
+            "src": 25073,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 3415,
+            "src": 47660,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 4572,
+            "src": 21405,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 6479,
+            "src": 29578,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 7116,
+            "src": 46387,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 7590,
+            "src": 53750,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 8460,
+            "src": 58442,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 14875,
+            "src": 15042,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 21343,
+            "src": 11835,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 1,
+            "future_reference": false
+          },
+          {
+            "dest": 21980,
+            "src": 47904,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 1,
+            "future_reference": true
+          },
+          {
+            "dest": 22418,
+            "src": 7287,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 1,
+            "future_reference": false
+          },
+          {
+            "dest": 23132,
+            "src": 30746,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 1,
+            "future_reference": true
+          },
+          {
+            "dest": 23445,
+            "src": 4217,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 1,
+            "future_reference": false
+          },
+          {
+            "dest": 29875,
+            "src": 49129,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 1,
+            "future_reference": true
+          },
+          {
+            "dest": 37861,
+            "src": 19548,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 2,
+            "future_reference": false
+          },
+          {
+            "dest": 38455,
+            "src": 11309,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 2,
+            "future_reference": false
+          },
+          {
+            "dest": 44875,
+            "src": 57413,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 2,
+            "future_reference": true
+          },
+          {
+            "dest": 51171,
+            "src": 15430,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 51985,
+            "src": 37655,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 52535,
+            "src": 29684,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 52978,
+            "src": 19024,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 53743,
+            "src": 17517,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 54323,
+            "src": 32293,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 54800,
+            "src": 33729,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 55539,
+            "src": 19702,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 55922,
+            "src": 4219,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 56442,
+            "src": 16328,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 57009,
+            "src": 43440,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 57615,
+            "src": 32171,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 58074,
+            "src": 17711,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 58920,
+            "src": 16949,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 59550,
+            "src": 18219,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 3,
+            "future_reference": false
+          }
+        ],
+        "flip_target_map": {},
+        "n_flipped": 0,
+        "burst_rows": 9000,
+        "actual_modified_fraction": 0.15,
+        "reference_access": "offline labelled clean archive, including future rows; no detector/model access",
+        "warmup_attack_free_rows": 1000,
+        "replacement_not_insertion": true
+      },
+      "source_observation_sha256": "7fc49360c99c22943887a784df2b16af7db1f0337f24c230a97d930d899dcd2d"
+    },
+    "RBF_I__s114__splice__severe": {
+      "stream": "RBF_I",
+      "base_seed": 114,
+      "mode": "splice",
+      "level": "severe",
+      "rows": 60000,
+      "classes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "benign_class": null,
+      "transition_intervals": [
+        [
+          9000,
+          21000
+        ],
+        [
+          24000,
+          36000
+        ],
+        [
+          39000,
+          51000
+        ]
+      ],
+      "supports_event_metrics": true,
+      "warmup_rows": 1000,
+      "key": "RBF_I__s114__splice__severe",
+      "base_key": "RBF_I__s114",
+      "attack_seed": 2199327107,
+      "observations": "RBF/splice/severe/validation_seed_114/attack_seed_2199327107/stream.parquet",
+      "truth": "../audit/evaluator/RBF/splice/severe/validation_seed_114/attack_seed_2199327107/truth.parquet",
+      "audit": "../audit/protected/RBF/seed_114/sample.parquet",
+      "attack": {
+        "stream": "RBF_I",
+        "base_seed": 114,
+        "rows": 60000,
+        "n_features": 10,
+        "classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "benign_class": null,
+        "kind": "broad_linear_mixture",
+        "transition_intervals": [
+          [
+            9000,
+            21000
+          ],
+          [
+            24000,
+            36000
+          ],
+          [
+            39000,
+            51000
+          ]
+        ],
+        "nominal_centers": [
+          15000,
+          30000,
+          45000
+        ],
+        "width": 12000,
+        "event_reference": "global-index scheduled mixture intervals",
+        "supports_event_metrics": true,
+        "segment_boundaries": [
+          15000,
+          30000,
+          45000
+        ],
+        "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+        "feature_lineage": {
+          "f0": {
+            "source_column": "generator_feature_0",
+            "source": "River RandomRBF"
+          },
+          "f1": {
+            "source_column": "generator_feature_1",
+            "source": "River RandomRBF"
+          },
+          "f2": {
+            "source_column": "generator_feature_2",
+            "source": "River RandomRBF"
+          },
+          "f3": {
+            "source_column": "generator_feature_3",
+            "source": "River RandomRBF"
+          },
+          "f4": {
+            "source_column": "generator_feature_4",
+            "source": "River RandomRBF"
+          },
+          "f5": {
+            "source_column": "generator_feature_5",
+            "source": "River RandomRBF"
+          },
+          "f6": {
+            "source_column": "generator_feature_6",
+            "source": "River RandomRBF"
+          },
+          "f7": {
+            "source_column": "generator_feature_7",
+            "source": "River RandomRBF"
+          },
+          "f8": {
+            "source_column": "generator_feature_8",
+            "source": "River RandomRBF"
+          },
+          "f9": {
+            "source_column": "generator_feature_9",
+            "source": "River RandomRBF"
+          }
+        },
+        "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+        "preprocessing": "none",
+        "warmup_rows": 1000,
+        "key": "RBF_I__s114__splice__severe",
+        "path": "results/per_dataset_study/stages/validation/RBF_I/01_attacks/RBF/splice/severe/validation_seed_114/attack_seed_2199327107/stream.parquet",
+        "sha256": "3bb0fb8440343dca563da05ec41234b0d72f71b53f3552f629f6d71dce479074",
+        "role": "validation",
+        "base_key": "RBF_I__s114",
+        "mode": "splice",
+        "level": "severe",
+        "attack_seed": 2199327107,
+        "truth_path": "results/per_dataset_study/stages/validation/RBF_I/audit/evaluator/RBF/splice/severe/validation_seed_114/attack_seed_2199327107/truth.parquet",
+        "truth_sha256": "dd61ca68261bf73818961a9dbd497b10b77cb12505de38f7ed2d0e4621de1b2c",
+        "rng_seed": 3563337631,
+        "level_value": 0.25,
+        "burst_starts": [
+          1453,
+          1753,
+          2279,
+          2736,
+          3134,
+          3610,
+          3929,
+          4256,
+          4713,
+          5202,
+          5500,
+          5939,
+          6334,
+          6640,
+          6898,
+          7265,
+          7829,
+          8112,
+          8512,
+          14875,
+          21490,
+          21826,
+          22107,
+          22373,
+          22632,
+          22992,
+          23487,
+          29875,
+          36005,
+          36438,
+          36711,
+          37047,
+          37319,
+          37574,
+          37884,
+          38367,
+          38686,
+          44875,
+          51077,
+          51769,
+          52419,
+          52699,
+          53029,
+          53760,
+          54042,
+          54461,
+          54715,
+          55012,
+          55317,
+          55998,
+          56255,
+          56717,
+          57013,
+          57378,
+          57632,
+          57908,
+          58543,
+          58993,
+          59352,
+          59661
+        ],
+        "burst_len": 250,
+        "burst_colocated": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "splice_sources": [
+          {
+            "dest": 1453,
+            "src": 48474,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 1753,
+            "src": 31135,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 2279,
+            "src": 35701,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 2736,
+            "src": 36141,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 3134,
+            "src": 22157,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 3610,
+            "src": 31190,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 3929,
+            "src": 24834,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 4256,
+            "src": 30709,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 4713,
+            "src": 16094,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 5202,
+            "src": 44614,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 5500,
+            "src": 50995,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 5939,
+            "src": 44363,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 6334,
+            "src": 28312,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 6640,
+            "src": 39629,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 6898,
+            "src": 15320,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 7265,
+            "src": 19040,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 7829,
+            "src": 59697,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 8112,
+            "src": 33800,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 8512,
+            "src": 22514,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 14875,
+            "src": 43119,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 21490,
+            "src": 13138,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 1,
+            "future_reference": false
+          },
+          {
+            "dest": 21826,
+            "src": 14045,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 1,
+            "future_reference": false
+          },
+          {
+            "dest": 22107,
+            "src": 34986,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 1,
+            "future_reference": true
+          },
+          {
+            "dest": 22373,
+            "src": 57091,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 1,
+            "future_reference": true
+          },
+          {
+            "dest": 22632,
+            "src": 39152,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 1,
+            "future_reference": true
+          },
+          {
+            "dest": 22992,
+            "src": 37853,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 1,
+            "future_reference": true
+          },
+          {
+            "dest": 23487,
+            "src": 36859,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 1,
+            "future_reference": true
+          },
+          {
+            "dest": 29875,
+            "src": 5148,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 1,
+            "future_reference": false
+          },
+          {
+            "dest": 36005,
+            "src": 6913,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 2,
+            "future_reference": false
+          },
+          {
+            "dest": 36438,
+            "src": 19637,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 2,
+            "future_reference": false
+          },
+          {
+            "dest": 36711,
+            "src": 1593,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 2,
+            "future_reference": false
+          },
+          {
+            "dest": 37047,
+            "src": 25841,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 2,
+            "future_reference": false
+          },
+          {
+            "dest": 37319,
+            "src": 51670,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 2,
+            "future_reference": true
+          },
+          {
+            "dest": 37574,
+            "src": 17998,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 2,
+            "future_reference": false
+          },
+          {
+            "dest": 37884,
+            "src": 18038,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 2,
+            "future_reference": false
+          },
+          {
+            "dest": 38367,
+            "src": 4926,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 2,
+            "future_reference": false
+          },
+          {
+            "dest": 38686,
+            "src": 4144,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 2,
+            "future_reference": false
+          },
+          {
+            "dest": 44875,
+            "src": 45940,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 2,
+            "future_reference": true
+          },
+          {
+            "dest": 51077,
+            "src": 26232,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 51769,
+            "src": 41676,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 52419,
+            "src": 312,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 52699,
+            "src": 21309,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 53029,
+            "src": 11957,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 53760,
+            "src": 38895,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 54042,
+            "src": 24073,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 54461,
+            "src": 36573,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 54715,
+            "src": 37035,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 55012,
+            "src": 13264,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 55317,
+            "src": 27138,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 55998,
+            "src": 9561,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 56255,
+            "src": 40219,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 56717,
+            "src": 3801,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 57013,
+            "src": 30425,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 57378,
+            "src": 5989,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 57632,
+            "src": 7076,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 57908,
+            "src": 8422,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 58543,
+            "src": 41191,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 58993,
+            "src": 3550,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 59352,
+            "src": 44239,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 59661,
+            "src": 31998,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 3,
+            "future_reference": false
+          }
+        ],
+        "flip_target_map": {},
+        "n_flipped": 0,
+        "burst_rows": 15000,
+        "actual_modified_fraction": 0.25,
+        "reference_access": "offline labelled clean archive, including future rows; no detector/model access",
+        "warmup_attack_free_rows": 1000,
+        "replacement_not_insertion": true
+      },
+      "source_observation_sha256": "3bb0fb8440343dca563da05ec41234b0d72f71b53f3552f629f6d71dce479074"
+    }
+  },
+  "outputs": {
+    "../00_streams/RBF/validation_seed_114/stream.parquet": "c44ffabf193c7438230fd4d22bfb17cd4d072508150eefb36ed49ca08cc08f5b",
+    "../audit/protected/RBF/seed_114/sample.parquet": "11b640fcb968d30537bcafd653d714296156a3a239db4228ee26795680f2e1e6",
+    "../audit/evaluator/RBF/clean/none/validation_seed_114/attack_seed_None/truth.parquet": "073998061e5b0737b59eccdaec0b0cf4b4354121b6ddb269681022aa34caa262",
+    "RBF/instance/moderate/validation_seed_114/attack_seed_1446359448/stream.parquet": "1cc387ac41968eef02d7c58435d5dc761349671fa073df3dda6c86a40272b618",
+    "../audit/evaluator/RBF/instance/moderate/validation_seed_114/attack_seed_1446359448/truth.parquet": "15690705716da732fb7d6d2f002b04e09c9a337e0e51f6f872becca38d182e1a",
+    "RBF/instance/severe/validation_seed_114/attack_seed_1409906528/stream.parquet": "778e7677ec62a02f663078e714ac92da23cf8a8d31d223d8b94315f35cc808ab",
+    "../audit/evaluator/RBF/instance/severe/validation_seed_114/attack_seed_1409906528/truth.parquet": "e73277352eeb61dbd13239e0e773d3ea5457133602860b84b58958992bc09ef7",
+    "RBF/concept/moderate/validation_seed_114/attack_seed_656574945/stream.parquet": "a7ec7cf56037a00d0bc8f333336db23a762bd91b77dd07aa0e5d3fcc08d839a0",
+    "../audit/evaluator/RBF/concept/moderate/validation_seed_114/attack_seed_656574945/truth.parquet": "d453352b88b137f7d946b38b8507cf95957599040d3e1c09fadb9396b006ebb3",
+    "RBF/concept/severe/validation_seed_114/attack_seed_2195729336/stream.parquet": "3b85b941e6c176aaea0104c5551e4c3033c50b36c19f506a72d4474c4a4a56c4",
+    "../audit/evaluator/RBF/concept/severe/validation_seed_114/attack_seed_2195729336/truth.parquet": "4e67dca294901896b214e7709ce4e3f6d964c38697bd9fc4c6f5a2c17b149845",
+    "RBF/splice/moderate/validation_seed_114/attack_seed_3352555626/stream.parquet": "7fc49360c99c22943887a784df2b16af7db1f0337f24c230a97d930d899dcd2d",
+    "../audit/evaluator/RBF/splice/moderate/validation_seed_114/attack_seed_3352555626/truth.parquet": "f2bb38f27bc2e561fe48c7fe5d030dca811088bcb00b844a6c32bb343630855c",
+    "RBF/splice/severe/validation_seed_114/attack_seed_2199327107/stream.parquet": "3bb0fb8440343dca563da05ec41234b0d72f71b53f3552f629f6d71dce479074",
+    "../audit/evaluator/RBF/splice/severe/validation_seed_114/attack_seed_2199327107/truth.parquet": "dd61ca68261bf73818961a9dbd497b10b77cb12505de38f7ed2d0e4621de1b2c"
+  },
+  "audit_assumption": {
+    "fraction": 0.05,
+    "seed": 517,
+    "delay_blocks": 1,
+    "window_blocks": 1,
+    "source": "simulated protected original-observation channel; never training or final test data"
+  },
+  "dataset": "RBF_I",
+  "data_role": "validation"
+}

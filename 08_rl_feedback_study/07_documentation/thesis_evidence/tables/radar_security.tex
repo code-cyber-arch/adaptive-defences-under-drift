@@ -1,0 +1,28 @@
+\begin{table}[htbp]
+\centering\small\singlespacing
+\caption{RADAR prediction and security outcomes on common adaptation rows (\%).}\label{tab:radar_security}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.18}
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+Response & Filter & Macro-F1 & Malicious recall & Benign FPR \\
+\midrule
+ADWIN & None & 22.40 & 61.15 & 19.34 \\
+ADWIN & F & 22.31 & 63.40 & 21.09 \\
+ADWIN & F+L & 21.82 & 59.77 & 20.42 \\
+HDDM-W & None & 22.52 & 60.39 & 18.69 \\
+HDDM-W & F & 22.63 & 63.50 & 20.59 \\
+HDDM-W & F+L & 21.87 & 59.00 & 19.95 \\
+Hellinger & None & 23.77 & 69.63 & 15.68 \\
+Hellinger & F & 23.97 & 66.91 & 15.93 \\
+Hellinger & F+L & 21.56 & 62.87 & 17.05 \\
+D3 OOF & None & 25.52 & 77.85 & 12.12 \\
+D3 OOF & F & 25.74 & 75.07 & 12.93 \\
+D3 OOF & F+L & 23.40 & 76.35 & 14.37 \\
+No reset & None & 27.20 & 82.07 & 9.14 \\
+No reset & F & 28.02 & 80.19 & 8.94 \\
+No reset & F+L & 26.65 & 84.27 & 10.59 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\begin{minipage}{\textwidth}\footnotesize Four detector rows use screened confirmed reset; no-reset references are shared. All seven condition categories have equal weight. A lower benign false-positive rate is preferable.\end{minipage}
+\end{table}

@@ -1,0 +1,143 @@
+{
+  "stream": "radar",
+  "mode": "splice",
+  "level": "severe",
+  "base_seed": null,
+  "attack_seed": 2444082711,
+  "attack_assignment": 1,
+  "base_key": "radar__evaluation",
+  "condition": "radar__evaluation__splice__severe__a1",
+  "filter_rows_withheld": 8536,
+  "rows": 144753,
+  "training_visits": 156953,
+  "accepted_training_visits": 109786,
+  "accepted_refit_rows": 18967,
+  "resets": 7,
+  "seconds": 36.60834083298687,
+  "pending_candidate": false,
+  "audit_rows_reserved": 7238,
+  "policy": "confirmed",
+  "guarded": true,
+  "host_n": 56440,
+  "host_accuracy": 0.7804394046775337,
+  "host_macro_f1": 0.31124653769433913,
+  "poison_rows": 34248,
+  "poison_rows_admitted": 24198,
+  "poison_admission_rate": 0.706552207428171,
+  "clean_rows": 102317,
+  "clean_rows_withheld": 27753,
+  "clean_withhold_rate": 0.27124524761281116,
+  "malicious_recall": 0.8568747530620309,
+  "benign_fpr": 0.18686846877968735,
+  "filter_poison_recall": 0.06739079654286381,
+  "filter_legitimate_rejection": 0.06086965020475581,
+  "detector": "hddm_w",
+  "filter": "learned_features_label",
+  "filter_seed": 17,
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "radar__evaluation__splice__severe__a1",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "radar"
+      ],
+      "rows": 144753,
+      "base_seeds": [],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "radar",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "7a8227720d818f8787b54d897e080bc15442d91dc6b9d0796469dcf2b8105a7a",
+      "audit": "6ad944c969986605d69ed6e46a206c6852a61cf81bce465e8a4c4b44a2f6b0e9",
+      "truth": "b59c943fa347ca615dc6229690533ccc2723800e99cc30e693375e7da188b831"
+    },
+    "detector": "hddm_w",
+    "filter": "learned_features_label",
+    "filter_seed": 17,
+    "profile_sha256": "763e7bb6621bb0a58b66d3f9235bdef8d08c608cbbbcfbe5e4ce3d7a76bbeba0"
+  },
+  "reused": null,
+  "files": {
+    "predictions.parquet": "dd1ae12dc929f87c32a9b560a5a8e5ef8060789c524c593e9843f36d7147f4e0",
+    "events.parquet": "3e5ca6562c0785deadea337b8a0754e7502e74f8543bcb346ab10dd153cb7236"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/filters/runs/radar/hddm_w/radar__evaluation__splice__severe__a1/learned_features_label_seed_17"
+}

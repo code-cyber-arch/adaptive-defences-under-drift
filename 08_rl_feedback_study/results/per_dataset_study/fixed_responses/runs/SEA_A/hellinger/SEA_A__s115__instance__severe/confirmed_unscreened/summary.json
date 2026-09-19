@@ -1,0 +1,145 @@
+{
+  "stream": "SEA_A",
+  "mode": "instance",
+  "level": "severe",
+  "base_seed": 115,
+  "attack_seed": 345179728,
+  "attack_assignment": null,
+  "base_key": "SEA_A__s115",
+  "condition": "SEA_A__s115__instance__severe",
+  "rows": 60000,
+  "training_visits": 57000,
+  "accepted_training_visits": 57000,
+  "accepted_refit_rows": 0,
+  "resets": 0,
+  "seconds": 0.5752839169872459,
+  "pending_candidate": true,
+  "audit_rows_reserved": 3000,
+  "policy": "confirmed",
+  "guarded": false,
+  "host_n": 56050,
+  "host_accuracy": 0.8910615521855486,
+  "host_macro_f1": 0.8804653252063084,
+  "poison_rows": 14226,
+  "poison_rows_admitted": 14226,
+  "poison_admission_rate": 1.0,
+  "clean_rows": 41824,
+  "clean_rows_withheld": 0,
+  "clean_withhold_rate": 0.0,
+  "malicious_recall": null,
+  "benign_fpr": null,
+  "detector": "hellinger",
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "SEA_A__s115__instance__severe",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "SEA_A"
+      ],
+      "rows": 60000,
+      "base_seeds": [
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "SEA_A",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "96e76df1cf2de8209181e746958d62dbe17f7f3d4e72c97516b69df4d83f20e5",
+      "audit": "ad8e825c37f60dba351e90b003769d3327a35b9539b390f278d14ef498b93438",
+      "truth": "649f225c1ab852bb92599b03dd1c2e3aee066a0f0c6ca3e6da59b146d8c42a6b"
+    },
+    "arm": {
+      "policy": "confirmed",
+      "guarded": false,
+      "detector": "hellinger"
+    }
+  },
+  "reused": null,
+  "files": {
+    "predictions.parquet": "1f1d6bcd73e2d9569fb58b298ae1de2b6841feead60a31e402431decbf0ab5dc",
+    "events.parquet": "341223151b2fa9d516251f74936e7b7599dc4efdae0375f5ce36d7821997e6eb"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/fixed_responses/runs/SEA_A/hellinger/SEA_A__s115__instance__severe/confirmed_unscreened"
+}

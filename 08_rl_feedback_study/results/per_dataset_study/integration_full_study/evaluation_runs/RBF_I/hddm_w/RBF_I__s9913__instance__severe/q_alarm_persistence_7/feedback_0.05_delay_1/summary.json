@@ -1,0 +1,145 @@
+{
+  "rows": 12000,
+  "training_visits": 11400,
+  "accepted_training_visits": 7600,
+  "accepted_refit_rows": 0,
+  "resets": 0,
+  "seconds": 0.5619041669997387,
+  "pending_candidate": false,
+  "audit_rows_reserved": 600,
+  "policy": "rl",
+  "guarded": true,
+  "host_n": 10450,
+  "host_accuracy": 0.3475598086124402,
+  "host_macro_f1": 0.33479347114531915,
+  "poison_rows": 2843,
+  "poison_rows_admitted": 1766,
+  "poison_admission_rate": 0.6211748153359128,
+  "clean_rows": 7607,
+  "clean_rows_withheld": 2723,
+  "clean_withhold_rate": 0.35795977389246747,
+  "malicious_recall": null,
+  "benign_fpr": null,
+  "condition": "RBF_I__s9913__instance__severe",
+  "stream": "RBF_I",
+  "mode": "instance",
+  "level": "severe",
+  "base_seed": 9913,
+  "arm": "q_alarm_persistence_7",
+  "detector": "hddm_w",
+  "feedback_fraction": 0.05,
+  "delay_blocks": 1,
+  "no_feedback_blocks": 0,
+  "state_visits": {
+    "00": 3,
+    "10": 6,
+    "01": 2
+  },
+  "action_counts": {
+    "update": 11
+  },
+  "contract": {
+    "condition": "RBF_I__s9913__instance__severe",
+    "arm": {
+      "name": "q_alarm_persistence_7",
+      "policy": "rl",
+      "variant": "alarm_persistence",
+      "seed": 7,
+      "model_path": "results/per_dataset_study/integration_full_study/inputs/training/RBF_I/04_rl_training/hddm_w/alarm_persistence/seed_7/q_table.json",
+      "model_sha256": "b473d94839ba32790c9f719c3daa59a3c9987494ae899abf5df3093235490109",
+      "detector": "hddm_w",
+      "dataset": "RBF_I"
+    },
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "RBF_I"
+      ],
+      "rows": 12000,
+      "base_seeds": [
+        9913
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance"
+      ],
+      "levels": {
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7
+        ],
+        "epochs": 1,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "RBF_I",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0
+      ],
+      "pilot_rows": 12000
+    },
+    "feedback_fraction": 0.05,
+    "delay_blocks": 1,
+    "inputs": {
+      "observations": "6c58af11bc107193b131b44c1f6a930219481c6a6518171260cc523ddd9666fa",
+      "audit": "cec0bd114d913878117fce961e4166a34a2c3d55b749c30d41b77a00f5f9c799",
+      "truth": "f9062833906f6c052559aa74ce1968ab25073875a79b8d23463392e9d3f04a29"
+    }
+  },
+  "status": "complete",
+  "files": {
+    "feedback_schedule.parquet": "9f8003ba9d582fb24f571d2c5ff0e73545dc7b916d380227f6a20af37c7d2090",
+    "events.parquet": "9acbe6f74ea48416070eca146280fd31e220ad2660d60ff6e86f2df4417fcb6a",
+    "predictions.parquet": "312cea070aaddda60e7c56f1f455c97bb39c10103be81922c522b012d5f60079"
+  }
+}

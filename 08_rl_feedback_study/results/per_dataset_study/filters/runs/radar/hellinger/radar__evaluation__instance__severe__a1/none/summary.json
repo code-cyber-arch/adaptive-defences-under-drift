@@ -1,0 +1,140 @@
+{
+  "stream": "radar",
+  "mode": "instance",
+  "level": "severe",
+  "base_seed": null,
+  "attack_seed": 11462624,
+  "attack_assignment": 1,
+  "base_key": "radar__evaluation",
+  "condition": "radar__evaluation__instance__severe__a1",
+  "resets": 4,
+  "training_visits": 145115,
+  "seconds": 37.82562004200008,
+  "host_n": 75608,
+  "host_accuracy": 0.7851682361654851,
+  "host_macro_f1": 0.16996336814113466,
+  "poison_rows": 34391,
+  "poison_rows_admitted": 28265,
+  "poison_admission_rate": 0.821872001395714,
+  "clean_rows": 102174,
+  "clean_rows_withheld": 18339,
+  "clean_withhold_rate": 0.17948793235069588,
+  "malicious_recall": 0.32806499261447564,
+  "benign_fpr": 0.0928175549397435,
+  "filter_poison_recall": 0.0,
+  "filter_legitimate_rejection": 0.0,
+  "detector": "hellinger",
+  "filter": "none",
+  "filter_seed": null,
+  "policy": "confirmed",
+  "guarded": true,
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "radar__evaluation__instance__severe__a1",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "radar"
+      ],
+      "rows": 144753,
+      "base_seeds": [],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "radar",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "f087289f7852d70539114c09a1a8392e1e1d04bcc15cefdf89d2ac9146efb596",
+      "audit": "6ad944c969986605d69ed6e46a206c6852a61cf81bce465e8a4c4b44a2f6b0e9",
+      "truth": "b82c05d02cfeca6c52c2620b9ebcadf66628ad15112bdf9e84ae3acd51b849e9"
+    },
+    "detector": "hellinger",
+    "filter": "none",
+    "filter_seed": null,
+    "profile_sha256": "dfd4079a8c49fd5a7aaf652e3d3abee2e34650065637f32c051d8f981e945187"
+  },
+  "reused": {
+    "summary": "results/per_dataset_study/fixed_responses/runs/radar/hellinger/radar__evaluation__instance__severe__a1/confirmed_screened/summary.json",
+    "sha256": "ca521e988633d80e1132705fb50107359e68f6bfde4bad4bc9fbc59b8577f6e7"
+  },
+  "files": {
+    "predictions.parquet": "eabacc95900b20f58907ae2c0588df56da21af86e6e0bd77bcf8b43c11e4c8d4",
+    "events.parquet": "236683291d057ef1b9bf5059c9842dfe61f9234424cd9d9c4255f77adbc3f4d1"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/filters/runs/radar/hellinger/radar__evaluation__instance__severe__a1/none"
+}

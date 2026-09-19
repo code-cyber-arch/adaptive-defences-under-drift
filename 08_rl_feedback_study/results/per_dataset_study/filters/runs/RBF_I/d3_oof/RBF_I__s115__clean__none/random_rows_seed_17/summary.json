@@ -1,0 +1,149 @@
+{
+  "stream": "RBF_I",
+  "mode": "clean",
+  "level": "none",
+  "base_seed": 115,
+  "attack_seed": null,
+  "attack_assignment": null,
+  "base_key": "RBF_I__s115",
+  "condition": "RBF_I__s115__clean__none",
+  "filter_rows_withheld": 0,
+  "rows": 60000,
+  "training_visits": 58900,
+  "accepted_training_visits": 43700,
+  "accepted_refit_rows": 2850,
+  "resets": 1,
+  "seconds": 2.674291000002995,
+  "pending_candidate": false,
+  "audit_rows_reserved": 3000,
+  "policy": "confirmed",
+  "guarded": true,
+  "host_n": 56050,
+  "host_accuracy": 0.5903479036574487,
+  "host_macro_f1": 0.587426708626134,
+  "poison_rows": 0,
+  "poison_rows_admitted": 0,
+  "poison_admission_rate": null,
+  "clean_rows": 56050,
+  "clean_rows_withheld": 15200,
+  "clean_withhold_rate": 0.2711864406779661,
+  "malicious_recall": null,
+  "benign_fpr": null,
+  "filter_poison_recall": null,
+  "filter_legitimate_rejection": 0.0,
+  "detector": "d3_oof",
+  "filter": "random_rows",
+  "filter_seed": 17,
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "RBF_I__s115__clean__none",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "RBF_I"
+      ],
+      "rows": 60000,
+      "base_seeds": [
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "RBF_I",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "43c3c147d3b222aeadc61a19eefc88d4e68ce9cf86e4d4b7c05131c9018f1ed5",
+      "audit": "5023714eec8eb6bfbf7a3f9af319a0c81274b6b6f00e132e6093ed1c3c51139f",
+      "truth": "ce136d586d7836378456065632e54e8c660c5ac3f471ee355fd7244acad37cd3"
+    },
+    "detector": "d3_oof",
+    "filter": "random_rows",
+    "filter_seed": 17,
+    "profile_sha256": "1718cadd4581d39375b25ef7c3a5a247c8da57b3e378020d1f983820f855a6a0"
+  },
+  "reused": null,
+  "files": {
+    "predictions.parquet": "c5614ac5fcc3bb62b41b99de83787e70b07b01b6487c58428d8a26ec8cbfe2f7",
+    "events.parquet": "eb537ffd40589dc05c4f65024092783acfb8ec768d4bd8cf6a5fa03204841998"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/filters/runs/RBF_I/d3_oof/RBF_I__s115__clean__none/random_rows_seed_17"
+}

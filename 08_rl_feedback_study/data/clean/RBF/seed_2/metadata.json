@@ -1,0 +1,98 @@
+{
+  "stream": "RBF_I",
+  "base_seed": 2,
+  "rows": 250000,
+  "n_features": 10,
+  "classes": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "benign_class": null,
+  "kind": "broad_linear_mixture",
+  "transition_intervals": [
+    [
+      37500,
+      87500
+    ],
+    [
+      100000,
+      150000
+    ],
+    [
+      162500,
+      212500
+    ]
+  ],
+  "nominal_centers": [
+    62500,
+    125000,
+    187500
+  ],
+  "width": 50000,
+  "event_reference": "global-index scheduled mixture intervals",
+  "supports_event_metrics": true,
+  "segment_boundaries": [
+    62500,
+    125000,
+    187500
+  ],
+  "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+  "feature_lineage": {
+    "f0": {
+      "source_column": "generator_feature_0",
+      "source": "River RandomRBF"
+    },
+    "f1": {
+      "source_column": "generator_feature_1",
+      "source": "River RandomRBF"
+    },
+    "f2": {
+      "source_column": "generator_feature_2",
+      "source": "River RandomRBF"
+    },
+    "f3": {
+      "source_column": "generator_feature_3",
+      "source": "River RandomRBF"
+    },
+    "f4": {
+      "source_column": "generator_feature_4",
+      "source": "River RandomRBF"
+    },
+    "f5": {
+      "source_column": "generator_feature_5",
+      "source": "River RandomRBF"
+    },
+    "f6": {
+      "source_column": "generator_feature_6",
+      "source": "River RandomRBF"
+    },
+    "f7": {
+      "source_column": "generator_feature_7",
+      "source": "River RandomRBF"
+    },
+    "f8": {
+      "source_column": "generator_feature_8",
+      "source": "River RandomRBF"
+    },
+    "f9": {
+      "source_column": "generator_feature_9",
+      "source": "River RandomRBF"
+    }
+  },
+  "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+  "preprocessing": "none",
+  "warmup_rows": 1000,
+  "key": "RBF_I__base_s2",
+  "sha256": "d54b4189d95d688c3b621a51e4bb4639982a70258e5abcb5f14e620923de7460",
+  "truth_sha256": "d80fd2f1f9786a9f467c3c6f86cc10a915f74daf32475098d3213f4d8ed69473",
+  "class_counts": {
+    "0": 69024,
+    "2": 65398,
+    "3": 59789,
+    "1": 55789
+  },
+  "path": "data/clean/RBF/seed_2/stream.parquet",
+  "truth_path": "data/evaluation_truth/RBF/stream_reference/seed_2/reference.parquet"
+}

@@ -1,0 +1,160 @@
+{
+  "rows": 12000,
+  "training_visits": 11400,
+  "accepted_training_visits": 8550,
+  "accepted_refit_rows": 950,
+  "resets": 1,
+  "seconds": 0.5311726669897325,
+  "pending_candidate": false,
+  "audit_rows_reserved": 600,
+  "policy": "rl",
+  "guarded": true,
+  "host_n": 10450,
+  "host_accuracy": 0.37521531100478467,
+  "host_macro_f1": 0.36730660822360744,
+  "poison_rows": 2843,
+  "poison_rows_admitted": 2030,
+  "poison_admission_rate": 0.7140344706296166,
+  "clean_rows": 7607,
+  "clean_rows_withheld": 2037,
+  "clean_withhold_rate": 0.2677796766136453,
+  "malicious_recall": null,
+  "benign_fpr": null,
+  "condition": "RBF_I__s9913__instance__severe",
+  "stream": "RBF_I",
+  "mode": "instance",
+  "level": "severe",
+  "base_seed": 9913,
+  "arm": "error_rule",
+  "detector": "d3_oof",
+  "feedback_fraction": 0.05,
+  "delay_blocks": 1,
+  "no_feedback_blocks": 0,
+  "state_visits": {
+    "00": 10,
+    "01": 1
+  },
+  "action_counts": {
+    "update": 10,
+    "reset": 1
+  },
+  "contract": {
+    "condition": "RBF_I__s9913__instance__severe",
+    "arm": {
+      "name": "error_rule",
+      "policy": "rl",
+      "variant": "alarm_persistence",
+      "table": {
+        "00": [
+          1.0,
+          0.0
+        ],
+        "01": [
+          0.0,
+          1.0
+        ],
+        "10": [
+          1.0,
+          0.0
+        ],
+        "11": [
+          0.0,
+          1.0
+        ]
+      },
+      "detector": "d3_oof",
+      "dataset": "RBF_I"
+    },
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "RBF_I"
+      ],
+      "rows": 12000,
+      "base_seeds": [
+        9913
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance"
+      ],
+      "levels": {
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7
+        ],
+        "epochs": 1,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "RBF_I",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0
+      ],
+      "pilot_rows": 12000
+    },
+    "feedback_fraction": 0.05,
+    "delay_blocks": 1,
+    "inputs": {
+      "observations": "6c58af11bc107193b131b44c1f6a930219481c6a6518171260cc523ddd9666fa",
+      "audit": "cec0bd114d913878117fce961e4166a34a2c3d55b749c30d41b77a00f5f9c799",
+      "truth": "f9062833906f6c052559aa74ce1968ab25073875a79b8d23463392e9d3f04a29"
+    }
+  },
+  "status": "complete",
+  "files": {
+    "feedback_schedule.parquet": "9f8003ba9d582fb24f571d2c5ff0e73545dc7b916d380227f6a20af37c7d2090",
+    "events.parquet": "15b1bb9e2f34defa6a0b682ad5e65241d19f44e386fda3dc22be5d6d9d843987",
+    "predictions.parquet": "979a80e8b352b49a00c99089245b5fd3e03aa4fbe97058adeaf442d96fb2146e"
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "rows": 60000,
+  "training_visits": 57000,
+  "accepted_training_visits": 40850,
+  "accepted_refit_rows": 9500,
+  "resets": 10,
+  "seconds": 0.6931874169968069,
+  "pending_candidate": false,
+  "audit_rows_reserved": 3000,
+  "policy": "rl",
+  "guarded": true,
+  "host_n": 47537,
+  "host_accuracy": 0.9088709847066495,
+  "host_macro_f1": 0.9005914670663735,
+  "poison_rows": 8513,
+  "poison_rows_admitted": 5772,
+  "poison_admission_rate": 0.67802184893692,
+  "clean_rows": 47537,
+  "clean_rows_withheld": 13409,
+  "clean_withhold_rate": 0.2820750152512779,
+  "malicious_recall": null,
+  "benign_fpr": null,
+  "condition": "SEA_A__s116__splice__moderate",
+  "stream": "SEA_A",
+  "mode": "splice",
+  "level": "moderate",
+  "base_seed": 116,
+  "arm": "selected_map",
+  "detector": "adwin",
+  "feedback_fraction": 0.02,
+  "delay_blocks": 1,
+  "no_feedback_blocks": 0,
+  "state_visits": {
+    "00": 46,
+    "11": 3,
+    "01": 6,
+    "10": 4
+  },
+  "action_counts": {
+    "update": 46,
+    "reset": 13
+  },
+  "contract": {
+    "condition": "SEA_A__s116__splice__moderate",
+    "arm": {
+      "name": "selected_map",
+      "policy": "rl",
+      "variant": "alarm_persistence",
+      "table": {
+        "00": [
+          1.0,
+          0.0
+        ],
+        "01": [
+          0.0,
+          1.0
+        ],
+        "10": [
+          0.0,
+          1.0
+        ],
+        "11": [
+          0.0,
+          1.0
+        ]
+      },
+      "detector": "adwin",
+      "dataset": "SEA_A"
+    },
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "SEA_A"
+      ],
+      "rows": 60000,
+      "base_seeds": [
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "SEA_A",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "feedback_fraction": 0.02,
+    "delay_blocks": 1,
+    "inputs": {
+      "observations": "9ce0354fdff0aa3da857564794ffab3162428b1d4b69f30f01e137211709cb35",
+      "audit": "1839bd68a012bbd3eb75d833bdeaf8e61043ad8cb50d178cfa2fdc76dae73c22",
+      "truth": "ade4cfdbb0f4e1a1c93b5c17434fd971a8cf3a21eccb41b0a983c66a43a5cad3"
+    }
+  },
+  "status": "complete",
+  "files": {
+    "feedback_schedule.parquet": "7138b2027180913f18e77863524e0a5a250ee1c4ef23446f350beba28397876d",
+    "events.parquet": "586c3fe2939671e3acd49f1e11be1e73de02f758808ae4687b383e092c0c1bae",
+    "predictions.parquet": "11b17a47c0f133ee1b376b87dab95ed171f6748e0c9412d603abb8de24e3810f"
+  }
+}

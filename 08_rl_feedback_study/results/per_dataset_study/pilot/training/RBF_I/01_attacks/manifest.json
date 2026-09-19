@@ -1,0 +1,418 @@
+{
+  "protocol": "guarded-update-rl-3.0",
+  "bases": {
+    "RBF_I__s9917": {
+      "metadata": {
+        "stream": "RBF_I",
+        "base_seed": 9917,
+        "rows": 12000,
+        "n_features": 10,
+        "classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "benign_class": null,
+        "kind": "broad_linear_mixture",
+        "transition_intervals": [
+          [
+            1800,
+            4200
+          ],
+          [
+            4800,
+            7200
+          ],
+          [
+            7800,
+            10200
+          ]
+        ],
+        "nominal_centers": [
+          3000,
+          6000,
+          9000
+        ],
+        "width": 2400,
+        "event_reference": "global-index scheduled mixture intervals",
+        "supports_event_metrics": true,
+        "segment_boundaries": [
+          3000,
+          6000,
+          9000
+        ],
+        "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+        "feature_lineage": {
+          "f0": {
+            "source_column": "generator_feature_0",
+            "source": "River RandomRBF"
+          },
+          "f1": {
+            "source_column": "generator_feature_1",
+            "source": "River RandomRBF"
+          },
+          "f2": {
+            "source_column": "generator_feature_2",
+            "source": "River RandomRBF"
+          },
+          "f3": {
+            "source_column": "generator_feature_3",
+            "source": "River RandomRBF"
+          },
+          "f4": {
+            "source_column": "generator_feature_4",
+            "source": "River RandomRBF"
+          },
+          "f5": {
+            "source_column": "generator_feature_5",
+            "source": "River RandomRBF"
+          },
+          "f6": {
+            "source_column": "generator_feature_6",
+            "source": "River RandomRBF"
+          },
+          "f7": {
+            "source_column": "generator_feature_7",
+            "source": "River RandomRBF"
+          },
+          "f8": {
+            "source_column": "generator_feature_8",
+            "source": "River RandomRBF"
+          },
+          "f9": {
+            "source_column": "generator_feature_9",
+            "source": "River RandomRBF"
+          }
+        },
+        "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+        "preprocessing": "none",
+        "warmup_rows": 1000,
+        "key": "RBF_I__s9917",
+        "path": "results/per_dataset_study/pilot/training/RBF_I/00_streams/RBF/training_seed_9917/stream.parquet",
+        "sha256": "bf1701eb81b9058bfb1ca2129b3b858ac4bcc372d0e6f96b14520945d020b779",
+        "role": "training"
+      },
+      "clean": "../00_streams/RBF/training_seed_9917/stream.parquet",
+      "audit": "../audit/protected/RBF/seed_9917/sample.parquet",
+      "audit_rows": 600
+    }
+  },
+  "conditions": {
+    "RBF_I__s9917__clean__none": {
+      "stream": "RBF_I",
+      "base_seed": 9917,
+      "mode": "clean",
+      "level": "none",
+      "rows": 12000,
+      "classes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "benign_class": null,
+      "transition_intervals": [
+        [
+          1800,
+          4200
+        ],
+        [
+          4800,
+          7200
+        ],
+        [
+          7800,
+          10200
+        ]
+      ],
+      "supports_event_metrics": true,
+      "warmup_rows": 1000,
+      "key": "RBF_I__s9917__clean__none",
+      "base_key": "RBF_I__s9917",
+      "attack_seed": null,
+      "observations": "../00_streams/RBF/training_seed_9917/stream.parquet",
+      "truth": "../audit/evaluator/RBF/clean/none/training_seed_9917/attack_seed_None/truth.parquet",
+      "audit": "../audit/protected/RBF/seed_9917/sample.parquet",
+      "attack": {
+        "stream": "RBF_I",
+        "base_seed": 9917,
+        "rows": 12000,
+        "n_features": 10,
+        "classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "benign_class": null,
+        "kind": "broad_linear_mixture",
+        "transition_intervals": [
+          [
+            1800,
+            4200
+          ],
+          [
+            4800,
+            7200
+          ],
+          [
+            7800,
+            10200
+          ]
+        ],
+        "nominal_centers": [
+          3000,
+          6000,
+          9000
+        ],
+        "width": 2400,
+        "event_reference": "global-index scheduled mixture intervals",
+        "supports_event_metrics": true,
+        "segment_boundaries": [
+          3000,
+          6000,
+          9000
+        ],
+        "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+        "feature_lineage": {
+          "f0": {
+            "source_column": "generator_feature_0",
+            "source": "River RandomRBF"
+          },
+          "f1": {
+            "source_column": "generator_feature_1",
+            "source": "River RandomRBF"
+          },
+          "f2": {
+            "source_column": "generator_feature_2",
+            "source": "River RandomRBF"
+          },
+          "f3": {
+            "source_column": "generator_feature_3",
+            "source": "River RandomRBF"
+          },
+          "f4": {
+            "source_column": "generator_feature_4",
+            "source": "River RandomRBF"
+          },
+          "f5": {
+            "source_column": "generator_feature_5",
+            "source": "River RandomRBF"
+          },
+          "f6": {
+            "source_column": "generator_feature_6",
+            "source": "River RandomRBF"
+          },
+          "f7": {
+            "source_column": "generator_feature_7",
+            "source": "River RandomRBF"
+          },
+          "f8": {
+            "source_column": "generator_feature_8",
+            "source": "River RandomRBF"
+          },
+          "f9": {
+            "source_column": "generator_feature_9",
+            "source": "River RandomRBF"
+          }
+        },
+        "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+        "preprocessing": "none",
+        "warmup_rows": 1000,
+        "key": "RBF_I__s9917__clean__none",
+        "path": "results/per_dataset_study/pilot/training/RBF_I/00_streams/RBF/training_seed_9917/stream.parquet",
+        "sha256": "bf1701eb81b9058bfb1ca2129b3b858ac4bcc372d0e6f96b14520945d020b779",
+        "role": "training",
+        "base_key": "RBF_I__s9917",
+        "mode": "clean",
+        "level": "none",
+        "attack_seed": null,
+        "truth_path": "results/per_dataset_study/pilot/training/RBF_I/audit/evaluator/RBF/clean/none/training_seed_9917/attack_seed_None/truth.parquet",
+        "truth_sha256": "8e329de4f7840fb582de7725a33f5fc32839c18f0622cd21779c3e4f3eac8676",
+        "rng_seed": 4200838236,
+        "level_value": 0.0,
+        "burst_starts": [],
+        "burst_len": 250,
+        "burst_colocated": [],
+        "splice_sources": [],
+        "flip_target_map": {},
+        "n_flipped": 0,
+        "burst_rows": 0,
+        "actual_modified_fraction": 0.0,
+        "reference_access": "offline labelled clean archive, including future rows; no detector/model access",
+        "warmup_attack_free_rows": 1000,
+        "replacement_not_insertion": true
+      },
+      "source_observation_sha256": "bf1701eb81b9058bfb1ca2129b3b858ac4bcc372d0e6f96b14520945d020b779"
+    },
+    "RBF_I__s9917__instance__severe": {
+      "stream": "RBF_I",
+      "base_seed": 9917,
+      "mode": "instance",
+      "level": "severe",
+      "rows": 12000,
+      "classes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "benign_class": null,
+      "transition_intervals": [
+        [
+          1800,
+          4200
+        ],
+        [
+          4800,
+          7200
+        ],
+        [
+          7800,
+          10200
+        ]
+      ],
+      "supports_event_metrics": true,
+      "warmup_rows": 1000,
+      "key": "RBF_I__s9917__instance__severe",
+      "base_key": "RBF_I__s9917",
+      "attack_seed": 3291892567,
+      "observations": "RBF/instance/severe/training_seed_9917/attack_seed_3291892567/stream.parquet",
+      "truth": "../audit/evaluator/RBF/instance/severe/training_seed_9917/attack_seed_3291892567/truth.parquet",
+      "audit": "../audit/protected/RBF/seed_9917/sample.parquet",
+      "attack": {
+        "stream": "RBF_I",
+        "base_seed": 9917,
+        "rows": 12000,
+        "n_features": 10,
+        "classes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "benign_class": null,
+        "kind": "broad_linear_mixture",
+        "transition_intervals": [
+          [
+            1800,
+            4200
+          ],
+          [
+            4800,
+            7200
+          ],
+          [
+            7800,
+            10200
+          ]
+        ],
+        "nominal_centers": [
+          3000,
+          6000,
+          9000
+        ],
+        "width": 2400,
+        "event_reference": "global-index scheduled mixture intervals",
+        "supports_event_metrics": true,
+        "segment_boundaries": [
+          3000,
+          6000,
+          9000
+        ],
+        "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+        "feature_lineage": {
+          "f0": {
+            "source_column": "generator_feature_0",
+            "source": "River RandomRBF"
+          },
+          "f1": {
+            "source_column": "generator_feature_1",
+            "source": "River RandomRBF"
+          },
+          "f2": {
+            "source_column": "generator_feature_2",
+            "source": "River RandomRBF"
+          },
+          "f3": {
+            "source_column": "generator_feature_3",
+            "source": "River RandomRBF"
+          },
+          "f4": {
+            "source_column": "generator_feature_4",
+            "source": "River RandomRBF"
+          },
+          "f5": {
+            "source_column": "generator_feature_5",
+            "source": "River RandomRBF"
+          },
+          "f6": {
+            "source_column": "generator_feature_6",
+            "source": "River RandomRBF"
+          },
+          "f7": {
+            "source_column": "generator_feature_7",
+            "source": "River RandomRBF"
+          },
+          "f8": {
+            "source_column": "generator_feature_8",
+            "source": "River RandomRBF"
+          },
+          "f9": {
+            "source_column": "generator_feature_9",
+            "source": "River RandomRBF"
+          }
+        },
+        "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+        "preprocessing": "none",
+        "warmup_rows": 1000,
+        "key": "RBF_I__s9917__instance__severe",
+        "path": "results/per_dataset_study/pilot/training/RBF_I/01_attacks/RBF/instance/severe/training_seed_9917/attack_seed_3291892567/stream.parquet",
+        "sha256": "0b31d684b6360f01141321a39f14bed98de3335e774948f1c05ddb8767b2b546",
+        "role": "training",
+        "base_key": "RBF_I__s9917",
+        "mode": "instance",
+        "level": "severe",
+        "attack_seed": 3291892567,
+        "truth_path": "results/per_dataset_study/pilot/training/RBF_I/audit/evaluator/RBF/instance/severe/training_seed_9917/attack_seed_3291892567/truth.parquet",
+        "truth_sha256": "a018099a157560320f76d2913256d6adaef28bb6a7067392b9cb0d9c562debae",
+        "rng_seed": 59080811,
+        "level_value": 0.25,
+        "burst_starts": [],
+        "burst_len": 250,
+        "burst_colocated": [],
+        "splice_sources": [],
+        "flip_target_map": {
+          "0": 2,
+          "1": 2,
+          "2": 1,
+          "3": 1
+        },
+        "n_flipped": 3000,
+        "burst_rows": 0,
+        "actual_modified_fraction": 0.25,
+        "reference_access": "offline labelled clean archive, including future rows; no detector/model access",
+        "warmup_attack_free_rows": 1000,
+        "replacement_not_insertion": true
+      },
+      "source_observation_sha256": "0b31d684b6360f01141321a39f14bed98de3335e774948f1c05ddb8767b2b546"
+    }
+  },
+  "outputs": {
+    "../00_streams/RBF/training_seed_9917/stream.parquet": "bf1701eb81b9058bfb1ca2129b3b858ac4bcc372d0e6f96b14520945d020b779",
+    "../audit/protected/RBF/seed_9917/sample.parquet": "684a783c17cfba93d30267a68b52af1d1da63b4d4a2e13704f642936a6e4602d",
+    "../audit/evaluator/RBF/clean/none/training_seed_9917/attack_seed_None/truth.parquet": "8e329de4f7840fb582de7725a33f5fc32839c18f0622cd21779c3e4f3eac8676",
+    "RBF/instance/severe/training_seed_9917/attack_seed_3291892567/stream.parquet": "0b31d684b6360f01141321a39f14bed98de3335e774948f1c05ddb8767b2b546",
+    "../audit/evaluator/RBF/instance/severe/training_seed_9917/attack_seed_3291892567/truth.parquet": "a018099a157560320f76d2913256d6adaef28bb6a7067392b9cb0d9c562debae"
+  },
+  "audit_assumption": {
+    "fraction": 0.05,
+    "seed": 517,
+    "delay_blocks": 1,
+    "window_blocks": 1,
+    "source": "simulated protected original-observation channel; never training or final test data"
+  },
+  "dataset": "RBF_I",
+  "data_role": "training"
+}

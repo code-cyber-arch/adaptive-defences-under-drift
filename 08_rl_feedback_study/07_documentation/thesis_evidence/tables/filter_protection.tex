@@ -1,0 +1,25 @@
+\begin{table}[htbp]
+\centering\small\singlespacing
+\caption{Learned-filter protection and withholding effects (percentage points).}\label{tab:filter_protection}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.18}
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+Dataset & Detector & Admission F & Admission F+L & Withheld F & Withheld F+L \\
+\midrule
+SEA & ADWIN & -0.4 & -16.5 & +0.5 & -10.2 \\
+SEA & HDDM-W & -2.4 & -16.9 & +3.3 & -10.7 \\
+SEA & Hellinger & -3.3 & -24.0 & +4.1 & -2.8 \\
+SEA & D3 OOF & -3.7 & -26.0 & +3.8 & -2.7 \\
+RBF & ADWIN & -1.7 & -1.6 & +3.6 & +3.6 \\
+RBF & HDDM-W & -5.4 & -3.9 & +4.0 & +3.1 \\
+RBF & Hellinger & -3.4 & -2.5 & +2.9 & +3.3 \\
+RBF & D3 OOF & -3.3 & -2.0 & +3.8 & +4.0 \\
+RADAR & ADWIN & -27.1 & -30.9 & +0.9 & +5.5 \\
+RADAR & HDDM-W & -26.6 & -30.8 & +0.7 & +5.1 \\
+RADAR & Hellinger & -25.6 & -29.6 & +0.1 & +5.1 \\
+RADAR & D3 OOF & -26.8 & -29.8 & +0.4 & +5.4 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\begin{minipage}{\textwidth}\footnotesize Differences from no filtering with the same screened confirmed-reset response. Admission averages the six attacked categories; withholding averages all seven categories. Negative admission is protective; positive withholding indicates more legitimate learning lost.\end{minipage}
+\end{table}

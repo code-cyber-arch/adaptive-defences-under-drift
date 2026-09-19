@@ -1,0 +1,22 @@
+\begin{table}[htbp]
+\centering\small\singlespacing
+\caption{RADAR clean-reference class support before and after development-copy exclusion.}\label{tab:radar_scoring_support}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+Class & Group & Before & After & Before (\%) & After (\%) \\
+\midrule
+0 & Ransomware & 14,264 & 9,740 & 10.44 & 12.88 \\
+1 & Ransomware & 8,197 & 1,942 & 6.00 & 2.57 \\
+2 & Ransomware & 8,076 & 42 & 5.91 & 0.06 \\
+3 & Ransomware & 8,450 & 37 & 6.19 & 0.05 \\
+4 & Ransomware & 9,855 & 151 & 7.22 & 0.20 \\
+5 & Ransomware & 14,354 & 1,363 & 10.51 & 1.80 \\
+6 & Ransomware & 4,674 & 265 & 3.42 & 0.35 \\
+7 & Goodware & 68,695 & 62,068 & 50.30 & 82.09 \\
+Total &  & 136,565 & 75,608 & 100.0 & 100.0 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\begin{minipage}{\textwidth}\footnotesize Both populations exclude warm-up and protected rows. After additionally excludes exact development-feature copies, as used in the main adaptation comparisons. Source class IDs are retained. Counts describe one clean reference, not five captures; attacked conditions have their own matched host masks. Macro-F1 retains all eight declared classes, including any absent from a scoring population.\end{minipage}
+\end{table}

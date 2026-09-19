@@ -1,0 +1,163 @@
+{
+  "rows": 60000,
+  "training_visits": 57000,
+  "accepted_training_visits": 23750,
+  "accepted_refit_rows": 22800,
+  "resets": 24,
+  "seconds": 2.4687961250019725,
+  "pending_candidate": false,
+  "audit_rows_reserved": 3000,
+  "policy": "rl",
+  "guarded": true,
+  "host_n": 47498,
+  "host_accuracy": 0.5693081813971115,
+  "host_macro_f1": 0.5631262255168954,
+  "poison_rows": 8552,
+  "poison_rows_admitted": 2905,
+  "poison_admission_rate": 0.3396866230121609,
+  "clean_rows": 47498,
+  "clean_rows_withheld": 27603,
+  "clean_withhold_rate": 0.5811402585372015,
+  "malicious_recall": null,
+  "benign_fpr": null,
+  "condition": "RBF_I__s114__splice__moderate",
+  "stream": "RBF_I",
+  "mode": "splice",
+  "level": "moderate",
+  "base_seed": 114,
+  "arm": "map_1101",
+  "detector": "d3_oof",
+  "feedback_fraction": 0.05,
+  "delay_blocks": 1,
+  "no_feedback_blocks": 0,
+  "state_visits": {
+    "00": 37,
+    "01": 22
+  },
+  "action_counts": {
+    "reset": 59
+  },
+  "contract": {
+    "condition": "RBF_I__s114__splice__moderate",
+    "arm": {
+      "name": "map_1101",
+      "policy": "rl",
+      "detector": "d3_oof",
+      "dataset": "RBF_I",
+      "table": {
+        "00": [
+          0.0,
+          1.0
+        ],
+        "01": [
+          0.0,
+          1.0
+        ],
+        "10": [
+          1.0,
+          0.0
+        ],
+        "11": [
+          0.0,
+          1.0
+        ]
+      },
+      "variant": "alarm_persistence"
+    },
+    "config": {
+      "name": "validation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "RBF_I"
+      ],
+      "rows": 60000,
+      "base_seeds": [
+        114
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "validation",
+      "dataset": "RBF_I",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0
+      ]
+    },
+    "feedback_fraction": 0.05,
+    "delay_blocks": 1,
+    "inputs": {
+      "observations": "7fc49360c99c22943887a784df2b16af7db1f0337f24c230a97d930d899dcd2d",
+      "audit": "11b640fcb968d30537bcafd653d714296156a3a239db4228ee26795680f2e1e6",
+      "truth": "f2bb38f27bc2e561fe48c7fe5d030dca811088bcb00b844a6c32bb343630855c"
+    }
+  },
+  "status": "complete",
+  "files": {
+    "feedback_schedule.parquet": "f5f54bb87dbe72be9e9a3cf972c5591d2bbe41a04f1689ed47ac1f545238a9db",
+    "events.parquet": "ee60d201b6ba47ee6d384af12af74c0afaefbe02015c3ad87dc1eb0a9232b922",
+    "predictions.parquet": "28b1a534d2fcdc45c3007545f8a0daa38711279673b7ee26d91e3460c3017bdd"
+  }
+}

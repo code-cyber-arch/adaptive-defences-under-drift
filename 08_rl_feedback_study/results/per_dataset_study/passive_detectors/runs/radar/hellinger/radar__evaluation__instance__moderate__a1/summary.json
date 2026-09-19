@@ -1,0 +1,128 @@
+{
+  "stream": "radar",
+  "mode": "instance",
+  "level": "moderate",
+  "base_seed": null,
+  "attack_seed": 2388385389,
+  "attack_assignment": 1,
+  "base_key": "radar__evaluation",
+  "condition": "radar__evaluation__instance__moderate__a1",
+  "alarm_rate": 0.1111111111111111,
+  "alarm_blocks": 16,
+  "monitored_blocks": 144,
+  "poison_exposed_blocks": 144,
+  "poison_alarm_blocks": 16,
+  "poison_alarm_rate": 0.1111111111111111,
+  "unexposed_blocks": 0,
+  "unexposed_alarm_blocks": 0,
+  "unexposed_alarm_rate": null,
+  "event_recall": null,
+  "detected_events": null,
+  "scheduled_events": null,
+  "detection_delay": null,
+  "seconds_per_100k": 0.07196802692814998,
+  "detector": "hellinger",
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "radar__evaluation__instance__moderate__a1",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "radar"
+      ],
+      "rows": 144753,
+      "base_seeds": [],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "radar",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "ebc65683107f7e24d5eda0046112833fe429abb1608284a5a3f7bc3ea6089b58",
+      "audit": "6ad944c969986605d69ed6e46a206c6852a61cf81bce465e8a4c4b44a2f6b0e9",
+      "truth": "d9d65aeafafb69f378bb240cd9a1b282e5f082c431244e7b1360ef0959de221b"
+    },
+    "detector": "hellinger",
+    "baseline_sha256": "2588e98fbf5da5b51389e3f256b9121d05fd609fef31e3d28369df9faa6f14a2"
+  },
+  "learner_resets": 0,
+  "files": {
+    "alarms.parquet": "ad5b33d1bb50afafcaed4f3d29df61f5d8fc58c48567abf8ea2d08d7500c1559"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/passive_detectors/runs/radar/hellinger/radar__evaluation__instance__moderate__a1"
+}

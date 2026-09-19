@@ -1,0 +1,146 @@
+{
+  "stream": "RBF_I",
+  "mode": "instance",
+  "level": "severe",
+  "base_seed": 116,
+  "attack_seed": 1132950715,
+  "attack_assignment": null,
+  "base_key": "RBF_I__s116",
+  "condition": "RBF_I__s116__instance__severe",
+  "resets": 0,
+  "training_visits": 60800,
+  "seconds": 2.913364291001926,
+  "host_n": 56050,
+  "host_accuracy": 0.5074576271186441,
+  "host_macro_f1": 0.4977877621123201,
+  "poison_rows": 14248,
+  "poison_rows_admitted": 11071,
+  "poison_admission_rate": 0.7770213363279057,
+  "clean_rows": 41802,
+  "clean_rows_withheld": 9173,
+  "clean_withhold_rate": 0.2194392612793646,
+  "malicious_recall": null,
+  "benign_fpr": null,
+  "filter_poison_recall": 0.0,
+  "filter_legitimate_rejection": 0.0,
+  "detector": "adwin",
+  "filter": "none",
+  "filter_seed": null,
+  "policy": "confirmed",
+  "guarded": true,
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "RBF_I__s116__instance__severe",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "RBF_I"
+      ],
+      "rows": 60000,
+      "base_seeds": [
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "RBF_I",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "951580fc1165e8dcd78d7ad0f2b0d68d2f44062d461243cdaa7e7f7298a6aa20",
+      "audit": "0d517e845414dc37e3dd318f02cd81c2949cf6a2a75b4ec1bfe5d2e9fab40d15",
+      "truth": "c381b3a54c680735837a8a069d086a792367fda3874076d7a0eeab7d9dcc7067"
+    },
+    "detector": "adwin",
+    "filter": "none",
+    "filter_seed": null,
+    "profile_sha256": "2ae6c1292fdfa7e312945cb506835f7ffc92f83bac713cd26d7ee8a2cd72e7c6"
+  },
+  "reused": {
+    "summary": "results/per_dataset_study/fixed_responses/runs/RBF_I/adwin/RBF_I__s116__instance__severe/confirmed_screened/summary.json",
+    "sha256": "897c85a60e7566fa78d59cb5dc11e6319339ee0eb8eafe1aa4448e2b42a43855"
+  },
+  "files": {
+    "predictions.parquet": "1ffd5b6e9a312a4255552d6ac3bda3071891db7081628b3cf6fce53e1bf47b60",
+    "events.parquet": "f1c51a846f6f0b58a5b310a83b43452ad54556d819d8e458e0b287b43268665c"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/filters/runs/RBF_I/adwin/RBF_I__s116__instance__severe/none"
+}

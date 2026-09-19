@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+\centering\small\singlespacing
+\caption{Held-out poisoning discrimination by attack type (ROC AUC).}\label{tab:filter_discrimination}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+Dataset & View & Instance & Concept & Splice \\
+\midrule
+SEA & F & 0.501 & 0.500 & 0.500 \\
+SEA & F+L & 0.933 & 0.711 & 0.500 \\
+RBF & F & 0.500 & 0.519 & 0.500 \\
+RBF & F+L & 0.440 & 0.505 & 0.497 \\
+RADAR & F & 0.500 & 0.997 & 0.519 \\
+RADAR & F+L & 0.232 & 0.935 & 0.527 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\begin{minipage}{\textwidth}\footnotesize ROC AUC is the area under the receiver operating characteristic curve. F uses features; F+L adds the observed label. Means average five fitting seeds, evaluation repetitions and both budgets equally. An AUC of 0.5 indicates chance-level ranking; clean inputs have no defined AUC. These scores assess intervention recognition, not downstream predictive benefit.\end{minipage}
+\end{table}

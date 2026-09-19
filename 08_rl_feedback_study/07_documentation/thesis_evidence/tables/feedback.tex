@@ -1,0 +1,28 @@
+\begin{table}[htbp]
+\centering\small\singlespacing
+\caption{Feedback sensitivity: range of mean changes across detectors and policy families (percentage points).}\label{tab:feedback}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.18}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Dataset & Feedback / delay & Macro-F1 range & Admission range \\
+\midrule
+SEA & 1\% / 1 & -1.06 to -0.22 & +18.06 to +35.94 \\
+SEA & 2\% / 1 & -0.56 to -0.04 & +10.30 to +21.53 \\
+SEA & 1\% / 5 & -1.15 to -0.39 & +10.92 to +28.64 \\
+SEA & 2\% / 5 & -1.30 to -0.50 & +2.81 to +17.62 \\
+SEA & 5\% / 5 & -1.50 to -0.50 & -12.17 to +0.74 \\
+RBF & 1\% / 1 & -0.18 to +1.02 & +12.14 to +20.45 \\
+RBF & 2\% / 1 & -0.26 to +0.65 & +7.29 to +11.31 \\
+RBF & 1\% / 5 & -0.60 to +0.21 & -1.38 to +12.11 \\
+RBF & 2\% / 5 & -1.08 to -0.53 & -4.63 to +1.77 \\
+RBF & 5\% / 5 & -2.12 to -1.29 & -13.86 to -7.61 \\
+RADAR & 1\% / 1 & -0.58 to +2.29 & +5.21 to +8.50 \\
+RADAR & 2\% / 1 & -0.23 to +2.10 & +2.50 to +5.09 \\
+RADAR & 1\% / 5 & -13.39 to +0.57 & -7.32 to +4.14 \\
+RADAR & 2\% / 5 & -12.97 to -2.56 & -9.61 to +0.21 \\
+RADAR & 5\% / 5 & -13.41 to -2.06 & -12.58 to -0.93 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\begin{minipage}{\textwidth}\footnotesize Reference: 5\% usable feedback and one-block delay. Families comprise no reset, confirmed reset, error rule, selected mapping and both RL representations. Scores use the full eligible host population, without the filter copy exclusion. Ranges describe settings, not confidence intervals.\end{minipage}
+\end{table}

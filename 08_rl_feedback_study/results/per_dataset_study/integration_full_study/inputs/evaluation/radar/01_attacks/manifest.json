@@ -1,0 +1,133 @@
+{
+  "dataset": "radar",
+  "data_role": "evaluation",
+  "conditions": {
+    "radar__evaluation__clean__none__aNone": {
+      "stream": "radar",
+      "base_seed": null,
+      "rows": 12000,
+      "classes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "benign_class": 7,
+      "transition_intervals": [],
+      "supports_event_metrics": false,
+      "warmup_rows": 1000,
+      "source_partition": {
+        "role": "evaluation",
+        "start_row": 340000,
+        "end_row_exclusive": 352000,
+        "full_source_rows": 484753
+      },
+      "key": "radar__evaluation__clean__none__aNone",
+      "base_key": "radar__evaluation",
+      "mode": "clean",
+      "level": "none",
+      "attack_seed": null,
+      "attack_assignment": null,
+      "observations": "../00_streams/stream.parquet",
+      "truth": "radar__evaluation__clean__none__aNone/truth.parquet",
+      "audit": "../audit/protected/sample.parquet",
+      "attack": {
+        "rng_seed": 3339982999,
+        "attack_seed": null,
+        "mode": "clean",
+        "level_value": 0.0,
+        "burst_starts": [],
+        "burst_len": 250,
+        "burst_colocated": [],
+        "splice_sources": [],
+        "flip_target_map": {},
+        "n_flipped": 0,
+        "burst_rows": 0,
+        "actual_modified_fraction": 0.0,
+        "reference_access": "offline labelled clean archive, including future rows; no detector/model access",
+        "warmup_attack_free_rows": 1000,
+        "replacement_not_insertion": true
+      },
+      "source_observation_sha256": "b7300c818b0c0204607b139dae854d328573a58e66a83fcacb8676e0ed917738"
+    },
+    "radar__evaluation__instance__severe__a0": {
+      "stream": "radar",
+      "base_seed": null,
+      "rows": 12000,
+      "classes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "benign_class": 7,
+      "transition_intervals": [],
+      "supports_event_metrics": false,
+      "warmup_rows": 1000,
+      "source_partition": {
+        "role": "evaluation",
+        "start_row": 340000,
+        "end_row_exclusive": 352000,
+        "full_source_rows": 484753
+      },
+      "key": "radar__evaluation__instance__severe__a0",
+      "base_key": "radar__evaluation",
+      "mode": "instance",
+      "level": "severe",
+      "attack_seed": 3068245370,
+      "attack_assignment": 0,
+      "observations": "radar__evaluation__instance__severe__a0/observations.parquet",
+      "truth": "radar__evaluation__instance__severe__a0/truth.parquet",
+      "audit": "../audit/protected/sample.parquet",
+      "attack": {
+        "rng_seed": 2261427419,
+        "attack_seed": 3068245370,
+        "mode": "instance",
+        "level_value": 0.25,
+        "burst_starts": [],
+        "burst_len": 250,
+        "burst_colocated": [],
+        "splice_sources": [],
+        "flip_target_map": {
+          "0": 7,
+          "1": 7,
+          "2": 7,
+          "3": 7,
+          "5": 7,
+          "6": 7,
+          "7": 0
+        },
+        "n_flipped": 3000,
+        "burst_rows": 0,
+        "actual_modified_fraction": 0.25,
+        "reference_access": "offline labelled clean archive, including future rows; no detector/model access",
+        "warmup_attack_free_rows": 1000,
+        "replacement_not_insertion": true
+      },
+      "source_observation_sha256": "6451c2f60849a1dd4532c9ba24f92ebd052563a5dd39fa9adf4317439236b30d"
+    }
+  },
+  "outputs": {
+    "../00_streams/stream.parquet": "b7300c818b0c0204607b139dae854d328573a58e66a83fcacb8676e0ed917738",
+    "../00_streams/row_map.parquet": "970cc93a35c82ce86ab10955c7b61072683ee4c5e0502048c93855521602d8d9",
+    "../audit/protected/sample.parquet": "1d262d86c6369f92992aff7b36a191d3f29e6f32d61cafccf2525b2447526802",
+    "radar__evaluation__clean__none__aNone/truth.parquet": "dee7c51630dab67285402faff69114dc83f6b69c8d02a9d1dcb3ea9a01e8c605",
+    "radar__evaluation__instance__severe__a0/observations.parquet": "6451c2f60849a1dd4532c9ba24f92ebd052563a5dd39fa9adf4317439236b30d",
+    "radar__evaluation__instance__severe__a0/truth.parquet": "09b8ba00922534f773dbe6314d70541403798a1621f423783f30d77713fc164e"
+  },
+  "source_partition": {
+    "role": "evaluation",
+    "start_row": 340000,
+    "end_row_exclusive": 352000,
+    "full_source_rows": 484753
+  },
+  "source_sha256": "41496efbf49bf593a2f280c84b5d45344a19baf3884a894fdb011bba588c5776"
+}

@@ -1,0 +1,140 @@
+{
+  "stream": "radar",
+  "mode": "instance",
+  "level": "moderate",
+  "base_seed": null,
+  "attack_seed": 3627463518,
+  "attack_assignment": 3,
+  "base_key": "radar__evaluation",
+  "condition": "radar__evaluation__instance__moderate__a3",
+  "resets": 11,
+  "training_visits": 162215,
+  "seconds": 29.02080645802198,
+  "host_n": 75608,
+  "host_accuracy": 0.7133636652206116,
+  "host_macro_f1": 0.20886597680236857,
+  "poison_rows": 20625,
+  "poison_rows_admitted": 17607,
+  "poison_admission_rate": 0.8536727272727272,
+  "clean_rows": 115940,
+  "clean_rows_withheld": 16932,
+  "clean_withhold_rate": 0.14604105571847506,
+  "malicious_recall": 0.6095273264401773,
+  "benign_fpr": 0.22262679641683314,
+  "filter_poison_recall": 0.0,
+  "filter_legitimate_rejection": 0.0,
+  "detector": "adwin",
+  "filter": "none",
+  "filter_seed": null,
+  "policy": "confirmed",
+  "guarded": true,
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "radar__evaluation__instance__moderate__a3",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "radar"
+      ],
+      "rows": 144753,
+      "base_seeds": [],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "radar",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "8fa8f99d399d806a72c95291ea4d3060e0bde1999ccb61f11b7b5a1756e2c49c",
+      "audit": "6ad944c969986605d69ed6e46a206c6852a61cf81bce465e8a4c4b44a2f6b0e9",
+      "truth": "26b94abe6306d01e9d4188953ea462c247592fe95d543532da27fe671b7afe57"
+    },
+    "detector": "adwin",
+    "filter": "none",
+    "filter_seed": null,
+    "profile_sha256": "c9cd046554d6c405678835949d9e45256e03122d965fbaac3560a017d3d36081"
+  },
+  "reused": {
+    "summary": "results/per_dataset_study/fixed_responses/runs/radar/adwin/radar__evaluation__instance__moderate__a3/confirmed_screened/summary.json",
+    "sha256": "36b4116d51a5b56e7f383a1f38195c557d305f926a729c6cd68637c098e0b46c"
+  },
+  "files": {
+    "predictions.parquet": "5310233eb49c696e82e077f2c325fb413337ddd314e004c1df23a6f7fdb78929",
+    "events.parquet": "c7e2b3d5357eeb5bbdf7f48bb4aaefc8058d828f368a2ada2b681e1c320982e9"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/filters/runs/radar/adwin/radar__evaluation__instance__moderate__a3/none"
+}

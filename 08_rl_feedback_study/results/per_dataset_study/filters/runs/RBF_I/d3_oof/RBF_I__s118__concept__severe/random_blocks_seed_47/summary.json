@@ -1,0 +1,149 @@
+{
+  "stream": "RBF_I",
+  "mode": "concept",
+  "level": "severe",
+  "base_seed": 118,
+  "attack_seed": 3811301496,
+  "attack_assignment": null,
+  "base_key": "RBF_I__s118",
+  "condition": "RBF_I__s118__concept__severe",
+  "filter_rows_withheld": 27550,
+  "rows": 60000,
+  "training_visits": 29450,
+  "accepted_training_visits": 19950,
+  "accepted_refit_rows": 0,
+  "resets": 0,
+  "seconds": 1.955368750001071,
+  "pending_candidate": false,
+  "audit_rows_reserved": 3000,
+  "policy": "confirmed",
+  "guarded": true,
+  "host_n": 41769,
+  "host_accuracy": 0.5199310493428141,
+  "host_macro_f1": 0.5062426015193435,
+  "poison_rows": 14281,
+  "poison_rows_admitted": 3265,
+  "poison_admission_rate": 0.2286254463973111,
+  "clean_rows": 41769,
+  "clean_rows_withheld": 26034,
+  "clean_withhold_rate": 0.6232852115205056,
+  "malicious_recall": null,
+  "benign_fpr": null,
+  "filter_poison_recall": 0.5152300259085498,
+  "filter_legitimate_rejection": 0.4834207187148364,
+  "detector": "d3_oof",
+  "filter": "random_blocks",
+  "filter_seed": 47,
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "RBF_I__s118__concept__severe",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "RBF_I"
+      ],
+      "rows": 60000,
+      "base_seeds": [
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "RBF_I",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "2ba937f5c76b0b2b4abd8fd4f119cacd0b5eb3cc5dec940411dedda5c9ff9269",
+      "audit": "5ddfdfba4f1d301792c18c3fbbcf32855a416123a97bec3675c3ebdea10c4fcd",
+      "truth": "8c75dc735e6a899ce651b2095b524f3627dde72e3970ecccad46e84667c71361"
+    },
+    "detector": "d3_oof",
+    "filter": "random_blocks",
+    "filter_seed": 47,
+    "profile_sha256": "14c98cc50240254e99d1c6fc65e4aafd811ffe559575673cd7980b2dca79bcc0"
+  },
+  "reused": null,
+  "files": {
+    "predictions.parquet": "ab5978e39a033e344a211cf4af7404978341b0d8624e8ea9a9de391b9bf7aa59",
+    "events.parquet": "c04b3fd379a23a4f7aa0f9235e38af7c41c1e0f9c88c65df01b663bff9c9582d"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/filters/runs/RBF_I/d3_oof/RBF_I__s118__concept__severe/random_blocks_seed_47"
+}

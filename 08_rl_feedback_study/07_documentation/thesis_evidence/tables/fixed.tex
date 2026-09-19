@@ -1,0 +1,25 @@
+\begin{table}[htbp]
+\centering\small\singlespacing
+\caption{Fixed-response effects on macro-F1 (percentage points).}\label{tab:fixed}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.18}
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+Dataset & Detector & Immediate & Confirmed & Screening \\
+\midrule
+SEA & ADWIN & +0.48 & +0.69 & +0.39 \\
+SEA & HDDM-W & +0.68 & +0.61 & +0.65 \\
+SEA & Hellinger & +0.71 & +0.26 & +0.57 \\
+SEA & D3 OOF & +0.30 & +0.03 & +0.73 \\
+RBF & ADWIN & -2.15 & -0.16 & -0.50 \\
+RBF & HDDM-W & -0.98 & -0.99 & -0.20 \\
+RBF & Hellinger & -1.62 & -0.08 & -1.40 \\
+RBF & D3 OOF & +0.36 & +0.45 & -1.39 \\
+RADAR & ADWIN & -4.24 & -4.80 & -5.46 \\
+RADAR & HDDM-W & -2.87 & -4.67 & -5.05 \\
+RADAR & Hellinger & -1.12 & -3.43 & -3.56 \\
+RADAR & D3 OOF & -3.12 & -1.67 & -4.20 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\begin{minipage}{\textwidth}\footnotesize Immediate and confirmed resets are compared with screened no reset. Screening compares screened with unscreened confirmed reset. All values use the common adaptation scoring mask and equal condition weights.\end{minipage}
+\end{table}

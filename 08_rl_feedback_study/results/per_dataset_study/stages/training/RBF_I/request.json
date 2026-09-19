@@ -1,0 +1,87 @@
+{
+  "config": {
+    "name": "training",
+    "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+    "streams": [
+      "RBF_I"
+    ],
+    "rows": 60000,
+    "base_seeds": [
+      112
+    ],
+    "block_size": 1000,
+    "warmup_rows": 1000,
+    "attack_seed": 200,
+    "attack_modes": [
+      "instance",
+      "concept",
+      "splice"
+    ],
+    "levels": {
+      "moderate": 0.15,
+      "severe": 0.25
+    },
+    "audit": {
+      "fraction": 0.05,
+      "seed": 517,
+      "delay_blocks": 1,
+      "window_blocks": 1,
+      "source": "simulated protected original-observation channel; never training or final test data"
+    },
+    "detector": {
+      "name": "ADWIN",
+      "delta": 0.002
+    },
+    "response": {
+      "history": 5,
+      "wait": 2,
+      "margin": 0.02
+    },
+    "gate": {
+      "metric": "accuracy",
+      "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+    },
+    "radar_rows": 484753,
+    "detectors": [
+      "adwin",
+      "hddm_w",
+      "hellinger",
+      "d3_oof"
+    ],
+    "rl": {
+      "seeds": [
+        7,
+        17,
+        27,
+        37,
+        47
+      ],
+      "epochs": 4,
+      "learning_rate": 0.1,
+      "discount": 0.9,
+      "epsilon": 0.1,
+      "variants": [
+        "alarm",
+        "alarm_persistence"
+      ],
+      "persistence": {
+        "history": 5,
+        "recent": 2,
+        "margin": 0.02
+      }
+    },
+    "development": {
+      "training_seed": 112,
+      "validation_seed": 113,
+      "rows": 60000
+    },
+    "data_role": "training",
+    "dataset": "RBF_I",
+    "persist_inputs": false,
+    "radar_embargo_blocks": 1,
+    "radar_attack_assignments": [
+      0
+    ]
+  },
+  "protocol_sha256": "614f710ed086e4de477d2ae8c3c8552a253cb23f4f9f84350a423273b39900d9"
+}

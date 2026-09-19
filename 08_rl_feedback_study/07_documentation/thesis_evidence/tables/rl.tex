@@ -1,0 +1,25 @@
+\begin{table}[H]
+\centering\small\singlespacing
+\caption{Policy macro-F1 differences from screened confirmed reset (percentage points).}\label{tab:rl}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.18}
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+Dataset & Detector & Rule & Mapping & 2-state RL & 4-state RL \\
+\midrule
+SEA & ADWIN & +0.33 & +0.30 & -0.18 & +0.02 \\
+SEA & HDDM-W & +0.42 & +0.72 & +0.15 & +0.38 \\
+SEA & Hellinger & +0.77 & +0.84 & +0.34 & +0.40 \\
+SEA & D3 OOF & +1.00 & +1.00 & +0.43 & +0.41 \\
+RBF & ADWIN & -0.72 & +0.16 & -0.33 & -0.22 \\
+RBF & HDDM-W & +0.11 & +0.99 & +0.20 & +0.32 \\
+RBF & Hellinger & -0.80 & +0.08 & -0.29 & -0.76 \\
+RBF & D3 OOF & -1.33 & -0.45 & -0.55 & -1.63 \\
+RADAR & ADWIN & +0.78 & +2.87 & +0.73 & +0.41 \\
+RADAR & HDDM-W & +0.65 & +0.98 & +1.69 & +0.15 \\
+RADAR & Hellinger & -0.59 & -0.80 & +1.62 & +1.47 \\
+RADAR & D3 OOF & -2.35 & -2.35 & -1.94 & -2.03 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\begin{minipage}{\textwidth}\footnotesize RL entries average all five fitting seeds; the mapping is selected on validation data. Evaluation seeds are not selected. Common adaptation scoring rows and equal condition weights are used.\end{minipage}
+\end{table}

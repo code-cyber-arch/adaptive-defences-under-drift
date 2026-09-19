@@ -1,0 +1,20 @@
+\begin{table}[htbp]
+\centering\small\singlespacing
+\caption{Baseline macro-F1 (\%) on host rows shared by all seven conditions.}\label{tab:baseline}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.18}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Condition & SEA & RBF & RADAR \\
+\midrule
+Clean & 88.17 & 54.52 & 53.86 \\
+Instance 15\% & 88.16 & 52.86 & 45.24 \\
+Instance 25\% & 87.75 & 51.63 & 36.81 \\
+Concept 15\% & 87.57 & 55.25 & 42.12 \\
+Concept 25\% & 87.43 & 52.87 & 40.24 \\
+Splice 15\% & 88.16 & 55.54 & 40.69 \\
+Splice 25\% & 88.17 & 54.70 & 39.00 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\begin{minipage}{\textwidth}\footnotesize Unscreened continuous learning without resets. Synthetic means use five streams; RADAR uses one clean reference and five assignments per attack. The common-condition mask differs from the adaptation comparison mask.\end{minipage}
+\end{table}

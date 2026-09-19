@@ -1,0 +1,130 @@
+{
+  "stream": "radar",
+  "mode": "instance",
+  "level": "severe",
+  "base_seed": null,
+  "attack_seed": 3068245370,
+  "attack_assignment": 0,
+  "base_key": "radar__evaluation",
+  "condition": "radar__evaluation__instance__severe__a0",
+  "resets": 1,
+  "training_visits": 13300,
+  "seconds": 2.082593667000765,
+  "host_n": 9230,
+  "host_accuracy": 0.6543878656554712,
+  "host_macro_f1": 0.1976320204764207,
+  "poison_rows": 2844,
+  "poison_rows_admitted": 2314,
+  "poison_admission_rate": 0.8136427566807314,
+  "clean_rows": 7606,
+  "clean_rows_withheld": 1370,
+  "clean_withhold_rate": 0.1801209571391007,
+  "malicious_recall": 0.356232110330471,
+  "benign_fpr": 0.08112121774642658,
+  "filter_poison_recall": 0.0,
+  "filter_legitimate_rejection": 0.0,
+  "detector": "hddm_w",
+  "filter": "none",
+  "filter_seed": null,
+  "policy": "confirmed",
+  "guarded": true,
+  "contract": {
+    "protocol_sha256": "60af6fc113d1f42cdf6ff3c948e1dfbfff2439f890cfa432e697352a60d33578",
+    "condition": "radar__evaluation__instance__severe__a0",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "radar"
+      ],
+      "rows": 12000,
+      "base_seeds": [],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance"
+      ],
+      "levels": {
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7
+        ],
+        "epochs": 1,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "radar",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0
+      ],
+      "pilot_rows": 12000
+    },
+    "inputs": {
+      "observations": "6451c2f60849a1dd4532c9ba24f92ebd052563a5dd39fa9adf4317439236b30d",
+      "audit": "1d262d86c6369f92992aff7b36a191d3f29e6f32d61cafccf2525b2447526802",
+      "truth": "09b8ba00922534f773dbe6314d70541403798a1621f423783f30d77713fc164e"
+    },
+    "detector": "hddm_w",
+    "filter": "none",
+    "filter_seed": null,
+    "profile_sha256": "980e18522bb2bab452ad5e018a51c3a6c948490c45cd32f55b2f0ce8b6f2e652"
+  },
+  "reused": {
+    "summary": "results/per_dataset_study/integration_full_study/fixed_responses/runs/radar/hddm_w/radar__evaluation__instance__severe__a0/confirmed_screened/summary.json",
+    "sha256": "2b1ac4fdefbff81ae5f2e33df0debc959c933b772d297a71a6ddddd5837cbb02"
+  },
+  "files": {
+    "predictions.parquet": "ddd9ceb18b2f12ed2c2bf64b48827c5406bece554f071d60beb447802846df14",
+    "events.parquet": "a563e18b2d4e381af1992cb10aa11866c958292c0e136fa1fca7a8f5084ee0ca"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/integration_full_study/filters/runs/radar/hddm_w/radar__evaluation__instance__severe__a0/none"
+}

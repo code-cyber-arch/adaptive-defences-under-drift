@@ -1,0 +1,140 @@
+{
+  "stream": "radar",
+  "mode": "splice",
+  "level": "moderate",
+  "base_seed": null,
+  "attack_seed": 424767608,
+  "attack_assignment": 0,
+  "base_key": "radar__evaluation",
+  "condition": "radar__evaluation__splice__moderate__a0",
+  "resets": 1,
+  "training_visits": 141315,
+  "seconds": 49.01507754198974,
+  "host_n": 65669,
+  "host_accuracy": 0.84028993893618,
+  "host_macro_f1": 0.21126024079677316,
+  "poison_rows": 20455,
+  "poison_rows_admitted": 17970,
+  "poison_admission_rate": 0.8785138108042043,
+  "clean_rows": 116110,
+  "clean_rows_withheld": 12715,
+  "clean_withhold_rate": 0.10950822495909052,
+  "malicious_recall": 0.674519586104952,
+  "benign_fpr": 0.06073479806728052,
+  "filter_poison_recall": 0.0,
+  "filter_legitimate_rejection": 0.0,
+  "detector": "d3_oof",
+  "filter": "none",
+  "filter_seed": null,
+  "policy": "confirmed",
+  "guarded": true,
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "radar__evaluation__splice__moderate__a0",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "radar"
+      ],
+      "rows": 144753,
+      "base_seeds": [],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "radar",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "2517764814aa6e97232d9b095d378171419870d880c03f234462216daa046de6",
+      "audit": "6ad944c969986605d69ed6e46a206c6852a61cf81bce465e8a4c4b44a2f6b0e9",
+      "truth": "2a46977e57fdfdd27a16714ea6a8e36182c68c55eae9d1a55ed525daea2458ab"
+    },
+    "detector": "d3_oof",
+    "filter": "none",
+    "filter_seed": null,
+    "profile_sha256": "8e97073c68265689d32b0abc8cf2baf230abf5e09233bd94828fc60127b41adf"
+  },
+  "reused": {
+    "summary": "results/per_dataset_study/fixed_responses/runs/radar/d3_oof/radar__evaluation__splice__moderate__a0/confirmed_screened/summary.json",
+    "sha256": "df89108de20342ed76b8ba287681ee840ccb157e2866ae0384768796ec992c71"
+  },
+  "files": {
+    "predictions.parquet": "b242d64237853eb8cfbf9d29de31cbb0413fe41638e7d2740c5f2d16ccbbd32b",
+    "events.parquet": "b844b8afddfee58b7850c89b5c3eff5a58e4e4485783b8bd613012f60a5bed4f"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/filters/runs/radar/d3_oof/radar__evaluation__splice__moderate__a0/none"
+}

@@ -1,0 +1,59 @@
+{
+  "algorithm": "tabular_q_learning",
+  "variant": "alarm",
+  "seed": 7,
+  "settings": {
+    "seeds": [
+      7
+    ],
+    "epochs": 1,
+    "learning_rate": 0.1,
+    "discount": 0.9,
+    "epsilon": 0.1,
+    "variants": [
+      "alarm",
+      "alarm_persistence"
+    ],
+    "persistence": {
+      "history": 5,
+      "recent": 2,
+      "margin": 0.02
+    },
+    "variant": "alarm"
+  },
+  "table": {
+    "0": [
+      1.2866668874678024,
+      0.0
+    ],
+    "1": [
+      0.4116535118086365,
+      0.0
+    ]
+  },
+  "state_visits": {
+    "0": 19,
+    "1": 3
+  },
+  "training_transitions": 22,
+  "state_count": 2,
+  "actions": [
+    "update",
+    "reset"
+  ],
+  "detector": "adwin",
+  "dataset": "SEA_A",
+  "request_sha256": "6bd39893e69f45c16e0436e5b0136eea59cd973322653e6b12fec5fa29fb8a25",
+  "training_base_seeds": [
+    9917
+  ],
+  "training_conditions": [
+    "SEA_A__s9917__clean__none",
+    "SEA_A__s9917__instance__severe"
+  ],
+  "files": {
+    "episodes.csv": "b2c4ae4fac9e512c0c600ca8344e6bb7d67f80287ed9286395eb29c149a65903",
+    "transitions.parquet": "f44f16088c59ae697c139f47f6c7c96260e2f8df2b6aa0e52ba503de1c2b36c2",
+    "policy.csv": "e7d4e9bf19b272cd421c490a51a7cb3ff855bfa53ccdef65e2e964b11c7b923a"
+  }
+}

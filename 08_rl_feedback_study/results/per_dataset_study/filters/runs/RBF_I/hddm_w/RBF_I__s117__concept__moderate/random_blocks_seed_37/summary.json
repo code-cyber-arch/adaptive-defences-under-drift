@@ -1,0 +1,149 @@
+{
+  "stream": "RBF_I",
+  "mode": "concept",
+  "level": "moderate",
+  "base_seed": 117,
+  "attack_seed": 1695553040,
+  "attack_assignment": null,
+  "base_key": "RBF_I__s117",
+  "condition": "RBF_I__s117__concept__moderate",
+  "filter_rows_withheld": 25650,
+  "rows": 60000,
+  "training_visits": 31350,
+  "accepted_training_visits": 19950,
+  "accepted_refit_rows": 0,
+  "resets": 0,
+  "seconds": 1.9658925000112504,
+  "pending_candidate": true,
+  "audit_rows_reserved": 3000,
+  "policy": "confirmed",
+  "guarded": true,
+  "host_n": 47497,
+  "host_accuracy": 0.5086215971535044,
+  "host_macro_f1": 0.5072566666419769,
+  "poison_rows": 8553,
+  "poison_rows_admitted": 1911,
+  "poison_admission_rate": 0.22343037530690985,
+  "clean_rows": 47497,
+  "clean_rows_withheld": 30408,
+  "clean_withhold_rate": 0.6402088552961239,
+  "malicious_recall": null,
+  "benign_fpr": null,
+  "filter_poison_recall": 0.6383725008768854,
+  "filter_legitimate_rejection": 0.42507947870391816,
+  "detector": "hddm_w",
+  "filter": "random_blocks",
+  "filter_seed": 37,
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "RBF_I__s117__concept__moderate",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "RBF_I"
+      ],
+      "rows": 60000,
+      "base_seeds": [
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "RBF_I",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "1f4369ece75070241688151c3c701968016ae369b5a5fe4ac6eb8e56c658b147",
+      "audit": "b8e12281d59d977b46d2e0a65e1823a45457105937c25034062269558f75f748",
+      "truth": "7666afd7b845593b3cd6600060f5acad92ee35c4ada235322e665af53b254110"
+    },
+    "detector": "hddm_w",
+    "filter": "random_blocks",
+    "filter_seed": 37,
+    "profile_sha256": "e415da298a99476c4592a0419ad8c1d0e1fdde2adc2ab0ab8bb7e0cdd25aeb21"
+  },
+  "reused": null,
+  "files": {
+    "predictions.parquet": "3076779425f257e65ecfe68d34d982d2f0616a94162fae8f34b42a8d79388dfe",
+    "events.parquet": "0eccabeac08057b41c5ca3e1e26be252b3c16148e4700a4f3876b7e988c13a4a"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/filters/runs/RBF_I/hddm_w/RBF_I__s117__concept__moderate/random_blocks_seed_37"
+}

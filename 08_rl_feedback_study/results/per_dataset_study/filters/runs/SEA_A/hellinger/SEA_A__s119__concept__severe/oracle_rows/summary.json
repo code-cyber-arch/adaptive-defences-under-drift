@@ -1,0 +1,149 @@
+{
+  "stream": "SEA_A",
+  "mode": "concept",
+  "level": "severe",
+  "base_seed": 119,
+  "attack_seed": 1193382814,
+  "attack_assignment": null,
+  "base_key": "SEA_A__s119",
+  "condition": "SEA_A__s119__concept__severe",
+  "filter_rows_withheld": 14269,
+  "rows": 60000,
+  "training_visits": 43965,
+  "accepted_training_visits": 38063,
+  "accepted_refit_rows": 1906,
+  "resets": 1,
+  "seconds": 0.6511198339867406,
+  "pending_candidate": false,
+  "audit_rows_reserved": 3000,
+  "policy": "confirmed",
+  "guarded": true,
+  "host_n": 41781,
+  "host_accuracy": 0.9096479260908068,
+  "host_macro_f1": 0.9011443931621959,
+  "poison_rows": 14269,
+  "poison_rows_admitted": 0,
+  "poison_admission_rate": 0.0,
+  "clean_rows": 41781,
+  "clean_rows_withheld": 5902,
+  "clean_withhold_rate": 0.14126038151312797,
+  "malicious_recall": null,
+  "benign_fpr": null,
+  "filter_poison_recall": 1.0,
+  "filter_legitimate_rejection": 0.0,
+  "detector": "hellinger",
+  "filter": "oracle_rows",
+  "filter_seed": null,
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "SEA_A__s119__concept__severe",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "SEA_A"
+      ],
+      "rows": 60000,
+      "base_seeds": [
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "SEA_A",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "db84b561b7f49927047b959f34db801907c317cc3eee3b7888e34e10a401026b",
+      "audit": "d471665f07d05edf5e3da74869a7e29d14ea030957cd70aac3a8f5792d364e0f",
+      "truth": "187f16040ed6a1d2f76f0db9c0cc29f77eb97a9b4671515f06a2d9aa945bf564"
+    },
+    "detector": "hellinger",
+    "filter": "oracle_rows",
+    "filter_seed": null,
+    "profile_sha256": "05d4c588c9657cea954b473565ffde9acd6bb1aae918a1f2bc20a8f9c1c583ce"
+  },
+  "reused": null,
+  "files": {
+    "predictions.parquet": "16f1096bde8959caa4cec5f976b9109e6d4aebec02b6b0ca3ae0e3b4ad7d4d8b",
+    "events.parquet": "eca5da858d15fef3ce577a8f4cccd182ccc7645de26f4a95af7f8f983445be77"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/filters/runs/SEA_A/hellinger/SEA_A__s119__concept__severe/oracle_rows"
+}

@@ -1,0 +1,562 @@
+{
+  "spec": {
+    "name": "per_dataset_study",
+    "rows": 60000,
+    "validation_seeds": [
+      114
+    ],
+    "evaluation_seeds": [
+      115,
+      116,
+      117
+    ],
+    "pilot_seed": 9917,
+    "streams": [
+      "SEA_A",
+      "RBF_I"
+    ],
+    "rl_seeds": [
+      7,
+      17,
+      27
+    ],
+    "feedback_fractions": [
+      0.01,
+      0.02,
+      0.05
+    ],
+    "feedback_delays": [
+      1,
+      5
+    ],
+    "sensitivity_conditions": [
+      [
+        "clean",
+        "none"
+      ],
+      [
+        "instance",
+        "severe"
+      ]
+    ],
+    "reserved_fraction": 0.05,
+    "selection_metric": "mean_host_macro_f1",
+    "selection_tiebreak": [
+      "mean_resets",
+      "policy_id"
+    ],
+    "scope": "Per-dataset training, validation, detector-policy evaluation and feedback sensitivity on SEA, RBF and RADAR",
+    "detectors": [
+      "adwin",
+      "hddm_w",
+      "hellinger",
+      "d3_oof"
+    ],
+    "training_seeds": [
+      112
+    ],
+    "training_epochs": 4,
+    "datasets": [
+      "SEA_A",
+      "RBF_I",
+      "radar"
+    ],
+    "training_mode": "per_dataset",
+    "radar": {
+      "source_metadata": "../data/clean/RADAR/metadata.json",
+      "source_rows": 484753,
+      "train_end_fraction": 0.5,
+      "validation_end_fraction": 0.7,
+      "embargo_blocks": 1,
+      "evaluation_attack_assignments": [
+        0,
+        1,
+        2
+      ]
+    }
+  },
+  "sources": {
+    "common/__init__.py": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+    "common/channels.py": "ac721119e5f3eb9b1c1154d22af4a7d6ca4f8c49e0899b567cc16c3f4b036098",
+    "common/generation.py": "df64ff01aa6566f40cd8e0152dcaea1d971dedd72acbc9ef42dda4e8ebe8e6d9",
+    "common/protocol.py": "f4cf5c15c3b9f4ec6b7c07515bc57bcf8415449396fadc3b803b39c8751f74f2",
+    "common/validation.py": "7060d47dbada3fde77afb8db61740a78487b7131ed347c260f9d45db5b6fea84",
+    "tools/compile_document.py": "f4d8f040c72db232d51f08affe14c448ba3baa31698582310a7503106861f40e",
+    "tools/run_experiment.py": "2205abb5a32accfdf23952f38f581067fc11fc1b69d95c97086f8b4bf3079c7b",
+    "tools/run_thesis.py": "299f38288410eab46f68aeec301f0ad8e2087bdc39c7a64cd7a2dfbbddae1b7c",
+    "tools/verify_experiment.py": "e69a780b7b2578f04a14addb3a5fea6bbe46387487701b6ad0970e793097697f",
+    "00_streams/build.py": "f9e2461504d083515d685f44f8e8ef3335d13cd9df44f9ffda9c9217b413230d",
+    "01_attacks/interventions.py": "1683af3503710331335cb18eb7ddde5c31673f9b457391e9bcdbc40a9027f2a4",
+    "01_attacks/per_dataset.py": "25e9be449a165d9ef7f54921c89b60b7fd5ec87587cb356861579ce3dd71fc0d",
+    "01_attacks/prepare.py": "1589397ba451cc97e9b7a347c69c2f7dd7474f2fb2a678649adc6c000e89d031",
+    "02_detectors/detectors.py": "533b6b615d7dc20f3bb998ea7b795a963adcb1d79cb274caa811bf107dfc5a52",
+    "02_detectors/monitors.py": "dd6855b6547403681f51a96dc54167c98d05bae76dbfe44ad5ea8f85d4d438f7",
+    "03_policies/gate.py": "91120520d1383288c617d1ce5fdcfddbcb0a2a8f4bee9c288b5a2da232c0b578",
+    "04_rl_training/controller.py": "b6bc661feacd5dddecc67111499a8615715f84d349a0432f2a8fd22b5b1f6041",
+    "04_rl_training/train.py": "0b0aa2183e8d09d233f2dee80d85a25742b8db0e921163be0ce4c396700cc60a",
+    "05_experiment/engine.py": "2b3987c12a20f62ed8bdf8845aff58840252bfa2b22bf8af11efd29688439242",
+    "05_experiment/policy_robustness.py": "9592c2e6ce0c7b126a8441a324e018114395ed6b78a4912d2621e8f47ba868f3",
+    "05_experiment/run_grid.py": "7f5d667d6234e18876df5833eee12317cabbea4c1c0cd996a74e27c0ca898192",
+    "06_analysis/analyse.py": "b474dc59e842f63a34d1f378fdc87c8df06b98c9e062bec1647b4c191d4788c9",
+    "06_analysis/figures.py": "058e270de55b4d1684e1d5c1989a6c5dc29d42e8593ed80c5599ab9061c976ca",
+    "06_analysis/policy_robustness.py": "239b7a53fab577c3c110fce9e0d254730076be2009a78a759226f21eb64d0663",
+    "07_documentation/build.py": "6997c1c75a0a6dad5e003c4bd17fbfafe4987db64f1380f8f920ff5f7389ccaf",
+    "requirements.txt": "17a8e59c2a8fb3e384ac852c4a229207f9ec6ae2c3f31163a3bf170970aeecd7",
+    "requirements.lock.txt": "26bce125f3482cbd12a0b3c7f138cdd87217fdd7ce0bb7181c786328968b7e30",
+    "scripts/run_research.py": "b0f5ef6983761ea2d402c0f23881ce5582878d0f0013347fa6b98fa4229fbba2",
+    "scripts/run_study.py": "4a4375e34b09bff2d87deaf9d541bdd2a23e4925cca25c3a36fe0c47cc86295f",
+    "scripts/verify_evidence.py": "f4f9c5c1753975726f58abe4d22904589a9e049e210b0f952be64a0e61eb35c5",
+    "scripts/restore_artifacts.py": "ead3c0d52d47c332ffe4b554af1d89befcb63ee1ff3ca52184508eefa19b731a",
+    "scripts/check_repository.py": "c8e7612b636e3afbf8194c6d2793928211c0510fd8c476971472712f0a624dda",
+    "scripts/create_run.py": "7273c4d5575804bd2685f30c82980e1f7351844b04890e96f63fded7772d16de",
+    "06_analysis/reporting/per_dataset_report.py": "012c18fc50586ff6a7d2240b1a346993256631fdd7beba44ac4d1ea7310f607b"
+  },
+  "environment": {
+    "python": "3.14.7",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "packages": {
+      "river": "0.25.0",
+      "numpy": "2.4.6",
+      "pandas": "3.0.5",
+      "pyarrow": "25.0.0",
+      "scikit-learn": "1.9.0",
+      "matplotlib": "3.11.1"
+    }
+  },
+  "radar_source": {
+    "source_metadata_sha256": "5f8bc7298785f14aaf025976b1a86d089a6b297edc7ba31ef97f89ec2322e943",
+    "source_sha256": "41496efbf49bf593a2f280c84b5d45344a19baf3884a894fdb011bba588c5776",
+    "snapshot": "data/clean/RADAR/full_stream.parquet",
+    "metadata": {
+      "stream": "radar",
+      "base_seed": null,
+      "rows": 484753,
+      "full_source_rows": 484753,
+      "n_features": 68,
+      "classes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "label_mapping": {
+        "Akira": 0,
+        "BlackBasta": 1,
+        "CyberVolk": 2,
+        "LockBit": 3,
+        "Lynx": 4,
+        "Medusa": 5,
+        "Meow": 6,
+        "goodware": 7
+      },
+      "benign_class": 7,
+      "feature_lineage": {
+        "f0": {
+          "source": "fasttext",
+          "source_column": "event.code"
+        },
+        "f1": {
+          "source": "fasttext",
+          "source_column": "event.type"
+        },
+        "f2": {
+          "source": "fasttext",
+          "source_column": "log.level"
+        },
+        "f3": {
+          "source": "fasttext",
+          "source_column": "event.category"
+        },
+        "f4": {
+          "source": "fasttext",
+          "source_column": "event.action"
+        },
+        "f5": {
+          "source": "fasttext",
+          "source_column": "rule.name"
+        },
+        "f6": {
+          "source": "fasttext",
+          "source_column": "user.domain"
+        },
+        "f7": {
+          "source": "fasttext",
+          "source_column": "user.name"
+        },
+        "f8": {
+          "source": "fasttext",
+          "source_column": "process.executable"
+        },
+        "f9": {
+          "source": "fasttext",
+          "source_column": "file.path"
+        },
+        "f10": {
+          "source": "fasttext",
+          "source_column": "process.hash.md5"
+        },
+        "f11": {
+          "source": "fasttext",
+          "source_column": "winlog.event_data.EventType"
+        },
+        "f12": {
+          "source": "fasttext",
+          "source_column": "registry.path"
+        },
+        "f13": {
+          "source": "fasttext",
+          "source_column": "winlog.event_data.Description"
+        },
+        "f14": {
+          "source": "fasttext",
+          "source_column": "winlog.event_data.Signed"
+        },
+        "f15": {
+          "source": "fasttext",
+          "source_column": "winlog.event_data.SignatureStatus"
+        },
+        "f16": {
+          "source": "fasttext",
+          "source_column": "winlog.event_data.Signature"
+        },
+        "f17": {
+          "source": "fasttext",
+          "source_column": "winlog.event_data.Product"
+        },
+        "f18": {
+          "source": "fasttext",
+          "source_column": "file.pe.original_file_name"
+        },
+        "f19": {
+          "source": "fasttext",
+          "source_column": "file.pe.file_version"
+        },
+        "f20": {
+          "source": "fasttext",
+          "source_column": "winlog.event_data.Company"
+        },
+        "f21": {
+          "source": "fasttext",
+          "source_column": "winlog.event_data.Type"
+        },
+        "f22": {
+          "source": "fasttext",
+          "source_column": "winlog.event_data.TerminalSessionId"
+        },
+        "f23": {
+          "source": "fasttext",
+          "source_column": "winlog.event_data.TargetUser"
+        },
+        "f24": {
+          "source": "fasttext",
+          "source_column": "winlog.event_data.TargetProcessId"
+        },
+        "f25": {
+          "source": "fasttext",
+          "source_column": "winlog.event_data.TargetProcessGUID"
+        },
+        "f26": {
+          "source": "fasttext",
+          "source_column": "winlog.event_data.TargetImage"
+        },
+        "f27": {
+          "source": "fasttext",
+          "source_column": "winlog.event_data.SourceUser"
+        },
+        "f28": {
+          "source": "fasttext",
+          "source_column": "process.thread.id"
+        },
+        "f29": {
+          "source": "fasttext",
+          "source_column": "source.port"
+        },
+        "f30": {
+          "source": "fasttext",
+          "source_column": "source.ip"
+        },
+        "f31": {
+          "source": "fasttext",
+          "source_column": "destination.port"
+        },
+        "f32": {
+          "source": "fasttext",
+          "source_column": "destination.ip"
+        },
+        "f33": {
+          "source": "fasttext",
+          "source_column": "winlog.event_data.CallTrace"
+        },
+        "f34": {
+          "source": "fasttext",
+          "source_column": "process.working_directory"
+        },
+        "f35": {
+          "source": "fasttext",
+          "source_column": "file.name"
+        },
+        "f36": {
+          "source": "fasttext",
+          "source_column": "winlog.event_data.ParentUser"
+        },
+        "f37": {
+          "source": "fasttext",
+          "source_column": "process.parent.pid"
+        },
+        "f38": {
+          "source": "fasttext",
+          "source_column": "process.parent.executable"
+        },
+        "f39": {
+          "source": "fasttext",
+          "source_column": "winlog.event_data.LogonId"
+        },
+        "f40": {
+          "source": "fasttext",
+          "source_column": "winlog.event_data.IntegrityLevel"
+        },
+        "f41": {
+          "source": "fasttext",
+          "source_column": "winlog.event_data.GrantedAccess"
+        },
+        "f42": {
+          "source": "fasttext",
+          "source_column": "sysmon.file.is_executable"
+        },
+        "f43": {
+          "source": "fasttext",
+          "source_column": "sysmon.dns.status"
+        },
+        "f44": {
+          "source": "fasttext",
+          "source_column": "dns.question.name"
+        },
+        "f45": {
+          "source": "fasttext",
+          "source_column": "network.transport"
+        },
+        "f46": {
+          "source": "fasttext",
+          "source_column": "network.direction"
+        },
+        "f47": {
+          "source": "engineered",
+          "source_column": "File_Delete_archived"
+        },
+        "f48": {
+          "source": "engineered",
+          "source_column": "File_created"
+        },
+        "f49": {
+          "source": "engineered",
+          "source_column": "File_creation_time_changed"
+        },
+        "f50": {
+          "source": "engineered",
+          "source_column": "Pipe_Created"
+        },
+        "f51": {
+          "source": "engineered",
+          "source_column": "Process_Create"
+        },
+        "f52": {
+          "source": "engineered",
+          "source_column": "Registry_value_set"
+        },
+        "f53": {
+          "source": "engineered",
+          "source_column": "process-related"
+        },
+        "f54": {
+          "source": "engineered",
+          "source_column": "file-related"
+        },
+        "f55": {
+          "source": "engineered",
+          "source_column": "network-related"
+        },
+        "f56": {
+          "source": "engineered",
+          "source_column": "driver-related"
+        },
+        "f57": {
+          "source": "engineered",
+          "source_column": "registry-related"
+        },
+        "f58": {
+          "source": "engineered",
+          "source_column": "suspicious_path"
+        },
+        "f59": {
+          "source": "engineered",
+          "source_column": "system_executable"
+        },
+        "f60": {
+          "source": "engineered",
+          "source_column": "path_length"
+        },
+        "f61": {
+          "source": "engineered",
+          "source_column": "directory_depth"
+        },
+        "f62": {
+          "source": "engineered",
+          "source_column": "process_vs_parent_freq_ratio"
+        },
+        "f63": {
+          "source": "engineered",
+          "source_column": "process_name_length"
+        },
+        "f64": {
+          "source": "engineered",
+          "source_column": "executable_depth_diff"
+        },
+        "f65": {
+          "source": "engineered",
+          "source_column": "parent_is_system_executable"
+        },
+        "f66": {
+          "source": "engineered",
+          "source_column": "extension_similarity"
+        },
+        "f67": {
+          "source": "engineered",
+          "source_column": "file_name_entropy"
+        }
+      },
+      "excluded_metadata": [
+        {
+          "source": "fasttext",
+          "column": "@timestamp"
+        },
+        {
+          "source": "fasttext",
+          "column": "target-class-name"
+        },
+        {
+          "source": "fasttext",
+          "column": "target-class"
+        },
+        {
+          "source": "engineered",
+          "column": "target-class"
+        },
+        {
+          "source": "engineered",
+          "column": "target"
+        }
+      ],
+      "fixed_zero_fills": {
+        "fasttext::event.code": 0,
+        "fasttext::event.type": 0,
+        "fasttext::log.level": 0,
+        "fasttext::event.category": 0,
+        "fasttext::event.action": 0,
+        "fasttext::rule.name": 0,
+        "fasttext::user.domain": 0,
+        "fasttext::user.name": 0,
+        "fasttext::process.executable": 0,
+        "fasttext::file.path": 0,
+        "fasttext::process.hash.md5": 0,
+        "fasttext::winlog.event_data.EventType": 0,
+        "fasttext::registry.path": 0,
+        "fasttext::winlog.event_data.Description": 0,
+        "fasttext::winlog.event_data.Signed": 0,
+        "fasttext::winlog.event_data.SignatureStatus": 0,
+        "fasttext::winlog.event_data.Signature": 0,
+        "fasttext::winlog.event_data.Product": 0,
+        "fasttext::file.pe.original_file_name": 0,
+        "fasttext::file.pe.file_version": 0,
+        "fasttext::winlog.event_data.Company": 0,
+        "fasttext::winlog.event_data.Type": 0,
+        "fasttext::winlog.event_data.TerminalSessionId": 0,
+        "fasttext::winlog.event_data.TargetUser": 0,
+        "fasttext::winlog.event_data.TargetProcessId": 0,
+        "fasttext::winlog.event_data.TargetProcessGUID": 0,
+        "fasttext::winlog.event_data.TargetImage": 0,
+        "fasttext::winlog.event_data.SourceUser": 0,
+        "fasttext::process.thread.id": 0,
+        "fasttext::source.port": 0,
+        "fasttext::source.ip": 0,
+        "fasttext::destination.port": 0,
+        "fasttext::destination.ip": 0,
+        "fasttext::winlog.event_data.CallTrace": 0,
+        "fasttext::process.working_directory": 0,
+        "fasttext::file.name": 0,
+        "fasttext::winlog.event_data.ParentUser": 0,
+        "fasttext::process.parent.pid": 0,
+        "fasttext::process.parent.executable": 0,
+        "fasttext::winlog.event_data.LogonId": 0,
+        "fasttext::winlog.event_data.IntegrityLevel": 0,
+        "fasttext::winlog.event_data.GrantedAccess": 0,
+        "fasttext::sysmon.file.is_executable": 0,
+        "fasttext::sysmon.dns.status": 0,
+        "fasttext::dns.question.name": 0,
+        "fasttext::network.transport": 0,
+        "fasttext::network.direction": 0,
+        "engineered::File_Delete_archived": 0,
+        "engineered::File_created": 0,
+        "engineered::File_creation_time_changed": 0,
+        "engineered::Pipe_Created": 0,
+        "engineered::Process_Create": 0,
+        "engineered::Registry_value_set": 0,
+        "engineered::process-related": 0,
+        "engineered::file-related": 0,
+        "engineered::network-related": 0,
+        "engineered::driver-related": 0,
+        "engineered::registry-related": 0,
+        "engineered::suspicious_path": 0,
+        "engineered::system_executable": 0,
+        "engineered::path_length": 0,
+        "engineered::directory_depth": 0,
+        "engineered::process_vs_parent_freq_ratio": 0,
+        "engineered::process_name_length": 0,
+        "engineered::executable_depth_diff": 0,
+        "engineered::parent_is_system_executable": 0,
+        "engineered::extension_similarity": 0,
+        "engineered::file_name_entropy": 0
+      },
+      "preprocessing": "fixed zero for nonfinite values; no fitted transform or global constant-column selection",
+      "transition_intervals": [],
+      "nominal_centers": [],
+      "estimated_phase_boundaries": [
+        113656,
+        210375,
+        290979,
+        376766
+      ],
+      "segment_boundaries": [
+        113656,
+        210375,
+        290979,
+        376766
+      ],
+      "supports_event_metrics": false,
+      "event_reference": "unverified proportional phase estimates; no exact event metrics",
+      "replay_segment_reference": "estimated positional phases, not proven pure concepts",
+      "kind": "source-assembled laboratory telemetry",
+      "warmup_rows": 1000,
+      "timestamp_order_verified": true,
+      "fasttext_training_provenance": "not established from supplied archive",
+      "key": "radar",
+      "sha256": "41496efbf49bf593a2f280c84b5d45344a19baf3884a894fdb011bba588c5776",
+      "truth_sha256": "87744e3a37de198d909ebc967728a63881ef1b86d76a4a4b0e76957973f4f1d0",
+      "class_counts": {
+        "7": 250011,
+        "5": 45825,
+        "3": 41395,
+        "0": 39075,
+        "2": 31396,
+        "1": 28106,
+        "4": 26125,
+        "6": 22820
+      },
+      "path": "data/clean/RADAR/stream.parquet",
+      "truth_path": "data/evaluation_truth/RADAR/stream_reference/capture/reference.parquet"
+    }
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "stream": "RBF_I",
+  "mode": "clean",
+  "level": "none",
+  "base_seed": 117,
+  "attack_seed": null,
+  "attack_assignment": null,
+  "base_key": "RBF_I__s117",
+  "condition": "RBF_I__s117__clean__none",
+  "resets": 2,
+  "training_visits": 60800,
+  "seconds": 2.9247270000050776,
+  "host_n": 56050,
+  "host_accuracy": 0.564371097234612,
+  "host_macro_f1": 0.5614956627311563,
+  "poison_rows": 0,
+  "poison_rows_admitted": 0,
+  "poison_admission_rate": null,
+  "clean_rows": 56050,
+  "clean_rows_withheld": 12350,
+  "clean_withhold_rate": 0.22033898305084745,
+  "malicious_recall": null,
+  "benign_fpr": null,
+  "filter_poison_recall": null,
+  "filter_legitimate_rejection": 0.0,
+  "detector": "hddm_w",
+  "filter": "none",
+  "filter_seed": null,
+  "policy": "confirmed",
+  "guarded": true,
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "RBF_I__s117__clean__none",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "RBF_I"
+      ],
+      "rows": 60000,
+      "base_seeds": [
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "RBF_I",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "1cb6665e8694cad89a8352ac3cc75ecfde0a2deb2f35991de73fe9927b6de124",
+      "audit": "b8e12281d59d977b46d2e0a65e1823a45457105937c25034062269558f75f748",
+      "truth": "ab9b40bc3e75822ae2dc9382663db8130654bda15e2e6fd71a8114b2ed00a4ec"
+    },
+    "detector": "hddm_w",
+    "filter": "none",
+    "filter_seed": null,
+    "profile_sha256": "4535131d6769471bb0bd1d2dfaa9596e2dd77d42bcf59c9a8676d10f1ac9c490"
+  },
+  "reused": {
+    "summary": "results/per_dataset_study/fixed_responses/runs/RBF_I/hddm_w/RBF_I__s117__clean__none/confirmed_screened/summary.json",
+    "sha256": "a7003c16d35ce1ba8c93b18d62977dffc7137cc36b450166bb1d6aecbd5d9ffd"
+  },
+  "files": {
+    "predictions.parquet": "3ea0e62273fd98df370c8336e5dcf07bdd32facf4093018a0d1c8da5c651bee6",
+    "events.parquet": "6fb7eb50a6c720589d39c9cfd3dae9e1737b9fad05c6f637557c90dd7da125c1"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/filters/runs/RBF_I/hddm_w/RBF_I__s117__clean__none/none"
+}

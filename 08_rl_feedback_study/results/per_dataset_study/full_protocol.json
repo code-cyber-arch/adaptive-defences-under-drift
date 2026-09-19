@@ -1,0 +1,171 @@
+{
+  "spec": {
+    "name": "complete_five_seed_study",
+    "input_study": "results/per_dataset_study",
+    "filter_seeds": [
+      7,
+      17,
+      27,
+      37,
+      47
+    ],
+    "evaluation_population": "shared_per_dataset_evaluation_partitions",
+    "filter_views": [
+      "features",
+      "features_label"
+    ],
+    "filter_controls": [
+      "none",
+      "oracle_rows",
+      "random_rows",
+      "oracle_blocks",
+      "random_blocks"
+    ],
+    "filter_max_fit_rows": 60000,
+    "filter_max_calibration_rows": 60000,
+    "filter_legitimate_rejection_target": 0.05,
+    "feedback_conditions": "all_seven",
+    "comparison_scope": [
+      "within_dataset_across_detectors",
+      "within_detector_across_policies",
+      "across_datasets",
+      "across_experiments_on_common_rows"
+    ],
+    "feedback_rl_representations": [
+      "alarm",
+      "alarm_persistence"
+    ]
+  },
+  "pilot": false,
+  "settings": {
+    "version": "upstream-filter-1.0",
+    "seed": 901,
+    "max_fit_rows": 60000,
+    "max_calibration_rows": 60000,
+    "legitimate_rejection_target": 0.05,
+    "radar_train_fraction": 0.5,
+    "radar_validation_end": 0.7,
+    "embargo_blocks": 1,
+    "detectors": [
+      "adwin",
+      "hddm_w",
+      "hellinger",
+      "d3_oof"
+    ],
+    "response": "confirmed",
+    "screened": true,
+    "classifier": {
+      "max_iter": 100,
+      "max_leaf_nodes": 15,
+      "learning_rate": 0.1,
+      "l2_regularization": 1.0,
+      "early_stopping": false
+    }
+  },
+  "sources": {
+    "common/__init__.py": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+    "common/channels.py": "ac721119e5f3eb9b1c1154d22af4a7d6ca4f8c49e0899b567cc16c3f4b036098",
+    "common/generation.py": "df64ff01aa6566f40cd8e0152dcaea1d971dedd72acbc9ef42dda4e8ebe8e6d9",
+    "common/protocol.py": "f4cf5c15c3b9f4ec6b7c07515bc57bcf8415449396fadc3b803b39c8751f74f2",
+    "common/replication.py": "a01a7358486c874e0da8c41184d273f205a1819cd2abdf51c102270785bb929b",
+    "common/validation.py": "7060d47dbada3fde77afb8db61740a78487b7131ed347c260f9d45db5b6fea84",
+    "tools/compile_document.py": "f4d8f040c72db232d51f08affe14c448ba3baa31698582310a7503106861f40e",
+    "tools/run_experiment.py": "2205abb5a32accfdf23952f38f581067fc11fc1b69d95c97086f8b4bf3079c7b",
+    "tools/run_thesis.py": "299f38288410eab46f68aeec301f0ad8e2087bdc39c7a64cd7a2dfbbddae1b7c",
+    "tools/verify_experiment.py": "e69a780b7b2578f04a14addb3a5fea6bbe46387487701b6ad0970e793097697f",
+    "00_streams/build.py": "f9e2461504d083515d685f44f8e8ef3335d13cd9df44f9ffda9c9217b413230d",
+    "01_attacks/interventions.py": "1683af3503710331335cb18eb7ddde5c31673f9b457391e9bcdbc40a9027f2a4",
+    "01_attacks/per_dataset.py": "c6823b1b92f8ca12086683d02aaa6061e17c8c87cb410b858d9bc752440875dc",
+    "01_attacks/prepare.py": "18d92ea7d1b75a841efd238c5130b407740cddb0a1ec8660b30b2431e66e9391",
+    "02_detectors/detectors.py": "533b6b615d7dc20f3bb998ea7b795a963adcb1d79cb274caa811bf107dfc5a52",
+    "02_detectors/monitors.py": "dd6855b6547403681f51a96dc54167c98d05bae76dbfe44ad5ea8f85d4d438f7",
+    "03_policies/gate.py": "91120520d1383288c617d1ce5fdcfddbcb0a2a8f4bee9c288b5a2da232c0b578",
+    "04_rl_training/controller.py": "b6bc661feacd5dddecc67111499a8615715f84d349a0432f2a8fd22b5b1f6041",
+    "04_rl_training/train.py": "85ade27a7ca05394197a1d90b50cd107cce82a44bcca2bc838ed6c9e25189735",
+    "05_experiment/engine.py": "2b3987c12a20f62ed8bdf8845aff58840252bfa2b22bf8af11efd29688439242",
+    "05_experiment/policy_robustness.py": "2bd0c863752c20fccfe7557ea71858afe7e3ff86d07224327b0935d210ac9512",
+    "05_experiment/run_grid.py": "7f5d667d6234e18876df5833eee12317cabbea4c1c0cd996a74e27c0ca898192",
+    "06_analysis/analyse.py": "b474dc59e842f63a34d1f378fdc87c8df06b98c9e062bec1647b4c191d4788c9",
+    "06_analysis/figures.py": "058e270de55b4d1684e1d5c1989a6c5dc29d42e8593ed80c5599ab9061c976ca",
+    "06_analysis/policy_robustness.py": "239b7a53fab577c3c110fce9e0d254730076be2009a78a759226f21eb64d0663",
+    "07_documentation/build.py": "6997c1c75a0a6dad5e003c4bd17fbfafe4987db64f1380f8f920ff5f7389ccaf",
+    "requirements.txt": "17a8e59c2a8fb3e384ac852c4a229207f9ec6ae2c3f31163a3bf170970aeecd7",
+    "requirements.lock.txt": "26bce125f3482cbd12a0b3c7f138cdd87217fdd7ce0bb7181c786328968b7e30",
+    "extensions/complete_study/run.py": "794c62e743a7a67b261dc9ad2be1fbc6b9b64d4e5097ec8b2646f06e93276ce4",
+    "extensions/complete_study/style.py": "853d357757519cd16cdb3e7060f3f079f6ef02ce06b1d889e5cb3a1381fd5ca7",
+    "extensions/complete_study/comparisons.py": "f1a6f2193d8bb58bf4659ccdcb0b7f8047cb1d35c6e8910655e750b482310bd2",
+    "extensions/complete_study/separability.py": "94dd441403a3a89ed2554a8aeeeadcee5740ace987618c4717f40293666b175f",
+    "extensions/complete_study/feedback.py": "eb6e7660a97cb449b41c7855a878ce3c7280bba7ddfccdf8e116a4678335ab08",
+    "extensions/complete_study/__init__.py": "cf859df8a52926f866eec77051b8941b50b4a959415abf4d766f8cbc7e1ee43c",
+    "extensions/complete_study/figures.py": "2a06e3baedb93a635241da9b937df92e204ec2ab2dc65e617d7c26fc5d68f4f3",
+    "extensions/complete_study/workers.py": "bdd76ec14c797b6699a4d5e24b5fdc20048290504b9cf39cb9c5b7173b5fb70f",
+    "extensions/complete_study/balance.py": "9bd1cf44e0309db16125e51949fab1b85e35b319345e918d2cf7d362b453c6d5",
+    "extensions/complete_study/report.py": "32c78c6a11c01f783f25113dc0b2e687b317c45ccffbf4112148b1867de41bb9",
+    "extensions/filter_study/run.py": "c113bf223c8b2b7f5ae025bee620dad8ac600fc7d38d41b01028184a4679722a",
+    "extensions/filter_study/separability.py": "782395cff50cd496fb5277cbcdea0f47fe97f176200952e993dac67a13b58b46",
+    "extensions/filter_study/protocol.py": "6ab100934e0a37bbfda9a6b44d73ccb028be4914af0c26c95ad21312e9db438e",
+    "extensions/filter_study/engine.py": "79d49cc938e5f25251324142cd23411e5c79fbbbe7f38e93300feaecfe7dc3cf",
+    "extensions/filter_study/report.py": "81fbfada9485ac4e3f6355b7b2233cb600e810efd8d0cbcccded283b2070bae1",
+    "06_analysis/dataset_summary/build.py": "584fb0291312b6dcee39f268dbc1b675769cdea6912afce474e5e6c844344e86",
+    "06_analysis/dataset_summary/report_overview.py": "3a0105016348ac6a1e7a41c9df625cdab2a5969e85f8bf005cbe57d373d0d1ce",
+    "06_analysis/dataset_summary/compare_detectors.py": "88fa0d233ab7cd02514d1fdb5e9060987b220519d937f8261c446a09e9e4af04",
+    "06_analysis/dataset_summary/baseline.py": "00ef83a6b7b3391c8d5e8489694df100957c48cee0a3f4bb4a34cd53ec8220b8",
+    "06_analysis/dataset_summary/rl_comparison.py": "7f4d43ed8cd2fc7bcaa811edac2a446c31dfb369bcc3489c0ae675934869dc41",
+    "06_analysis/dataset_summary/detector_heatmaps.py": "77e76a50e47a8c48ba04cc8eeb7f660c8fcf7eab2494764c14f27df109953505",
+    "06_analysis/dataset_summary/compact.py": "288b5ed9519f61a21ba91380dde6d81a700091ff5c5f2fd5fa2f6c3178e8faf0",
+    "06_analysis/dataset_summary/lines.py": "7252d5ecc992c0ee990cc084f107033d7dcae29bcffdee4484bc0ec7a8f3b2eb",
+    "06_analysis/dataset_summary/fixed_responses.py": "73cd39e106406299c923702439fca3830ef278a9760a995347cc950ed3e59842",
+    "06_analysis/dataset_summary/detector_baseline.py": "6bb77aab1823dfa24b8ce16444c73503011edd7738f1f112d4545e4caf1552c2",
+    "06_analysis/dataset_summary/render_summaries.py": "13955de7a280275b807614bdf602ff0738484ff7f01abcc7c419eaa3e462687f"
+  },
+  "environment": {
+    "python": "3.14.7",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "packages": {
+      "river": "0.25.0",
+      "numpy": "2.4.6",
+      "pandas": "3.0.5",
+      "pyarrow": "25.0.0",
+      "scikit-learn": "1.9.0",
+      "matplotlib": "3.11.1"
+    }
+  },
+  "input_contracts": {
+    "training/SEA_A": {
+      "request": "f898a2bc0434878faaa2030b52c6299ecc8ea3f763f35940d0664a034031b659",
+      "manifest": "e2bbb9e5d979a5691d99f988692eb7c5883932417865a29047912bba6b7a84d2"
+    },
+    "validation/SEA_A": {
+      "request": "e77d20b39fe1c25991f3e7fcfd0249ef02e9c26848de68e54c3341ed8074c1fa",
+      "manifest": "7a79110df3f0c6722ac5be0737b7d2dcadd7aac5a3eb89b1c2da1cb89f8b7839"
+    },
+    "evaluation/SEA_A": {
+      "request": "69fb0bff2a05cdece10db13e07c5c3ce1643db7910c1fcbd6dbb7330633640df",
+      "manifest": "c274e391cf7b229274553c3e5367e0bde5511d3ee8e6d648116a3c2c33cdd972"
+    },
+    "training/RBF_I": {
+      "request": "524cf52a1ab41f51b2956ccf294d7ee8b6e7fff62150347e3726c6883b4a06b5",
+      "manifest": "68eebc35c54589e236a939d31cbcf98132596d2811da9d66e9a84cae5ce56de1"
+    },
+    "validation/RBF_I": {
+      "request": "ba43f41afe714aa0159f733c53f27222a215917fa44c3c2ffb903b83b01a236a",
+      "manifest": "eb49194c87e4cb2717f4e5144eaf06f15381b4a567af0e1fc061a675020e2e75"
+    },
+    "evaluation/RBF_I": {
+      "request": "b97a1027f682d16d5f206c1a157a8db5dcb58632aec185fb9045bf8f02aa670a",
+      "manifest": "a13a1588ab95ed0f385f2b9f2e1cb50dcbaf1f77dfae2766970ea918d98d49b7"
+    },
+    "training/radar": {
+      "request": "1ba189615f9927f500934228b35b3e01f755fe37f0782ececddf600d49186cb7",
+      "manifest": "7b51985ea7a564c4de20834fc4800e7aa9e31eff1280977dd4c3af390f2e9ff6"
+    },
+    "validation/radar": {
+      "request": "df13818646b07a205769ce336c515c0799eded002cb6c942436ded0e51db7e51",
+      "manifest": "e2e09b28337365b86e69f0d18fdae13ba8db280a93b2afa5788ae735e7ac3473"
+    },
+    "evaluation/radar": {
+      "request": "7cb0d602e69eba417ba33b1f6ff670d31184607ff5639e6180752c7de7db08fd",
+      "manifest": "23880fcaf45ed39695bb9d40e7afdf9d9595b499bcebb5500edce5dd2fdc0505"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 # Cite the experiment repository
 
-`CITATION.cff` identifies the software. The public repository is [https://github.com/code-cyber-arch/adaptive-defences-under-drift](https://github.com/code-cyber-arch/adaptive-defences-under-drift). Use an exact commit in the thesis so future changes do not alter the cited evidence. Keep the original repository citation when describing the origin of the adopted benchmark.
+`CITATION.cff` identifies version 1.1.0 of the software, released on 19 September 2026. The current five-seed study is in `08_rl_feedback_study/`. The public repository is [https://github.com/code-cyber-arch/adaptive-defences-under-drift](https://github.com/code-cyber-arch/adaptive-defences-under-drift). Use an exact commit in the thesis so future changes do not alter the cited evidence. Keep the original repository citation when describing the origin of the adopted benchmark.
 
 Suggested artifact statement:
 

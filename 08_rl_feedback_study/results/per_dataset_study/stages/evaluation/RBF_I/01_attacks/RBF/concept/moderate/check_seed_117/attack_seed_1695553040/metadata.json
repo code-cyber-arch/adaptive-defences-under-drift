@@ -1,0 +1,184 @@
+{
+  "stream": "RBF_I",
+  "base_seed": 117,
+  "rows": 60000,
+  "n_features": 10,
+  "classes": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "benign_class": null,
+  "kind": "broad_linear_mixture",
+  "transition_intervals": [
+    [
+      9000,
+      21000
+    ],
+    [
+      24000,
+      36000
+    ],
+    [
+      39000,
+      51000
+    ]
+  ],
+  "nominal_centers": [
+    15000,
+    30000,
+    45000
+  ],
+  "width": 12000,
+  "event_reference": "global-index scheduled mixture intervals",
+  "supports_event_metrics": true,
+  "segment_boundaries": [
+    15000,
+    30000,
+    45000
+  ],
+  "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+  "feature_lineage": {
+    "f0": {
+      "source_column": "generator_feature_0",
+      "source": "River RandomRBF"
+    },
+    "f1": {
+      "source_column": "generator_feature_1",
+      "source": "River RandomRBF"
+    },
+    "f2": {
+      "source_column": "generator_feature_2",
+      "source": "River RandomRBF"
+    },
+    "f3": {
+      "source_column": "generator_feature_3",
+      "source": "River RandomRBF"
+    },
+    "f4": {
+      "source_column": "generator_feature_4",
+      "source": "River RandomRBF"
+    },
+    "f5": {
+      "source_column": "generator_feature_5",
+      "source": "River RandomRBF"
+    },
+    "f6": {
+      "source_column": "generator_feature_6",
+      "source": "River RandomRBF"
+    },
+    "f7": {
+      "source_column": "generator_feature_7",
+      "source": "River RandomRBF"
+    },
+    "f8": {
+      "source_column": "generator_feature_8",
+      "source": "River RandomRBF"
+    },
+    "f9": {
+      "source_column": "generator_feature_9",
+      "source": "River RandomRBF"
+    }
+  },
+  "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+  "preprocessing": "none",
+  "warmup_rows": 1000,
+  "key": "RBF_I__s117__concept__moderate",
+  "path": "results/per_dataset_study/stages/evaluation/RBF_I/01_attacks/RBF/concept/moderate/check_seed_117/attack_seed_1695553040/stream.parquet",
+  "sha256": "1f4369ece75070241688151c3c701968016ae369b5a5fe4ac6eb8e56c658b147",
+  "role": "check",
+  "base_key": "RBF_I__s117",
+  "mode": "concept",
+  "level": "moderate",
+  "attack_seed": 1695553040,
+  "truth_path": "results/per_dataset_study/stages/evaluation/RBF_I/audit/evaluator/RBF/concept/moderate/check_seed_117/attack_seed_1695553040/truth.parquet",
+  "truth_sha256": "7666afd7b845593b3cd6600060f5acad92ee35c4ada235322e665af53b254110",
+  "rng_seed": 3192818858,
+  "level_value": 0.15,
+  "burst_starts": [
+    1398,
+    2485,
+    4325,
+    4739,
+    5161,
+    5744,
+    7119,
+    8654,
+    14875,
+    21366,
+    22147,
+    22468,
+    23006,
+    23627,
+    29875,
+    36084,
+    36877,
+    37308,
+    38201,
+    38608,
+    44875,
+    51086,
+    51793,
+    52151,
+    52426,
+    53413,
+    54840,
+    55320,
+    56099,
+    56440,
+    56834,
+    57541,
+    57798,
+    58644,
+    59135,
+    59656
+  ],
+  "burst_len": 250,
+  "burst_colocated": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    true,
+    false,
+    false,
+    false,
+    false,
+    false,
+    true,
+    false,
+    false,
+    false,
+    false,
+    false,
+    true,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "splice_sources": [],
+  "flip_target_map": {},
+  "n_flipped": 0,
+  "burst_rows": 9000,
+  "actual_modified_fraction": 0.15,
+  "reference_access": "offline labelled clean archive, including future rows; no detector/model access",
+  "warmup_attack_free_rows": 1000,
+  "replacement_not_insertion": true
+}

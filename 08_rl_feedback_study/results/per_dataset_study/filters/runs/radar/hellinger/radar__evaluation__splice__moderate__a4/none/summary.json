@@ -1,0 +1,140 @@
+{
+  "stream": "radar",
+  "mode": "splice",
+  "level": "moderate",
+  "base_seed": null,
+  "attack_seed": 216158045,
+  "attack_assignment": 4,
+  "base_key": "radar__evaluation",
+  "condition": "radar__evaluation__splice__moderate__a4",
+  "resets": 5,
+  "training_visits": 150815,
+  "seconds": 31.270747875008965,
+  "host_n": 64134,
+  "host_accuracy": 0.7296597748464153,
+  "host_macro_f1": 0.20667185324079368,
+  "poison_rows": 20451,
+  "poison_rows_admitted": 16957,
+  "poison_admission_rate": 0.8291526086743924,
+  "clean_rows": 116114,
+  "clean_rows_withheld": 25006,
+  "clean_withhold_rate": 0.2153573212532511,
+  "malicious_recall": 0.6853613753964279,
+  "benign_fpr": 0.20898527381500231,
+  "filter_poison_recall": 0.0,
+  "filter_legitimate_rejection": 0.0,
+  "detector": "hellinger",
+  "filter": "none",
+  "filter_seed": null,
+  "policy": "confirmed",
+  "guarded": true,
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "radar__evaluation__splice__moderate__a4",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "radar"
+      ],
+      "rows": 144753,
+      "base_seeds": [],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "radar",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "1cf79721eb255ce711d94c7970709dc41baa39c3d48b2bb397d8bd882ca33dd8",
+      "audit": "6ad944c969986605d69ed6e46a206c6852a61cf81bce465e8a4c4b44a2f6b0e9",
+      "truth": "9b80668257ac2f06d5948d931aa13950dd8e91fb38e3fa7ddbbec5fc9c83f7d0"
+    },
+    "detector": "hellinger",
+    "filter": "none",
+    "filter_seed": null,
+    "profile_sha256": "65e5cdcb1a52a7237d8fb3ec27ef549a1ea43682e5c3efe6171377e923c7b19e"
+  },
+  "reused": {
+    "summary": "results/per_dataset_study/fixed_responses/runs/radar/hellinger/radar__evaluation__splice__moderate__a4/confirmed_screened/summary.json",
+    "sha256": "6b31b78600f25b1e51b23ab53eac16f54262f6e3d8f536a0844080192ae5a614"
+  },
+  "files": {
+    "predictions.parquet": "4ebf924c6cf517602653240cd6e6f80c493eca1a97033452377099577f536767",
+    "events.parquet": "a0cbbe2c2c7a46efeecfec37f947177ec729e7c829874b979bb5a558a8f302a8"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/filters/runs/radar/hellinger/radar__evaluation__splice__moderate__a4/none"
+}

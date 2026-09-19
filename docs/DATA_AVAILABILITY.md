@@ -1,5 +1,7 @@
 # Data and artifact availability
 
+The current five-seed study has its own [publication scope](../08_rl_feedback_study/docs/PUBLICATION.md) and file-identity manifest. The legacy local-artifact manifest below applies to the earlier root benchmark.
+
 ## Public Git contents
 
 The repository contains the frozen settings, source code, input metadata and hashes, completed metric tables, available run summaries, selected figures and verification records. It supports code inspection, small synthetic pipeline checks and saved-table reconciliation without downloading the full research data.

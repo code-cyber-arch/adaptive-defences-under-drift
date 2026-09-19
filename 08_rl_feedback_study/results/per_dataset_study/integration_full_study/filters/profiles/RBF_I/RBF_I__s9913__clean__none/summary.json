@@ -1,0 +1,110 @@
+{
+  "stream": "RBF_I",
+  "mode": "clean",
+  "level": "none",
+  "base_seed": 9913,
+  "attack_seed": null,
+  "attack_assignment": null,
+  "base_key": "RBF_I__s9913",
+  "condition": "RBF_I__s9913__clean__none",
+  "contract": {
+    "protocol_sha256": "60af6fc113d1f42cdf6ff3c948e1dfbfff2439f890cfa432e697352a60d33578",
+    "condition": "RBF_I__s9913__clean__none",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "RBF_I"
+      ],
+      "rows": 12000,
+      "base_seeds": [
+        9913
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance"
+      ],
+      "levels": {
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7
+        ],
+        "epochs": 1,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "RBF_I",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0
+      ],
+      "pilot_rows": 12000
+    },
+    "inputs": {
+      "observations": "453036f9621d69b2a2be0b348db6addb99026634ca9c4e5ebf25abee798322eb",
+      "audit": "cec0bd114d913878117fce961e4166a34a2c3d55b749c30d41b77a00f5f9c799",
+      "truth": "3d2dde26f306c50adcf86538d102f3a551d73a9b31ce8784a2557338b6752404"
+    },
+    "models": {
+      "7": "6c7d0c9c536a257342933f37a26ba8661d8463336f2b9342365d55f24eed5083",
+      "17": "4ff2e656bd70881e1c38052533666cc2db24e98a7bf0742d446b0ae9f7161e88",
+      "27": "10e0b3ef1781113a986c472f37e69b4d08cb16e4e74afb1e03c5617a7eae0cf4",
+      "37": "af29df1956483d2e84fb7ec1dbae0d0611cf281aa4e99c518ff4cad88acdc114",
+      "47": "6a43cabb3d00a6dfa17b53bfa697de26cb22ddd7c08f97e9e2dad75978272059"
+    }
+  },
+  "host_rows": 10450,
+  "files": {
+    "masks.parquet": "4990f564003f90afa2c2d91b89f2835049c91012bddb1a35cf3af066375cace3"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/integration_full_study/filters/profiles/RBF_I/RBF_I__s9913__clean__none"
+}

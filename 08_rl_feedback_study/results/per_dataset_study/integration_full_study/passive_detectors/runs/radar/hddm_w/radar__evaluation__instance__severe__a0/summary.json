@@ -1,0 +1,118 @@
+{
+  "stream": "radar",
+  "mode": "instance",
+  "level": "severe",
+  "base_seed": null,
+  "attack_seed": 3068245370,
+  "attack_assignment": 0,
+  "base_key": "radar__evaluation",
+  "condition": "radar__evaluation__instance__severe__a0",
+  "alarm_rate": 0.6363636363636364,
+  "alarm_blocks": 7,
+  "monitored_blocks": 11,
+  "poison_exposed_blocks": 11,
+  "poison_alarm_blocks": 7,
+  "poison_alarm_rate": 0.6363636363636364,
+  "unexposed_blocks": 0,
+  "unexposed_alarm_blocks": 0,
+  "unexposed_alarm_rate": null,
+  "event_recall": null,
+  "detected_events": null,
+  "scheduled_events": null,
+  "detection_delay": null,
+  "seconds_per_100k": 0.15448576693112653,
+  "detector": "hddm_w",
+  "contract": {
+    "protocol_sha256": "60af6fc113d1f42cdf6ff3c948e1dfbfff2439f890cfa432e697352a60d33578",
+    "condition": "radar__evaluation__instance__severe__a0",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "radar"
+      ],
+      "rows": 12000,
+      "base_seeds": [],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance"
+      ],
+      "levels": {
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7
+        ],
+        "epochs": 1,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "radar",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0
+      ],
+      "pilot_rows": 12000
+    },
+    "inputs": {
+      "observations": "6451c2f60849a1dd4532c9ba24f92ebd052563a5dd39fa9adf4317439236b30d",
+      "audit": "1d262d86c6369f92992aff7b36a191d3f29e6f32d61cafccf2525b2447526802",
+      "truth": "09b8ba00922534f773dbe6314d70541403798a1621f423783f30d77713fc164e"
+    },
+    "detector": "hddm_w",
+    "baseline_sha256": "d4a54a270975b3436c828a9777874d1530f4f9ef78ec72bc365342308f4bb2e9"
+  },
+  "learner_resets": 0,
+  "files": {
+    "alarms.parquet": "3c7dcee001a134c3b5f3f39d5975b02acd778e193a4eadfce30edd20ffff4c12"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/integration_full_study/passive_detectors/runs/radar/hddm_w/radar__evaluation__instance__severe__a0"
+}

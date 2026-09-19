@@ -1,0 +1,149 @@
+{
+  "stream": "RBF_I",
+  "mode": "instance",
+  "level": "moderate",
+  "base_seed": 115,
+  "attack_seed": 2781123431,
+  "attack_assignment": null,
+  "base_key": "RBF_I__s115",
+  "condition": "RBF_I__s115__instance__moderate",
+  "filter_rows_withheld": 8551,
+  "rows": 60000,
+  "training_visits": 53286,
+  "accepted_training_visits": 40391,
+  "accepted_refit_rows": 7245,
+  "resets": 3,
+  "seconds": 2.3068065409897827,
+  "pending_candidate": false,
+  "audit_rows_reserved": 3000,
+  "policy": "confirmed",
+  "guarded": true,
+  "host_n": 56050,
+  "host_accuracy": 0.5546297948260481,
+  "host_macro_f1": 0.5479815898443987,
+  "poison_rows": 8551,
+  "poison_rows_admitted": 5470,
+  "poison_admission_rate": 0.6396912641796281,
+  "clean_rows": 47499,
+  "clean_rows_withheld": 17566,
+  "clean_withhold_rate": 0.3698183119644624,
+  "malicious_recall": null,
+  "benign_fpr": null,
+  "filter_poison_recall": 0.1474681323821775,
+  "filter_legitimate_rejection": 0.15347691530348007,
+  "detector": "adwin",
+  "filter": "random_rows",
+  "filter_seed": 47,
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "RBF_I__s115__instance__moderate",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "RBF_I"
+      ],
+      "rows": 60000,
+      "base_seeds": [
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "RBF_I",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "beca7aea8f124d2cbc89235d50e702fa987dc763b827da84841c03393f3b402b",
+      "audit": "5023714eec8eb6bfbf7a3f9af319a0c81274b6b6f00e132e6093ed1c3c51139f",
+      "truth": "247180c24d50a3f85988093985574d4afdb253bc391b8591c1ecc3e6e1d939b2"
+    },
+    "detector": "adwin",
+    "filter": "random_rows",
+    "filter_seed": 47,
+    "profile_sha256": "5e3abed9e8fda5a00df4faa6d05ee3036a5be31ba97909ee0e4af6a68e027288"
+  },
+  "reused": null,
+  "files": {
+    "predictions.parquet": "70d71c7dd1da197b119cecd486c4f0e3d5594747b396ded144415db0fc6f8212",
+    "events.parquet": "c9da8817e3f043254c858de933eb9864f978ee203f9af00116341379fb2a0b8f"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/filters/runs/RBF_I/adwin/RBF_I__s115__instance__moderate/random_rows_seed_47"
+}

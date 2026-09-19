@@ -1,0 +1,25 @@
+\begin{table}[htbp]
+\centering\small\singlespacing
+\caption{Passive detector behaviour across the seven conditions.}\label{tab:passive}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.18}
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+Dataset & Detector & Alarms (\%) & Recall (\%) & Delay \\
+\midrule
+SEA & ADWIN & 23.6 & 79.0 & 5.98 \\
+SEA & HDDM-W & 23.0 & 64.8 & 7.42 \\
+SEA & Hellinger & 8.0 & 88.6 & 6.38 \\
+SEA & D3 OOF & 3.0 & 53.3 & 6.90 \\
+RBF & ADWIN & 29.2 & 100.0 & 4.00 \\
+RBF & HDDM-W & 67.2 & 100.0 & 1.50 \\
+RBF & Hellinger & 10.0 & 100.0 & 6.63 \\
+RBF & D3 OOF & 2.3 & 44.8 & 18.90 \\
+RADAR & ADWIN & 79.4 & -- & -- \\
+RADAR & HDDM-W & 66.3 & -- & -- \\
+RADAR & Hellinger & 9.0 & -- & -- \\
+RADAR & D3 OOF & 3.8 & -- & -- \\
+\bottomrule
+\end{tabular}
+\par\smallskip\begin{minipage}{\textwidth}\footnotesize Delay is in 1,000-row blocks and is conditional on detection. RADAR has no verified natural-drift reference; recall and delay are undefined. Condition means have equal weight.\end{minipage}
+\end{table}

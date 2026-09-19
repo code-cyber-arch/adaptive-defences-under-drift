@@ -1,0 +1,82 @@
+{
+  "name": "per_dataset_study",
+  "rows": 60000,
+  "validation_seeds": [
+    114
+  ],
+  "evaluation_seeds": [
+    115,
+    116,
+    117,
+    118,
+    119
+  ],
+  "pilot_seed": 9917,
+  "streams": [
+    "SEA_A",
+    "RBF_I"
+  ],
+  "rl_seeds": [
+    7,
+    17,
+    27,
+    37,
+    47
+  ],
+  "feedback_fractions": [
+    0.01,
+    0.02,
+    0.05
+  ],
+  "feedback_delays": [
+    1,
+    5
+  ],
+  "sensitivity_conditions": [
+    [
+      "clean",
+      "none"
+    ],
+    [
+      "instance",
+      "severe"
+    ]
+  ],
+  "reserved_fraction": 0.05,
+  "selection_metric": "mean_host_macro_f1",
+  "selection_tiebreak": [
+    "mean_resets",
+    "policy_id"
+  ],
+  "scope": "Per-dataset training, validation, detector-policy evaluation and feedback sensitivity on SEA, RBF and RADAR",
+  "detectors": [
+    "adwin",
+    "hddm_w",
+    "hellinger",
+    "d3_oof"
+  ],
+  "training_seeds": [
+    112
+  ],
+  "training_epochs": 4,
+  "datasets": [
+    "SEA_A",
+    "RBF_I",
+    "radar"
+  ],
+  "training_mode": "per_dataset",
+  "radar": {
+    "source_metadata": "../data/clean/RADAR/metadata.json",
+    "source_rows": 484753,
+    "train_end_fraction": 0.5,
+    "validation_end_fraction": 0.7,
+    "embargo_blocks": 1,
+    "evaluation_attack_assignments": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  }
+}

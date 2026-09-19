@@ -1,0 +1,130 @@
+{
+  "stream": "radar",
+  "mode": "clean",
+  "level": "none",
+  "base_seed": null,
+  "attack_seed": null,
+  "attack_assignment": null,
+  "base_key": "radar__evaluation",
+  "condition": "radar__evaluation__clean__none__aNone",
+  "resets": 0,
+  "training_visits": 11400,
+  "seconds": 1.7417985000065528,
+  "host_n": 9230,
+  "host_accuracy": 0.6761646803900325,
+  "host_macro_f1": 0.20884405046061125,
+  "poison_rows": 0,
+  "poison_rows_admitted": 0,
+  "poison_admission_rate": null,
+  "clean_rows": 10450,
+  "clean_rows_withheld": 4750,
+  "clean_withhold_rate": 0.45454545454545453,
+  "malicious_recall": 0.3739266198282592,
+  "benign_fpr": 0.043994802301837756,
+  "filter_poison_recall": null,
+  "filter_legitimate_rejection": 0.0,
+  "detector": "d3_oof",
+  "filter": "none",
+  "filter_seed": null,
+  "policy": "confirmed",
+  "guarded": true,
+  "contract": {
+    "protocol_sha256": "60af6fc113d1f42cdf6ff3c948e1dfbfff2439f890cfa432e697352a60d33578",
+    "condition": "radar__evaluation__clean__none__aNone",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "radar"
+      ],
+      "rows": 12000,
+      "base_seeds": [],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance"
+      ],
+      "levels": {
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7
+        ],
+        "epochs": 1,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "radar",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0
+      ],
+      "pilot_rows": 12000
+    },
+    "inputs": {
+      "observations": "b7300c818b0c0204607b139dae854d328573a58e66a83fcacb8676e0ed917738",
+      "audit": "1d262d86c6369f92992aff7b36a191d3f29e6f32d61cafccf2525b2447526802",
+      "truth": "dee7c51630dab67285402faff69114dc83f6b69c8d02a9d1dcb3ea9a01e8c605"
+    },
+    "detector": "d3_oof",
+    "filter": "none",
+    "filter_seed": null,
+    "profile_sha256": "c739ad580ef7680837b55f93ead88b12ff90aaad694b1bd14804971d94d4ed2d"
+  },
+  "reused": {
+    "summary": "results/per_dataset_study/integration_full_study/fixed_responses/runs/radar/d3_oof/radar__evaluation__clean__none__aNone/confirmed_screened/summary.json",
+    "sha256": "edf9dde8e6aca9cbaf5126f01a1fe45046fba96f5e6fb4223c521412e6df4292"
+  },
+  "files": {
+    "predictions.parquet": "0439d38794b2fbf3290224869376acca5875e2ac67aa1d5713004d4bb2ed2b62",
+    "events.parquet": "2539dd9a8b36110780e2715a3f96943a268f5006b8dc97312dbf48c1e902e563"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/integration_full_study/filters/runs/radar/d3_oof/radar__evaluation__clean__none__aNone/none"
+}

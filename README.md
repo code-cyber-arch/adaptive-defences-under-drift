@@ -2,17 +2,25 @@
 
 Controlled experiments on **update screening, reset control and observation filtering** under natural or scheduled change and injected poisoning. The shared classifier is a Hoeffding Tree. The datasets are SEA, Random RBF and one assembled RADAR ransomware telemetry stream.
 
-This standalone repository continues the `drift-response-2` study. It preserves the implemented scientific code and retained measurements. [Provenance](provenance/README.md) identifies the original repository and commit. The original working folder remains unchanged.
+The current research component is [08_rl_feedback_study](08_rl_feedback_study/README.md). It evaluates three datasets, four detectors and seven conditions, with five evaluation repetitions and five fitting seeds for learned methods. RADAR repetitions are attack assignments on one capture, not independent deployments.
 
-| Experiment | Purpose | Implementation | Retained evidence |
-| --- | --- | --- | --- |
-| 1. Fixed responses and update screening | Separate resetting from candidate-update validation | `00_streams`–`06_analysis` | [Original evaluation](results/evaluation/) |
-| 2. Learned reset control | Compare two frozen tabular Q-learning controllers with a fixed screened response | `04_rl_training`, `05_experiment` | [RL comparisons](results/evaluation/06_analysis/presentation/rl_comparison/) |
-| 3. Observation filtering | Test filtering before monitoring and learning, including matched no-reset controls | `extensions/filter_study`, `extensions/filter_no_reset` | [Filter study](results/filter_study/) and [no-reset controls](results/filter_no_reset/) |
+| Experiment | Comparison | Current evidence |
+| --- | --- | --- |
+| 1. Fixed responses and screening | Screened/unscreened updates and reset policies | [Fixed-response summaries](08_rl_feedback_study/results/per_dataset_study/analysis/full_study/fixed_summary.csv) |
+| 2. Learned reset control | Two Q-learning representations, fixed and same-information controls, feedback sensitivity | [Common-row comparisons](08_rl_feedback_study/results/per_dataset_study/analysis/comparisons/dataset_method_summary.csv) |
+| 3. Observation filtering | Two learned views, oracle/random controls and matched no-reset responses | [Filter summaries](08_rl_feedback_study/results/per_dataset_study/analysis/full_study/filter_summary.csv) |
 
-The completed evidence contains **1,464 original policy records, 244 passive-monitor evaluations, 1,708 filter runs and 183 matched no-reset controls**. A no-reset model continues learning; it is not frozen. The filter controls are paired with four monitors, giving 732 comparisons without treating reused controls as independent runs.
+The verified grid contains **1,818 fixed-response configurations, 404 passive evaluations, 120 fitted controllers, 30 fitted filters, 10,403 filter/control configurations and 33,936 RL/control feedback evaluations** (including default feedback). See the [complete design](08_rl_feedback_study/docs/FULL_STUDY.md), [completion record](08_rl_feedback_study/results/per_dataset_study/full_completion.json) and [thesis evidence](08_rl_feedback_study/07_documentation/thesis_evidence/README.md). These are configuration counts, not independent statistical sample sizes.
 
-## Start here
+The root-level implementation and results preserve the earlier benchmark and its [provenance](provenance/README.md). Current five-seed findings are under `08_rl_feedback_study/`; the earlier records remain separately identifiable.
+
+## Current study
+
+- [Study instructions](08_rl_feedback_study/README.md)
+- [Methods](08_rl_feedback_study/07_documentation/METHODS.md) and [results](08_rl_feedback_study/07_documentation/RESULTS.md)
+- [Public evidence and local artifact limits](08_rl_feedback_study/docs/PUBLICATION.md)
+
+## Retained benchmark instructions
 
 - [Experiment design and diagrams](docs/EXPERIMENT.md)
 - [Results and figure guide](docs/RESULTS.md)

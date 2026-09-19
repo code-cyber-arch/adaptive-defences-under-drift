@@ -1,0 +1,322 @@
+{
+  "protocol": "guarded-update-rl-3.0",
+  "bases": {
+    "SEA_A__s9911": {
+      "metadata": {
+        "stream": "SEA_A",
+        "base_seed": 9911,
+        "rows": 12000,
+        "n_features": 3,
+        "classes": [
+          0,
+          1
+        ],
+        "benign_class": null,
+        "kind": "rapid_linear_mixture",
+        "transition_intervals": [
+          [
+            2964,
+            3036
+          ],
+          [
+            5964,
+            6036
+          ],
+          [
+            8964,
+            9036
+          ]
+        ],
+        "nominal_centers": [
+          3000,
+          6000,
+          9000
+        ],
+        "width": 72,
+        "event_reference": "global-index scheduled mixture intervals",
+        "supports_event_metrics": true,
+        "segment_boundaries": [
+          3000,
+          6000,
+          9000
+        ],
+        "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+        "feature_lineage": {
+          "f0": {
+            "source_column": "generator_feature_0",
+            "source": "River SEA"
+          },
+          "f1": {
+            "source_column": "generator_feature_1",
+            "source": "River SEA"
+          },
+          "f2": {
+            "source_column": "generator_feature_2",
+            "source": "River SEA"
+          }
+        },
+        "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+        "preprocessing": "none",
+        "warmup_rows": 1000,
+        "key": "SEA_A__s9911",
+        "path": "results/per_dataset_study/integration_full_study/inputs/training/SEA_A/00_streams/SEA/training_seed_9911/stream.parquet",
+        "sha256": "fa32782649f722dbd836679a134c5b83c7279a1c570170f9d3ea592214e00832",
+        "role": "training"
+      },
+      "clean": "../00_streams/SEA/training_seed_9911/stream.parquet",
+      "audit": "../audit/protected/SEA/seed_9911/sample.parquet",
+      "audit_rows": 600
+    }
+  },
+  "conditions": {
+    "SEA_A__s9911__clean__none": {
+      "stream": "SEA_A",
+      "base_seed": 9911,
+      "mode": "clean",
+      "level": "none",
+      "rows": 12000,
+      "classes": [
+        0,
+        1
+      ],
+      "benign_class": null,
+      "transition_intervals": [
+        [
+          2964,
+          3036
+        ],
+        [
+          5964,
+          6036
+        ],
+        [
+          8964,
+          9036
+        ]
+      ],
+      "supports_event_metrics": true,
+      "warmup_rows": 1000,
+      "key": "SEA_A__s9911__clean__none",
+      "base_key": "SEA_A__s9911",
+      "attack_seed": null,
+      "observations": "../00_streams/SEA/training_seed_9911/stream.parquet",
+      "truth": "../audit/evaluator/SEA/clean/none/training_seed_9911/attack_seed_None/truth.parquet",
+      "audit": "../audit/protected/SEA/seed_9911/sample.parquet",
+      "attack": {
+        "stream": "SEA_A",
+        "base_seed": 9911,
+        "rows": 12000,
+        "n_features": 3,
+        "classes": [
+          0,
+          1
+        ],
+        "benign_class": null,
+        "kind": "rapid_linear_mixture",
+        "transition_intervals": [
+          [
+            2964,
+            3036
+          ],
+          [
+            5964,
+            6036
+          ],
+          [
+            8964,
+            9036
+          ]
+        ],
+        "nominal_centers": [
+          3000,
+          6000,
+          9000
+        ],
+        "width": 72,
+        "event_reference": "global-index scheduled mixture intervals",
+        "supports_event_metrics": true,
+        "segment_boundaries": [
+          3000,
+          6000,
+          9000
+        ],
+        "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+        "feature_lineage": {
+          "f0": {
+            "source_column": "generator_feature_0",
+            "source": "River SEA"
+          },
+          "f1": {
+            "source_column": "generator_feature_1",
+            "source": "River SEA"
+          },
+          "f2": {
+            "source_column": "generator_feature_2",
+            "source": "River SEA"
+          }
+        },
+        "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+        "preprocessing": "none",
+        "warmup_rows": 1000,
+        "key": "SEA_A__s9911__clean__none",
+        "path": "results/per_dataset_study/integration_full_study/inputs/training/SEA_A/00_streams/SEA/training_seed_9911/stream.parquet",
+        "sha256": "fa32782649f722dbd836679a134c5b83c7279a1c570170f9d3ea592214e00832",
+        "role": "training",
+        "base_key": "SEA_A__s9911",
+        "mode": "clean",
+        "level": "none",
+        "attack_seed": null,
+        "truth_path": "results/per_dataset_study/integration_full_study/inputs/training/SEA_A/audit/evaluator/SEA/clean/none/training_seed_9911/attack_seed_None/truth.parquet",
+        "truth_sha256": "f1bd70a7c033e6bcfc03055ebca76bc7cbbba1bd365f9ca44d40311e111def5e",
+        "rng_seed": 3899428700,
+        "level_value": 0.0,
+        "burst_starts": [],
+        "burst_len": 250,
+        "burst_colocated": [],
+        "splice_sources": [],
+        "flip_target_map": {},
+        "n_flipped": 0,
+        "burst_rows": 0,
+        "actual_modified_fraction": 0.0,
+        "reference_access": "offline labelled clean archive, including future rows; no detector/model access",
+        "warmup_attack_free_rows": 1000,
+        "replacement_not_insertion": true
+      },
+      "source_observation_sha256": "fa32782649f722dbd836679a134c5b83c7279a1c570170f9d3ea592214e00832"
+    },
+    "SEA_A__s9911__instance__severe": {
+      "stream": "SEA_A",
+      "base_seed": 9911,
+      "mode": "instance",
+      "level": "severe",
+      "rows": 12000,
+      "classes": [
+        0,
+        1
+      ],
+      "benign_class": null,
+      "transition_intervals": [
+        [
+          2964,
+          3036
+        ],
+        [
+          5964,
+          6036
+        ],
+        [
+          8964,
+          9036
+        ]
+      ],
+      "supports_event_metrics": true,
+      "warmup_rows": 1000,
+      "key": "SEA_A__s9911__instance__severe",
+      "base_key": "SEA_A__s9911",
+      "attack_seed": 3451770219,
+      "observations": "SEA/instance/severe/training_seed_9911/attack_seed_3451770219/stream.parquet",
+      "truth": "../audit/evaluator/SEA/instance/severe/training_seed_9911/attack_seed_3451770219/truth.parquet",
+      "audit": "../audit/protected/SEA/seed_9911/sample.parquet",
+      "attack": {
+        "stream": "SEA_A",
+        "base_seed": 9911,
+        "rows": 12000,
+        "n_features": 3,
+        "classes": [
+          0,
+          1
+        ],
+        "benign_class": null,
+        "kind": "rapid_linear_mixture",
+        "transition_intervals": [
+          [
+            2964,
+            3036
+          ],
+          [
+            5964,
+            6036
+          ],
+          [
+            8964,
+            9036
+          ]
+        ],
+        "nominal_centers": [
+          3000,
+          6000,
+          9000
+        ],
+        "width": 72,
+        "event_reference": "global-index scheduled mixture intervals",
+        "supports_event_metrics": true,
+        "segment_boundaries": [
+          3000,
+          6000,
+          9000
+        ],
+        "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+        "feature_lineage": {
+          "f0": {
+            "source_column": "generator_feature_0",
+            "source": "River SEA"
+          },
+          "f1": {
+            "source_column": "generator_feature_1",
+            "source": "River SEA"
+          },
+          "f2": {
+            "source_column": "generator_feature_2",
+            "source": "River SEA"
+          }
+        },
+        "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+        "preprocessing": "none",
+        "warmup_rows": 1000,
+        "key": "SEA_A__s9911__instance__severe",
+        "path": "results/per_dataset_study/integration_full_study/inputs/training/SEA_A/01_attacks/SEA/instance/severe/training_seed_9911/attack_seed_3451770219/stream.parquet",
+        "sha256": "a2cc77b3e76ab7e8538ee15c1f4809ac762c80bf68c0e5e203d3b24396b71762",
+        "role": "training",
+        "base_key": "SEA_A__s9911",
+        "mode": "instance",
+        "level": "severe",
+        "attack_seed": 3451770219,
+        "truth_path": "results/per_dataset_study/integration_full_study/inputs/training/SEA_A/audit/evaluator/SEA/instance/severe/training_seed_9911/attack_seed_3451770219/truth.parquet",
+        "truth_sha256": "a79524dc5a15ce5b082643f12eb4a088d859f85b8aeb338f047e1ab94a96d40d",
+        "rng_seed": 1326650177,
+        "level_value": 0.25,
+        "burst_starts": [],
+        "burst_len": 250,
+        "burst_colocated": [],
+        "splice_sources": [],
+        "flip_target_map": {
+          "0": 1,
+          "1": 0
+        },
+        "n_flipped": 3000,
+        "burst_rows": 0,
+        "actual_modified_fraction": 0.25,
+        "reference_access": "offline labelled clean archive, including future rows; no detector/model access",
+        "warmup_attack_free_rows": 1000,
+        "replacement_not_insertion": true
+      },
+      "source_observation_sha256": "a2cc77b3e76ab7e8538ee15c1f4809ac762c80bf68c0e5e203d3b24396b71762"
+    }
+  },
+  "outputs": {
+    "../00_streams/SEA/training_seed_9911/stream.parquet": "fa32782649f722dbd836679a134c5b83c7279a1c570170f9d3ea592214e00832",
+    "../audit/protected/SEA/seed_9911/sample.parquet": "1062337ca1972577f8af33ae844232c6c0a6b721f5c4ede894682701b4694408",
+    "../audit/evaluator/SEA/clean/none/training_seed_9911/attack_seed_None/truth.parquet": "f1bd70a7c033e6bcfc03055ebca76bc7cbbba1bd365f9ca44d40311e111def5e",
+    "SEA/instance/severe/training_seed_9911/attack_seed_3451770219/stream.parquet": "a2cc77b3e76ab7e8538ee15c1f4809ac762c80bf68c0e5e203d3b24396b71762",
+    "../audit/evaluator/SEA/instance/severe/training_seed_9911/attack_seed_3451770219/truth.parquet": "a79524dc5a15ce5b082643f12eb4a088d859f85b8aeb338f047e1ab94a96d40d"
+  },
+  "audit_assumption": {
+    "fraction": 0.05,
+    "seed": 517,
+    "delay_blocks": 1,
+    "window_blocks": 1,
+    "source": "simulated protected original-observation channel; never training or final test data"
+  },
+  "dataset": "SEA_A",
+  "data_role": "training"
+}

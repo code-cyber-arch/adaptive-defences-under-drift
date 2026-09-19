@@ -1,0 +1,2072 @@
+{
+  "protocol": "guarded-update-rl-3.0",
+  "bases": {
+    "SEA_A__s112": {
+      "metadata": {
+        "stream": "SEA_A",
+        "base_seed": 112,
+        "rows": 60000,
+        "n_features": 3,
+        "classes": [
+          0,
+          1
+        ],
+        "benign_class": null,
+        "kind": "rapid_linear_mixture",
+        "transition_intervals": [
+          [
+            14820,
+            15180
+          ],
+          [
+            29820,
+            30180
+          ],
+          [
+            44820,
+            45180
+          ]
+        ],
+        "nominal_centers": [
+          15000,
+          30000,
+          45000
+        ],
+        "width": 360,
+        "event_reference": "global-index scheduled mixture intervals",
+        "supports_event_metrics": true,
+        "segment_boundaries": [
+          15000,
+          30000,
+          45000
+        ],
+        "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+        "feature_lineage": {
+          "f0": {
+            "source_column": "generator_feature_0",
+            "source": "River SEA"
+          },
+          "f1": {
+            "source_column": "generator_feature_1",
+            "source": "River SEA"
+          },
+          "f2": {
+            "source_column": "generator_feature_2",
+            "source": "River SEA"
+          }
+        },
+        "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+        "preprocessing": "none",
+        "warmup_rows": 1000,
+        "key": "SEA_A__s112",
+        "path": "results/per_dataset_study/stages/training/SEA_A/00_streams/SEA/training_seed_112/stream.parquet",
+        "sha256": "0ba13366107cfa4ac44b61dc0b697ebaeea09fc6c2fe50896cd286821a2753ca",
+        "role": "training"
+      },
+      "clean": "../00_streams/SEA/training_seed_112/stream.parquet",
+      "audit": "../audit/protected/SEA/seed_112/sample.parquet",
+      "audit_rows": 3000
+    }
+  },
+  "conditions": {
+    "SEA_A__s112__clean__none": {
+      "stream": "SEA_A",
+      "base_seed": 112,
+      "mode": "clean",
+      "level": "none",
+      "rows": 60000,
+      "classes": [
+        0,
+        1
+      ],
+      "benign_class": null,
+      "transition_intervals": [
+        [
+          14820,
+          15180
+        ],
+        [
+          29820,
+          30180
+        ],
+        [
+          44820,
+          45180
+        ]
+      ],
+      "supports_event_metrics": true,
+      "warmup_rows": 1000,
+      "key": "SEA_A__s112__clean__none",
+      "base_key": "SEA_A__s112",
+      "attack_seed": null,
+      "observations": "../00_streams/SEA/training_seed_112/stream.parquet",
+      "truth": "../audit/evaluator/SEA/clean/none/training_seed_112/attack_seed_None/truth.parquet",
+      "audit": "../audit/protected/SEA/seed_112/sample.parquet",
+      "attack": {
+        "stream": "SEA_A",
+        "base_seed": 112,
+        "rows": 60000,
+        "n_features": 3,
+        "classes": [
+          0,
+          1
+        ],
+        "benign_class": null,
+        "kind": "rapid_linear_mixture",
+        "transition_intervals": [
+          [
+            14820,
+            15180
+          ],
+          [
+            29820,
+            30180
+          ],
+          [
+            44820,
+            45180
+          ]
+        ],
+        "nominal_centers": [
+          15000,
+          30000,
+          45000
+        ],
+        "width": 360,
+        "event_reference": "global-index scheduled mixture intervals",
+        "supports_event_metrics": true,
+        "segment_boundaries": [
+          15000,
+          30000,
+          45000
+        ],
+        "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+        "feature_lineage": {
+          "f0": {
+            "source_column": "generator_feature_0",
+            "source": "River SEA"
+          },
+          "f1": {
+            "source_column": "generator_feature_1",
+            "source": "River SEA"
+          },
+          "f2": {
+            "source_column": "generator_feature_2",
+            "source": "River SEA"
+          }
+        },
+        "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+        "preprocessing": "none",
+        "warmup_rows": 1000,
+        "key": "SEA_A__s112__clean__none",
+        "path": "results/per_dataset_study/stages/training/SEA_A/00_streams/SEA/training_seed_112/stream.parquet",
+        "sha256": "0ba13366107cfa4ac44b61dc0b697ebaeea09fc6c2fe50896cd286821a2753ca",
+        "role": "training",
+        "base_key": "SEA_A__s112",
+        "mode": "clean",
+        "level": "none",
+        "attack_seed": null,
+        "truth_path": "results/per_dataset_study/stages/training/SEA_A/audit/evaluator/SEA/clean/none/training_seed_112/attack_seed_None/truth.parquet",
+        "truth_sha256": "67f6a8e4f60941df59d6c180a69182a93dd133f9d616978f5ba32caf2ff8345c",
+        "rng_seed": 4068653918,
+        "level_value": 0.0,
+        "burst_starts": [],
+        "burst_len": 250,
+        "burst_colocated": [],
+        "splice_sources": [],
+        "flip_target_map": {},
+        "n_flipped": 0,
+        "burst_rows": 0,
+        "actual_modified_fraction": 0.0,
+        "reference_access": "offline labelled clean archive, including future rows; no detector/model access",
+        "warmup_attack_free_rows": 1000,
+        "replacement_not_insertion": true
+      },
+      "source_observation_sha256": "0ba13366107cfa4ac44b61dc0b697ebaeea09fc6c2fe50896cd286821a2753ca"
+    },
+    "SEA_A__s112__instance__moderate": {
+      "stream": "SEA_A",
+      "base_seed": 112,
+      "mode": "instance",
+      "level": "moderate",
+      "rows": 60000,
+      "classes": [
+        0,
+        1
+      ],
+      "benign_class": null,
+      "transition_intervals": [
+        [
+          14820,
+          15180
+        ],
+        [
+          29820,
+          30180
+        ],
+        [
+          44820,
+          45180
+        ]
+      ],
+      "supports_event_metrics": true,
+      "warmup_rows": 1000,
+      "key": "SEA_A__s112__instance__moderate",
+      "base_key": "SEA_A__s112",
+      "attack_seed": 3901507815,
+      "observations": "SEA/instance/moderate/training_seed_112/attack_seed_3901507815/stream.parquet",
+      "truth": "../audit/evaluator/SEA/instance/moderate/training_seed_112/attack_seed_3901507815/truth.parquet",
+      "audit": "../audit/protected/SEA/seed_112/sample.parquet",
+      "attack": {
+        "stream": "SEA_A",
+        "base_seed": 112,
+        "rows": 60000,
+        "n_features": 3,
+        "classes": [
+          0,
+          1
+        ],
+        "benign_class": null,
+        "kind": "rapid_linear_mixture",
+        "transition_intervals": [
+          [
+            14820,
+            15180
+          ],
+          [
+            29820,
+            30180
+          ],
+          [
+            44820,
+            45180
+          ]
+        ],
+        "nominal_centers": [
+          15000,
+          30000,
+          45000
+        ],
+        "width": 360,
+        "event_reference": "global-index scheduled mixture intervals",
+        "supports_event_metrics": true,
+        "segment_boundaries": [
+          15000,
+          30000,
+          45000
+        ],
+        "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+        "feature_lineage": {
+          "f0": {
+            "source_column": "generator_feature_0",
+            "source": "River SEA"
+          },
+          "f1": {
+            "source_column": "generator_feature_1",
+            "source": "River SEA"
+          },
+          "f2": {
+            "source_column": "generator_feature_2",
+            "source": "River SEA"
+          }
+        },
+        "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+        "preprocessing": "none",
+        "warmup_rows": 1000,
+        "key": "SEA_A__s112__instance__moderate",
+        "path": "results/per_dataset_study/stages/training/SEA_A/01_attacks/SEA/instance/moderate/training_seed_112/attack_seed_3901507815/stream.parquet",
+        "sha256": "48ed0d9296381b440ee5881231a97a615c275624874d4a7f4879cbcfa473fb11",
+        "role": "training",
+        "base_key": "SEA_A__s112",
+        "mode": "instance",
+        "level": "moderate",
+        "attack_seed": 3901507815,
+        "truth_path": "results/per_dataset_study/stages/training/SEA_A/audit/evaluator/SEA/instance/moderate/training_seed_112/attack_seed_3901507815/truth.parquet",
+        "truth_sha256": "cb4f7d293974d9469a0abe214c2f181770c46973bd942f5df4677f28bcd917d1",
+        "rng_seed": 4188857590,
+        "level_value": 0.15,
+        "burst_starts": [],
+        "burst_len": 250,
+        "burst_colocated": [],
+        "splice_sources": [],
+        "flip_target_map": {
+          "0": 1,
+          "1": 0
+        },
+        "n_flipped": 9000,
+        "burst_rows": 0,
+        "actual_modified_fraction": 0.15,
+        "reference_access": "offline labelled clean archive, including future rows; no detector/model access",
+        "warmup_attack_free_rows": 1000,
+        "replacement_not_insertion": true
+      },
+      "source_observation_sha256": "48ed0d9296381b440ee5881231a97a615c275624874d4a7f4879cbcfa473fb11"
+    },
+    "SEA_A__s112__instance__severe": {
+      "stream": "SEA_A",
+      "base_seed": 112,
+      "mode": "instance",
+      "level": "severe",
+      "rows": 60000,
+      "classes": [
+        0,
+        1
+      ],
+      "benign_class": null,
+      "transition_intervals": [
+        [
+          14820,
+          15180
+        ],
+        [
+          29820,
+          30180
+        ],
+        [
+          44820,
+          45180
+        ]
+      ],
+      "supports_event_metrics": true,
+      "warmup_rows": 1000,
+      "key": "SEA_A__s112__instance__severe",
+      "base_key": "SEA_A__s112",
+      "attack_seed": 3702708315,
+      "observations": "SEA/instance/severe/training_seed_112/attack_seed_3702708315/stream.parquet",
+      "truth": "../audit/evaluator/SEA/instance/severe/training_seed_112/attack_seed_3702708315/truth.parquet",
+      "audit": "../audit/protected/SEA/seed_112/sample.parquet",
+      "attack": {
+        "stream": "SEA_A",
+        "base_seed": 112,
+        "rows": 60000,
+        "n_features": 3,
+        "classes": [
+          0,
+          1
+        ],
+        "benign_class": null,
+        "kind": "rapid_linear_mixture",
+        "transition_intervals": [
+          [
+            14820,
+            15180
+          ],
+          [
+            29820,
+            30180
+          ],
+          [
+            44820,
+            45180
+          ]
+        ],
+        "nominal_centers": [
+          15000,
+          30000,
+          45000
+        ],
+        "width": 360,
+        "event_reference": "global-index scheduled mixture intervals",
+        "supports_event_metrics": true,
+        "segment_boundaries": [
+          15000,
+          30000,
+          45000
+        ],
+        "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+        "feature_lineage": {
+          "f0": {
+            "source_column": "generator_feature_0",
+            "source": "River SEA"
+          },
+          "f1": {
+            "source_column": "generator_feature_1",
+            "source": "River SEA"
+          },
+          "f2": {
+            "source_column": "generator_feature_2",
+            "source": "River SEA"
+          }
+        },
+        "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+        "preprocessing": "none",
+        "warmup_rows": 1000,
+        "key": "SEA_A__s112__instance__severe",
+        "path": "results/per_dataset_study/stages/training/SEA_A/01_attacks/SEA/instance/severe/training_seed_112/attack_seed_3702708315/stream.parquet",
+        "sha256": "4a0ee488eb0ce4275199ac856e92d6507294337d23967f8e2aa1657dad4631c3",
+        "role": "training",
+        "base_key": "SEA_A__s112",
+        "mode": "instance",
+        "level": "severe",
+        "attack_seed": 3702708315,
+        "truth_path": "results/per_dataset_study/stages/training/SEA_A/audit/evaluator/SEA/instance/severe/training_seed_112/attack_seed_3702708315/truth.parquet",
+        "truth_sha256": "fb570c911d35ce429dfa51a078e050088f6730e4bf0c823afd882d7e1ce44c69",
+        "rng_seed": 230950451,
+        "level_value": 0.25,
+        "burst_starts": [],
+        "burst_len": 250,
+        "burst_colocated": [],
+        "splice_sources": [],
+        "flip_target_map": {
+          "0": 1,
+          "1": 0
+        },
+        "n_flipped": 15000,
+        "burst_rows": 0,
+        "actual_modified_fraction": 0.25,
+        "reference_access": "offline labelled clean archive, including future rows; no detector/model access",
+        "warmup_attack_free_rows": 1000,
+        "replacement_not_insertion": true
+      },
+      "source_observation_sha256": "4a0ee488eb0ce4275199ac856e92d6507294337d23967f8e2aa1657dad4631c3"
+    },
+    "SEA_A__s112__concept__moderate": {
+      "stream": "SEA_A",
+      "base_seed": 112,
+      "mode": "concept",
+      "level": "moderate",
+      "rows": 60000,
+      "classes": [
+        0,
+        1
+      ],
+      "benign_class": null,
+      "transition_intervals": [
+        [
+          14820,
+          15180
+        ],
+        [
+          29820,
+          30180
+        ],
+        [
+          44820,
+          45180
+        ]
+      ],
+      "supports_event_metrics": true,
+      "warmup_rows": 1000,
+      "key": "SEA_A__s112__concept__moderate",
+      "base_key": "SEA_A__s112",
+      "attack_seed": 3892634147,
+      "observations": "SEA/concept/moderate/training_seed_112/attack_seed_3892634147/stream.parquet",
+      "truth": "../audit/evaluator/SEA/concept/moderate/training_seed_112/attack_seed_3892634147/truth.parquet",
+      "audit": "../audit/protected/SEA/seed_112/sample.parquet",
+      "attack": {
+        "stream": "SEA_A",
+        "base_seed": 112,
+        "rows": 60000,
+        "n_features": 3,
+        "classes": [
+          0,
+          1
+        ],
+        "benign_class": null,
+        "kind": "rapid_linear_mixture",
+        "transition_intervals": [
+          [
+            14820,
+            15180
+          ],
+          [
+            29820,
+            30180
+          ],
+          [
+            44820,
+            45180
+          ]
+        ],
+        "nominal_centers": [
+          15000,
+          30000,
+          45000
+        ],
+        "width": 360,
+        "event_reference": "global-index scheduled mixture intervals",
+        "supports_event_metrics": true,
+        "segment_boundaries": [
+          15000,
+          30000,
+          45000
+        ],
+        "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+        "feature_lineage": {
+          "f0": {
+            "source_column": "generator_feature_0",
+            "source": "River SEA"
+          },
+          "f1": {
+            "source_column": "generator_feature_1",
+            "source": "River SEA"
+          },
+          "f2": {
+            "source_column": "generator_feature_2",
+            "source": "River SEA"
+          }
+        },
+        "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+        "preprocessing": "none",
+        "warmup_rows": 1000,
+        "key": "SEA_A__s112__concept__moderate",
+        "path": "results/per_dataset_study/stages/training/SEA_A/01_attacks/SEA/concept/moderate/training_seed_112/attack_seed_3892634147/stream.parquet",
+        "sha256": "ac3b8abc50ffd0e15bf45fba3657f162320bac2069e9a780dd2034fb2cd3e7bc",
+        "role": "training",
+        "base_key": "SEA_A__s112",
+        "mode": "concept",
+        "level": "moderate",
+        "attack_seed": 3892634147,
+        "truth_path": "results/per_dataset_study/stages/training/SEA_A/audit/evaluator/SEA/concept/moderate/training_seed_112/attack_seed_3892634147/truth.parquet",
+        "truth_sha256": "848917574d10c2aa038065cb4961485db96eae53b52dc3fc9c115c1bbb20a45e",
+        "rng_seed": 2193907737,
+        "level_value": 0.15,
+        "burst_starts": [
+          1620,
+          2920,
+          4476,
+          11863,
+          12476,
+          12921,
+          14875,
+          15657,
+          16415,
+          17581,
+          22757,
+          23753,
+          25252,
+          26324,
+          26843,
+          29875,
+          31744,
+          32416,
+          36591,
+          36868,
+          37487,
+          39662,
+          40270,
+          42819,
+          43978,
+          44875,
+          45369,
+          47348,
+          48185,
+          48723,
+          51896,
+          52437,
+          52728,
+          53026,
+          53755,
+          57362
+        ],
+        "burst_len": 250,
+        "burst_colocated": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "splice_sources": [],
+        "flip_target_map": {},
+        "n_flipped": 0,
+        "burst_rows": 9000,
+        "actual_modified_fraction": 0.15,
+        "reference_access": "offline labelled clean archive, including future rows; no detector/model access",
+        "warmup_attack_free_rows": 1000,
+        "replacement_not_insertion": true
+      },
+      "source_observation_sha256": "ac3b8abc50ffd0e15bf45fba3657f162320bac2069e9a780dd2034fb2cd3e7bc"
+    },
+    "SEA_A__s112__concept__severe": {
+      "stream": "SEA_A",
+      "base_seed": 112,
+      "mode": "concept",
+      "level": "severe",
+      "rows": 60000,
+      "classes": [
+        0,
+        1
+      ],
+      "benign_class": null,
+      "transition_intervals": [
+        [
+          14820,
+          15180
+        ],
+        [
+          29820,
+          30180
+        ],
+        [
+          44820,
+          45180
+        ]
+      ],
+      "supports_event_metrics": true,
+      "warmup_rows": 1000,
+      "key": "SEA_A__s112__concept__severe",
+      "base_key": "SEA_A__s112",
+      "attack_seed": 360172572,
+      "observations": "SEA/concept/severe/training_seed_112/attack_seed_360172572/stream.parquet",
+      "truth": "../audit/evaluator/SEA/concept/severe/training_seed_112/attack_seed_360172572/truth.parquet",
+      "audit": "../audit/protected/SEA/seed_112/sample.parquet",
+      "attack": {
+        "stream": "SEA_A",
+        "base_seed": 112,
+        "rows": 60000,
+        "n_features": 3,
+        "classes": [
+          0,
+          1
+        ],
+        "benign_class": null,
+        "kind": "rapid_linear_mixture",
+        "transition_intervals": [
+          [
+            14820,
+            15180
+          ],
+          [
+            29820,
+            30180
+          ],
+          [
+            44820,
+            45180
+          ]
+        ],
+        "nominal_centers": [
+          15000,
+          30000,
+          45000
+        ],
+        "width": 360,
+        "event_reference": "global-index scheduled mixture intervals",
+        "supports_event_metrics": true,
+        "segment_boundaries": [
+          15000,
+          30000,
+          45000
+        ],
+        "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+        "feature_lineage": {
+          "f0": {
+            "source_column": "generator_feature_0",
+            "source": "River SEA"
+          },
+          "f1": {
+            "source_column": "generator_feature_1",
+            "source": "River SEA"
+          },
+          "f2": {
+            "source_column": "generator_feature_2",
+            "source": "River SEA"
+          }
+        },
+        "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+        "preprocessing": "none",
+        "warmup_rows": 1000,
+        "key": "SEA_A__s112__concept__severe",
+        "path": "results/per_dataset_study/stages/training/SEA_A/01_attacks/SEA/concept/severe/training_seed_112/attack_seed_360172572/stream.parquet",
+        "sha256": "550c5e6ff3ecf16e4cae20d7b37cfb72600e66c7bbe65b70839c14afdae1805d",
+        "role": "training",
+        "base_key": "SEA_A__s112",
+        "mode": "concept",
+        "level": "severe",
+        "attack_seed": 360172572,
+        "truth_path": "results/per_dataset_study/stages/training/SEA_A/audit/evaluator/SEA/concept/severe/training_seed_112/attack_seed_360172572/truth.parquet",
+        "truth_sha256": "8af452de9429fa7664feed2cfaeb506d6b2d955dc022b0f92fba4afa513471fa",
+        "rng_seed": 1580936239,
+        "level_value": 0.25,
+        "burst_starts": [
+          2126,
+          2973,
+          3714,
+          4024,
+          4719,
+          7284,
+          7671,
+          8240,
+          9137,
+          10047,
+          10776,
+          12137,
+          12637,
+          13500,
+          14875,
+          15266,
+          15768,
+          16416,
+          17581,
+          18382,
+          18828,
+          19793,
+          23273,
+          24799,
+          27515,
+          28271,
+          28670,
+          29875,
+          30339,
+          30653,
+          31506,
+          32308,
+          33607,
+          34491,
+          36641,
+          37105,
+          37882,
+          39022,
+          39595,
+          40039,
+          40323,
+          42039,
+          43775,
+          44334,
+          44875,
+          46319,
+          48088,
+          48882,
+          49208,
+          50083,
+          52128,
+          52580,
+          54206,
+          54556,
+          55151,
+          55730,
+          56758,
+          57854,
+          59077,
+          59430
+        ],
+        "burst_len": 250,
+        "burst_colocated": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "splice_sources": [],
+        "flip_target_map": {},
+        "n_flipped": 0,
+        "burst_rows": 15000,
+        "actual_modified_fraction": 0.25,
+        "reference_access": "offline labelled clean archive, including future rows; no detector/model access",
+        "warmup_attack_free_rows": 1000,
+        "replacement_not_insertion": true
+      },
+      "source_observation_sha256": "550c5e6ff3ecf16e4cae20d7b37cfb72600e66c7bbe65b70839c14afdae1805d"
+    },
+    "SEA_A__s112__splice__moderate": {
+      "stream": "SEA_A",
+      "base_seed": 112,
+      "mode": "splice",
+      "level": "moderate",
+      "rows": 60000,
+      "classes": [
+        0,
+        1
+      ],
+      "benign_class": null,
+      "transition_intervals": [
+        [
+          14820,
+          15180
+        ],
+        [
+          29820,
+          30180
+        ],
+        [
+          44820,
+          45180
+        ]
+      ],
+      "supports_event_metrics": true,
+      "warmup_rows": 1000,
+      "key": "SEA_A__s112__splice__moderate",
+      "base_key": "SEA_A__s112",
+      "attack_seed": 929844026,
+      "observations": "SEA/splice/moderate/training_seed_112/attack_seed_929844026/stream.parquet",
+      "truth": "../audit/evaluator/SEA/splice/moderate/training_seed_112/attack_seed_929844026/truth.parquet",
+      "audit": "../audit/protected/SEA/seed_112/sample.parquet",
+      "attack": {
+        "stream": "SEA_A",
+        "base_seed": 112,
+        "rows": 60000,
+        "n_features": 3,
+        "classes": [
+          0,
+          1
+        ],
+        "benign_class": null,
+        "kind": "rapid_linear_mixture",
+        "transition_intervals": [
+          [
+            14820,
+            15180
+          ],
+          [
+            29820,
+            30180
+          ],
+          [
+            44820,
+            45180
+          ]
+        ],
+        "nominal_centers": [
+          15000,
+          30000,
+          45000
+        ],
+        "width": 360,
+        "event_reference": "global-index scheduled mixture intervals",
+        "supports_event_metrics": true,
+        "segment_boundaries": [
+          15000,
+          30000,
+          45000
+        ],
+        "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+        "feature_lineage": {
+          "f0": {
+            "source_column": "generator_feature_0",
+            "source": "River SEA"
+          },
+          "f1": {
+            "source_column": "generator_feature_1",
+            "source": "River SEA"
+          },
+          "f2": {
+            "source_column": "generator_feature_2",
+            "source": "River SEA"
+          }
+        },
+        "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+        "preprocessing": "none",
+        "warmup_rows": 1000,
+        "key": "SEA_A__s112__splice__moderate",
+        "path": "results/per_dataset_study/stages/training/SEA_A/01_attacks/SEA/splice/moderate/training_seed_112/attack_seed_929844026/stream.parquet",
+        "sha256": "72cc558c15570b42a529bc5c4d14af1f472ab3e7dc2ad2a504db56864dec2e4e",
+        "role": "training",
+        "base_key": "SEA_A__s112",
+        "mode": "splice",
+        "level": "moderate",
+        "attack_seed": 929844026,
+        "truth_path": "results/per_dataset_study/stages/training/SEA_A/audit/evaluator/SEA/splice/moderate/training_seed_112/attack_seed_929844026/truth.parquet",
+        "truth_sha256": "d9789d1374b9befbeb31639713abd2f57584194ac57f9d94ce2576004c686c10",
+        "rng_seed": 272384631,
+        "level_value": 0.15,
+        "burst_starts": [
+          4320,
+          4600,
+          10445,
+          12279,
+          14875,
+          17177,
+          18090,
+          19974,
+          22518,
+          23002,
+          24935,
+          25373,
+          25674,
+          26066,
+          27941,
+          29875,
+          31260,
+          31874,
+          33896,
+          36686,
+          37001,
+          37494,
+          38096,
+          40481,
+          41523,
+          42358,
+          42618,
+          44875,
+          46407,
+          47174,
+          47722,
+          50012,
+          52421,
+          53164,
+          56822,
+          57964
+        ],
+        "burst_len": 250,
+        "burst_colocated": [
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "splice_sources": [
+          {
+            "dest": 4320,
+            "src": 56947,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 4600,
+            "src": 50170,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 10445,
+            "src": 54167,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 12279,
+            "src": 51718,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 14875,
+            "src": 32655,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 17177,
+            "src": 56529,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 1,
+            "future_reference": true
+          },
+          {
+            "dest": 18090,
+            "src": 33255,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 1,
+            "future_reference": true
+          },
+          {
+            "dest": 19974,
+            "src": 3241,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 1,
+            "future_reference": false
+          },
+          {
+            "dest": 22518,
+            "src": 43526,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 1,
+            "future_reference": true
+          },
+          {
+            "dest": 23002,
+            "src": 13999,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 1,
+            "future_reference": false
+          },
+          {
+            "dest": 24935,
+            "src": 30201,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 1,
+            "future_reference": true
+          },
+          {
+            "dest": 25373,
+            "src": 40807,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 1,
+            "future_reference": true
+          },
+          {
+            "dest": 25674,
+            "src": 42991,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 1,
+            "future_reference": true
+          },
+          {
+            "dest": 26066,
+            "src": 41925,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 1,
+            "future_reference": true
+          },
+          {
+            "dest": 27941,
+            "src": 45526,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 1,
+            "future_reference": true
+          },
+          {
+            "dest": 29875,
+            "src": 48849,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 1,
+            "future_reference": true
+          },
+          {
+            "dest": 31260,
+            "src": 55444,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 2,
+            "future_reference": true
+          },
+          {
+            "dest": 31874,
+            "src": 8468,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 2,
+            "future_reference": false
+          },
+          {
+            "dest": 33896,
+            "src": 56356,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 2,
+            "future_reference": true
+          },
+          {
+            "dest": 36686,
+            "src": 5262,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 2,
+            "future_reference": false
+          },
+          {
+            "dest": 37001,
+            "src": 54433,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 2,
+            "future_reference": true
+          },
+          {
+            "dest": 37494,
+            "src": 26078,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 2,
+            "future_reference": false
+          },
+          {
+            "dest": 38096,
+            "src": 55266,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 2,
+            "future_reference": true
+          },
+          {
+            "dest": 40481,
+            "src": 57352,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 2,
+            "future_reference": true
+          },
+          {
+            "dest": 41523,
+            "src": 46766,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 2,
+            "future_reference": true
+          },
+          {
+            "dest": 42358,
+            "src": 22776,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 2,
+            "future_reference": false
+          },
+          {
+            "dest": 42618,
+            "src": 1151,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 2,
+            "future_reference": false
+          },
+          {
+            "dest": 44875,
+            "src": 3352,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 2,
+            "future_reference": false
+          },
+          {
+            "dest": 46407,
+            "src": 26562,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 47174,
+            "src": 37223,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 47722,
+            "src": 24177,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 50012,
+            "src": 40534,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 52421,
+            "src": 39769,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 53164,
+            "src": 19761,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 56822,
+            "src": 4547,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 57964,
+            "src": 39765,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 3,
+            "future_reference": false
+          }
+        ],
+        "flip_target_map": {},
+        "n_flipped": 0,
+        "burst_rows": 9000,
+        "actual_modified_fraction": 0.15,
+        "reference_access": "offline labelled clean archive, including future rows; no detector/model access",
+        "warmup_attack_free_rows": 1000,
+        "replacement_not_insertion": true
+      },
+      "source_observation_sha256": "72cc558c15570b42a529bc5c4d14af1f472ab3e7dc2ad2a504db56864dec2e4e"
+    },
+    "SEA_A__s112__splice__severe": {
+      "stream": "SEA_A",
+      "base_seed": 112,
+      "mode": "splice",
+      "level": "severe",
+      "rows": 60000,
+      "classes": [
+        0,
+        1
+      ],
+      "benign_class": null,
+      "transition_intervals": [
+        [
+          14820,
+          15180
+        ],
+        [
+          29820,
+          30180
+        ],
+        [
+          44820,
+          45180
+        ]
+      ],
+      "supports_event_metrics": true,
+      "warmup_rows": 1000,
+      "key": "SEA_A__s112__splice__severe",
+      "base_key": "SEA_A__s112",
+      "attack_seed": 712648499,
+      "observations": "SEA/splice/severe/training_seed_112/attack_seed_712648499/stream.parquet",
+      "truth": "../audit/evaluator/SEA/splice/severe/training_seed_112/attack_seed_712648499/truth.parquet",
+      "audit": "../audit/protected/SEA/seed_112/sample.parquet",
+      "attack": {
+        "stream": "SEA_A",
+        "base_seed": 112,
+        "rows": 60000,
+        "n_features": 3,
+        "classes": [
+          0,
+          1
+        ],
+        "benign_class": null,
+        "kind": "rapid_linear_mixture",
+        "transition_intervals": [
+          [
+            14820,
+            15180
+          ],
+          [
+            29820,
+            30180
+          ],
+          [
+            44820,
+            45180
+          ]
+        ],
+        "nominal_centers": [
+          15000,
+          30000,
+          45000
+        ],
+        "width": 360,
+        "event_reference": "global-index scheduled mixture intervals",
+        "supports_event_metrics": true,
+        "segment_boundaries": [
+          15000,
+          30000,
+          45000
+        ],
+        "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+        "feature_lineage": {
+          "f0": {
+            "source_column": "generator_feature_0",
+            "source": "River SEA"
+          },
+          "f1": {
+            "source_column": "generator_feature_1",
+            "source": "River SEA"
+          },
+          "f2": {
+            "source_column": "generator_feature_2",
+            "source": "River SEA"
+          }
+        },
+        "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+        "preprocessing": "none",
+        "warmup_rows": 1000,
+        "key": "SEA_A__s112__splice__severe",
+        "path": "results/per_dataset_study/stages/training/SEA_A/01_attacks/SEA/splice/severe/training_seed_112/attack_seed_712648499/stream.parquet",
+        "sha256": "b6ea410020b7a5fb613d35b5165dadf64fb865a8940c52b29c91944bcc891916",
+        "role": "training",
+        "base_key": "SEA_A__s112",
+        "mode": "splice",
+        "level": "severe",
+        "attack_seed": 712648499,
+        "truth_path": "results/per_dataset_study/stages/training/SEA_A/audit/evaluator/SEA/splice/severe/training_seed_112/attack_seed_712648499/truth.parquet",
+        "truth_sha256": "2894c2e9d7b292d124e184825d4f86bd4f4934d9bfcc8e3a393e954089c4fd44",
+        "rng_seed": 1659206494,
+        "level_value": 0.25,
+        "burst_starts": [
+          3181,
+          4814,
+          5943,
+          6983,
+          8999,
+          12081,
+          12721,
+          13860,
+          14875,
+          15358,
+          16624,
+          17629,
+          20153,
+          20889,
+          21489,
+          21832,
+          22535,
+          23699,
+          24887,
+          26283,
+          27019,
+          28446,
+          29102,
+          29357,
+          29875,
+          31726,
+          32605,
+          33389,
+          33923,
+          34259,
+          34856,
+          35913,
+          36193,
+          37172,
+          38629,
+          39112,
+          40444,
+          40820,
+          41196,
+          44435,
+          44875,
+          45413,
+          46384,
+          47042,
+          47775,
+          48139,
+          48578,
+          49242,
+          49734,
+          51011,
+          51677,
+          53258,
+          53773,
+          54765,
+          55500,
+          55834,
+          56084,
+          57846,
+          58117,
+          58719
+        ],
+        "burst_len": 250,
+        "burst_colocated": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "splice_sources": [
+          {
+            "dest": 3181,
+            "src": 33673,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 4814,
+            "src": 23537,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 5943,
+            "src": 22849,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 6983,
+            "src": 50354,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 8999,
+            "src": 20619,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 12081,
+            "src": 42705,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 12721,
+            "src": 49984,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 13860,
+            "src": 17728,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 14875,
+            "src": 15159,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 0,
+            "future_reference": true
+          },
+          {
+            "dest": 15358,
+            "src": 55299,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 1,
+            "future_reference": true
+          },
+          {
+            "dest": 16624,
+            "src": 2063,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 1,
+            "future_reference": false
+          },
+          {
+            "dest": 17629,
+            "src": 112,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 1,
+            "future_reference": false
+          },
+          {
+            "dest": 20153,
+            "src": 10468,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 1,
+            "future_reference": false
+          },
+          {
+            "dest": 20889,
+            "src": 9835,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 1,
+            "future_reference": false
+          },
+          {
+            "dest": 21489,
+            "src": 13309,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 1,
+            "future_reference": false
+          },
+          {
+            "dest": 21832,
+            "src": 59386,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 1,
+            "future_reference": true
+          },
+          {
+            "dest": 22535,
+            "src": 5523,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 1,
+            "future_reference": false
+          },
+          {
+            "dest": 23699,
+            "src": 51829,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 1,
+            "future_reference": true
+          },
+          {
+            "dest": 24887,
+            "src": 384,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 1,
+            "future_reference": false
+          },
+          {
+            "dest": 26283,
+            "src": 52051,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 1,
+            "future_reference": true
+          },
+          {
+            "dest": 27019,
+            "src": 45115,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 1,
+            "future_reference": true
+          },
+          {
+            "dest": 28446,
+            "src": 42149,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 1,
+            "future_reference": true
+          },
+          {
+            "dest": 29102,
+            "src": 52417,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 1,
+            "future_reference": true
+          },
+          {
+            "dest": 29357,
+            "src": 41154,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 1,
+            "future_reference": true
+          },
+          {
+            "dest": 29875,
+            "src": 36474,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 1,
+            "future_reference": true
+          },
+          {
+            "dest": 31726,
+            "src": 49203,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 2,
+            "future_reference": true
+          },
+          {
+            "dest": 32605,
+            "src": 49994,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 2,
+            "future_reference": true
+          },
+          {
+            "dest": 33389,
+            "src": 18044,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 2,
+            "future_reference": false
+          },
+          {
+            "dest": 33923,
+            "src": 56127,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 2,
+            "future_reference": true
+          },
+          {
+            "dest": 34259,
+            "src": 5341,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 2,
+            "future_reference": false
+          },
+          {
+            "dest": 34856,
+            "src": 53707,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 2,
+            "future_reference": true
+          },
+          {
+            "dest": 35913,
+            "src": 5291,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 2,
+            "future_reference": false
+          },
+          {
+            "dest": 36193,
+            "src": 22229,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 2,
+            "future_reference": false
+          },
+          {
+            "dest": 37172,
+            "src": 3541,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 2,
+            "future_reference": false
+          },
+          {
+            "dest": 38629,
+            "src": 17881,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 2,
+            "future_reference": false
+          },
+          {
+            "dest": 39112,
+            "src": 3680,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 2,
+            "future_reference": false
+          },
+          {
+            "dest": 40444,
+            "src": 8799,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 2,
+            "future_reference": false
+          },
+          {
+            "dest": 40820,
+            "src": 13965,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 2,
+            "future_reference": false
+          },
+          {
+            "dest": 41196,
+            "src": 13815,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 2,
+            "future_reference": false
+          },
+          {
+            "dest": 44435,
+            "src": 51120,
+            "length": 250,
+            "source_segment": 3,
+            "destination_segment": 2,
+            "future_reference": true
+          },
+          {
+            "dest": 44875,
+            "src": 18403,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 2,
+            "future_reference": false
+          },
+          {
+            "dest": 45413,
+            "src": 31730,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 46384,
+            "src": 25436,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 47042,
+            "src": 13232,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 47775,
+            "src": 13901,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 48139,
+            "src": 43766,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 48578,
+            "src": 9290,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 49242,
+            "src": 38888,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 49734,
+            "src": 40749,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 51011,
+            "src": 32581,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 51677,
+            "src": 7116,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 53258,
+            "src": 37505,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 53773,
+            "src": 7227,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 54765,
+            "src": 39806,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 55500,
+            "src": 43486,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 55834,
+            "src": 41253,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 56084,
+            "src": 21861,
+            "length": 250,
+            "source_segment": 1,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 57846,
+            "src": 31053,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 58117,
+            "src": 11902,
+            "length": 250,
+            "source_segment": 0,
+            "destination_segment": 3,
+            "future_reference": false
+          },
+          {
+            "dest": 58719,
+            "src": 42452,
+            "length": 250,
+            "source_segment": 2,
+            "destination_segment": 3,
+            "future_reference": false
+          }
+        ],
+        "flip_target_map": {},
+        "n_flipped": 0,
+        "burst_rows": 15000,
+        "actual_modified_fraction": 0.25,
+        "reference_access": "offline labelled clean archive, including future rows; no detector/model access",
+        "warmup_attack_free_rows": 1000,
+        "replacement_not_insertion": true
+      },
+      "source_observation_sha256": "b6ea410020b7a5fb613d35b5165dadf64fb865a8940c52b29c91944bcc891916"
+    }
+  },
+  "outputs": {
+    "../00_streams/SEA/training_seed_112/stream.parquet": "0ba13366107cfa4ac44b61dc0b697ebaeea09fc6c2fe50896cd286821a2753ca",
+    "../audit/protected/SEA/seed_112/sample.parquet": "2835952c430ab104425c563c0a0997a74cbcb7746b2a1d31e7681bff3b4e5ae0",
+    "../audit/evaluator/SEA/clean/none/training_seed_112/attack_seed_None/truth.parquet": "67f6a8e4f60941df59d6c180a69182a93dd133f9d616978f5ba32caf2ff8345c",
+    "SEA/instance/moderate/training_seed_112/attack_seed_3901507815/stream.parquet": "48ed0d9296381b440ee5881231a97a615c275624874d4a7f4879cbcfa473fb11",
+    "../audit/evaluator/SEA/instance/moderate/training_seed_112/attack_seed_3901507815/truth.parquet": "cb4f7d293974d9469a0abe214c2f181770c46973bd942f5df4677f28bcd917d1",
+    "SEA/instance/severe/training_seed_112/attack_seed_3702708315/stream.parquet": "4a0ee488eb0ce4275199ac856e92d6507294337d23967f8e2aa1657dad4631c3",
+    "../audit/evaluator/SEA/instance/severe/training_seed_112/attack_seed_3702708315/truth.parquet": "fb570c911d35ce429dfa51a078e050088f6730e4bf0c823afd882d7e1ce44c69",
+    "SEA/concept/moderate/training_seed_112/attack_seed_3892634147/stream.parquet": "ac3b8abc50ffd0e15bf45fba3657f162320bac2069e9a780dd2034fb2cd3e7bc",
+    "../audit/evaluator/SEA/concept/moderate/training_seed_112/attack_seed_3892634147/truth.parquet": "848917574d10c2aa038065cb4961485db96eae53b52dc3fc9c115c1bbb20a45e",
+    "SEA/concept/severe/training_seed_112/attack_seed_360172572/stream.parquet": "550c5e6ff3ecf16e4cae20d7b37cfb72600e66c7bbe65b70839c14afdae1805d",
+    "../audit/evaluator/SEA/concept/severe/training_seed_112/attack_seed_360172572/truth.parquet": "8af452de9429fa7664feed2cfaeb506d6b2d955dc022b0f92fba4afa513471fa",
+    "SEA/splice/moderate/training_seed_112/attack_seed_929844026/stream.parquet": "72cc558c15570b42a529bc5c4d14af1f472ab3e7dc2ad2a504db56864dec2e4e",
+    "../audit/evaluator/SEA/splice/moderate/training_seed_112/attack_seed_929844026/truth.parquet": "d9789d1374b9befbeb31639713abd2f57584194ac57f9d94ce2576004c686c10",
+    "SEA/splice/severe/training_seed_112/attack_seed_712648499/stream.parquet": "b6ea410020b7a5fb613d35b5165dadf64fb865a8940c52b29c91944bcc891916",
+    "../audit/evaluator/SEA/splice/severe/training_seed_112/attack_seed_712648499/truth.parquet": "2894c2e9d7b292d124e184825d4f86bd4f4934d9bfcc8e3a393e954089c4fd44"
+  },
+  "audit_assumption": {
+    "fraction": 0.05,
+    "seed": 517,
+    "delay_blocks": 1,
+    "window_blocks": 1,
+    "source": "simulated protected original-observation channel; never training or final test data"
+  },
+  "dataset": "SEA_A",
+  "data_role": "training"
+}

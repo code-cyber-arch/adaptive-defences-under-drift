@@ -1,0 +1,66 @@
+{
+  "stream": "SEA_A",
+  "base_seed": 0,
+  "rows": 250000,
+  "n_features": 3,
+  "classes": [
+    0,
+    1
+  ],
+  "benign_class": null,
+  "kind": "rapid_linear_mixture",
+  "transition_intervals": [
+    [
+      61750,
+      63250
+    ],
+    [
+      124250,
+      125750
+    ],
+    [
+      186750,
+      188250
+    ]
+  ],
+  "nominal_centers": [
+    62500,
+    125000,
+    187500
+  ],
+  "width": 1500,
+  "event_reference": "global-index scheduled mixture intervals",
+  "supports_event_metrics": true,
+  "segment_boundaries": [
+    62500,
+    125000,
+    187500
+  ],
+  "replay_segment_reference": "nominal mixture centers; segments need not be pure concepts",
+  "feature_lineage": {
+    "f0": {
+      "source_column": "generator_feature_0",
+      "source": "River SEA"
+    },
+    "f1": {
+      "source_column": "generator_feature_1",
+      "source": "River SEA"
+    },
+    "f2": {
+      "source_column": "generator_feature_2",
+      "source": "River SEA"
+    }
+  },
+  "generation": "Adjacent fixed components mixed with linear probability using global zero-based row index; no nested local clocks",
+  "preprocessing": "none",
+  "warmup_rows": 1000,
+  "key": "SEA_A__base_s0",
+  "sha256": "752df5e37002bfe9e6b2beb4186134d46220f339601a4c28da35da561eb827bc",
+  "truth_sha256": "42bd83e207239e21adc06935ea7bc7000ea56cc97526a359bb5b36a541475348",
+  "class_counts": {
+    "1": 157722,
+    "0": 92278
+  },
+  "path": "data/clean/SEA/seed_0/stream.parquet",
+  "truth_path": "data/evaluation_truth/SEA/stream_reference/seed_0/reference.parquet"
+}

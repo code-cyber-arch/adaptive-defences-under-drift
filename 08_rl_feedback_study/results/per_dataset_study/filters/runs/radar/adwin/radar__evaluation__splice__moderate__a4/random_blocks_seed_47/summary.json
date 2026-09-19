@@ -1,0 +1,143 @@
+{
+  "stream": "radar",
+  "mode": "splice",
+  "level": "moderate",
+  "base_seed": null,
+  "attack_seed": 216158045,
+  "attack_assignment": 4,
+  "base_key": "radar__evaluation",
+  "condition": "radar__evaluation__splice__moderate__a4",
+  "filter_rows_withheld": 78850,
+  "rows": 144753,
+  "training_visits": 58665,
+  "accepted_training_visits": 52965,
+  "accepted_refit_rows": 0,
+  "resets": 0,
+  "seconds": 31.261196791019756,
+  "pending_candidate": true,
+  "audit_rows_reserved": 7238,
+  "policy": "confirmed",
+  "guarded": true,
+  "host_n": 64134,
+  "host_accuracy": 0.7883338011039386,
+  "host_macro_f1": 0.3029376966626103,
+  "poison_rows": 20451,
+  "poison_rows_admitted": 7586,
+  "poison_admission_rate": 0.37093540658158525,
+  "clean_rows": 116114,
+  "clean_rows_withheld": 71685,
+  "clean_withhold_rate": 0.6173674147820246,
+  "malicious_recall": 0.4984142880988149,
+  "benign_fpr": 0.1277036355269213,
+  "filter_poison_recall": 0.596743435528825,
+  "filter_legitimate_rejection": 0.573970408391753,
+  "detector": "adwin",
+  "filter": "random_blocks",
+  "filter_seed": 47,
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "radar__evaluation__splice__moderate__a4",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "radar"
+      ],
+      "rows": 144753,
+      "base_seeds": [],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "radar",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "1cf79721eb255ce711d94c7970709dc41baa39c3d48b2bb397d8bd882ca33dd8",
+      "audit": "6ad944c969986605d69ed6e46a206c6852a61cf81bce465e8a4c4b44a2f6b0e9",
+      "truth": "9b80668257ac2f06d5948d931aa13950dd8e91fb38e3fa7ddbbec5fc9c83f7d0"
+    },
+    "detector": "adwin",
+    "filter": "random_blocks",
+    "filter_seed": 47,
+    "profile_sha256": "65e5cdcb1a52a7237d8fb3ec27ef549a1ea43682e5c3efe6171377e923c7b19e"
+  },
+  "reused": null,
+  "files": {
+    "predictions.parquet": "2b165b444e0f659f307fdd0638079858abd8b6294586c4fd5d1fbd1f0365070e",
+    "events.parquet": "56eaa729a61067d2472e782fc0741f3e3135b9d3354f1cc4f7e9cf6347d0e5b1"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/filters/runs/radar/adwin/radar__evaluation__splice__moderate__a4/random_blocks_seed_47"
+}

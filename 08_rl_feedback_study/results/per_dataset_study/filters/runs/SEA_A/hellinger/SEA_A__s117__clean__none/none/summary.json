@@ -1,0 +1,146 @@
+{
+  "stream": "SEA_A",
+  "mode": "clean",
+  "level": "none",
+  "base_seed": 117,
+  "attack_seed": null,
+  "attack_assignment": null,
+  "base_key": "SEA_A__s117",
+  "condition": "SEA_A__s117__clean__none",
+  "resets": 0,
+  "training_visits": 57000,
+  "seconds": 0.9059867079922697,
+  "host_n": 56050,
+  "host_accuracy": 0.9093309545049063,
+  "host_macro_f1": 0.9005996193617851,
+  "poison_rows": 0,
+  "poison_rows_admitted": 0,
+  "poison_admission_rate": null,
+  "clean_rows": 56050,
+  "clean_rows_withheld": 13300,
+  "clean_withhold_rate": 0.23728813559322035,
+  "malicious_recall": null,
+  "benign_fpr": null,
+  "filter_poison_recall": null,
+  "filter_legitimate_rejection": 0.0,
+  "detector": "hellinger",
+  "filter": "none",
+  "filter_seed": null,
+  "policy": "confirmed",
+  "guarded": true,
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "SEA_A__s117__clean__none",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "SEA_A"
+      ],
+      "rows": 60000,
+      "base_seeds": [
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "SEA_A",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "7c0f2484c6a69843fec1220c27cb8289df1148278c2b50eca735836a62314526",
+      "audit": "88d85ee2193517a13a5fe3ec628148ff003cc6039bc568ee4a21399bc13bb8ff",
+      "truth": "53c09686c89306cf2d011ebf283306f117bb045c43a8b99c21fe94ccc9249179"
+    },
+    "detector": "hellinger",
+    "filter": "none",
+    "filter_seed": null,
+    "profile_sha256": "45d0480006044f87d4c810dea74e4740cf006ef0d7d033a72d02f70125dcda84"
+  },
+  "reused": {
+    "summary": "results/per_dataset_study/fixed_responses/runs/SEA_A/hellinger/SEA_A__s117__clean__none/confirmed_screened/summary.json",
+    "sha256": "12fe7a33ab938c2b4195d41ce7a6daf3fef54305002e173dfe22f77eec840288"
+  },
+  "files": {
+    "predictions.parquet": "2ab4fe4e4c2b2bf0a54ef6adede338ce225a3c8d73e15bb64670d2ff4cbd1c7f",
+    "events.parquet": "b94e46042df2c5ef6f673a197655f26291e35985b0e178d2191dc39eb6dc8c80"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/filters/runs/SEA_A/hellinger/SEA_A__s117__clean__none/none"
+}

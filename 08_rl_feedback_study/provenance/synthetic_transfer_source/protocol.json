@@ -1,0 +1,106 @@
+{
+  "spec": {
+    "name": "rl_feedback_study",
+    "rows": 60000,
+    "validation_seeds": [
+      114
+    ],
+    "evaluation_seeds": [
+      115,
+      116,
+      117
+    ],
+    "pilot_seed": 9917,
+    "streams": [
+      "SEA_A",
+      "RBF_I"
+    ],
+    "rl_seeds": [
+      7,
+      17,
+      27
+    ],
+    "feedback_fractions": [
+      0.01,
+      0.02,
+      0.05
+    ],
+    "feedback_delays": [
+      1,
+      5
+    ],
+    "sensitivity_conditions": [
+      [
+        "clean",
+        "none"
+      ],
+      [
+        "instance",
+        "severe"
+      ]
+    ],
+    "reserved_fraction": 0.05,
+    "selection_metric": "mean_host_macro_f1",
+    "selection_tiebreak": [
+      "mean_resets",
+      "policy_id"
+    ],
+    "scope": "Matched detector-specific training and evaluation on synthetic streams; existing RQ1 and RQ2",
+    "detectors": [
+      "adwin",
+      "hddm_w",
+      "hellinger",
+      "d3_oof"
+    ],
+    "training_seeds": [
+      112
+    ],
+    "training_epochs": 4
+  },
+  "sources": {
+    "common/__init__.py": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+    "common/channels.py": "ac721119e5f3eb9b1c1154d22af4a7d6ca4f8c49e0899b567cc16c3f4b036098",
+    "common/generation.py": "df64ff01aa6566f40cd8e0152dcaea1d971dedd72acbc9ef42dda4e8ebe8e6d9",
+    "common/protocol.py": "f4cf5c15c3b9f4ec6b7c07515bc57bcf8415449396fadc3b803b39c8751f74f2",
+    "common/validation.py": "7060d47dbada3fde77afb8db61740a78487b7131ed347c260f9d45db5b6fea84",
+    "tools/compile_document.py": "f4d8f040c72db232d51f08affe14c448ba3baa31698582310a7503106861f40e",
+    "tools/run_experiment.py": "2205abb5a32accfdf23952f38f581067fc11fc1b69d95c97086f8b4bf3079c7b",
+    "tools/run_thesis.py": "08e7a0ac25d4ed906abeefb945322e2960a9265340e61087797b42bf28f0b168",
+    "tools/verify_experiment.py": "e69a780b7b2578f04a14addb3a5fea6bbe46387487701b6ad0970e793097697f",
+    "00_streams/build.py": "f9e2461504d083515d685f44f8e8ef3335d13cd9df44f9ffda9c9217b413230d",
+    "01_attacks/interventions.py": "1683af3503710331335cb18eb7ddde5c31673f9b457391e9bcdbc40a9027f2a4",
+    "01_attacks/prepare.py": "1589397ba451cc97e9b7a347c69c2f7dd7474f2fb2a678649adc6c000e89d031",
+    "02_detectors/detectors.py": "533b6b615d7dc20f3bb998ea7b795a963adcb1d79cb274caa811bf107dfc5a52",
+    "02_detectors/monitors.py": "dd6855b6547403681f51a96dc54167c98d05bae76dbfe44ad5ea8f85d4d438f7",
+    "03_policies/gate.py": "91120520d1383288c617d1ce5fdcfddbcb0a2a8f4bee9c288b5a2da232c0b578",
+    "04_rl_training/controller.py": "b6bc661feacd5dddecc67111499a8615715f84d349a0432f2a8fd22b5b1f6041",
+    "04_rl_training/train.py": "a20aaf499b133c86c6604c9b65be385f6470f5e0db53fb7a7474eb042fe877f0",
+    "05_experiment/engine.py": "2b3987c12a20f62ed8bdf8845aff58840252bfa2b22bf8af11efd29688439242",
+    "05_experiment/policy_robustness.py": "42e7af73f96b8510a9b72521364fe4edd7467cb78c953d5d95edd6992d7ab849",
+    "05_experiment/run_grid.py": "7f5d667d6234e18876df5833eee12317cabbea4c1c0cd996a74e27c0ca898192",
+    "06_analysis/analyse.py": "b474dc59e842f63a34d1f378fdc87c8df06b98c9e062bec1647b4c191d4788c9",
+    "06_analysis/figures.py": "058e270de55b4d1684e1d5c1989a6c5dc29d42e8593ed80c5599ab9061c976ca",
+    "06_analysis/policy_robustness.py": "27b13d1f38cc53c13c2a3d626c0a1f6030c2862648489f180feb64869f67165b",
+    "07_documentation/build.py": "6997c1c75a0a6dad5e003c4bd17fbfafe4987db64f1380f8f920ff5f7389ccaf",
+    "requirements.txt": "17a8e59c2a8fb3e384ac852c4a229207f9ec6ae2c3f31163a3bf170970aeecd7",
+    "requirements.lock.txt": "26bce125f3482cbd12a0b3c7f138cdd87217fdd7ce0bb7181c786328968b7e30",
+    "scripts/run_research.py": "96ce9ce28537ddeb6242f287e0082ddf7290d0e34c131d0f8b3b7c933bb21277",
+    "scripts/run_study.py": "4a4375e34b09bff2d87deaf9d541bdd2a23e4925cca25c3a36fe0c47cc86295f",
+    "scripts/verify_evidence.py": "f4f9c5c1753975726f58abe4d22904589a9e049e210b0f952be64a0e61eb35c5",
+    "scripts/restore_artifacts.py": "ead3c0d52d47c332ffe4b554af1d89befcb63ee1ff3ca52184508eefa19b731a",
+    "scripts/check_repository.py": "c8e7612b636e3afbf8194c6d2793928211c0510fd8c476971472712f0a624dda",
+    "scripts/create_run.py": "7273c4d5575804bd2685f30c82980e1f7351844b04890e96f63fded7772d16de"
+  },
+  "environment": {
+    "python": "3.14.7",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "packages": {
+      "river": "0.25.0",
+      "numpy": "2.4.6",
+      "pandas": "3.0.5",
+      "pyarrow": "25.0.0",
+      "scikit-learn": "1.9.0",
+      "matplotlib": "3.11.1"
+    }
+  }
+}

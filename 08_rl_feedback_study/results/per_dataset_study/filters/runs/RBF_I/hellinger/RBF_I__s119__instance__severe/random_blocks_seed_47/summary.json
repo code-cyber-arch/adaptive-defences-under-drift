@@ -1,0 +1,149 @@
+{
+  "stream": "RBF_I",
+  "mode": "instance",
+  "level": "severe",
+  "base_seed": 119,
+  "attack_seed": 80988754,
+  "attack_assignment": null,
+  "base_key": "RBF_I__s119",
+  "condition": "RBF_I__s119__instance__severe",
+  "filter_rows_withheld": 56050,
+  "rows": 60000,
+  "training_visits": 950,
+  "accepted_training_visits": 950,
+  "accepted_refit_rows": 0,
+  "resets": 0,
+  "seconds": 1.179196667013457,
+  "pending_candidate": false,
+  "audit_rows_reserved": 3000,
+  "policy": "confirmed",
+  "guarded": true,
+  "host_n": 56050,
+  "host_accuracy": 0.34497769848349685,
+  "host_macro_f1": 0.31899239668695933,
+  "poison_rows": 14216,
+  "poison_rows_admitted": 0,
+  "poison_admission_rate": 0.0,
+  "clean_rows": 41834,
+  "clean_rows_withheld": 41834,
+  "clean_withhold_rate": 1.0,
+  "malicious_recall": null,
+  "benign_fpr": null,
+  "filter_poison_recall": 1.0,
+  "filter_legitimate_rejection": 1.0,
+  "detector": "hellinger",
+  "filter": "random_blocks",
+  "filter_seed": 47,
+  "contract": {
+    "protocol_sha256": "27f6ed3ccd8475b3a2e243a5f78064efb6fb5df92cb04ef033b6b1dc1310fc40",
+    "condition": "RBF_I__s119__instance__severe",
+    "config": {
+      "name": "evaluation",
+      "purpose": "Compare screened fixed policies and two frozen RL state representations on a reused benchmark",
+      "streams": [
+        "RBF_I"
+      ],
+      "rows": 60000,
+      "base_seeds": [
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "block_size": 1000,
+      "warmup_rows": 1000,
+      "attack_seed": 200,
+      "attack_modes": [
+        "instance",
+        "concept",
+        "splice"
+      ],
+      "levels": {
+        "moderate": 0.15,
+        "severe": 0.25
+      },
+      "audit": {
+        "fraction": 0.05,
+        "seed": 517,
+        "delay_blocks": 1,
+        "window_blocks": 1,
+        "source": "simulated protected original-observation channel; never training or final test data"
+      },
+      "detector": {
+        "name": "ADWIN",
+        "delta": 0.002
+      },
+      "response": {
+        "history": 5,
+        "wait": 2,
+        "margin": 0.02
+      },
+      "gate": {
+        "metric": "accuracy",
+        "rule": "candidate accuracy must be at least active accuracy on the previous protected sample"
+      },
+      "radar_rows": 484753,
+      "detectors": [
+        "adwin",
+        "hddm_w",
+        "hellinger",
+        "d3_oof"
+      ],
+      "rl": {
+        "seeds": [
+          7,
+          17,
+          27,
+          37,
+          47
+        ],
+        "epochs": 4,
+        "learning_rate": 0.1,
+        "discount": 0.9,
+        "epsilon": 0.1,
+        "variants": [
+          "alarm",
+          "alarm_persistence"
+        ],
+        "persistence": {
+          "history": 5,
+          "recent": 2,
+          "margin": 0.02
+        }
+      },
+      "development": {
+        "training_seed": 112,
+        "validation_seed": 113,
+        "rows": 60000
+      },
+      "data_role": "evaluation",
+      "dataset": "RBF_I",
+      "persist_inputs": false,
+      "radar_embargo_blocks": 1,
+      "radar_attack_assignments": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "inputs": {
+      "observations": "8701b0c1811f8c749498c235764aeeef8ec095191d436322b4534a2f215e7a7f",
+      "audit": "c4aa37ae6136283f6dbb4fe9d6645a836816e3524ac6f48b3c2d0b11cd7ee6fd",
+      "truth": "5d11b75489f573881428e316c2567a07cf35a819e78516ed771a724a60843f2f"
+    },
+    "detector": "hellinger",
+    "filter": "random_blocks",
+    "filter_seed": 47,
+    "profile_sha256": "bd2925fafd29786e8c0529003ea80cde4864175d91be2ea68da9be2e75acbd62"
+  },
+  "reused": null,
+  "files": {
+    "predictions.parquet": "4942e0649296076099bbe28d45542ab9387b60018696feecdc75ed9d3716c865",
+    "events.parquet": "2592955a06d71c2948a3d58da17453f6bf77f8cda7193e56c5da0676988dd80d"
+  },
+  "status": "complete",
+  "folder": "results/per_dataset_study/filters/runs/RBF_I/hellinger/RBF_I__s119__instance__severe/random_blocks_seed_47"
+}

@@ -1,0 +1,66 @@
+{
+  "algorithm": "tabular_q_learning",
+  "variant": "alarm",
+  "seed": 47,
+  "settings": {
+    "seeds": [
+      7,
+      17,
+      27,
+      37,
+      47
+    ],
+    "epochs": 4,
+    "learning_rate": 0.1,
+    "discount": 0.9,
+    "epsilon": 0.1,
+    "variants": [
+      "alarm",
+      "alarm_persistence"
+    ],
+    "persistence": {
+      "history": 5,
+      "recent": 2,
+      "margin": 0.02
+    },
+    "variant": "alarm"
+  },
+  "table": {
+    "0": [
+      7.023458102197127,
+      7.477909589529085
+    ],
+    "1": [
+      7.92785913973057,
+      3.3816700655842453
+    ]
+  },
+  "state_visits": {
+    "0": 6469,
+    "1": 279
+  },
+  "training_transitions": 6748,
+  "state_count": 2,
+  "actions": [
+    "update",
+    "reset"
+  ],
+  "detector": "hellinger",
+  "dataset": "radar",
+  "request_sha256": "1ba189615f9927f500934228b35b3e01f755fe37f0782ececddf600d49186cb7",
+  "training_base_seeds": [],
+  "training_conditions": [
+    "radar__training__clean__none__aNone",
+    "radar__training__instance__moderate__a0",
+    "radar__training__instance__severe__a0",
+    "radar__training__concept__moderate__a0",
+    "radar__training__concept__severe__a0",
+    "radar__training__splice__moderate__a0",
+    "radar__training__splice__severe__a0"
+  ],
+  "files": {
+    "episodes.csv": "84f7ad5eda8974028a2bba51470d5b81d55a3a05c207af6cf8c9fca6cb32f722",
+    "transitions.parquet": "ac64a3e598cab351030c434ab6cf8f204a3f828730d1e0367b10437bc70f5321",
+    "policy.csv": "b71d5a0bf81917a79af692185ba56730df6d8ac167d9fa6f7a48dd05486dd7c3"
+  }
+}
