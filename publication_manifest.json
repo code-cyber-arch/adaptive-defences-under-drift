@@ -1,6 +1,6 @@
 {
-  "version": "1.1.1",
-  "scope": "Public file identity at the authoritative root layout. Historical records are isolated under provenance.",
+  "version": "1.1.2",
+  "scope": "Public file identity; raw inputs and traces are excluded.",
   "files": [
     {
       "path": ".gitignore",
@@ -29,8 +29,8 @@
     },
     {
       "path": "01_attacks/per_dataset.py",
-      "bytes": 7210,
-      "sha256": "c6823b1b92f8ca12086683d02aaa6061e17c8c87cb410b858d9bc752440875dc"
+      "bytes": 7215,
+      "sha256": "4e5bc35b754cbdfb7ce3a50738d23cb5bb0a8b4da42d3635dedb25ed2b7768f6"
     },
     {
       "path": "01_attacks/prepare.py",
@@ -395,12 +395,12 @@
     {
       "path": "CITATION.cff",
       "bytes": 664,
-      "sha256": "af46eae5f29391a2fed0f5d4ad6a8520196e673e0f96f0e70c536ee73dbc4a9e"
+      "sha256": "a0e7ee21335f6e695f715d11f4c3fa111771d6c4b53527b5192ba48205c8e9c0"
     },
     {
       "path": "README.md",
-      "bytes": 5046,
-      "sha256": "c0d90698ea6ad593b93cc2987c9b490917ef0e71082601ea2ea7a016592725e9"
+      "bytes": 5293,
+      "sha256": "2485796affabbecce0e22b368b05f7e8f25768bb4e3981becb9cb46b0db7eefe"
     },
     {
       "path": "RIGHTS.md",
@@ -464,8 +464,8 @@
     },
     {
       "path": "configs/study.json",
-      "bytes": 1287,
-      "sha256": "4a4519109703d2b872f140196cd5e739c7b62abd515a86251c57434f8cbd5344"
+      "bytes": 1284,
+      "sha256": "2491d042e9e8919086eaefdeee0d5741f3bfd4dd6d1ed83bb117e8dd81ea87b4"
     },
     {
       "path": "configs/thesis.json",
@@ -964,8 +964,13 @@
     },
     {
       "path": "docs/PUBLICATION.md",
-      "bytes": 1963,
-      "sha256": "43c35657c6eab7bf403af94461aa57e99657a273ddf3f158d12a344fbf5d6a65"
+      "bytes": 2266,
+      "sha256": "14748430ad3fca6abecf5c5516966e35477e28186ca51398903c6708b5e323b4"
+    },
+    {
+      "path": "docs/REPRODUCIBILITY.md",
+      "bytes": 2990,
+      "sha256": "080b7da125c0a8324dafda1224cf5314dd33303579ace9eb5800e01b38b41e03"
     },
     {
       "path": "docs/graphics/comparison_coverage.pdf",
@@ -294634,13 +294639,18 @@
     },
     {
       "path": "run.sh",
-      "bytes": 980,
-      "sha256": "484445f23bdc0f1c63d201f987d50b9e86734678169fbe78ec89ba0b7ab1d94f"
+      "bytes": 1134,
+      "sha256": "6137beacfd8419ac3807cae4ea1377d7e9b95ecb1be561d75811db0800ea7faf"
     },
     {
       "path": "scripts/check_publication.py",
       "bytes": 940,
       "sha256": "f1e7a3b98f37fe8f26e01d34b07ce0e33a14a8c5f3626e764ad28148d2407861"
+    },
+    {
+      "path": "scripts/create_run.py",
+      "bytes": 2526,
+      "sha256": "0d97e4f8b60b219d5e402acebda88675433d60714a949cc895c68a19141bc32f"
     },
     {
       "path": "scripts/prepare_replication_grid.py",
@@ -294649,8 +294659,8 @@
     },
     {
       "path": "scripts/run_research.py",
-      "bytes": 12494,
-      "sha256": "9bcefe62a6b0aaf6bf5084accb9e709b0b5765ed0e6f028ba778c2f8eede68a7"
+      "bytes": 12775,
+      "sha256": "de41bc2d25da6c20c3ec6d7d9586bcb5f4d53af89eac0cc0d598743004d2eb5a"
     },
     {
       "path": "scripts/run_study.py",
@@ -294721,6 +294731,11 @@
       "path": "tests/test_replication.py",
       "bytes": 3154,
       "sha256": "e224b4e33ce42b21d8c7eb60b7de60e2719621f13b44dc61a1ac519c949300e9"
+    },
+    {
+      "path": "tests/test_reproduction_paths.py",
+      "bytes": 1831,
+      "sha256": "4d0369a5f3dd38a4171640e05722e792b7f5b095b68296fe7a279efdc7d4bbed"
     },
     {
       "path": "tests/test_rl_protocol.py",

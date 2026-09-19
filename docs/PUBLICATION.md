@@ -1,6 +1,6 @@
 # Public study evidence
 
-Version 1.1.1 presents the completed five-seed study in the main numbered research folders. The repository has one authoritative stream, attack, detector, policy, training, experiment and analysis structure.
+Version 1.1.2 presents the completed five-seed study in the main numbered research folders. The repository has one authoritative stream, attack, detector, policy, training, experiment and analysis structure.
 
 Published material includes scientific code, pinned dependencies, configuration and input metadata, fitted Q-table JSON, run summaries, aggregate CSV tables, vector figures, completion and verification records, and retained execution provenance. Current conclusions use `results/per_dataset_study/analysis/comparisons/` for common-row adaptation comparisons. Earlier studies, pilots and integration checks remain identifiable and are not additional thesis evidence.
 
@@ -21,4 +21,6 @@ bash run.sh --tests
 
 Historical benchmark utilities are retained under `provenance/legacy_study/`. Use the publication check above for the current study. Files exported for the thesis are documented in [the evidence guide](../07_documentation/thesis_evidence/README.md).
 
-The thesis cites an exact commit containing version 1.1.1, so later changes to `main` cannot silently change its reference. `CITATION.cff` at the repository root supplies author, title, version and release date. The project author is Abdurahman Mahammedsied; 2026 is the publication year.
+The thesis cites an exact commit containing version 1.1.2, so later changes to `main` cannot silently change its reference. `CITATION.cff` at the repository root supplies author, title, version and release date. The project author is Abdurahman Mahammedsied; 2026 is the publication year.
+
+A new full reproduction requires only the verified RADAR input in addition to the code and dependencies; synthetic streams and outputs are generated. See [reproduction instructions](REPRODUCIBILITY.md). Original traces are required for re-auditing the original execution, not for generating a new one.

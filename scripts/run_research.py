@@ -37,6 +37,9 @@ def configuration(spec, role, dataset, pilot=False):
 
 
 def freeze(spec, pilot=False):
+    if (RESULTS/'full_completion.json').exists() and not (ROOT/'run-workspace.json').exists():
+        raise RuntimeError('Retained thesis results must not be overwritten. Create a fresh '
+                           'workspace with scripts/create_run.py NAME --radar-input PATH.')
     if spec['radar']['train_end_fraction'] != .5 or spec['radar']['validation_end_fraction'] != .7:
         raise ValueError('RADAR temporal boundaries differ from the implemented protocol')
     radar = prepare.snapshot_radar(spec)

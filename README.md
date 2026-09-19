@@ -17,11 +17,15 @@ Phase 04 trains **120 controllers**: three datasets × four detectors × two sta
 
 ```sh
 bash run.sh --tests
-bash run.sh --pilot --workers 4
-bash run.sh --run --workers 4
+python3 scripts/create_run.py reproduction --radar-input /path/to/full_stream.parquet
+cd runs/reproduction
+bash setup.sh
+bash run.sh --full --workers 4
 ```
 
 The pilot trains 24 small controllers and executes 288 comparisons across all three datasets and four detectors. Pilot rows and outcomes are excluded from research findings. The full RL/control pipeline trains 120 controllers and executes 1,344 validation configurations and 33,936 feedback/evaluation configurations (including defaults), followed by trace checks and reporting. Runs reuse verified artifacts only when their per-run scientific settings and input hashes match.
+
+[Reproduction instructions](docs/REPRODUCIBILITY.md) explain the required RADAR input, fresh workspace and checks. A clone alone cannot rerun all datasets.
 
 ## Partitions
 

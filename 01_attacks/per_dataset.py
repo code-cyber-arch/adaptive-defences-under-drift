@@ -20,13 +20,12 @@ def radar_bounds(rows, block=1000, embargo=1):
 def snapshot_radar(spec):
     metadata_path = (p.ROOT / spec['radar']['source_metadata']).resolve()
     metadata = p.read(metadata_path)
-    source = p.ROOT.parent / metadata['path']
-    if metadata['rows'] != spec['radar']['source_rows'] or p.sha(source) != metadata['sha256']:
-        raise ValueError('RADAR source identity differs')
     destination = p.ROOT / 'data/clean/RADAR/full_stream.parquet'
     if not destination.exists():
-        destination.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(source, destination)
+        raise FileNotFoundError('RADAR input is not included in Git. Supply the verified '
+                                'full_stream.parquet using scripts/create_run.py --radar-input PATH.')
+    if metadata['rows'] != spec['radar']['source_rows']:
+        raise ValueError('RADAR source identity differs')
     if p.sha(destination) != metadata['sha256']:
         raise ValueError('Local RADAR snapshot differs')
     return {'source_metadata_sha256': p.sha(metadata_path), 'source_sha256': metadata['sha256'],
