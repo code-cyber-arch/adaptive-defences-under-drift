@@ -2,4 +2,4 @@
 
 Define ADWIN, HDDM-W, Hellinger and D3 monitors. The experiment runner records their alarms with the corresponding policy decisions.
 
-See [the folder map](../docs/FOLDER_MAP.md) and [execution guide](../docs/GUIDE.md).
+See [the study structure](../README.md) and [complete design](../docs/FULL_STUDY.md).
